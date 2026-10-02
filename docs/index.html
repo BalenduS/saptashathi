@@ -282,7 +282,7 @@ const store = {
   get(k, d){ try{ const v = localStorage.getItem('ss:'+k); return v===null? d : JSON.parse(v);}catch(e){return d;} },
   set(k, v){ try{ localStorage.setItem('ss:'+k, JSON.stringify(v)); }catch(e){} }
 };
-const prefs = Object.assign({script:'telu', mean:'both', iast:true, scale:1, theme:'system'}, store.get('prefs', {}));
+const prefs = Object.assign({script:'telu', mean:'both', iast:true, scale:1, theme:'system', tspell:'book'}, store.get('prefs', {}));
 let learned = new Set(store.get('learned', []));
 let DATA = null, NOTES = {}, NOTEIDX = {};
 let memo = false, paathMode = false;
@@ -296,7 +296,10 @@ const C = {k:['క','क'],kh:['ఖ','ख'],g:['గ','ग'],gh:['ఘ','घ'],'�
   p:['ప','प'],ph:['ఫ','फ'],b:['బ','ब'],bh:['భ','भ'],m:['మ','म'],y:['య','य'],r:['ర','र'],l:['ల','ल'],v:['వ','व'],'ś':['శ','श'],'ṣ':['ష','ष'],s:['స','स'],h:['హ','ह'],'ḻ':['ళ','ळ']};
 const VIR = ['్','्'], ANU=['ం','ं'], VIS=['ః','ः'], AVA=['ఽ','ऽ'];
 function xl(iast, script){
-  const si = script==='telu'?0:1, s = iast.normalize('NFC').toLowerCase().replace(/ṁ/g,'ṃ');
+  const si = script==='telu'?0:1;
+  let s = iast.normalize('NFC').toLowerCase().replace(/ṁ/g,'ṃ');
+  /* Telugu book style: a nasal before a consonant of its own class is written as anusvāra (మంగళ, శంఖ) */
+  if(si===0 && prefs.tspell!=='strict') s = s.replace(/ṅ(?=[kg])|ñ(?=[cj])|ṇ(?=[ṭḍ])|n(?=[td])|m(?=[pb])/g,'ṃ');
   if(s==='oṃ' && script==='deva') return 'ॐ';
   let out='', i=0, pend=false;
   const tok = (str,pos,dict)=>{ for(const L of [2,1]){ const t=str.substr(pos,L); if(dict[t]) return t; } return null; };
@@ -371,7 +374,8 @@ function applyPrefs(){
   document.querySelectorAll('[data-script]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.script===prefs.script));
   store.set('prefs', prefs);
 }
-const scriptOf = obj => obj[prefs.script];
+const teluBook = t => prefs.tspell==='strict' ? t : t.replace(/ఙ్(?=[కఖగఘ])|ఞ్(?=[చఛజఝ])|ణ్(?=[టఠడఢ])|న్(?=[తథదధ])|మ్(?=[పఫబభ])/g,'ం');
+const scriptOf = obj => prefs.script==='telu' ? teluBook(obj.telu||'') : obj[prefs.script];
 const sec = id => DATA.sections[id];
 
 /* entries for a section: preamble blocks + verses, refs resolved */
@@ -499,7 +503,7 @@ async function renderVerse(sid, idx){
     <article class="leafcard" aria-label="Verse ${esc(e.ref)}">
       ${spk||grp?`<div class="rubric">${spk}${grp}</div>`:''}
       ${scriptHTML(e)}
-      ${prefs.iast && !memo ? `<p class="iast">${esc(e.iast)}</p>` : ''}
+      ${prefs.iast && !memo ? `<p class="iast">${esc(e.iast).replace(/ (\|+)/g,"\u00a0$1")}</p>` : ''}
       ${memo ? `<p class="memohint">Recite from memory, then tap a line to check it.</p>`:''}
     </article>
     <div class="nav">
@@ -575,6 +579,7 @@ function openSheet(){
     <h2 class="sc">Reading settings</h2>
     <div class="row"><label>Script</label><div class="seg"><button class="telu" data-script="telu" aria-pressed="${prefs.script==='telu'}">తెలుగు</button><button class="deva" data-script="deva" aria-pressed="${prefs.script==='deva'}">देवनागरी</button></div></div>
     <div class="row"><label>Meaning in</label><div class="seg" id="meanSeg">${[['en','English'],['te','తెలుగు'],['both','Both']].map(([v,l])=>`<button data-mean="${v}" aria-pressed="${prefs.mean===v}" class="${v==='te'?'telu':''}">${l}</button>`).join('')}</div></div>
+    <div class="row"><label>Telugu spelling</label><div class="seg" id="spellSeg">${[['book','శంఖ'],['strict','శఙ్ఖ']].map(([v,l])=>`<button class="telu" data-spell="${v}" aria-pressed="${prefs.tspell===v}" aria-label="${v==='book'?'Book style':'Strict Sanskrit'}">${l}</button>`).join('')}</div></div>
     <div class="row"><label for="iastT">Roman transliteration</label><input type="checkbox" id="iastT" ${prefs.iast?'checked':''}></div>
     <div class="row"><label for="scaleR">Text size</label><input type="range" id="scaleR" min="0.85" max="1.5" step="0.05" value="${prefs.scale}"></div>
     <div class="row"><label>Theme</label><div class="seg" id="themeSeg">${[['system','Auto'],['light','Day'],['dark','Lamp']].map(([v,l])=>`<button data-theme-v="${v}" aria-pressed="${prefs.theme===v}">${l}</button>`).join('')}</div></div>
@@ -584,6 +589,7 @@ function openSheet(){
   root.querySelectorAll('.toc a').forEach(a=>a.addEventListener('click', close));
   root.querySelectorAll('[data-mean]').forEach(b=>b.onclick=()=>{prefs.mean=b.dataset.mean; applyPrefs(); openSheet(); route();});
   root.querySelectorAll('[data-theme-v]').forEach(b=>b.onclick=()=>{prefs.theme=b.dataset.themeV; applyPrefs(); openSheet();});
+  root.querySelectorAll('[data-spell]').forEach(b=>b.onclick=()=>{prefs.tspell=b.dataset.spell; applyPrefs(); openSheet(); route();});
   $('#iastT').onchange = e=>{prefs.iast=e.target.checked; applyPrefs(); route();};
   $('#scaleR').oninput = e=>{prefs.scale=+e.target.value; applyPrefs();};
 }
