@@ -140,7 +140,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .w .wi{display:block;font-size:13px;font-style:italic;color:var(--ink-3)}
 .w .wm{display:block;font-size:14px;margin-top:2px}
 .w .wt{display:block;font-family:var(--f-telu);font-size:15px;color:var(--ink-2)}
-.pada{font-size:calc(20px * var(--scale));line-height:1.9;margin:0 0 12px;overflow-wrap:anywhere}
+.pada{font-size:calc(20px * var(--scale));line-height:1.9;margin:0 0 12px;overflow-wrap:break-word}
+.pada span{display:inline-block;max-width:100%}
 .pada.telu{font-family:var(--f-telu)} .pada.deva{font-family:var(--f-deva)}
 .pada span+span::before{content:"·";color:var(--kumkum);margin:0 .35em}
 .meter{display:grid;gap:8px}
