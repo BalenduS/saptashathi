@@ -1,0 +1,215 @@
+{
+"5.83": {"pada": [["ṛṣiḥ","the sage","ఋషి"],["uvāca","said","పలికెను"]], "en": "The sage said:", "te": "ఋషి ఇలా అన్నాడు:"},
+"5.84": {
+ "pada": [["evam","thus","ఈ విధంగా"],["stava","in praise","స్తుతిలో"],["abhiyuktānām","engaged","నిమగ్నులైన"],["devānām","while the gods","దేవతలు"],["tatra","there","అక్కడ"],["pārvatī","Pārvatī","పార్వతి"],["snātum","to bathe","స్నానం చేయడానికి"],["abhyāyayau","came","వచ్చింది"],["toye","in the waters","జలాలలో"],["jāhnavyāḥ","of the Gaṅgā","గంగానది"],["nṛpanandana","O prince","ఓ రాజపుత్రా"]],
+ "en": "While the gods were engaged in this praise, Pārvatī came there to bathe in the waters of the Gaṅgā, O prince.",
+ "te": "ఓ రాజపుత్రా, దేవతలు ఇలా స్తుతిస్తుండగా పార్వతి గంగాజలాలలో స్నానం చేయడానికి అక్కడికి వచ్చింది."
+},
+"5.85": {
+ "pada": [["sā","she","ఆమె"],["abravīt","said","అంది"],["tān","to those","ఆ"],["surān","gods","దేవతలతో"],["subhrūḥ","the fair-browed","అందమైన కనుబొమలు గల"],["bhavadbhiḥ","by you","మీ చేత"],["stūyate","is being praised","స్తుతించబడుతోంది"],["atra","here","ఇక్కడ"],["kā","who","ఎవరు"],["śarīra","body","శరీర"],["kośataḥ","from the sheath of","కోశం నుండి"],["ca","and","మరియు"],["asyāḥ","her","ఆమె"],["samudbhūtā","emerging","ఆవిర్భవించి"],["abravīt","said","అంది"],["śivā","the auspicious one","శివ"]],
+ "en": "The fair-browed goddess asked the gods, 'Whom are you praising here?' Then an auspicious form emerged from the sheath of her own body and answered.",
+ "te": "అందమైన కనుబొమలు గల ఆమె 'మీరు ఇక్కడ ఎవరిని స్తుతిస్తున్నారు?' అని దేవతలను అడిగింది. అప్పుడు ఆమె శరీరకోశం నుండి మంగళకరమైన ఒక రూపం ఆవిర్భవించి ఇలా అంది.",
+ "ctx": {"en": "A beautiful twist: Pārvatī asks whom the gods are praising, and the answer comes from inside her own body. The goddess they seek was within her all along.", "te": "అందమైన మలుపు: దేవతలు ఎవరిని స్తుతిస్తున్నారని పార్వతి అడుగుతుంది; సమాధానం ఆమె శరీరం లోపలి నుండే వస్తుంది. వారు వెతుకుతున్న దేవి ఆమెలోనే ఉంది."}
+},
+"5.86": {
+ "pada": [["stotram","hymn","స్తోత్రం"],["mama","to me","నాకు"],["etat","this","ఈ"],["kriyate","is being made","చేయబడుతోంది"],["śumbha","by Śumbha","శుంభ"],["daitya","the daitya","దైత్యుని చేత"],["nirākṛtaiḥ","by those cast out","తిరస్కరించబడినవారి చేత"],["devaiḥ","by the gods","దేవతల చేత"],["sametaiḥ","assembled","కలిసి వచ్చిన"],["samare","in battle","యుద్ధంలో"],["niśumbhena","by Niśumbha","నిశుంభుని చేత"],["parājitaiḥ","defeated","ఓడించబడిన"]],
+ "en": "'This hymn is being sung to me by the gods gathered here, who have been driven out by the daitya Śumbha and defeated in battle by Niśumbha.'",
+ "te": "'శుంభ దైత్యుని చేత వెళ్ళగొట్టబడి, యుద్ధంలో నిశుంభుని చేత ఓడించబడి, ఇక్కడ కలిసి వచ్చిన దేవతలు ఈ స్తోత్రాన్ని నాకే చేస్తున్నారు.'"
+},
+"5.87": {
+ "pada": [["śarīra","body","శరీర"],["kośāt","from the sheath of","కోశం నుండి"],["yat","since","ఎందుకంటే"],["tasyāḥ","her","ఆ"],["pārvatyāḥ","of Pārvatī","పార్వతి యొక్క"],["niḥsṛtā","came forth","వెలువడిందో"],["ambikā","Ambikā","అంబిక"],["kauśikī iti","as Kauśikī","కౌశికి అని"],["samasteṣu","in all","సమస్త"],["tataḥ","therefore","అందువల్ల"],["lokeṣu","the worlds","లోకాలలో"],["gīyate","she is sung","కీర్తించబడుతుంది"]],
+ "en": "Because Ambikā came forth from the sheath (kośa) of Pārvatī's body, she is sung of in all the worlds as Kauśikī.",
+ "te": "పార్వతి శరీరకోశం నుండి వెలువడినందువల్ల అంబిక సమస్త లోకాలలో కౌశికి అని కీర్తించబడుతుంది."
+},
+"5.88": {
+ "pada": [["tasyām","when she","ఆమె"],["vinirgatāyām","had come out","బయటకు వచ్చిన తరువాత"],["tu","and","అయితే"],["kṛṣṇā","dark","నల్లగా"],["abhūt","became","మారింది"],["sā api","she too","ఆమె కూడా"],["pārvatī","Pārvatī","పార్వతి"],["kālikā iti","as Kālikā","కాళిక అని"],["samākhyātā","known","ప్రసిద్ధి చెందింది"],["himācala","the Himālaya","హిమాలయాన్ని"],["kṛta","making","చేసుకొని"],["āśrayā","her dwelling","నివాసంగా"]],
+ "en": "When Kauśikī had come out of her, Pārvatī herself became dark and was known as Kālikā, making the Himālaya her home.",
+ "te": "కౌశికి బయటకు వచ్చిన తరువాత పార్వతి స్వయంగా నల్లగా మారి, హిమాలయాన్ని నివాసంగా చేసుకొని కాళిక అని ప్రసిద్ధి చెందింది.",
+ "ctx": {"en": "One goddess becomes two: the radiant Ambikā/Kauśikī, who will draw the asuras to battle, and the dark Kālikā. Kālī herself appears in Chapter 7 as Cāmuṇḍā.", "te": "ఒక్క దేవి రెండుగా మారుతుంది: అసురులను యుద్ధానికి రప్పించే ప్రకాశవంతమైన అంబిక/కౌశికి, నల్లని కాళిక. 7వ అధ్యాయంలో కాళి స్వయంగా చాముండగా కనిపిస్తుంది."}
+},
+"5.89": {
+ "pada": [["tataḥ","then","అప్పుడు"],["ambikām","Ambikā","అంబికను"],["param","supreme","పరమ"],["rūpam","form","రూపాన్ని"],["bibhrāṇām","bearing","ధరించిన"],["sumanoharam","most enchanting","అతి మనోహరమైన"],["dadarśa","saw","చూశారు"],["caṇḍaḥ","Caṇḍa","చండుడు"],["muṇḍaḥ","Muṇḍa","ముండుడు"],["ca","and","మరియు"],["bhṛtyau","the two servants","ఇద్దరు సేవకులు"],["śumbha","of Śumbha","శుంభ"],["niśumbhayoḥ","and Niśumbha","నిశుంభుల"]],
+ "en": "Then Caṇḍa and Muṇḍa, servants of Śumbha and Niśumbha, saw Ambikā in her supreme and most enchanting form.",
+ "te": "అప్పుడు శుంభ నిశుంభుల సేవకులైన చండ ముండులు అతి మనోహరమైన పరమ రూపం ధరించిన అంబికను చూశారు."
+},
+"5.90": {
+ "pada": [["tābhyām","by the two","వారిద్దరి చేత"],["śumbhāya","to Śumbha","శుంభునికి"],["ca","and","మరియు"],["ākhyātā","was described","చెప్పబడింది"],["sā","she","ఆమె"],["atīva","exceedingly","అతి"],["sumanoharā","enchanting","మనోహరమైనది"],["kā api","some","ఎవరో ఒక"],["āste","there is","ఉంది"],["strī","a woman","స్త్రీ"],["mahārāja","O great king","ఓ మహారాజా"],["bhāsayantī","illuminating","ప్రకాశింపజేస్తూ"],["himācalam","the Himālaya","హిమాలయాన్ని"]],
+ "en": "The two described her to Śumbha as most enchanting: 'O great king, there is a woman there who lights up the Himālaya.'",
+ "te": "వారిద్దరూ ఆమె అతి మనోహరమైనదని శుంభునికి చెప్పారు: 'ఓ మహారాజా, హిమాలయాన్ని ప్రకాశింపజేస్తూ ఎవరో ఒక స్త్రీ ఉంది.'"
+},
+"5.91": {
+ "pada": [["na eva","never","ఎన్నడూ కాదు"],["tādṛk","such","అటువంటి"],["kvacit","anywhere","ఎక్కడా"],["rūpam","beauty","రూపం"],["dṛṣṭam","has been seen","చూడబడలేదు"],["kenacit","by anyone","ఎవరి చేతనూ"],["uttamam","supreme","ఉత్తమమైన"],["jñāyatām","let it be found out","తెలుసుకోండి"],["kā api","who","ఎవరో"],["asau","she","ఆమె"],["devī","the goddess","దేవి"],["gṛhyatām","let her be taken","స్వీకరించండి"],["ca","and","మరియు"],["asureśvara","O lord of asuras","ఓ అసురేశ్వరా"]],
+ "en": "'Such supreme beauty has never been seen by anyone anywhere. Find out who that goddess is, O lord of asuras, and take her.'",
+ "te": "'అటువంటి ఉత్తమ రూపాన్ని ఎవరూ ఎక్కడా చూడలేదు. ఓ అసురేశ్వరా, ఆ దేవి ఎవరో తెలుసుకొని ఆమెను స్వీకరించండి.'"
+},
+"5.92": {
+ "pada": [["strī","among women","స్త్రీలలో"],["ratnam","a jewel","రత్నం"],["ati","most","అతి"],["cārvaṅgī","lovely-limbed","సుందరమైన అవయవాలు గలది"],["dyotayantī","lighting up","ప్రకాశింపజేస్తూ"],["diśaḥ","the directions","దిక్కులను"],["tu","and","మరియు"],["tviṣā","with her radiance","కాంతితో"],["sā","she","ఆమె"],["tu","indeed","అయితే"],["tiṣṭhati","stands there","ఉంది"],["daityendra","O king of daityas","ఓ దైత్యేంద్రా"],["tām","her","ఆమెను"],["bhavān","you","మీరు"],["draṣṭum","to see","చూడడానికి"],["arhati","ought","తగినవారు"]],
+ "en": "'She is a jewel among women, lovely in every limb, lighting up the directions with her radiance. She is there, O king of daityas; you should see her.'",
+ "te": "'స్త్రీలలో రత్నం, అతి సుందరమైన అవయవాలు గలది, తన కాంతితో దిక్కులను ప్రకాశింపజేస్తూ అక్కడ ఉంది. ఓ దైత్యేంద్రా, మీరు ఆమెను చూడాలి.'"
+},
+"5.93": {
+ "pada": [["yāni","whatever","ఏ"],["ratnāni","jewels","రత్నాలు"],["maṇayaḥ","gems","మణులు"],["gaja","elephants","ఏనుగులు"],["aśva","horses","గుర్రాలు"],["ādīni","and the like","మొదలైనవి"],["vai","indeed","నిజంగా"],["prabho","O lord","ఓ ప్రభూ"],["trailokye","in the three worlds","ముల్లోకాలలో"],["tu","and","అయితే"],["samastāni","all","సమస్తమూ"],["sāmpratam","now","ఇప్పుడు"],["bhānti","shine","ప్రకాశిస్తున్నాయి"],["te","your","మీ"],["gṛhe","in the house","ఇంట్లో"]],
+ "en": "'Whatever jewels, gems, elephants, horses and the like there are in the three worlds, O lord, all of them now shine in your palace.'",
+ "te": "'ఓ ప్రభూ, ముల్లోకాలలో ఉన్న రత్నాలు, మణులు, ఏనుగులు, గుర్రాలు మొదలైనవన్నీ ఇప్పుడు మీ ఇంట్లోనే ప్రకాశిస్తున్నాయి.'",
+ "ctx": {"en": "5.93–5.100: the servants list the 'jewels' (the best of everything) Śumbha has seized from the gods, to argue that this jewel among women should be his too. To Śumbha, the Devī is just one more possession.", "te": "5.93–5.100: శుంభుడు దేవతల నుండి లాక్కున్న 'రత్నాలను' (ప్రతి దానిలో శ్రేష్ఠమైనవి) సేవకులు పేర్కొంటారు; స్త్రీరత్నమైన ఈమె కూడా అతనిదే కావాలని వాదిస్తారు. శుంభునికి దేవి మరో సంపద మాత్రమే."}
+},
+"5.94": {
+ "pada": [["airāvataḥ","Airāvata","ఐరావతం"],["samānītaḥ","has been brought","తీసుకురాబడింది"],["gaja","elephant","గజ"],["ratnam","the jewel among","రత్నమైన"],["purandarāt","from Indra","ఇంద్రుని నుండి"],["pārijāta","the Pārijāta","పారిజాత"],["taruḥ","tree","వృక్షం"],["ca","and","మరియు"],["ayam","this","ఈ"],["tathā eva","likewise","అలాగే"],["uccaiḥśravāḥ","Uccaiḥśravas","ఉచ్చైఃశ్రవం"],["hayaḥ","the horse","గుర్రం"]],
+ "en": "'Airāvata, the jewel among elephants, has been brought from Indra, and so have the Pārijāta tree and the horse Uccaiḥśravas.'",
+ "te": "'గజరత్నమైన ఐరావతాన్ని ఇంద్రుని నుండి తెచ్చారు; పారిజాత వృక్షం, ఉచ్చైఃశ్రవం అనే గుర్రం కూడా.'"
+},
+"5.95": {
+ "pada": [["vimānam","celestial chariot","విమానం"],["haṃsa","swans","హంసలతో"],["saṃyuktam","yoked with","కూడిన"],["etat","this","ఈ"],["tiṣṭhati","stands","ఉంది"],["te","your","మీ"],["aṅgaṇe","in the courtyard","ప్రాంగణంలో"],["ratnabhūtam","a treasure","రత్నభూతమైన"],["iha","here","ఇక్కడికి"],["ānītam","brought","తేబడింది"],["yat","which","ఏదైతే"],["āsīt","was","ఉండేదో"],["vedhasaḥ","Brahmā's","బ్రహ్మ యొక్క"],["adbhutam","wondrous","అద్భుతమైన"]],
+ "en": "'The wondrous swan-drawn chariot that belonged to Brahmā, a true treasure, has been brought here and stands in your courtyard.'",
+ "te": "'బ్రహ్మకు చెందిన, హంసలు కట్టిన అద్భుతమైన రత్నభూత విమానం ఇక్కడికి తేబడి మీ ప్రాంగణంలో ఉంది.'"
+},
+"5.96": {
+ "pada": [["nidhiḥ","treasure","నిధి"],["eṣaḥ","this","ఈ"],["mahāpadmaḥ","Mahāpadma","మహాపద్మం"],["samānītaḥ","has been brought","తేబడింది"],["dhaneśvarāt","from Kubera","కుబేరుని నుండి"],["kiñjalkinīm","with filaments","కేసరాలతో కూడిన"],["dadau","gave","ఇచ్చాడు"],["ca","and","మరియు"],["abdhiḥ","the ocean","సముద్రుడు"],["mālām","a garland","మాలను"],["amlāna","unfading","వాడని"],["paṅkajām","of lotuses","పద్మాల"]],
+ "en": "'The Mahāpadma treasure has been brought from Kubera, and the ocean gave you a garland of unfading lotuses, rich with filaments.'",
+ "te": "'మహాపద్మ నిధిని కుబేరుని నుండి తెచ్చారు; సముద్రుడు కేసరాలతో కూడిన వాడని పద్మాల మాలను ఇచ్చాడు.'"
+},
+"5.97": {
+ "pada": [["chatram","the parasol","ఛత్రం"],["te","your","మీ"],["vāruṇam","of Varuṇa","వరుణుని"],["gehe","in the house","ఇంట్లో"],["kāñcana","gold","బంగారాన్ని"],["srāvi","streaming","కురిపించే"],["tiṣṭhati","stands","ఉంది"],["tathā","and","అలాగే"],["ayam","this","ఈ"],["syandana","chariot","రథం"],["varaḥ","finest","శ్రేష్ఠమైన"],["yaḥ","which","ఏదైతే"],["purā","before","పూర్వం"],["āsīt","was","ఉండేదో"],["prajāpateḥ","Prajāpati's","ప్రజాపతి యొక్క"]],
+ "en": "'Varuṇa's parasol, which streams gold, is in your house, and so is this finest of chariots, which once belonged to Prajāpati.'",
+ "te": "'బంగారాన్ని కురిపించే వరుణుని ఛత్రం మీ ఇంట్లో ఉంది; పూర్వం ప్రజాపతిది అయిన ఈ శ్రేష్ఠమైన రథం కూడా.'"
+},
+"5.98": {
+ "pada": [["mṛtyoḥ","of Death","మృత్యువు యొక్క"],["utkrāntidā","Utkrāntidā (giver of departure)","ఉత్క్రాంతిదా"],["nāma","named","అనే పేరు గల"],["śaktiḥ","spear","శక్తి"],["īśa","O lord","ఓ ప్రభూ"],["tvayā","by you","మీ చేత"],["hṛtā","has been taken","హరించబడింది"],["pāśaḥ","the noose","పాశం"],["salilarājasya","of the lord of waters","జలాధిపతి యొక్క"],["bhrātuḥ","of your brother","మీ సోదరుని"],["tava","your","మీ"],["parigrahe","in the possession","ఆధీనంలో"]],
+ "en": "'You have taken Death's spear called Utkrāntidā, O lord, and the noose of the lord of waters is in the possession of your brother.'",
+ "te": "'ఓ ప్రభూ, మృత్యువు యొక్క ఉత్క్రాంతిదా అనే శక్తిని మీరు హరించారు; జలాధిపతి పాశం మీ సోదరుని ఆధీనంలో ఉంది.'"
+},
+"5.99": {
+ "pada": [["niśumbhasya","Niśumbha's","నిశుంభునివి"],["abdhi","in the ocean","సముద్రంలో"],["jātāḥ","born","పుట్టిన"],["ca","and","మరియు"],["samastāḥ","all","సమస్త"],["ratna","gem","రత్న"],["jātayaḥ","kinds of","జాతులు"],["vahniḥ","Fire","అగ్ని"],["api","also","కూడా"],["dadau","gave","ఇచ్చాడు"],["tubhyam","to you","మీకు"],["agni","by fire","అగ్నితో"],["śauce","purified","శుద్ధమైన"],["ca","and","మరియు"],["vāsasī","two garments","రెండు వస్త్రాలను"]],
+ "en": "'All kinds of gems born in the ocean belong to Niśumbha, and even Agni gave you two garments purified by fire.'",
+ "te": "'సముద్రంలో పుట్టిన సమస్త రత్నజాతులు నిశుంభునివే; అగ్ని కూడా అగ్నితో శుద్ధమైన రెండు వస్త్రాలను మీకు ఇచ్చాడు.'"
+},
+"5.100": {
+ "pada": [["evam","thus","ఈ విధంగా"],["daityendra","O king of daityas","ఓ దైత్యేంద్రా"],["ratnāni","jewels","రత్నాలు"],["samastāni","all","సమస్త"],["āhṛtāni","have been brought","తేబడ్డాయి"],["te","to you","మీకు"],["strī","among women","స్త్రీ"],["ratnam","the jewel","రత్నం"],["eṣā","this","ఈ"],["kalyāṇī","auspicious lady","కళ్యాణి"],["tvayā","by you","మీ చేత"],["kasmāt","why","ఎందుకు"],["na gṛhyate","is not taken","స్వీకరించబడదు"]],
+ "en": "'So, O king of daityas, every jewel has been brought to you. Why then do you not take this auspicious lady, the jewel among women?'",
+ "te": "'ఓ దైత్యేంద్రా, ఇలా సమస్త రత్నాలు మీకు తేబడ్డాయి. స్త్రీరత్నమైన ఈ కళ్యాణిని మీరు ఎందుకు స్వీకరించరు?'"
+},
+"5.101": {"pada": [["ṛṣiḥ","the sage","ఋషి"],["uvāca","said","పలికెను"]], "en": "The sage said:", "te": "ఋషి ఇలా అన్నాడు:"},
+"5.102": {
+ "pada": [["niśamya","hearing","విని"],["iti","thus","ఈ విధమైన"],["vacaḥ","words","మాటలను"],["śumbhaḥ","Śumbha","శుంభుడు"],["saḥ","he","అతడు"],["tadā","then","అప్పుడు"],["caṇḍamuṇḍayoḥ","of Caṇḍa and Muṇḍa","చండముండుల"],["preṣayāmāsa","sent","పంపాడు"],["sugrīvam","Sugrīva","సుగ్రీవుని"],["dūtam","as messenger","దూతగా"],["devyāḥ","to the Goddess","దేవి వద్దకు"],["mahāsuram","the great asura","మహాసురుని"]],
+ "en": "Hearing these words of Caṇḍa and Muṇḍa, Śumbha sent the great asura Sugrīva to the Goddess as his messenger.",
+ "te": "చండముండుల ఈ మాటలు విని శుంభుడు మహాసురుడైన సుగ్రీవుని దూతగా దేవి వద్దకు పంపాడు."
+},
+"5.103": {
+ "pada": [["iti ca iti ca","such and such","ఇలా ఇలా"],["vaktavyā","should be told","చెప్పాలి"],["sā","she","ఆమెకు"],["gatvā","going","వెళ్ళి"],["vacanāt","by the words","మాటల ప్రకారం"],["mama","my","నా"],["yathā","so that","ఎలాగైతే"],["ca","and","మరియు"],["abhyeti","she comes","వస్తుందో"],["samprītyā","willingly","సంతోషంగా"],["tathā","so","అలా"],["kāryam","should be done","చేయాలి"],["tvayā","by you","నీ చేత"],["laghu","quickly","త్వరగా"]],
+ "en": "'Go and tell her such and such, in my words, and act quickly so that she comes to me willingly.'",
+ "te": "'వెళ్ళి నా మాటలుగా ఆమెకు ఇలా ఇలా చెప్పు; ఆమె సంతోషంగా నా వద్దకు వచ్చేలా త్వరగా చేయి.'"
+},
+"5.104": {
+ "pada": [["saḥ","he","అతడు"],["tatra","there","అక్కడికి"],["gatvā","going","వెళ్ళి"],["yatra","where","ఎక్కడ"],["āste","she was","ఉందో"],["śaila","mountain","పర్వత"],["uddeśe","in the region","ప్రదేశంలో"],["atiśobhane","very beautiful","అతి సుందరమైన"],["tām","that","ఆ"],["ca","and","మరియు"],["devīm","Goddess","దేవితో"],["tataḥ","then","అప్పుడు"],["prāha","spoke","పలికాడు"],["ślakṣṇam","smoothly","నేర్పుగా"],["madhurayā","in sweet","మధురమైన"],["girā","words","వాక్కుతో"]],
+ "en": "He went to the very beautiful spot on the mountain where she was, and spoke to the Goddess smoothly, in sweet words.",
+ "te": "అతడు ఆమె ఉన్న అతి సుందరమైన పర్వత ప్రదేశానికి వెళ్ళి, ఆ దేవితో నేర్పుగా, మధురమైన మాటలతో ఇలా అన్నాడు."
+},
+"5.105": {"pada": [["dūtaḥ","the messenger","దూత"],["uvāca","said","పలికెను"]], "en": "The messenger said:", "te": "దూత ఇలా అన్నాడు:"},
+"5.106": {
+ "pada": [["devi","O lady","ఓ దేవీ"],["daityeśvaraḥ","lord of the daityas","దైత్యేశ్వరుడు"],["śumbhaḥ","Śumbha","శుంభుడు"],["trailokye","in the three worlds","ముల్లోకాలలో"],["parameśvaraḥ","supreme lord","పరమేశ్వరుడు"],["dūtaḥ","messenger","దూతను"],["aham","I","నేను"],["preṣitaḥ","sent","పంపబడిన"],["tena","by him","అతని చేత"],["tvat","you","మీ"],["sakāśam","to the presence of","సన్నిధికి"],["iha","here","ఇక్కడ"],["āgataḥ","have come","వచ్చాను"]],
+ "en": "'O lady, Śumbha, lord of the daityas, is supreme lord of the three worlds. I am the messenger he has sent, and I have come here to you.'",
+ "te": "'ఓ దేవీ, దైత్యేశ్వరుడైన శుంభుడు ముల్లోకాలకు పరమేశ్వరుడు. అతడు పంపిన దూతనై మీ సన్నిధికి వచ్చాను.'"
+},
+"5.107": {
+ "pada": [["avyāhata","never obstructed","ఎదురులేని"],["ājñaḥ","whose command is","ఆజ్ఞ గలవాడు"],["sarvāsu","in all","సమస్త"],["yaḥ","who","ఎవరైతే"],["sadā","always","ఎల్లప్పుడూ"],["devayoniṣu","among divine races","దేవజాతులలో"],["nirjita","conquered","జయించిన"],["akhila","all","సమస్త"],["daityāriḥ","enemies of the daityas","దైత్యశత్రువులను"],["saḥ","he","అతడు"],["yat","what","ఏమి"],["āha","says","చెప్పాడో"],["śṛṇuṣva","hear","వినండి"],["tat","that","దానిని"]],
+ "en": "'His command is never opposed among any of the divine races, and he has conquered all the enemies of the daityas. Hear what he says.'",
+ "te": "'సమస్త దేవజాతులలో ఎల్లప్పుడూ ఎదురులేని ఆజ్ఞ గలవాడు, దైత్యశత్రువులందరినీ జయించినవాడు అతడు. అతడు చెప్పినది వినండి.'"
+},
+"5.108": {
+ "pada": [["mama","mine","నావి"],["trailokyam","the three worlds","ముల్లోకాలు"],["akhilam","entire","సమస్త"],["mama","my","నా"],["devāḥ","the gods","దేవతలు"],["vaśa","command","వశాన్ని"],["anugāḥ","obey","అనుసరిస్తారు"],["yajñabhāgān","the shares of sacrifice","యజ్ఞభాగాలను"],["aham","I","నేను"],["sarvān","all","అన్నింటినీ"],["upāśnāmi","enjoy","అనుభవిస్తాను"],["pṛthak pṛthak","each separately","వేర్వేరుగా"]],
+ "en": "'\"The whole of the three worlds is mine, and the gods obey my command. I enjoy every share of the sacrifices, each one separately.\"'",
+ "te": "'\"ముల్లోకాలన్నీ నావి; దేవతలు నా ఆజ్ఞకు లోబడి ఉంటారు. యజ్ఞభాగాలన్నింటినీ నేనే వేర్వేరుగా అనుభవిస్తాను.\"'",
+ "ctx": {"en": "From here to 5.114 the messenger repeats Śumbha's own words: pure ego, 'mine, mine, mine', ending with the offer of marriage as another acquisition.", "te": "ఇక్కడి నుండి 5.114 వరకు దూత శుంభుని మాటలనే చెబుతాడు: 'నాది, నాది, నాది' అనే స్వచ్ఛమైన అహంకారం; చివరికి వివాహ ప్రతిపాదన కూడా మరో సంపాదనగానే."}
+},
+"5.109": {
+ "pada": [["trailokye","in the three worlds","ముల్లోకాలలోని"],["vara","finest","శ్రేష్ఠ"],["ratnāni","treasures","రత్నాలు"],["mama","my","నా"],["vaśyāni","under control","వశంలో ఉన్నాయి"],["aśeṣataḥ","without exception","పూర్తిగా"],["tathā eva","likewise","అలాగే"],["gajaratnam","the jewel of elephants","గజరత్నం"],["ca","and","మరియు"],["hṛtam","taken","హరించబడింది"],["devendra","of Indra","దేవేంద్రుని"],["vāhanam","the mount","వాహనం"]],
+ "en": "'\"All the finest treasures of the three worlds are in my power, without exception, and so is the jewel of elephants I took, the mount of Indra.\"'",
+ "te": "'\"ముల్లోకాలలోని శ్రేష్ఠ రత్నాలన్నీ పూర్తిగా నా వశంలో ఉన్నాయి; దేవేంద్రుని వాహనమైన గజరత్నాన్ని కూడా హరించాను.\"'"
+},
+"5.110": {
+ "pada": [["kṣīroda","the Ocean of Milk","క్షీరసముద్ర"],["mathana","churning","మథనం నుండి"],["udbhūtam","born from","పుట్టిన"],["aśvaratnam","the jewel of horses","అశ్వరత్నాన్ని"],["mama","to me","నాకు"],["amaraiḥ","by the immortals","దేవతల చేత"],["uccaiḥśravasa","Uccaiḥśravas","ఉచ్చైఃశ్రవం"],["saṃjñam","named","అనే పేరు గల"],["tat","that","దానిని"],["praṇipatya","bowing","నమస్కరించి"],["samarpitam","was offered","సమర్పించారు"]],
+ "en": "'\"The jewel of horses, Uccaiḥśravas, born from the churning of the Ocean of Milk, the immortals bowed and offered to me.\"'",
+ "te": "'\"క్షీరసాగర మథనం నుండి పుట్టిన ఉచ్చైఃశ్రవం అనే అశ్వరత్నాన్ని దేవతలు నమస్కరించి నాకు సమర్పించారు.\"'"
+},
+"5.111": {
+ "pada": [["yāni","whatever","ఏవైతే"],["ca","and","మరియు"],["anyāni","other","ఇతర"],["deveṣu","among the gods","దేవతలలో"],["gandharveṣu","gandharvas","గంధర్వులలో"],["urageṣu","and serpents","నాగులలో"],["ca","and","మరియు"],["ratnabhūtāni","precious","రత్నాలైన"],["bhūtāni","things","వస్తువులు"],["tāni","they","అవి"],["mayi eva","in me alone","నా వద్దనే"],["śobhane","O lovely one","ఓ సుందరీ"]],
+ "en": "'\"Whatever other precious things there are among gods, gandharvas and serpents, all of them, O lovely one, are with me alone.\"'",
+ "te": "'\"ఓ సుందరీ, దేవతలు, గంధర్వులు, నాగులలో ఉన్న ఇతర రత్నాలన్నీ నా వద్దనే ఉన్నాయి.\"'"
+},
+"5.112": {
+ "pada": [["strī","among women","స్త్రీ"],["ratnabhūtām","the jewel","రత్నంగా"],["tvām","you","మిమ్మల్ని"],["devi","O lady","ఓ దేవీ"],["loke","in the world","లోకంలో"],["manyāmahe","consider","భావిస్తున్నాము"],["vayam","we","మేము"],["sā","so","అట్టి"],["tvam","you","మీరు"],["asmān","to us","మా వద్దకు"],["upāgaccha","come","రండి"],["yataḥ","since","ఎందుకంటే"],["ratna","jewels","రత్నాలను"],["bhujaḥ","enjoyers of","అనుభవించేవారము"],["vayam","we are","మేము"]],
+ "en": "'\"We consider you, O lady, the jewel among women in this world. So come to us, for we are the ones who enjoy every jewel.\"'",
+ "te": "'\"ఓ దేవీ, లోకంలో మిమ్మల్ని స్త్రీరత్నంగా భావిస్తున్నాము. రత్నాలను అనుభవించేవారము మేమే కాబట్టి మా వద్దకు రండి.\"'"
+},
+"5.113": {
+ "pada": [["mām","me","నన్ను"],["vā","or","గానీ"],["mama","my","నా"],["anujam","younger brother","తమ్ముడైన"],["vā api","or else","లేదా"],["niśumbham","Niśumbha","నిశుంభుని"],["uru","great","గొప్ప"],["vikramam","of valour","పరాక్రమం గల"],["bhaja","accept","వరించండి"],["tvam","you","మీరు"],["cañcala","darting","చంచలమైన"],["apāṅgi","O you of glances","కడగంటి చూపులు గలదానా"],["ratnabhūtā","a jewel","రత్నం"],["asi","you are","మీరు"],["vai","indeed","నిజంగా"],["yataḥ","since","ఎందుకంటే"]],
+ "en": "'\"Accept me, or my valiant younger brother Niśumbha, O lady of darting glances, since you are indeed a jewel.\"'",
+ "te": "'\"చంచలమైన కడగంటి చూపులు గల సుందరీ, మీరు రత్నం కాబట్టి నన్ను గానీ, మహాపరాక్రమవంతుడైన నా తమ్ముడు నిశుంభుని గానీ వరించండి.\"'"
+},
+"5.114": {
+ "pada": [["parama","supreme","పరమ"],["aiśvaryam","sovereignty","ఐశ్వర్యాన్ని"],["atulam","incomparable","సాటిలేని"],["prāpsyase","you will gain","పొందుతారు"],["mat","with me","నాతో"],["parigrahāt","by union","వివాహం వల్ల"],["etat","this","దీనిని"],["buddhyā","with your mind","బుద్ధితో"],["samālocya","considering","ఆలోచించి"],["mat","my","నా"],["parigrahatām","wife","భార్యగా"],["vraja","become","కండి"]],
+ "en": "'\"By marrying me you will gain supreme, incomparable sovereignty. Think this over carefully and become my wife.\"'",
+ "te": "'\"నన్ను వివాహం చేసుకుంటే సాటిలేని పరమ ఐశ్వర్యాన్ని పొందుతారు. బుద్ధితో దీనిని ఆలోచించి నా భార్యగా రండి.\"'"
+},
+"5.115": {"pada": [["ṛṣiḥ","the sage","ఋషి"],["uvāca","said","పలికెను"]], "en": "The sage said:", "te": "ఋషి ఇలా అన్నాడు:"},
+"5.116": {
+ "pada": [["iti","thus","ఈ విధంగా"],["uktā","addressed","చెప్పబడిన"],["sā","she","ఆ"],["tadā","then","అప్పుడు"],["devī","the Goddess","దేవి"],["gambhīra","deep","గంభీరంగా"],["antaḥ","inwardly","లోలోపల"],["smitā","smiling","నవ్వుతూ"],["jagau","spoke","పలికింది"],["durgā","Durgā","దుర్గ"],["bhagavatī","the blessed","భగవతి"],["bhadrā","the gracious","భద్ర"],["yayā","by whom","ఎవరి చేత"],["idam","this","ఈ"],["dhāryate","is upheld","ధరించబడుతోందో"],["jagat","world","జగత్తు"]],
+ "en": "Addressed in this way, the Goddess smiled deeply within, and Durgā, the blessed and gracious one by whom this world is upheld, spoke.",
+ "te": "ఇలా చెప్పబడిన ఆ దేవి లోలోపల గంభీరంగా నవ్వుకుంది. ఈ జగత్తును ధరించే భగవతి, భద్ర అయిన దుర్గ ఇలా పలికింది."
+},
+"5.117": {"pada": [["devī","the Goddess","దేవి"],["uvāca","said","పలికెను"]], "en": "The Goddess said:", "te": "దేవి ఇలా అంది:"},
+"5.118": {
+ "pada": [["satyam","truth","సత్యం"],["uktam","has been spoken","చెప్పబడింది"],["tvayā","by you","నీ చేత"],["na","not","లేదు"],["atra","here","ఇందులో"],["mithyā","false","అసత్యం"],["kiñcit","anything","ఏ కొంచెమూ"],["tvayā","by you","నీ చేత"],["uditam","said","చెప్పబడింది"],["trailokya","three worlds","ముల్లోకాలకు"],["adhipatiḥ","lord","అధిపతి"],["śumbhaḥ","Śumbha","శుంభుడు"],["niśumbhaḥ","Niśumbha","నిశుంభుడు"],["ca api","also","కూడా"],["tādṛśaḥ","is such","అలాంటివాడే"]],
+ "en": "'You have spoken the truth; nothing you have said is false. Śumbha is lord of the three worlds, and Niśumbha is his equal.'",
+ "te": "'నీవు సత్యమే చెప్పావు; నీవు చెప్పిన దానిలో అసత్యం ఏమీ లేదు. శుంభుడు ముల్లోకాలకు అధిపతి; నిశుంభుడు కూడా అలాంటివాడే.'"
+},
+"5.119": {
+ "pada": [["kim tu","but","కానీ"],["atra","here","ఇందులో"],["yat","what","ఏదైతే"],["pratijñātam","has been vowed","ప్రతిజ్ఞ చేయబడిందో"],["mithyā","false","అసత్యంగా"],["tat","that","దానిని"],["kriyate","can be made","చేయగలను"],["katham","how","ఎలా"],["śrūyatām","hear","వినుము"],["alpa","little","అల్ప"],["buddhitvāt","out of understanding","బుద్ధి వల్ల"],["pratijñā","vow","ప్రతిజ్ఞ"],["yā","which","ఏదైతే"],["kṛtā","was made","చేయబడిందో"],["purā","before","పూర్వం"]],
+ "en": "'But how can I make false a vow I have already made? Hear the vow I made earlier, out of my small understanding.'",
+ "te": "'కానీ నేను చేసిన ప్రతిజ్ఞను ఎలా అసత్యం చేయగలను? అల్పబుద్ధితో నేను పూర్వం చేసిన ప్రతిజ్ఞ ఏమిటో వినుము.'",
+ "ctx": {"en": "'Out of my small understanding' is pure irony from the Goddess of all knowledge. Her vow in the next verse is the trap that will draw the asuras to their end.", "te": "'అల్పబుద్ధితో' అనేది సమస్త జ్ఞానస్వరూపిణి అయిన దేవి పలికే స్వచ్ఛమైన వ్యంగ్యం. తరువాతి శ్లోకంలోని ఆమె ప్రతిజ్ఞే అసురులను వారి అంతానికి రప్పించే వల."}
+},
+"5.120": {
+ "pada": [["yaḥ","whoever","ఎవరైతే"],["mām","me","నన్ను"],["jayati","conquers","జయిస్తాడో"],["saṅgrāme","in battle","యుద్ధంలో"],["yaḥ","whoever","ఎవరైతే"],["me","my","నా"],["darpam","pride","గర్వాన్ని"],["vyapohati","removes","తొలగిస్తాడో"],["yaḥ","whoever","ఎవరైతే"],["me","to me","నాకు"],["pratibalaḥ","an equal in strength","సమాన బలుడో"],["loke","in the world","లోకంలో"],["saḥ","he","అతడే"],["me","my","నాకు"],["bhartā","husband","భర్త"],["bhaviṣyati","will be","అవుతాడు"]],
+ "en": "'\"Whoever conquers me in battle, whoever breaks my pride, whoever is my equal in strength in this world: he will be my husband.\"'",
+ "te": "'\"యుద్ధంలో నన్ను జయించినవాడు, నా గర్వాన్ని తొలగించినవాడు, లోకంలో నాకు సమాన బలుడైనవాడే నాకు భర్త అవుతాడు.\"'"
+},
+"5.121": {
+ "pada": [["tat","so","అందువల్ల"],["āgacchatu","let him come","రావచ్చు"],["śumbhaḥ","Śumbha","శుంభుడు"],["atra","here","ఇక్కడికి"],["niśumbhaḥ","Niśumbha","నిశుంభుడు"],["vā","or","గానీ"],["mahābalaḥ","the mighty","మహాబలుడైన"],["mām","me","నన్ను"],["jitvā","having conquered","జయించి"],["kim","why","ఎందుకు"],["cireṇa","delay","ఆలస్యం"],["atra","here","ఇక్కడ"],["pāṇim","hand","చేతిని"],["gṛhṇātu","let him take","పట్టుకోవచ్చు"],["me","my","నా"],["laghu","quickly","త్వరగా"]],
+ "en": "'So let Śumbha come here, or mighty Niśumbha. Why delay? Let him conquer me and quickly take my hand.'",
+ "te": "'కాబట్టి శుంభుడు గానీ, మహాబలుడైన నిశుంభుడు గానీ ఇక్కడికి రావచ్చు. ఆలస్యం ఎందుకు? నన్ను జయించి త్వరగా నా చేయి పట్టుకోవచ్చు.'"
+},
+"5.122": {"pada": [["dūtaḥ","the messenger","దూత"],["uvāca","said","పలికెను"]], "en": "The messenger said:", "te": "దూత ఇలా అన్నాడు:"},
+"5.123": {
+ "pada": [["avaliptā","arrogant","గర్విష్ఠురాలవు"],["asi","you are","నీవు"],["mā","do not","వద్దు"],["evam","thus","ఇలా"],["tvam","you","నీవు"],["devi","O lady","ఓ దేవీ"],["brūhi","speak","మాట్లాడు"],["mama","my","నా"],["agrataḥ","before","ఎదుట"],["trailokye","in the three worlds","ముల్లోకాలలో"],["kaḥ","what","ఏ"],["pumān","man","పురుషుడు"],["tiṣṭhet","could stand","నిలవగలడు"],["agre","before","ఎదుట"],["śumbha","Śumbha","శుంభ"],["niśumbhayoḥ","and Niśumbha","నిశుంభుల"]],
+ "en": "'You are arrogant, lady. Do not speak like this in front of me. What man in the three worlds could stand before Śumbha and Niśumbha?'",
+ "te": "'ఓ దేవీ, నీవు గర్విష్ఠురాలవు. నా ఎదుట ఇలా మాట్లాడకు. ముల్లోకాలలో ఏ పురుషుడు శుంభ నిశుంభుల ఎదుట నిలవగలడు?'"
+},
+"5.124": {
+ "pada": [["anyeṣām","of the other","ఇతర"],["api","even","కూడా"],["daityānām","daityas","దైత్యుల"],["sarve","all","అందరూ"],["devāḥ","the gods","దేవతలు"],["na vai","not at all","నిజంగా లేరు"],["yudhi","in battle","యుద్ధంలో"],["tiṣṭhanti","stand","నిలవగలరు"],["sammukhe","face to face","ఎదుట"],["devi","O lady","ఓ దేవీ"],["kim punaḥ","how much less","ఇంకెంత"],["strī","a woman","స్త్రీవి"],["tvam","you","నీవు"],["ekikā","alone","ఒంటరిగా"]],
+ "en": "'Not even all the gods together can face the other daityas in battle, lady. How much less you, a woman, alone?'",
+ "te": "'ఓ దేవీ, దేవతలందరూ కలిసినా ఇతర దైత్యుల ఎదుట కూడా యుద్ధంలో నిలవలేరు. ఒంటరి స్త్రీవైన నీ సంగతి ఇంకెంత?'"
+},
+"5.125": {
+ "pada": [["indra","Indra","ఇంద్రుడు"],["ādyāḥ","and the rest","మొదలైన"],["sakalāḥ","all","సమస్త"],["devāḥ","the gods","దేవతలు"],["tasthuḥ","stood","నిలవలేదు"],["yeṣām","before whom","ఎవరి ఎదుట"],["na","not","లేదు"],["saṃyuge","in battle","యుద్ధంలో"],["śumbha","Śumbha","శుంభ"],["ādīnām","and the others","మొదలైనవారి"],["katham","how","ఎలా"],["teṣām","of them","వారి"],["strī","a woman","స్త్రీవి"],["prayāsyasi","will you go","వెళ్తావు"],["sammukham","to face","ఎదుటికి"]],
+ "en": "'Indra and all the gods could not stand before Śumbha and the others in battle. How will you, a woman, go to face them?'",
+ "te": "'ఇంద్రాది సమస్త దేవతలు యుద్ధంలో ఎవరి ఎదుట నిలవలేకపోయారో, ఆ శుంభాదుల ఎదుటికి స్త్రీవైన నీవు ఎలా వెళ్తావు?'"
+},
+"5.126": {
+ "pada": [["sā","so","అట్టి"],["tvam","you","నీవు"],["gaccha","go","వెళ్ళు"],["mayā eva","by me alone","నా చేతనే"],["uktā","told","చెప్పబడినదానివై"],["pārśvam","to the side","వద్దకు"],["śumbha","Śumbha","శుంభ"],["niśumbhayoḥ","and Niśumbha","నిశుంభుల"],["keśa","by the hair","జుట్టు పట్టి"],["ākarṣaṇa","dragging","ఈడ్చడం వల్ల"],["nirdhūta","lost","పోగొట్టుకున్న"],["gauravā","dignity","గౌరవం గలదానివై"],["mā gamiṣyasi","do not go","వెళ్ళకు"]],
+ "en": "'So go with me to Śumbha and Niśumbha, as I tell you. Do not go dragged by the hair, with your dignity lost.'",
+ "te": "'కాబట్టి నేను చెప్పినట్లు శుంభ నిశుంభుల వద్దకు నాతో రా. జుట్టు పట్టి ఈడ్చబడి గౌరవం పోగొట్టుకొని వెళ్ళకు.'"
+},
+"5.127": {"pada": [["devī","the Goddess","దేవి"],["uvāca","said","పలికెను"]], "en": "The Goddess said:", "te": "దేవి ఇలా అంది:"},
+"5.128": {
+ "pada": [["evam etat","so it is","ఇది నిజమే"],["balī","mighty","బలవంతుడు"],["śumbhaḥ","Śumbha","శుంభుడు"],["niśumbhaḥ","Niśumbha","నిశుంభుడు"],["ca api","also","కూడా"],["tādṛśaḥ","is such","అలాంటివాడే"],["kim karomi","what can I do","ఏమి చేయను"],["pratijñā","vow","ప్రతిజ్ఞ"],["me","my","నా"],["yat","since","ఎందుకంటే"],["anālocitā","made without thinking","ఆలోచించకుండా చేసిన"],["purā","before","పూర్వం"]],
+ "en": "'That is so: Śumbha is mighty, and Niśumbha too. But what can I do? I made my vow long ago without thinking it through.'",
+ "te": "'నిజమే, శుంభుడు బలవంతుడు; నిశుంభుడు కూడా అలాంటివాడే. కానీ ఏమి చేయను? పూర్వం ఆలోచించకుండా ప్రతిజ్ఞ చేశాను.'"
+},
+"5.129": {
+ "pada": [["saḥ","so","అట్టి"],["tvam","you","నీవు"],["gaccha","go","వెళ్ళు"],["mayā","by me","నా చేత"],["uktam","said","చెప్పబడిన"],["te","to you","నీకు"],["yat","what","ఏదైతే"],["etat","this","ఈ"],["sarvam","all","అంతా"],["ādṛtaḥ","carefully","శ్రద్ధగా"],["tat","that","దానిని"],["ācakṣva","tell","చెప్పు"],["asurendrāya","to the lord of asuras","అసురేంద్రునికి"],["saḥ","he","అతడు"],["ca","and","మరియు"],["yuktam","fitting","తగినది"],["karotu","let him do","చేయుగాక"],["yat","whatever","ఏదో"]],
+ "en": "'So go, and carefully tell the lord of the asuras all that I have said to you. Then let him do whatever he thinks fit.'",
+ "te": "'కాబట్టి వెళ్ళి నేను నీకు చెప్పినదంతా శ్రద్ధగా అసురేంద్రునికి చెప్పు. తరువాత అతడు తగినది చేయుగాక.'",
+ "ctx": {"en": "End of Chapter 5. The challenge is set; in Chapter 6 Śumbha sends his general Dhūmralocana to drag her back by force.", "te": "5వ అధ్యాయం ముగిసింది. సవాలు ఏర్పడింది; 6వ అధ్యాయంలో ఆమెను బలవంతంగా ఈడ్చుకురమ్మని శుంభుడు తన సేనాపతి ధూమ్రలోచనుని పంపుతాడు."}
+}
+}
