@@ -120,7 +120,20 @@ def main():
                            ('murti', 'Mūrti Rahasyam', 'mUrtirahasyam.itx')]]
 
     # --- Navarna vidhi: Sanskrit lines only, Hindi instructions dropped (we write our own) ---
-    t = body_of('tantradurgA700.itx', '|| viniyogaH ||', '|| itinavArNajapavidhiH')
+    RIT_FIX = [('ChadAMsi', 'ChandAMsi'), ('sarasvatyodevatA,', 'sarasvatyo devatAH,'),
+               ('sarvA~Nge, isa mUlamantra se hAthoM kI shuddhi karake karanyAsa kareM |', 'sarvA~Nge |'),
+               ('dakShiNeHkare', 'dakShiNe kare'), ('sha~NkhaMsanda', 'sha~NkhaM sanda'),
+               ('uttarasyAntatheshvari', 'uttarasyAM tatheshvari'), ('saumyAniyAni yAni', 'saumyAni yAni'),
+               ('kanyAbhiHkaravAla', 'kanyAbhiH karavAla'), ('vishikhAM shchApaM', 'vishikhAMshchApaM'),
+               ('vibhrANAm', 'bibhrANAm'), ('namo.astute ||', 'namo.astu te ||')]
+    def rfix(lines):
+        out = []
+        for l in lines:
+            for a, b in RIT_FIX:
+                l = l.replace(a, b)
+            out.append(l)
+        return out
+    t = rfix(body_of('tantradurgA700.itx', '|| viniyogaH ||', '|| itinavArNajapavidhiH'))
     def take(after, before):
         i = next(k for k, l in enumerate(t) if after in l) + 1
         j = next(k for k, l in enumerate(t) if k >= i and before in l)
@@ -163,7 +176,7 @@ def main():
     ])
 
     # --- Saptashati nyasa (Gita Press form: verse + anga phrase, without the tantric bijas) ---
-    u = body_of('tantradurgA700.itx', 'viniyogaH\\-', '|| R^iShyAdinyAsaH ||')
+    u = rfix(body_of('tantradurgA700.itx', 'viniyogaH\\-', '|| R^iShyAdinyAsaH ||'))
     sn_vin = '\n'.join(clean(l) for l in u[1:u.index(next(l for l in u if 'ise paDhakara' in l))])
     pairs = []
     vs = [l for l in u if not l.startswith('||') and 'ise paDhakara' not in l]
@@ -179,7 +192,7 @@ def main():
         else:
             cur.append(clean(l))
     anga = [b for b in blocks]
-    dh = body_of('tantradurgA700.itx', '|| dhyAnamantraH ||', 'artha \\-')[1:]
+    dh = rfix(body_of('tantradurgA700.itx', '|| dhyAnamantraH ||', 'artha \\-'))[1:]
     nyasa = ritual('saptashati-nyasa', 'Saptaśatī Nyāsa & Dhyānam', [
         ('Viniyoga', [sn_vin]),
         ('Kara Nyāsa', anga),

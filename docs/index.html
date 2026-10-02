@@ -525,7 +525,7 @@ async function renderVerse(sid, idx){
     }
     const c = ctxFor(notes, list, idx);
     if(c){
-      h += `<section class="panel ctx"><h3 class="sc">${c.same?'Context':'Where we are in the story'}</h3>
+      h += `<section class="panel ctx"><h3 class="sc">${c.same?'Context':(sid.startsWith('ch')?'Where we are in the story':'About this part')}</h3>
         ${prefs.mean!=='te'&&c.ctx.en?`<p>${esc(c.ctx.en)}</p>`:''}${prefs.mean!=='en'&&c.ctx.te?`<p class="te">${esc(c.ctx.te)}</p>`:''}</section>`;
     }
     if(!n && e.kind!=='uvacha'){
