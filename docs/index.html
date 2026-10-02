@@ -349,6 +349,17 @@ function syllables(line){
   return syl;
 }
 
+function metreNote(counts){
+  const all = (...ns) => counts.length>0 && counts.every(c=>ns.includes(c));
+  if(all(16)) return 'Metre: anuṣṭubh, 8 syllables a quarter, 16 a line.';
+  if(all(8)) return 'Metre: anuṣṭubh, 8 syllables a quarter.';
+  if(all(14,28)) return 'Metre: vasantatilakā, 14 syllables a quarter (– – ∪ – ∪ ∪ ∪ – ∪ ∪ – ∪ – –).';
+  if(all(19,38)) return 'Metre: śārdūlavikrīḍita, 19 syllables a quarter.';
+  if(all(21,42)) return 'Metre: sragdharā, 21 syllables a quarter.';
+  if(all(11,22)) return 'Metre: triṣṭubh, 11 syllables a quarter.';
+  return 'Keep each quarter of the verse steady; long syllables get two beats.';
+}
+
 /* ---------------- helpers ---------------- */
 const esc = s => String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const $ = (sel, el=document) => el.querySelector(sel);
@@ -519,7 +530,7 @@ async function renderVerse(sid, idx){
       const lines = e.iast.split('\n').filter(l=>l.trim());
       h += `<section class="panel"><h3 class="sc">Pronunciation · syllable weight</h3>
         <div class="meter">${lines.map(l=>{ const sy=syllables(l); return `<div class="mline">${sy.map(x=>`${x.brk?'<span class="gap"></span>':''}<span class="syl ${x.guru?'g':''}"><i>${x.guru?'–':'∪'}</i><b>${esc(x.txt)}</b></span>`).join('')}<span class="cnt">${sy.length}</span></div>`; }).join('')}</div>
-        <p class="legend" style="margin-top:10px"><b>–</b> guru (long, held two beats) · ∪ laghu (short, one beat). Most verses here are anuṣṭubh: 16 syllables a line, 32 a verse.</p></section>`;
+        <p class="legend" style="margin-top:10px"><b>–</b> guru (long, held two beats) · ∪ laghu (short, one beat). ${metreNote(lines.map((l,i)=>syllables(l).length-(i===0&&/^oṃ\s/.test(l)?1:0)))}</p></section>`;
     }
   }
   h += `</div></div></div>`;
