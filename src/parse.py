@@ -33,6 +33,7 @@ ERRATA = [
     ('digbandhadevatAstatvam', 'digbandhadevatAstattvam'),
     ('daityaH kSheNarakto gamiShyati', 'daityaH kShINarakto gamiShyati'),
     ('abhyadhA vata tAM', 'abhyadhAvata tAM'),
+    ('parituShTA dadAmite', 'parituShTA dadAmi te'),
     ('nArAyaNi namo.astute || 11\\.14', 'nArAyaNi namo.astu te || 11\\.14'),
     ('nArAyaNi namo.astute || 11\\.23', 'nArAyaNi namo.astu te || 11\\.23'),
     ('papAtorvyAM devI shUlAgra', 'papAtorvyAM devIshUlAgra'),
