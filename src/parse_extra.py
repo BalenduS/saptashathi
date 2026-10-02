@@ -101,7 +101,19 @@ def main():
                    body_of('siddhakunjikaa.itx', 'OM asya', 'iti shrIrudrayAmale'),
                    num=re.compile(r'\|\|\s*(\d+)\s*\|\|\s*$'))
 
-    rah = [generic(f'rahasya-{k}', t, 'prayer', body_of(f, 'asya' if k == 'pradhanika' else 'R^iShiruvAcha', 'iti shrImArkaNDeya'),
+    RAH_FIX = [('rahaspatrayasya', 'rahasyatrayasya'), ('taptak~nchana', 'taptakA~nchana'),
+               ('guNeneduprabhraM', 'guNenenduprabhaM'), ('raktabAhu shvetA', 'raktabAhuM shvetA'),
+               ('chadrashekharam', 'chandrashekharam'), ('bhushuDi', 'bhushuNDi'),
+               ('nishchotad', 'nishchyotad'), ('muhuratadrita', 'muhuratandrita'), ('idirA', 'indirA'),
+               ('akShavyam', 'akShayyam'), ('nAmAtarai', 'nAmAntarai'), ('chaDikAyAH', 'chaNDikAyAH')]
+    def rbody(f, start):
+        out = []
+        for l in body_of(f, start, 'iti shrImArkaNDeya'):
+            for a, b in RAH_FIX:
+                l = l.replace(a, b)
+            out.append(l)
+        return out
+    rah = [generic(f'rahasya-{k}', t, 'prayer', rbody(f, 'shrIgaNeshAya' if k == 'pradhanika' else 'R^iShiruvAcha'),
                    num=re.compile(r'\|\|\s*(\d+)\s*\|\|\s*$'))
            for k, t, f in [('pradhanika', 'Prādhānika Rahasyam', 'prAdhAnikarahasyam.itx'),
                            ('vaikrtika', 'Vaikṛtika Rahasyam', 'vaikRitikarahasyam.itx'),
