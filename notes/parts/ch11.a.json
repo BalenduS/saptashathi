@@ -1,0 +1,132 @@
+{
+"_intro": {
+ "en": "Chapter 11 is the Nārāyaṇī Stuti, the gods' hymn after Śumbha's death and one of the most widely recited passages in Hindu worship. Its refrain, 'nārāyaṇi namo'stu te', and the verse 'sarvamaṅgalamāṅgalye' are sung far beyond the Saptaśatī. The hymn greets each of the Mothers in turn and ends with the Devī's promise: whenever demons trouble the world she will come again, and she names her future forms: Vindhyavāsinī, Raktadantikā, Śatākṣī, Śākambharī, Durgā, Bhīmā and Bhrāmarī.",
+ "te": "11వ అధ్యాయం నారాయణీ స్తుతి: శుంభుని మరణం తరువాత దేవతలు చేసిన స్తోత్రం, హిందూ పూజలో అత్యంత విస్తృతంగా పఠించే భాగాలలో ఒకటి. దీని పల్లవి 'నారాయణి నమోఽస్తు తే', 'సర్వమంగళమాంగళ్యే' శ్లోకం సప్తశతి వెలుపల కూడా పాడబడతాయి. స్తుతి ప్రతి మాతృకను వరుసగా నమస్కరిస్తుంది; చివరలో దేవి వాగ్దానం చేస్తుంది: అసురులు లోకాన్ని బాధించినప్పుడల్లా ఆమె మళ్ళీ వస్తుంది; తన భావి రూపాలను చెబుతుంది: వింధ్యవాసిని, రక్తదంతిక, శతాక్షి, శాకంభరి, దుర్గ, భీమ, భ్రామరి."
+},
+"pre0": {
+ "pada": [["oṃ","Om","ఓం"],["bālaravi","the rising sun","బాలసూర్యుని"],["dyutim","radiant as","కాంతి గలదానిని"],["indu","moon","చంద్రుడు"],["kirīṭām","crowned with","కిరీటంగా గలదానిని"],["tuṅga","full","ఉన్నతమైన"],["kucām","bosomed","స్తనాలు గలదానిని"],["nayana","eyes","నేత్రాలు"],["traya","three","మూడు"],["yuktām","having","కలిగినదానిని"],["smera","smiling","చిరునవ్వు"],["mukhīm","face","ముఖం గలదానిని"],["varada","boon-giving","వరద"],["aṅkuśa","goad","అంకుశ"],["pāśa","noose","పాశ"],["abhīti","fear-not","అభయ"],["karām","in her hands","హస్తాలు గలదానిని"],["prabhaje","I worship","భజిస్తాను"],["bhuvaneśīm","Bhuvaneśvarī","భువనేశ్వరిని"]],
+ "en": "I worship Bhuvaneśvarī, radiant as the rising sun, crowned with the moon, full-bosomed, three-eyed and smiling, her hands showing the boon-gesture, goad, noose and the gesture of 'fear not'.",
+ "te": "బాలసూర్యుని కాంతితో, చంద్రుని కిరీటంగా ధరించి, మూడు కన్నులతో, చిరునవ్వు ముఖంతో, వరద, అంకుశ, పాశ, అభయ హస్తాలతో ఉన్న భువనేశ్వరిని భజిస్తాను.",
+ "ctx": {"en": "Bhuvaneśvarī, 'ruler of the worlds', is the dhyāna for the gods' great hymn.", "te": "'భువనాలకు అధీశ్వరి' అయిన భువనేశ్వరి దేవతల మహాస్తుతికి ధ్యానమూర్తి."}
+},
+"11.1": {"pada": [["oṃ","Om","ఓం"],["ṛṣiḥ","the sage","ఋషి"],["uvāca","said","పలికెను"]], "en": "Om. The sage said:", "te": "ఓం. ఋషి ఇలా అన్నాడు:"},
+"11.2": {
+ "pada": [["devyā","by the Goddess","దేవి చేత"],["hate","slain","సంహరించబడగా"],["tatra","there","అక్కడ"],["mahāsurendre","the great lord of asuras","మహాసురేంద్రుడు"],["sendrāḥ","with Indra","ఇంద్రునితో సహా"],["surāḥ","the gods","దేవతలు"],["vahni","Agni","అగ్ని"],["purogamāḥ","led by","ముందు నడిచే"],["tām","her","ఆ"],["kātyāyanīm","Kātyāyanī","కాత్యాయనిని"],["tuṣṭuvuḥ","praised","స్తుతించారు"],["iṣṭa","desire","కోరిక"],["lābhāt","from gaining","నెరవేరడంతో"],["vikāśi","beaming","వికసించిన"],["vaktra","faces","ముఖ"],["abja","lotuses","పద్మాలతో"],["vikāśita","brightening","ప్రకాశింపజేసిన"],["āśāḥ","the quarters","దిక్కులు గలవారు"]],
+ "en": "When the great lord of the asuras had been slain there by the Goddess, the gods with Indra, led by Agni, praised Kātyāyanī. Their wish fulfilled, their lotus-faces were beaming and lit up the quarters.",
+ "te": "ఆ మహాసురేంద్రుడు దేవి చేత సంహరించబడగా, అగ్నిని ముందుంచుకొని ఇంద్రునితో సహా దేవతలు కోరిక నెరవేరిన ఆనందంతో, వికసించిన ముఖపద్మాలతో దిక్కులను ప్రకాశింపజేస్తూ కాత్యాయనిని స్తుతించారు.",
+ "ctx": {"en": "The opening verses are in the longer triṣṭubh metre (11 syllables a line); the 'nārāyaṇi namo'stu te' verses from 11.8 are anuṣṭubh.", "te": "మొదటి శ్లోకాలు త్రిష్టుప్ ఛందస్సులో (పాదానికి 11 అక్షరాలు) ఉన్నాయి; 11.8 నుండి 'నారాయణి నమోఽస్తు తే' శ్లోకాలు అనుష్టుప్ ఛందస్సులో ఉన్నాయి."}
+},
+"11.3": {
+ "pada": [["devi","O Goddess","ఓ దేవీ"],["prapanna","of those who come to you","శరణు కోరినవారి"],["ārti","distress","ఆర్తిని"],["hare","remover of","హరించేదానా"],["prasīda","be gracious","ప్రసన్నురాలవు కమ్ము"],["mātaḥ","O Mother","ఓ తల్లీ"],["jagataḥ","of the world","జగత్తుకు"],["akhilasya","entire","సమస్త"],["viśveśvari","O ruler of the universe","ఓ విశ్వేశ్వరీ"],["pāhi","protect","రక్షించు"],["viśvam","the universe","విశ్వాన్ని"],["tvam","you","నీవు"],["īśvarī","the ruler","అధీశ్వరివి"],["cara","the moving","చర"],["acarasya","and unmoving","అచరాలకు"]],
+ "en": "'O Goddess, who take away the distress of those who come to you for refuge, be gracious. Be gracious, Mother of the whole world. Be gracious, ruler of the universe, protect the universe. You, O Goddess, are the ruler of all that moves and does not move.'",
+ "te": "'శరణు కోరినవారి ఆర్తిని హరించే ఓ దేవీ, ప్రసన్నురాలవు కమ్ము. సమస్త జగత్తుకు తల్లీ, ప్రసన్నురాలవు కమ్ము. విశ్వేశ్వరీ, ప్రసన్నురాలవై విశ్వాన్ని రక్షించు. ఓ దేవీ, చరాచరాలకు అధీశ్వరివి నీవే.'"
+},
+"11.4": {
+ "pada": [["ādhāra","support","ఆధారం"],["bhūtā","being","అయిన"],["jagataḥ","of the world","జగత్తుకు"],["tvam","you","నీవు"],["ekā","alone","ఒక్కతెవే"],["mahī","earth","భూమి"],["svarūpeṇa","in the form of","రూపంలో"],["yataḥ","since","ఎందుకంటే"],["sthitā","abide","ఉన్నావు"],["asi","you","నీవు"],["apām","of waters","జలాల"],["svarūpa","form","రూపంలో"],["sthitayā","abiding in","ఉన్న"],["tvayā","by you","నీ చేత"],["etat","this","ఇది"],["āpyāyate","is nourished","పోషించబడుతుంది"],["kṛtsnam","whole","సమస్తం"],["alaṅghya","unsurpassable","అతిక్రమించలేని"],["vīrye","O you of","పరాక్రమం గలదానా"]],
+ "en": "'You alone are the support of the world, for you abide in the form of the earth. Abiding in the form of the waters, you nourish this whole universe, O you of unsurpassable power.'",
+ "te": "'భూమి రూపంలో ఉన్నందువల్ల జగత్తుకు ఆధారం నీవొక్కతెవే. అతిక్రమించలేని పరాక్రమం గలదానా, జలరూపంలో ఉండి ఈ సమస్తాన్ని పోషిస్తున్నావు.'"
+},
+"11.5": {
+ "pada": [["tvam","you","నీవు"],["vaiṣṇavī","of Viṣṇu","వైష్ణవీ"],["śaktiḥ","the power","శక్తివి"],["ananta","endless","అనంత"],["vīryā","valour","వీర్యం గల"],["viśvasya","of the universe","విశ్వానికి"],["bījam","the seed","బీజానివి"],["paramā","supreme","పరమ"],["asi","you are","నీవు"],["māyā","māyā","మాయవు"],["sammohitam","deluded","సమ్మోహితమైంది"],["devi","O Goddess","ఓ దేవీ"],["samastam","all","సమస్తం"],["etat","this","ఇది"],["tvam","you","నీవు"],["vai","indeed","నిజంగా"],["prasannā","when pleased","ప్రసన్నురాలవైతే"],["bhuvi","on earth","భూమిపై"],["mukti","of liberation","ముక్తికి"],["hetuḥ","the cause","కారణం"]],
+ "en": "'You are the power of Viṣṇu, of endless valour, the seed of the universe, the supreme māyā. By you, O Goddess, all this is held in delusion; and you, when pleased, are the cause of liberation on earth.'",
+ "te": "'నీవు అనంతవీర్యం గల వైష్ణవీశక్తివి, విశ్వానికి బీజానివి, పరమ మాయవు. ఓ దేవీ, ఈ సమస్తం నీ చేత సమ్మోహితమై ఉంది; నీవు ప్రసన్నురాలవైతే భూమిపై ముక్తికి కారణమవుతావు.'",
+ "ctx": {"en": "The same Devī both binds (as māyā) and frees (as the cause of mukti). This idea runs through the whole text, from 1.55–58 onward.", "te": "బంధించేది (మాయగా), విడిపించేది (ముక్తికి కారణంగా) ఒకే దేవి. ఈ భావన 1.55–58 నుండి గ్రంథమంతా సాగుతుంది."}
+},
+"11.6": {
+ "pada": [["vidyāḥ","forms of knowledge","విద్యలు"],["samastāḥ","all","సమస్త"],["tava","your","నీ"],["devi","O Goddess","ఓ దేవీ"],["bhedāḥ","aspects","భేదాలు"],["striyaḥ","women","స్త్రీలు"],["samastāḥ","all","సమస్త"],["sakalāḥ","entire","అందరూ"],["jagatsu","in the worlds","లోకాలలో"],["tvayā","by you","నీ చేత"],["ekayā","alone","ఒక్కదాని చేత"],["pūritam","is filled","నిండి ఉంది"],["ambayā","the Mother","తల్లి"],["etat","this","ఇది"],["kā","what","ఏ"],["te","your","నీకు"],["stutiḥ","praise","స్తుతి"],["stavya","worthy of praise","స్తుతించదగిన"],["para","higher","పర"],["apara","lower","అపర"],["uktiḥ","speech","వాక్కు"]],
+ "en": "'All forms of knowledge, O Goddess, are aspects of you, and so are all women in all the worlds. By you alone, the Mother, this world is filled. What praise can there be for you, who are beyond all speech, higher and lower?'",
+ "te": "'ఓ దేవీ, సమస్త విద్యలు నీ భేదాలే; లోకాలలోని స్త్రీలందరూ నీ రూపాలే. తల్లివైన నీ ఒక్కదానితో ఈ జగత్తు నిండి ఉంది. పరాపర వాక్కులకు అతీతమైన నీకు ఏ స్తుతి సరిపోతుంది?'",
+ "ctx": {"en": "A well-known verse: every woman is seen as a form of the Devī, which is why kanyā-pūjā (worship of girls) forms part of Navarātri.", "te": "ప్రసిద్ధ శ్లోకం: ప్రతి స్త్రీ దేవి రూపమే; అందుకే నవరాత్రిలో కన్యాపూజ ఒక భాగం."}
+},
+"11.7": {
+ "pada": [["sarva","all","సర్వ"],["bhūtā","beings","భూతాలుగా ఉన్న"],["yadā","when","ఎప్పుడైతే"],["devī","the Goddess","దేవి"],["bhukti","enjoyment","భుక్తి"],["mukti","and liberation","ముక్తులను"],["pradāyinī","giver of","ప్రసాదించేది"],["tvam","you","నీవు"],["stutā","are praised","స్తుతించబడ్డావు"],["stutaye","for praise","స్తుతికి"],["kā vā","what","ఏవి"],["bhavantu","could be","అవుతాయి"],["parama","supreme","పరమ"],["uktayaḥ","words","వాక్కులు"]],
+ "en": "'Since you, the Goddess, are all beings and the giver of worldly enjoyment and liberation, you are already praised by that very fact. What supreme words could be equal to praising you?'",
+ "te": "'సర్వభూతాలూ నీవే, భుక్తిముక్తులను ప్రసాదించే దేవివి నీవే కాబట్టి ఆ విధంగానే నీవు స్తుతించబడ్డావు. నిన్ను స్తుతించడానికి ఏ పరమ వాక్కులు సరిపోతాయి?'"
+},
+"11.8": {
+ "pada": [["sarvasya","of every","సర్వ"],["buddhi","intelligence","బుద్ధి"],["rūpeṇa","in the form of","రూపంలో"],["janasya","person","జనుల"],["hṛdi","in the heart","హృదయంలో"],["saṃsthite","you who dwell","ఉండేదానా"],["svarga","heaven","స్వర్గం"],["apavarga","and final liberation","అపవర్గాలను"],["de","giver of","ఇచ్చేదానా"],["devi","O Goddess","ఓ దేవీ"],["nārāyaṇi","O Nārāyaṇī","ఓ నారాయణీ"],["namaḥ","salutation","నమస్కారం"],["astu","be","అగుగాక"],["te","to you","నీకు"]],
+ "en": "'You who dwell in the heart of every person as intelligence, giver of heaven and liberation, O Goddess Nārāyaṇī, salutations to you.'",
+ "te": "'సర్వజనుల హృదయంలో బుద్ధిరూపంలో ఉండేదానా, స్వర్గాపవర్గాలను ఇచ్చే దేవీ, నారాయణీ, నీకు నమస్కారం.'",
+ "ctx": {"en": "Here the refrain 'nārāyaṇi namo'stu te' begins; it ends sixteen verses later at 11.23. Nārāyaṇī means the śakti of Nārāyaṇa, and also 'the refuge of all beings'.", "te": "ఇక్కడ 'నారాయణి నమోఽస్తు తే' పల్లవి మొదలై 11.23 వరకు సాగుతుంది. నారాయణి అంటే నారాయణుని శక్తి, 'సర్వజీవులకు ఆశ్రయమైనది' అని కూడా."}
+},
+"11.9": {
+ "pada": [["kalā","kalās","కళలు"],["kāṣṭhā","kāṣṭhās","కాష్ఠలు"],["ādi","and other units of time","మొదలైన"],["rūpeṇa","in the form of","రూపంలో"],["pariṇāma","change","పరిణామాన్ని"],["pradāyini","bringer of","కలిగించేదానా"],["viśvasya","of the universe","విశ్వానికి"],["uparatau","in the dissolution","లయంలో"],["śakte","O power","ఓ శక్తీ"],["nārāyaṇi","O Nārāyaṇī","ఓ నారాయణీ"],["namaḥ astu te","salutations to you","నీకు నమస్కారం"]],
+ "en": "'You who, as the units of time, kalā, kāṣṭhā and the rest, bring about change; you who are the power at the dissolution of the universe; O Nārāyaṇī, salutations to you.'",
+ "te": "'కళ, కాష్ఠ మొదలైన కాలరూపాలలో పరిణామాన్ని కలిగించేదానా, విశ్వలయానికి శక్తివైనదానా, నారాయణీ, నీకు నమస్కారం.'"
+},
+"11.10": {
+ "pada": [["sarva","all","సర్వ"],["maṅgala","auspicious things","మంగళాలకు"],["māṅgalye","the auspiciousness of","మంగళమైనదానా"],["śive","O auspicious one","ఓ శివే"],["sarva","all","సర్వ"],["artha","aims","పురుషార్థాలను"],["sādhike","fulfiller of","సాధించేదానా"],["śaraṇye","O refuge","ఓ శరణ్యా"],["tryambake","O three-eyed one","ఓ త్ర్యంబకే"],["gauri","O Gaurī","ఓ గౌరీ"],["nārāyaṇi","O Nārāyaṇī","ఓ నారాయణీ"],["namaḥ astu te","salutations to you","నీకు నమస్కారం"]],
+ "en": "'Auspiciousness of all that is auspicious, O Śivā, who fulfil every aim; refuge of all, three-eyed Gaurī, O Nārāyaṇī, salutations to you.'",
+ "te": "'సర్వమంగళాలకు మంగళమైనదానా, శివే, సర్వార్థాలను సాధించేదానా, శరణ్యా, త్ర్యంబకే, గౌరీ, నారాయణీ, నీకు నమస్కారం.'",
+ "ctx": {"en": "'Sarvamaṅgalamāṅgalye' is perhaps the most-recited verse of the Saptaśatī, sung at the start and end of countless pūjās and festivals.", "te": "'సర్వమంగళమాంగళ్యే' బహుశా సప్తశతిలో అత్యధికంగా పఠించే శ్లోకం; లెక్కలేనన్ని పూజల, పండుగల ప్రారంభంలో, ముగింపులో పాడబడుతుంది."}
+},
+"11.11": {
+ "pada": [["sṛṣṭi","creation","సృష్టి"],["sthiti","preservation","స్థితి"],["vināśānām","and destruction","వినాశాలకు"],["śakti","the power","శక్తి"],["bhūte","who are","అయినదానా"],["sanātani","O eternal one","ఓ సనాతనీ"],["guṇa","the guṇas","గుణాలకు"],["āśraye","support of","ఆశ్రయమైనదానా"],["guṇamaye","made of the guṇas","గుణమయీ"],["nārāyaṇi","O Nārāyaṇī","ఓ నారాయణీ"],["namaḥ astu te","salutations to you","నీకు నమస్కారం"]],
+ "en": "'Eternal one, who are the power behind creation, preservation and destruction; support of the guṇas and made of the guṇas; O Nārāyaṇī, salutations to you.'",
+ "te": "'సృష్టి స్థితి వినాశాలకు శక్తివైన సనాతనీ, గుణాలకు ఆశ్రయమైనదానా, గుణమయీ, నారాయణీ, నీకు నమస్కారం.'"
+},
+"11.12": {
+ "pada": [["śaraṇāgata","those who seek refuge","శరణాగతులైన"],["dīna","the lowly","దీనులు"],["ārta","the afflicted","ఆర్తుల"],["paritrāṇa","rescuing","రక్షణలో"],["parāyaṇe","devoted to","నిమగ్నమైనదానా"],["sarvasya","of all","అందరి"],["ārti","suffering","ఆర్తిని"],["hare","remover of","హరించేదానా"],["devi","O Goddess","ఓ దేవీ"],["nārāyaṇi","O Nārāyaṇī","ఓ నారాయణీ"],["namaḥ astu te","salutations to you","నీకు నమస్కారం"]],
+ "en": "'You who are devoted to rescuing the lowly and afflicted who come to you for refuge, who take away everyone's suffering, O Goddess Nārāyaṇī, salutations to you.'",
+ "te": "'శరణాగతులైన దీనుల, ఆర్తుల రక్షణలో నిమగ్నమైనదానా, అందరి ఆర్తిని హరించే దేవీ, నారాయణీ, నీకు నమస్కారం.'"
+},
+"11.13": {
+ "pada": [["haṃsa","swans","హంసలతో"],["yukta","yoked with","కూడిన"],["vimāna","celestial chariot","విమానంలో"],["sthe","seated in","కూర్చున్నదానా"],["brahmāṇī","Brahmāṇī's","బ్రహ్మాణి"],["rūpa","form","రూపాన్ని"],["dhāriṇi","bearing","ధరించినదానా"],["kauśa","kuśa-grass","కుశ"],["ambhaḥ","water","జలాన్ని"],["kṣarike","sprinkler of","చిలకరించేదానా"],["devi","O Goddess","ఓ దేవీ"],["nārāyaṇi","O Nārāyaṇī","ఓ నారాయణీ"],["namaḥ astu te","salutations to you","నీకు నమస్కారం"]],
+ "en": "'You who sit in the swan-drawn chariot in the form of Brahmāṇī, sprinkling water with kuśa grass, O Goddess Nārāyaṇī, salutations to you.'",
+ "te": "'హంసలు కట్టిన విమానంలో బ్రహ్మాణి రూపంలో కూర్చొని కుశజలాన్ని చిలకరించే దేవీ, నారాయణీ, నీకు నమస్కారం.'",
+ "ctx": {"en": "11.13–11.21 greet the Mothers one by one, as they appeared in the battles of Chapters 8 and 9.", "te": "11.13–11.21 శ్లోకాలు 8, 9 అధ్యాయాల యుద్ధాలలో ప్రత్యక్షమైన మాతృకలను ఒక్కొక్కరిగా నమస్కరిస్తాయి."}
+},
+"11.14": {
+ "pada": [["triśūla","trident","త్రిశూలం"],["candra","moon","చంద్రుడు"],["ahi","serpent","సర్పం"],["dhare","bearer of","ధరించేదానా"],["mahā","great","మహా"],["vṛṣabha","bull","వృషభం"],["vāhini","riding","వాహనంగా గలదానా"],["māheśvarī","Māheśvarī","మాహేశ్వరి"],["svarūpeṇa","in the form of","రూపంలో"],["nārāyaṇi","O Nārāyaṇī","ఓ నారాయణీ"],["namaḥ astu te","salutations to you","నీకు నమస్కారం"]],
+ "en": "'You who bear the trident, the moon and the serpent, riding the great bull, in the form of Māheśvarī, O Nārāyaṇī, salutations to you.'",
+ "te": "'త్రిశూలం, చంద్రుడు, సర్పం ధరించి, మహావృషభ వాహనంతో మాహేశ్వరి రూపంలో ఉన్నదానా, నారాయణీ, నీకు నమస్కారం.'"
+},
+"11.15": {
+ "pada": [["mayūra","peacocks","నెమళ్ళు"],["kukkuṭa","and cocks","కోళ్ళతో"],["vṛte","surrounded by","చుట్టూ ఉన్నదానా"],["mahā","great","మహా"],["śakti","spear","శక్తిని"],["dhare","bearing","ధరించేదానా"],["anaghe","O sinless one","ఓ అనఘా"],["kaumārī","Kaumārī's","కౌమారి"],["rūpa","form","రూపంలో"],["saṃsthāne","abiding in","ఉన్నదానా"],["nārāyaṇi","O Nārāyaṇī","ఓ నారాయణీ"],["namaḥ astu te","salutations to you","నీకు నమస్కారం"]],
+ "en": "'You who are surrounded by peacocks and cocks, bearing the great spear, sinless one in the form of Kaumārī, O Nārāyaṇī, salutations to you.'",
+ "te": "'నెమళ్ళు, కోళ్ళు చుట్టూ ఉండగా, మహాశక్తిని ధరించిన అనఘా, కౌమారి రూపంలో ఉన్నదానా, నారాయణీ, నీకు నమస్కారం.'",
+ "ctx": {"en": "The cock is Skanda's banner emblem, as the peacock is his mount.", "te": "కోడి కుమారస్వామి ధ్వజ చిహ్నం; నెమలి అతని వాహనం."}
+},
+"11.16": {
+ "pada": [["śaṅkha","conch","శంఖం"],["cakra","discus","చక్రం"],["gadā","mace","గద"],["śārṅga","bow Śārṅga","శార్ఙ్గం"],["gṛhīta","holding","ధరించిన"],["parama","supreme","శ్రేష్ఠ"],["āyudhe","weapons","ఆయుధాలు గలదానా"],["prasīda","be gracious","ప్రసన్నురాలవు కమ్ము"],["vaiṣṇavī","of Vaiṣṇavī","వైష్ణవీ"],["rūpe","O you in the form","రూపిణీ"],["nārāyaṇi","O Nārāyaṇī","ఓ నారాయణీ"],["namaḥ astu te","salutations to you","నీకు నమస్కారం"]],
+ "en": "'You who hold the supreme weapons, conch, discus, mace and the bow Śārṅga, in the form of Vaiṣṇavī, be gracious. O Nārāyaṇī, salutations to you.'",
+ "te": "'శంఖ చక్ర గదా శార్ఙ్గాలనే శ్రేష్ఠ ఆయుధాలు ధరించిన వైష్ణవీ రూపిణీ, ప్రసన్నురాలవు కమ్ము. నారాయణీ, నీకు నమస్కారం.'"
+},
+"11.17": {
+ "pada": [["gṛhīta","holding","ధరించిన"],["ugra","fierce","ఉగ్రమైన"],["mahācakre","great discus","మహాచక్రం గలదానా"],["daṃṣṭra","tusk","కోరతో"],["uddhṛta","lifted up","పైకెత్తిన"],["vasundhare","the earth","భూమి గలదానా"],["varāha","boar","వరాహ"],["rūpiṇi","in the form of","రూపిణీ"],["śive","O auspicious one","ఓ శివే"],["nārāyaṇi","O Nārāyaṇī","ఓ నారాయణీ"],["namaḥ astu te","salutations to you","నీకు నమస్కారం"]],
+ "en": "'You who hold the fierce great discus and lifted the earth on your tusk, auspicious one in the form of the Boar, O Nārāyaṇī, salutations to you.'",
+ "te": "'ఉగ్రమైన మహాచక్రం ధరించి, కోరతో భూమిని పైకెత్తిన వరాహరూపిణీ, శివే, నారాయణీ, నీకు నమస్కారం.'"
+},
+"11.18": {
+ "pada": [["nṛsiṃha","man-lion","నృసింహ"],["rūpeṇa","in the form","రూపంలో"],["ugreṇa","fierce","ఉగ్రమైన"],["hantum","to kill","సంహరించడానికి"],["daityān","the daityas","దైత్యులను"],["kṛta","made","చేసిన"],["udyame","effort","ప్రయత్నం గలదానా"],["trailokya","the three worlds","ముల్లోకాల"],["trāṇa","protection","రక్షణతో"],["sahite","joined with","కూడినదానా"],["nārāyaṇi","O Nārāyaṇī","ఓ నారాయణీ"],["namaḥ astu te","salutations to you","నీకు నమస్కారం"]],
+ "en": "'You who in the fierce form of the Man-Lion set out to slay the daityas, intent on protecting the three worlds, O Nārāyaṇī, salutations to you.'",
+ "te": "'ఉగ్రమైన నృసింహ రూపంలో దైత్యులను సంహరించడానికి పూనుకున్న, ముల్లోకాల రక్షణతో కూడినదానా, నారాయణీ, నీకు నమస్కారం.'"
+},
+"11.19": {
+ "pada": [["kirīṭini","crowned one","కిరీటం ధరించినదానా"],["mahāvajre","with the great thunderbolt","మహావజ్రం గలదానా"],["sahasra","thousand","వేయి"],["nayana","eyes","కన్నులతో"],["ujjvale","shining with","ప్రకాశించేదానా"],["vṛtra","Vṛtra's","వృత్రుని"],["prāṇa","life","ప్రాణాలను"],["hare","taker of","హరించినదానా"],["ca","and","మరియు"],["aindri","O Aindrī","ఓ ఐంద్రీ"],["nārāyaṇi","O Nārāyaṇī","ఓ నారాయణీ"],["namaḥ astu te","salutations to you","నీకు నమస్కారం"]],
+ "en": "'Crowned one, bearer of the great thunderbolt, shining with a thousand eyes, who took the life of Vṛtra, O Aindrī, O Nārāyaṇī, salutations to you.'",
+ "te": "'కిరీటం ధరించి, మహావజ్రంతో, వేయి కన్నులతో ప్రకాశిస్తూ వృత్రుని ప్రాణాలను హరించిన ఐంద్రీ, నారాయణీ, నీకు నమస్కారం.'"
+},
+"11.20": {
+ "pada": [["śivadūtī","Śivadūtī","శివదూతి"],["svarūpeṇa","in the form of","రూపంలో"],["hata","slaying","సంహరించిన"],["daitya","daitya","దైత్య"],["mahābale","great hosts","మహాబలాలు గలదానా"],["ghora","terrible","భయంకరమైన"],["rūpe","in form","రూపం గలదానా"],["mahā","great","మహా"],["rāve","roaring","నాదం గలదానా"],["nārāyaṇi","O Nārāyaṇī","ఓ నారాయణీ"],["namaḥ astu te","salutations to you","నీకు నమస్కారం"]],
+ "en": "'You who in the form of Śivadūtī slew the mighty daitya hosts, terrible in form and great in roar, O Nārāyaṇī, salutations to you.'",
+ "te": "'శివదూతి రూపంలో మహాబలులైన దైత్యులను సంహరించిన, భయంకర రూపం, మహానాదం గలదానా, నారాయణీ, నీకు నమస్కారం.'"
+},
+"11.21": {
+ "pada": [["daṃṣṭrā","fangs","కోరలతో"],["karāla","fearsome","భయంకరమైన"],["vadane","face","ముఖం గలదానా"],["śiromālā","garland of heads","శిరోమాల"],["vibhūṣaṇe","adorned with","అలంకారంగా గలదానా"],["cāmuṇḍe","O Cāmuṇḍā","ఓ చాముండా"],["muṇḍa","Muṇḍa","ముండుని"],["mathane","crusher of","మర్దించినదానా"],["nārāyaṇi","O Nārāyaṇī","ఓ నారాయణీ"],["namaḥ astu te","salutations to you","నీకు నమస్కారం"]],
+ "en": "'You whose face is fearsome with fangs, adorned with a garland of heads, O Cāmuṇḍā, crusher of Muṇḍa, O Nārāyaṇī, salutations to you.'",
+ "te": "'కోరలతో భయంకరమైన ముఖం గల, శిరోమాలను అలంకారంగా ధరించిన, ముండుని మర్దించిన చాముండా, నారాయణీ, నీకు నమస్కారం.'"
+},
+"11.22": {
+ "pada": [["lakṣmi","O Lakṣmī (fortune)","ఓ లక్ష్మీ"],["lajje","O modesty","ఓ లజ్జా"],["mahāvidye","O great knowledge","ఓ మహావిద్యా"],["śraddhe","O faith","ఓ శ్రద్ధా"],["puṣṭi","O nourishment","ఓ పుష్టీ"],["svadhe","O Svadhā","ఓ స్వధా"],["dhruve","O constant one","ఓ ధ్రువా"],["mahārātri","O great night","ఓ మహారాత్రీ"],["mahāmāye","O great māyā","ఓ మహామాయా"],["nārāyaṇi","O Nārāyaṇī","ఓ నారాయణీ"],["namaḥ astu te","salutations to you","నీకు నమస్కారం"]],
+ "en": "'O Lakṣmī, Modesty, Great Knowledge, Faith, Nourishment, Svadhā, Constancy, Great Night, Great Māyā, O Nārāyaṇī, salutations to you.'",
+ "te": "'ఓ లక్ష్మీ, లజ్జా, మహావిద్యా, శ్రద్ధా, పుష్టీ, స్వధా, ధ్రువా, మహారాత్రీ, మహామాయా, నారాయణీ, నీకు నమస్కారం.'",
+ "ctx": {"en": "Svadhā is the offering-word used for the ancestors (as svāhā is for the gods). Many of these names come back in Chapter 5's 'yā devī' hymn.", "te": "స్వధా పితృదేవతలకు సమర్పణ పదం (దేవతలకు స్వాహా వలె). ఈ పేర్లలో చాలా 5వ అధ్యాయపు 'యా దేవీ' స్తుతిలో కూడా వస్తాయి."}
+},
+"11.23": {
+ "pada": [["medhe","O intellect","ఓ మేధా"],["sarasvati","O Sarasvatī","ఓ సరస్వతీ"],["vare","O best one","ఓ శ్రేష్ఠా"],["bhūti","O prosperity","ఓ భూతీ"],["bābhravi","O tawny one (Bābhravī)","ఓ బాభ్రవీ"],["tāmasi","O dark one (Tāmasī)","ఓ తామసీ"],["niyate","O self-restrained one","ఓ నియతా"],["tvam","you","నీవు"],["prasīda","be gracious","ప్రసన్నురాలవు కమ్ము"],["īśe","O sovereign","ఓ ఈశా"],["nārāyaṇi","O Nārāyaṇī","ఓ నారాయణీ"],["namaḥ astu te","salutations to you","నీకు నమస్కారం"]],
+ "en": "'O Intellect, Sarasvatī, best one, Prosperity, Bābhravī, Tāmasī, self-controlled one, be gracious, O sovereign. O Nārāyaṇī, salutations to you.'",
+ "te": "'ఓ మేధా, సరస్వతీ, శ్రేష్ఠా, భూతీ, బాభ్రవీ, తామసీ, నియతా, ఓ ఈశా, ప్రసన్నురాలవు కమ్ము. నారాయణీ, నీకు నమస్కారం.'",
+ "ctx": {"en": "The last 'nārāyaṇi' verse. The source writes 'namo'stute' here and at 11.14; this reader separates it as namo'stu te like the other verses.", "te": "చివరి 'నారాయణి' శ్లోకం. మూలంలో ఇక్కడ, 11.14లో 'నమోఽస్తుతే' అని కలిపి ఉంది; ఇతర శ్లోకాల వలె 'నమోఽస్తు తే' అని విడదీసి ఇచ్చాము."}
+}
+}
