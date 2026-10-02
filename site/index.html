@@ -41,6 +41,7 @@
   --kumkum:#f0826e;--kumkum-soft:#3d1d18;--haldi:#e3b45a;--haldi-soft:#3a2d14;--focus:#8ab8ff;color-scheme:dark}
 
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html,body{height:100%}
 body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55;-webkit-text-size-adjust:100%}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
@@ -238,7 +239,90 @@ input[type=range]{accent-color:var(--kumkum);width:9rem}
   .script{font-size:calc(23px * var(--scale))}
   .words{grid-template-columns:1fr 1fr}
 }
+
+/* ---------- motion (all gated: html[data-motion="on"] is set only when the reader allows motion) ---------- */
+:root{--lampglow:transparent}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--lampglow:rgb(240 170 80 / .16)}}
+:root[data-theme="dark"]{--lampglow:rgb(240 170 80 / .16)}
+@keyframes leafIn{from{opacity:0;transform:translateX(calc(var(--dir,0)*34px)) rotate(calc(var(--dir,0)*.6deg))}to{opacity:1;transform:none}}
+@keyframes lineIn{from{opacity:0;transform:translateY(9px);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes flame{0%,100%{transform:scale(1,1) skewX(0)}20%{transform:scale(.93,1.07) skewX(2.5deg)}45%{transform:scale(1.05,.95) skewX(-2deg)}70%{transform:scale(.97,1.05) skewX(1.2deg)}}
+@keyframes halo{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:.95;transform:scale(1.08)}}
+@keyframes breathe{0%,100%{opacity:.6}50%{opacity:1}}
+@keyframes pop{0%{transform:scale(1)}35%{transform:scale(1.14)}70%{transform:scale(.97)}100%{transform:scale(1)}}
+@keyframes burst{0%{transform:translate(0,0) rotate(0) scale(.6);opacity:1}45%{transform:translate(var(--tx),var(--ty)) rotate(calc(var(--r)*.5)) scale(1);opacity:1}100%{transform:translate(calc(var(--tx)*1.25),calc(var(--ty) + 90px)) rotate(var(--r)) scale(.9);opacity:0}}
+@keyframes fall{0%{transform:translate(0,-8vh) rotate(0);opacity:0}8%{opacity:1}100%{transform:translate(var(--tx),108vh) rotate(var(--r));opacity:.9}}
+@keyframes sheetIn{from{transform:translateX(100%)}to{transform:none}}
+@keyframes sheetOut{to{transform:translateX(100%)}}
+@keyframes fadeIn{from{opacity:0}}
+@keyframes fadeOut{to{opacity:0}}
+@keyframes cardIn{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes barGrow{from{width:0}}
+@keyframes toastIn{from{opacity:0;transform:translate(-50%,14px)}}
+@keyframes hl{0%{text-shadow:0 0 0 transparent}40%{text-shadow:0 0 14px var(--haldi)}100%{text-shadow:0 0 0 transparent}}
+
+.mhead{display:flex;align-items:flex-end;gap:12px}
+.mhead .diya{margin-bottom:6px}
+.diya{width:58px;height:58px;flex:none;overflow:visible}
+.diya .flame{transform-box:fill-box;transform-origin:50% 100%}
+.diya .halo{transform-box:fill-box;transform-origin:50% 50%}
+html[data-motion="on"] .diya .flame{animation:flame 2.6s ease-in-out infinite}
+html[data-motion="on"] .diya .halo{animation:halo 3.4s ease-in-out infinite}
+
+html[data-motion="on"] .masthead{animation:fadeUp .6s cubic-bezier(.2,.7,.2,1) both}
+html[data-motion="on"] .home .slist li{animation:fadeUp .45s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(min(var(--i,0) * 28ms, 640ms) + 120ms)}
+html[data-motion="on"] .home .group h2,html[data-motion="on"] .home .gsub{animation:fadeIn .5s both .1s}
+html[data-motion="on"] .lbar i{animation:barGrow 1s cubic-bezier(.2,.7,.2,1) both .5s}
+
+.leafcard{isolation:isolate}
+.leafcard::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;background:radial-gradient(ellipse 80% 70% at 50% 0%,var(--lampglow),transparent 70%)}
+html[data-motion="on"] .leafcard::after{animation:breathe 5s ease-in-out infinite}
+html[data-motion="on"] .verse-view .leafcard{animation:leafIn .45s cubic-bezier(.2,.7,.2,1) both}
+html[data-motion="on"] .verse-view:not(.memo) .script .ln{display:inline-block;max-width:100%;animation:lineIn .55s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0) * 120ms + 140ms)}
+html[data-motion="on"] .verse-view .iast{animation:fadeIn .6s both .45s}
+html[data-motion="on"] .verse-view .vright>.panel{animation:fadeUp .5s cubic-bezier(.2,.7,.2,1) both}
+html[data-motion="on"] .verse-view .vright>.panel:nth-child(2){animation-delay:.08s}
+html[data-motion="on"] .verse-view .vright>.panel:nth-child(3){animation-delay:.16s}
+html[data-motion="on"] .verse-view .vright>.panel:nth-child(4){animation-delay:.24s}
+html[data-motion="on"] .memo .script .ln.shown{animation:lineIn .4s both}
+.verse-view{touch-action:pan-y pinch-zoom}
+.leafcard.dragging{transition:none}
+.leafcard.snap{transition:transform .25s cubic-bezier(.2,.7,.2,1),opacity .25s}
+
+.btn.popping{animation:pop .45s cubic-bezier(.2,.7,.2,1)}
+.petal{position:fixed;z-index:60;width:11px;height:15px;margin:-7px 0 0 -5px;border-radius:0 85% 0 85%;pointer-events:none;animation:burst 1s cubic-bezier(.15,.7,.3,1) forwards}
+.petal.fall{top:0;margin:0;width:13px;height:17px;animation:fall linear forwards}
+
+.pada span.hl{color:var(--kumkum)}
+html[data-motion="on"] .pada span.hl{animation:hl .9s ease-out}
+.w{transition:border-color .2s,transform .2s}
+.w.hl{border-color:var(--kumkum)}
+html[data-motion="on"] .w.hl{animation:pop .4s}
+
+.reveal .pv{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.2,1)}
+.reveal .pv.in{opacity:1;transform:none}
+
+html[data-motion="on"] .scrim{animation:fadeIn .25s both}
+html[data-motion="on"] .sheet{animation:sheetIn .3s cubic-bezier(.2,.7,.2,1) both}
+html[data-motion="on"] .closing .scrim{animation:fadeOut .2s both}
+html[data-motion="on"] .closing .sheet{animation:sheetOut .2s ease-in both}
+html[data-motion="on"] .toast{animation:toastIn .3s both}
+
+.done{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:20px;background:rgb(20 10 8 / .45)}
+.donecard{background:var(--leaf);border:1px solid var(--rule);border-radius:14px;max-width:26rem;width:100%;padding:26px 24px 20px;text-align:center;box-shadow:0 20px 60px rgb(0 0 0 / .25)}
+.donecard .diya{width:76px;height:76px;margin:0 auto 4px;display:block}
+.donecard .sc{color:var(--kumkum);font-size:13px;margin:0}
+.donecard h2{font-family:var(--f-title);font-weight:400;color:var(--kumkum);font-size:28px;line-height:1.3;margin:6px 0 4px;text-wrap:balance}
+.donecard h2.deva{font-family:var(--f-deva)}
+.donecard p{margin:4px 0;color:var(--ink-2);font-size:15px}
+.donecard .nav{justify-content:center;margin-top:16px}
+html[data-motion="on"] .done{animation:fadeIn .3s both}
+html[data-motion="on"] .donecard{animation:cardIn .5s cubic-bezier(.2,.7,.2,1) both .05s}
+
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (prefers-reduced-motion:reduce){.reveal .pv{opacity:1;transform:none}}
 </style>
 
 <header class="bar">
@@ -274,7 +358,7 @@ const store = {
   get(k, d){ try{ const v = localStorage.getItem('ss:'+k); return v===null? d : JSON.parse(v);}catch(e){return d;} },
   set(k, v){ try{ localStorage.setItem('ss:'+k, JSON.stringify(v)); }catch(e){} }
 };
-const prefs = Object.assign({script:'telu', mean:'both', iast:true, scale:1, theme:'system', tspell:'book'}, store.get('prefs', {}));
+const prefs = Object.assign({script:'telu', mean:'both', iast:true, scale:1, theme:'system', tspell:'book', motion:'on'}, store.get('prefs', {}));
 let learned = new Set(store.get('learned', []));
 let DATA = null, NOTES = {}, NOTEIDX = {};
 let memo = false, paathMode = false;
@@ -360,8 +444,59 @@ function metreNote(counts){
 const esc = s => String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const $ = (sel, el=document) => el.querySelector(sel);
 function toast(msg){ const t=document.createElement('div'); t.className='toast'; t.textContent=msg; document.body.appendChild(t); setTimeout(()=>t.remove(),1600); }
+/* ---------------- motion ---------------- */
+const RM = matchMedia('(prefers-reduced-motion: reduce)');
+const motionOK = () => prefs.motion!=='off' && !RM.matches;
+let navDir = 0, lastProg = null;
+const DIYA = `<svg class="diya" viewBox="0 0 64 64" aria-hidden="true"><defs>
+  <radialGradient id="dgH" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffcf73" stop-opacity=".6"/><stop offset="1" stop-color="#ffcf73" stop-opacity="0"/></radialGradient>
+  <linearGradient id="dgF" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#d4471c"/><stop offset=".5" stop-color="#f29e33"/><stop offset="1" stop-color="#fff0b8"/></linearGradient></defs>
+  <circle class="halo" cx="32" cy="24" r="20" fill="url(#dgH)"/>
+  <path class="flame" d="M32 6c5 8 8 15 0 26c-8-11-5-18 0-26z" fill="url(#dgF)"/>
+  <path d="M32 30v5" stroke="var(--ink-2)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M9 37c3 12 43 12 46 0z" fill="var(--kumkum)"/>
+  <path d="M7 37h50" stroke="var(--haldi)" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M25 49h14l-2.5 6h-9z" fill="var(--kumkum)" opacity=".8"/></svg>`;
+const PETALS = ['#f0a12b','#f6c64f','#e0661f','#c8321f','#f9dd75','#e88a2d'];
+function petals(x, y, n=16){
+  if(!motionOK()) return;
+  for(let i=0;i<n;i++){
+    const p=document.createElement('i'); p.className='petal';
+    const a = (-170 + Math.random()*160) * Math.PI/180, d = 50 + Math.random()*90;
+    p.style.cssText = `left:${x}px;top:${y}px;--tx:${(Math.cos(a)*d).toFixed(1)}px;--ty:${(Math.sin(a)*d).toFixed(1)}px;--r:${(Math.random()*540-270).toFixed(0)}deg;background:${PETALS[i%PETALS.length]};animation-duration:${(850+Math.random()*450).toFixed(0)}ms`;
+    p.addEventListener('animationend', ()=>p.remove()); document.body.appendChild(p);
+  }
+}
+function shower(n=46){
+  if(!motionOK()) return;
+  for(let i=0;i<n;i++){
+    const p=document.createElement('i'); p.className='petal fall';
+    p.style.cssText = `left:${(Math.random()*100).toFixed(1)}vw;--tx:${(Math.random()*120-60).toFixed(0)}px;--r:${(Math.random()*720-360).toFixed(0)}deg;background:${PETALS[i%PETALS.length]};animation-duration:${(2600+Math.random()*1800).toFixed(0)}ms;animation-delay:${(Math.random()*1300).toFixed(0)}ms`;
+    p.addEventListener('animationend', ()=>p.remove()); document.body.appendChild(p);
+  }
+}
+function countUp(root){
+  if(!motionOK()) return;
+  root.querySelectorAll('[data-n]').forEach(el=>{
+    const to=+el.dataset.n; if(!to) return; const t0=performance.now(), dur=900;
+    const step=t=>{ const k=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-k,3); el.textContent=Math.round(to*e); if(k<1) requestAnimationFrame(step); };
+    el.textContent='0'; requestAnimationFrame(step);
+  });
+}
+/* theme change: the new theme spreads out in a circle from the tapped button (View Transitions where supported) */
+function withReveal(ev, fn){
+  if(!motionOK() || !document.startViewTransition){ fn(); return; }
+  const x = ev ? ev.clientX : innerWidth/2, y = ev ? ev.clientY : 0;
+  const r = Math.hypot(Math.max(x, innerWidth-x), Math.max(y, innerHeight-y));
+  const vt = document.startViewTransition(fn);
+  vt.ready.then(()=>{
+    document.documentElement.animate({clipPath:[`circle(0px at ${x}px ${y}px)`,`circle(${r}px at ${x}px ${y}px)`]},
+      {duration:650, easing:'cubic-bezier(.2,.7,.2,1)', pseudoElement:'::view-transition-new(root)'});
+  }).catch(()=>{});
+}
 function applyPrefs(){
   document.documentElement.style.setProperty('--scale', prefs.scale);
+  document.documentElement.dataset.motion = motionOK() ? 'on' : 'off';
   if(prefs.theme==='system') document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme', prefs.theme);
   document.querySelectorAll('[data-script]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.script===prefs.script));
   store.set('prefs', prefs);
@@ -433,14 +568,15 @@ function renderHome(){
   let h = `<div class="wrap home">
     <section class="masthead">
       <p class="sc" style="color:var(--kumkum)">Mārkaṇḍeya Purāṇa · Devī Māhātmyam</p>
-      <h2 class="script-title ${prefs.script}">${xl('śrīdurgāsaptaśatī', prefs.script)}</h2>
+      <div class="mhead"><h2 class="script-title ${prefs.script}">${xl('śrīdurgāsaptaśatī', prefs.script)}</h2>${DIYA}</div>
       <p>Read each verse, see how it is pronounced, understand every word, then move to the next. Gita Press order, from the Kavacham to the Kṣamā-prārthanā.</p>
-      <div class="counts"><span><b>${chMantras}</b> mantras in 13 chapters</span><span><b>${learned.size}</b> marked learned</span><span><b>${annotated}</b> with meanings so far</span></div>
+      <div class="counts"><span><b data-n="${chMantras}">${chMantras}</b> mantras in 13 chapters</span><span><b data-n="${learned.size}">${learned.size}</b> marked learned</span><span><b data-n="${annotated}">${annotated}</b> verses with meanings</span></div>
       ${last && DATA.sections[last.s] ? `<button class="continue" data-go="${sectionHash(last.s,last.i)}"><span><span class="k">Continue where you stopped</span><br><span class="v">${esc(title(sec(last.s)))} · ${esc(refLabel(last.s, entries(last.s)[last.i]||{}))}</span></span><span class="arrow">→</span></button>` : ''}
     </section>`;
   const deities = {prathama:'Brahmā is the ṛṣi, Mahākālī the devatā', madhyama:'Viṣṇu is the ṛṣi, Mahālakṣmī the devatā', uttara:'Rudra is the ṛṣi, Mahāsarasvatī the devatā',
     purvanga:'Recite these before beginning the chapters', uttaranga:'Recite these after the thirteenth chapter', extras:'Recited by many before or in place of the angas'};
   h += `<div class="groups">`;
+  let ri = 0;
   DATA.groups.forEach(g=>{
     h += `<section class="group"><h2 class="sc">${esc(g.title)}</h2><p class="gsub">${esc(deities[g.id]||'')}</p><ul class="slist">`;
     g.sections.forEach(id=>{
@@ -450,7 +586,7 @@ function renderHome(){
       const es = entries(id);
       const l = es.filter(e=>learned.has(keyOf(id,e))).length;
       const ann = NOTEIDX[src];
-      h += `<li><button class="srow" data-go="${sectionHash(id)}">
+      h += `<li style="--i:${ri++}"><button class="srow" data-go="${sectionHash(id)}">
         <span class="num ${isCh?'':'dot'}">${isCh? id.slice(2) : '◦'}</span>
         <span class="t"><span class="s ${prefs.script}">${esc(scriptTitle(s))}</span><span class="e">${esc(s.title)}${s.kind==='ref'?' · within '+esc(sec(s.ref.section).title):''}</span></span>
         <span class="meta"><span>${n} ${s.kind==='ritual'?'steps':'mantras'}</span>${ann? '<span class="chip ok">Meanings</span>' : '<span class="chip txt">Text</span>'}${l? `<span class="lbar" title="${l} of ${es.length} learned"><i style="width:${Math.round(100*l/es.length)}%"></i></span>`:''}</span>
@@ -461,6 +597,7 @@ function renderHome(){
   h += `</div><footer class="foot"><span>Sanskrit text from <a href="https://sanskritdocuments.org/doc_devii/durga700.html" target="_blank" rel="noopener">sanskritdocuments.org</a>, transliterated to Telugu and IAST. Mantra numbering follows the Gita Press 700 count.</span><span>Meanings and word notes are a study aid. Check difficult passages with your guru or a printed commentary.</span></footer></div>`;
   app.innerHTML = h;
   window.scrollTo(0,0);
+  countUp(app);
 }
 const keyOf = (sid,e) => (e._src||sid)+':'+e.ref;
 
@@ -474,7 +611,7 @@ function scriptHTML(e, cls=''){
   const txt = scriptOf(e) || '';
   const lines = txt.split('\n');
   const ref = !e._pre && e.kind!=='ritual' && e.kind!=='uvacha' ? ` <span class="dn">॥ ${esc(e.ref)} ॥</span>` : (e.kind==='uvacha'?' <span class="dn">॥</span>':'');
-  return `<p class="script ${prefs.script} ${e.kind==='uvacha'?'uv':''} ${cls}">${lines.map((l,i)=>`<span class="ln" data-ln="${i}">${esc(l)}${i===lines.length-1?ref:''}</span>`).join('\n')}</p>`;
+  return `<p class="script ${prefs.script} ${e.kind==='uvacha'?'uv':''} ${cls}">${lines.map((l,i)=>`<span class="ln" data-ln="${i}" style="--i:${i}">${esc(l)}${i===lines.length-1?ref:''}</span>`).join('\n')}</p>`;
 }
 
 async function renderVerse(sid, idx){
@@ -490,9 +627,9 @@ async function renderVerse(sid, idx){
   const grp = e._pre ? `<span class="grp sc">${esc(PRE_LABEL[e.label]||e.label)}</span>` : e.kind==='ritual' ? `<span class="grp sc">${esc(e.group)}</span>` : '';
   let h = `<div class="wrap verse-view ${memo?'memo':''}">
     <div class="crumb"><span>${esc(title(sec(sid)))}</span><span class="pos">${idx+1} / ${list.length}</span>${e.count>1?`<span class="chip txt">counts as ${e.count} mantras</span>`:''}</div>
-    <div class="prog"><i style="width:${(100*(idx+1)/list.length).toFixed(1)}%"></i></div>
+    <div class="prog"><i style="width:${(lastProg && lastProg.s===sid ? lastProg.p : 0).toFixed(1)}%"></i></div>
     <div class="vgrid ${memo?'solo':''}"><div class="vleft">
-    <article class="leafcard" aria-label="Verse ${esc(e.ref)}">
+    <article class="leafcard" style="--dir:${navDir}" aria-label="Verse ${esc(e.ref)}">
       ${spk||grp?`<div class="rubric">${spk}${grp}</div>`:''}
       ${scriptHTML(e)}
       ${prefs.iast && !memo ? `<p class="iast">${esc(e.iast).replace(/ (\|+)/g,"\u00a0$1")}</p>` : ''}
@@ -533,17 +670,47 @@ async function renderVerse(sid, idx){
   h += `</div></div></div>`;
   app.innerHTML = h;
   window.scrollTo(0,0);
-  $('#prev').onclick = ()=> go(sectionHash(sid, idx-1));
-  $('#next').onclick = ()=> idx===list.length-1 ? nextSection(sid) : go(sectionHash(sid, idx+1));
-  $('#learnBtn').onclick = ()=>{ learned.has(k)?learned.delete(k):learned.add(k); store.set('learned',[...learned]); renderVerse(sid, idx); };
+  navDir = 0;
+  const pct = 100*(idx+1)/list.length, pbar = $('.prog i');
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{ pbar.style.width = pct.toFixed(1)+'%'; }));
+  lastProg = {s:sid, p:pct};
+  $('#prev').onclick = ()=>{ navDir=-1; go(sectionHash(sid, idx-1)); };
+  $('#next').onclick = ()=>{ navDir=1; idx===list.length-1 ? nextSection(sid) : go(sectionHash(sid, idx+1)); };
+  $('#learnBtn').onclick = ev=>{
+    const b = ev.currentTarget, on = !learned.has(k);
+    on ? learned.add(k) : learned.delete(k); store.set('learned',[...learned]);
+    b.classList.toggle('learned', on); b.setAttribute('aria-pressed', on); b.textContent = on ? '✓ Learned' : 'Mark learned';
+    if(on){ b.classList.remove('popping'); void b.offsetWidth; b.classList.add('popping');
+      const r=b.getBoundingClientRect(); petals(r.left+r.width/2, r.top+r.height/2); }
+  };
+  /* word card <-> word in the line */
+  const ps = app.querySelectorAll('.pada span'), ws = app.querySelectorAll('.words .w');
+  const flash = (el)=>{ el.classList.remove('hl'); void el.offsetWidth; el.classList.add('hl'); };
+  ws.forEach((w,i)=>{ const f=()=>{ ps.forEach(x=>x.classList.remove('hl')); ws.forEach(x=>x.classList.remove('hl')); if(ps[i]) flash(ps[i]); flash(w); }; w.addEventListener('click', f); w.addEventListener('pointerenter', ev=>{ if(ev.pointerType==='mouse') f(); }); });
+  ps.forEach((p,i)=>p.addEventListener('click', ()=>{ ps.forEach(x=>x.classList.remove('hl')); ws.forEach(x=>x.classList.remove('hl')); flash(p); if(ws[i]){ flash(ws[i]); ws[i].scrollIntoView({block:'nearest', behavior: motionOK()?'smooth':'auto'}); } }));
   if(memo) app.querySelectorAll('.script .ln').forEach(l=>l.onclick=()=>l.classList.toggle('shown'));
   bindSwipe(sid, idx, list.length);
 }
 
 function nextSection(sid){
   const order = DATA.groups.flatMap(g=>g.sections);
-  const i = order.indexOf(sid);
-  if(i<order.length-1){ toast('Next: '+title(sec(order[i+1]))); go(sectionHash(order[i+1],0)); } else go('#');
+  const i = order.indexOf(sid), nxt = order[i+1];
+  const es = entries(sid), l = es.filter(e=>learned.has(keyOf(sid,e))).length;
+  const root = document.createElement('div'); root.className='done'; root.setAttribute('role','dialog'); root.setAttribute('aria-label','Section complete');
+  root.innerHTML = `<div class="donecard">${DIYA}<p class="sc">${nxt?'Section complete':'Pārāyaṇa complete'}</p>
+    <h2 class="${prefs.script}">॥ ${esc(scriptTitle(sec(sid)))} ॥</h2>
+    <p>${esc(title(sec(sid)))} · ${es.length} ${sec(sid).kind==='ritual'?'steps':'entries'} read${l?` · ${l} marked learned`:''}</p>
+    ${nxt?'':`<p>${esc(xl('sarvamaṅgalamāṅgalye śive sarvārthasādhike', prefs.script))}</p>`}
+    <div class="nav"><button class="btn" data-act="home">All sections</button>${nxt?`<button class="btn primary" data-act="next">${esc(title(sec(nxt)))} →</button>`:''}</div></div>`;
+  const close = (to)=>{ root.remove(); if(to) go(to); };
+  root.addEventListener('click', ev=>{
+    const a = ev.target.closest('[data-act]');
+    if(a) close(a.dataset.act==='next' ? sectionHash(nxt,0) : '#');
+    else if(ev.target===root) close(null);
+  });
+  document.body.appendChild(root);
+  root.querySelector('[data-act="next"],[data-act="home"]').focus({preventScroll:true});
+  shower(nxt ? 42 : 90);
 }
 
 async function renderPaath(sid){
@@ -558,6 +725,11 @@ async function renderPaath(sid){
   const order = DATA.groups.flatMap(g=>g.sections), oi = order.indexOf(sid);
   h += `<div class="pnext">${oi>0?`<button class="btn" data-go="#${order[oi-1]}~p">← ${esc(title(sec(order[oi-1])))}</button>`:'<span></span>'}${oi<order.length-1?`<button class="btn primary" data-go="#${order[oi+1]}~p">${esc(title(sec(order[oi+1])))} →</button>`:''}</div></div>`;
   app.innerHTML = h; window.scrollTo(0,0);
+  if(motionOK() && 'IntersectionObserver' in window){
+    const box = app.querySelector('.paath'); box.classList.add('reveal');
+    const io = new IntersectionObserver(es=>es.forEach(x=>{ if(x.isIntersecting){ x.target.classList.add('in'); io.unobserve(x.target); } }), {rootMargin:'0px 0px -6% 0px'});
+    box.querySelectorAll('.pv').forEach(v=>io.observe(v));
+  }
   try{ if(navigator.wakeLock) await navigator.wakeLock.request('screen'); }catch(e){}
 }
 
@@ -574,13 +746,15 @@ function openSheet(){
     <div class="row"><label>Telugu spelling</label><div class="seg" id="spellSeg">${[['book','శంఖ'],['strict','శఙ్ఖ']].map(([v,l])=>`<button class="telu" data-spell="${v}" aria-pressed="${prefs.tspell===v}" aria-label="${v==='book'?'Book style':'Strict Sanskrit'}">${l}</button>`).join('')}</div></div>
     <div class="row"><label for="iastT">Roman transliteration</label><input type="checkbox" id="iastT" ${prefs.iast?'checked':''}></div>
     <div class="row"><label for="scaleR">Text size</label><input type="range" id="scaleR" min="0.85" max="1.5" step="0.05" value="${prefs.scale}"></div>
+    <div class="row"><label>Animations</label><div class="seg" id="motionSeg">${[['on','On'],['off','Off']].map(([v,l])=>`<button data-motion-v="${v}" aria-pressed="${prefs.motion===v}">${l}</button>`).join('')}</div></div>
     <div class="row"><label>Theme</label><div class="seg" id="themeSeg">${[['system','Auto'],['light','Day'],['dark','Lamp']].map(([v,l])=>`<button data-theme-v="${v}" aria-pressed="${prefs.theme===v}">${l}</button>`).join('')}</div></div>
     <h2 class="sc">Contents</h2><nav class="toc">${toc}</nav></aside>`;
-  const close = ()=> root.innerHTML='';
+  const close = ()=>{ if(!motionOK()){ root.innerHTML=''; return; } root.classList.add('closing'); setTimeout(()=>{ root.innerHTML=''; root.classList.remove('closing'); }, 190); };
   $('#scrim').onclick = close; $('#closeSheet').onclick = close;
+  root.querySelectorAll('[data-motion-v]').forEach(b=>b.onclick=()=>{prefs.motion=b.dataset.motionV; applyPrefs(); openSheet();});
   root.querySelectorAll('.toc a').forEach(a=>a.addEventListener('click', close));
   root.querySelectorAll('[data-mean]').forEach(b=>b.onclick=()=>{prefs.mean=b.dataset.mean; applyPrefs(); openSheet(); route();});
-  root.querySelectorAll('[data-theme-v]').forEach(b=>b.onclick=()=>{prefs.theme=b.dataset.themeV; applyPrefs(); openSheet();});
+  root.querySelectorAll('[data-theme-v]').forEach(b=>b.onclick=ev=>{ if(prefs.theme===b.dataset.themeV) return; withReveal(ev, ()=>{ prefs.theme=b.dataset.themeV; applyPrefs(); openSheet(); }); });
   root.querySelectorAll('[data-spell]').forEach(b=>b.onclick=()=>{prefs.tspell=b.dataset.spell; applyPrefs(); openSheet(); route();});
   $('#iastT').onchange = e=>{prefs.iast=e.target.checked; applyPrefs(); route();};
   $('#scaleR').oninput = e=>{prefs.scale=+e.target.value; applyPrefs();};
@@ -611,14 +785,36 @@ $('#paathBtn').onclick = ()=>{
 };
 document.addEventListener('keydown', e=>{
   if(e.target.closest('input')||$('#sheetRoot').innerHTML) return;
+  if(document.querySelector('.done')) return;
   if(e.key==='ArrowRight'){ const n=$('#next'); n&&n.click(); }
   if(e.key==='ArrowLeft'){ const p=$('#prev'); p&&!p.disabled&&p.click(); }
 });
 function bindSwipe(sid, idx, len){
-  let x0=null,y0=null;
-  app.ontouchstart = e=>{ x0=e.touches[0].clientX; y0=e.touches[0].clientY; };
-  app.ontouchend = e=>{ if(x0===null) return; const dx=e.changedTouches[0].clientX-x0, dy=e.changedTouches[0].clientY-y0; x0=null;
-    if(Math.abs(dx)>70 && Math.abs(dx)>2*Math.abs(dy)){ if(dx<0) $('#next').click(); else if(idx>0) $('#prev').click(); } };
+  let x0=null, y0=null, dx=0, horiz=null;
+  const card = ()=>$('.leafcard');
+  app.ontouchstart = e=>{ if(e.touches.length>1){ x0=null; return; } x0=e.touches[0].clientX; y0=e.touches[0].clientY; dx=0; horiz=null; };
+  app.ontouchmove = e=>{
+    if(x0===null) return;
+    const mx=e.touches[0].clientX-x0, my=e.touches[0].clientY-y0;
+    if(horiz===null && (Math.abs(mx)>8 || Math.abs(my)>8)) horiz = Math.abs(mx) > Math.abs(my)*1.4;
+    if(!horiz || !motionOK()) return;
+    dx = (idx===0 && mx>0) ? mx*0.25 : mx;           /* resist at the first verse */
+    const c=card(); if(!c) return;
+    c.classList.add('dragging'); c.style.animation='none';
+    c.style.transform=`translateX(${dx*0.7}px) rotate(${dx/60}deg)`; c.style.opacity = String(1-Math.min(.5, Math.abs(dx)/600));
+  };
+  app.ontouchend = e=>{
+    if(x0===null) return;
+    const fx=e.changedTouches[0].clientX-x0, fy=e.changedTouches[0].clientY-y0; x0=null;
+    const c=card(), goNext = fx<-70 && Math.abs(fx)>1.6*Math.abs(fy), goPrev = fx>70 && Math.abs(fx)>1.6*Math.abs(fy) && idx>0;
+    if(c && motionOK() && horiz){
+      c.classList.remove('dragging'); c.classList.add('snap');
+      if(goNext||goPrev){ c.style.transform=`translateX(${goNext?-120:120}%) rotate(${goNext?-4:4}deg)`; c.style.opacity='0';
+        setTimeout(()=>$(goNext?'#next':'#prev').click(), 170); return; }
+      c.style.transform=''; c.style.opacity=''; return;
+    }
+    if(goNext) $('#next').click(); else if(goPrev) $('#prev').click();
+  };
 }
 
 /* ---------------- boot ---------------- */
