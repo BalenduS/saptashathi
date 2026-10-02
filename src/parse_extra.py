@@ -86,7 +86,8 @@ def main():
     core = {s['id']: s for s in json.load(open(DATA, encoding='utf-8'))}
 
     ratri_v = generic('ratri-vedic', 'Vedokta Rātri Sūktam', 'prayer',
-                      body_of('rAtrisUktam.itx', 'OM rAtrI', 'parishiShTam'),
+                      [re.sub(r'(?<=[A-Za-z~^.])1(?=[A-Za-z ])', '', l)  # strip svarita-kampa digit
+                       for l in body_of('rAtrisUktam.itx', 'OM rAtrI', 'parishiShTam')],
                       num=re.compile(r'\|\|\s*10\\?\.127\\?\.0?(\d+)\s*$'))
     ratri_v['verses'] = [v for v in ratri_v['verses'] if v['n'] <= 8]
     ratri_v['source_note'] = 'Ṛgveda 10.127 (svara marks omitted)'

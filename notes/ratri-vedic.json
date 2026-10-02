@@ -1,0 +1,49 @@
+{
+"_intro": {
+ "en": "The Vedic Rātri Sūktam is Ṛgveda 10.127, a hymn to Night as a goddess. In the Saptaśatī tradition it is recited before the chapters, because the Devī is praised in Chapter 1 as Yoganidrā, the cosmic sleep and night. The language is Vedic Sanskrit, older than the rest of the text, and some forms differ from classical grammar. The pitch-accent marks of the Veda are omitted here.",
+ "te": "వేదోక్త రాత్రిసూక్తం ఋగ్వేదం 10.127: రాత్రిని దేవతగా స్తుతించే సూక్తం. సప్తశతి సంప్రదాయంలో దీనిని అధ్యాయాలకు ముందు పఠిస్తారు, ఎందుకంటే 1వ అధ్యాయంలో దేవి యోగనిద్రగా, విశ్వరాత్రిగా స్తుతించబడుతుంది. భాష వైదిక సంస్కృతం; మిగిలిన గ్రంథం కన్నా ప్రాచీనమైనది, కొన్ని రూపాలు శాస్త్రీయ వ్యాకరణానికి భిన్నంగా ఉంటాయి. ఇక్కడ వేద స్వర చిహ్నాలు ఇవ్వలేదు."
+},
+"1": {
+ "pada": [["oṃ","Om","ఓం"],["rātrī","Night","రాత్రి"],["vyakhyat","has looked out","చూసింది"],["āyatī","as she comes","వస్తూ"],["purutrā","in many places","అనేక చోట్ల"],["devī","the goddess","దేవి"],["akṣabhiḥ","with her eyes (the stars)","కన్నులతో (నక్షత్రాలతో)"],["viśvāḥ","all","సమస్త"],["adhi","upon herself","తనపై"],["śriyaḥ","glories","శోభలను"],["adhita","she has put on","ధరించింది"]],
+ "en": "Night, the goddess, as she comes, has looked out in many places with her eyes. She has put on all her glories.",
+ "te": "రాత్రి దేవి వస్తూ అనేక చోట్ల తన కన్నులతో చూసింది. సమస్త శోభలను ధరించింది.",
+ "ctx": {"en": "Her 'eyes' are the stars appearing all over the sky.", "te": "ఆమె 'కన్నులు' ఆకాశమంతా కనిపించే నక్షత్రాలు."}
+},
+"2": {
+ "pada": [["ā","fully","పూర్తిగా"],["urvī","the wide space","విశాల ప్రదేశాన్ని"],["aprāḥ","has filled","నింపింది"],["amartyā","the immortal","అమర్త్య"],["nivataḥ","the depths","లోయలను"],["devī","goddess","దేవి"],["udvataḥ","the heights","శిఖరాలను"],["jyotiṣā","with light","జ్యోతితో"],["bādhate","drives back","తొలగిస్తుంది"],["tamaḥ","darkness","చీకటిని"]],
+ "en": "The immortal goddess has filled the wide space, the depths and the heights. With her light she drives back the darkness.",
+ "te": "అమర్త్య దేవి విశాల ప్రదేశాన్ని, లోయలను, శిఖరాలను నింపింది. తన జ్యోతితో చీకటిని తొలగిస్తుంది.",
+ "ctx": {"en": "'orvaprā' is the sandhi of ā urvī aprāḥ. Night here is a bright, starlit night, not mere darkness.", "te": "'ఓర్వప్రా' అనేది ఆ ఉర్వీ అప్రాః యొక్క సంధి. ఇక్కడ రాత్రి కేవలం చీకటి కాదు, నక్షత్రాలతో ప్రకాశించే రాత్రి."}
+},
+"3": {
+ "pada": [["niḥ","aside","ప్రక్కకు"],["u","indeed","నిజంగా"],["svasāram","her sister","సోదరిని"],["askṛta","she has set","చేసింది"],["uṣasam","Dawn","ఉషస్సును"],["devī","the goddess","దేవి"],["āyatī","coming","వస్తూ"],["apa","away","దూరంగా"],["it u","surely","తప్పక"],["hāsate","will go","వెళ్ళిపోతుంది"],["tamaḥ","darkness","చీకటి"]],
+ "en": "Coming, the goddess has set aside her sister Dawn. Darkness, too, will surely go away.",
+ "te": "వస్తూ దేవి తన సోదరి ఉషస్సును ప్రక్కకు తప్పించింది. చీకటి కూడా తప్పక దూరమవుతుంది.",
+ "ctx": {"en": "Night and Dawn are sisters in the Veda, taking turns across the sky.", "te": "వేదంలో రాత్రి, ఉషస్సు సోదరీమణులు; ఆకాశంలో వంతులవారీగా వస్తారు."}
+},
+"4": {
+ "pada": [["sā","she","ఆమె"],["naḥ","to us","మాకు"],["adya","today","ఈ రోజు"],["yasyāḥ","at whose","ఎవరి"],["vayam","we","మేము"],["ni","down","క్రిందికి"],["te","your","నీ"],["yāman","at the coming","రాకలో"],["avikṣmahi","have settled to rest","విశ్రమించాము"],["vṛkṣe","in a tree","చెట్టుపై"],["na","as","వలె"],["vasatim","nest","గూటికి"],["vayaḥ","birds","పక్షులు"]],
+ "en": "May she be kind to us today. At your coming we have settled down to rest, as birds go to their nest in a tree.",
+ "te": "ఆమె ఈ రోజు మాకు అనుకూలురాలగుగాక. పక్షులు చెట్టుపై గూటికి చేరినట్లు నీ రాకతో మేము విశ్రమించాము."
+},
+"5": {
+ "pada": [["ni","down to rest","విశ్రమించారు"],["grāmāsaḥ","the villages","గ్రామాలు"],["avikṣata","have settled","విశ్రమించాయి"],["padvantaḥ","creatures with feet","కాళ్ళు గల జీవులు"],["pakṣiṇaḥ","winged ones","పక్షులు"],["śyenāsaḥ","hawks","డేగలు"],["cit","even","కూడా"],["arthinaḥ","seeking prey","ఆహారం వెదికే"]],
+ "en": "Villages have gone to rest; so have creatures with feet and creatures with wings, and even hawks hungry for prey.",
+ "te": "గ్రామాలు విశ్రమించాయి; కాళ్ళు గల జీవులు, పక్షులు, ఆహారం వెదికే డేగలు కూడా విశ్రమించాయి."
+},
+"6": {
+ "pada": [["yāvaya","keep away","దూరంగా ఉంచు"],["vṛkyam","the she-wolf","ఆడ తోడేలును"],["vṛkam","the wolf","తోడేలును"],["yavaya","keep away","దూరంగా ఉంచు"],["stenam","the thief","దొంగను"],["ūrmye","O billowing Night","ఓ అలల వంటి రాత్రీ"],["athā","then","అప్పుడు"],["naḥ","for us","మాకు"],["sutarā","easy to pass through","సులభంగా దాటదగినదానివి"],["bhava","be","అగుము"]],
+ "en": "Keep away the she-wolf and the wolf, keep away the thief, O billowing Night. Then be easy for us to pass through.",
+ "te": "ఓ అలల వంటి రాత్రీ, ఆడ తోడేలును, తోడేలును, దొంగను దూరంగా ఉంచు. అప్పుడు మాకు సులభంగా దాటదగినదానివి కమ్ము."
+},
+"7": {
+ "pada": [["upa","near","దగ్గరకు"],["mā","me","నా"],["pepiśat","adorning","అలంకరిస్తూ"],["tamaḥ","darkness","చీకటి"],["kṛṣṇam","black","నల్లని"],["vyaktam","palpable","స్పష్టమైన"],["asthita","has come","వచ్చి నిలిచింది"],["uṣaḥ","O Dawn","ఓ ఉషస్సా"],["ṛṇā iva","like debts","ఋణాల వలె"],["yātaya","banish","తొలగించు"]],
+ "en": "Darkness has come close to me, black and palpable, painting everything. O Dawn, banish it as one clears away debts.",
+ "te": "అన్నింటినీ అలంకరిస్తూ నల్లని స్పష్టమైన చీకటి నా దగ్గరకు వచ్చి నిలిచింది. ఓ ఉషస్సా, ఋణాలను తీర్చినట్లు దానిని తొలగించు."
+},
+"8": {
+ "pada": [["upa","to you","నీకు"],["te","your","నీ"],["gāḥ iva","like cows","గోవుల వలె"],["akaram","I have brought","తెచ్చాను"],["vṛṇīṣva","accept","స్వీకరించు"],["duhitaḥ","O daughter","ఓ పుత్రీ"],["divaḥ","of Heaven","ద్యులోకపు"],["rātri","O Night","ఓ రాత్రీ"],["stomam","this praise","ఈ స్తోత్రాన్ని"],["na","like","వలె"],["jigyuṣe","for a victor","విజేత కోసం"]],
+ "en": "I have brought this hymn to you as one brings cows. Accept it, daughter of Heaven, O Night, like a song of praise for a victor.",
+ "te": "గోవులను తెచ్చినట్లు ఈ స్తోత్రాన్ని నీకు తెచ్చాను. ఓ ద్యులోక పుత్రీ, ఓ రాత్రీ, విజేత కోసం పాడే స్తుతి వలె దీనిని స్వీకరించు."
+}
+}
