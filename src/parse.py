@@ -32,6 +32,8 @@ ERRATA = [
     ('vijayA satata sthitA', 'vijayA satataM sthitA'),
     ('digbandhadevatAstatvam', 'digbandhadevatAstattvam'),
     ('daityaH kSheNarakto gamiShyati', 'daityaH kShINarakto gamiShyati'),
+    ('abhyadhA vata tAM', 'abhyadhAvata tAM'),
+    ('papAtorvyAM devI shUlAgra', 'papAtorvyAM devIshUlAgra'),
 ]
 
 NUM = re.compile(r'\|\|\s*(?:(\d+)\\?\.)?(\d+)\s*\|\|\s*$')
