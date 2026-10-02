@@ -1,0 +1,176 @@
+{
+"2.36": {
+ "pada": [["sannaddha","fully armed","సన్నద్ధమైన"],["akhila","all","సమస్త"],["sainyāḥ","their armies","సైన్యాలు గలవారై"],["te","they","వారు"],["samuttasthuḥ","rose up","లేచారు"],["udāyudhāḥ","with raised weapons","ఆయుధాలు ఎత్తి"],["āḥ","Ah!","ఆః"],["kim etat","what is this","ఇది ఏమిటి"],["iti","thus","అని"],["krodhāt","in anger","కోపంతో"],["ābhāṣya","exclaiming","పలికి"],["mahiṣāsuraḥ","Mahiṣāsura","మహిషాసురుడు"]],
+ "en": "...rose up with all their armies in battle array, weapons raised. 'Ah! What is this?' Mahiṣāsura cried in fury...",
+ "te": "...తమ సైన్యాలన్నింటినీ సన్నద్ధం చేసి ఆయుధాలు ఎత్తి లేచారు. 'ఆః! ఇది ఏమిటి?' అని మహిషాసురుడు కోపంతో అరిచి...",
+ "ctx": {"en": "The asuras hear the roar and come to find its source. Mahiṣa's first sight of the Devī in 2.37–2.39 is one of the great images of the text: her feet bend the earth, her crown scrapes the sky, her thousand arms fill the directions.", "te": "గర్జన విని దాని మూలం వెతుకుతూ అసురులు వస్తారు. 2.37–2.39లో మహిషుడు దేవిని మొదటిసారి చూసే దృశ్యం గ్రంథంలోని గొప్ప చిత్రాలలో ఒకటి: ఆమె పాదాలకు భూమి వంగుతుంది, కిరీటం ఆకాశాన్ని తాకుతుంది, వేయి భుజాలు దిక్కులను నింపుతాయి."}
+},
+"2.37": {
+ "pada": [["abhyadhāvata","rushed towards","పరుగెత్తాడు"],["tam","that","ఆ"],["śabdam","sound","శబ్దం వైపు"],["aśeṣaiḥ","by all","సమస్త"],["asuraiḥ","the asuras","అసురుల చేత"],["vṛtaḥ","surrounded","చుట్టుముట్టబడి"],["saḥ","he","అతడు"],["dadarśa","saw","చూశాడు"],["tataḥ","then","అప్పుడు"],["devīm","the Goddess","దేవిని"],["vyāpta","pervading","వ్యాపించిన"],["lokatrayām","the three worlds","ముల్లోకాలను"],["tviṣā","with her light","కాంతితో"]],
+ "en": "...and rushed towards the sound, surrounded by all the asuras. Then he saw the Goddess, filling the three worlds with her light...",
+ "te": "...అసురులందరితో కలిసి ఆ శబ్దం వైపు పరుగెత్తాడు. అప్పుడు తన కాంతితో ముల్లోకాలను వ్యాపించిన దేవిని చూశాడు..."
+},
+"2.38": {
+ "pada": [["pāda","of her feet","పాదాల"],["ākrāntyā","by the tread","అడుగుల చేత"],["nata","bent down","వంగిన"],["bhuvam","the earth","భూమి గలదానిని"],["kirīṭa","by her crown","కిరీటం చేత"],["ullikhita","scraped","గీయబడిన"],["ambarām","the sky","ఆకాశం గలదానిని"],["kṣobhita","shaken","కలవరపెట్టిన"],["aśeṣa","all","సమస్త"],["pātālām","the netherworlds","పాతాళాలను"],["dhanuḥ","of her bow","ధనుస్సు యొక్క"],["jyā","string","అల్లెతాటి"],["niḥsvanena","by the twang","ధ్వనితో"],["tām","her","ఆమెను"]],
+ "en": "...the earth bending under the tread of her feet, her crown grazing the sky, all the netherworlds shaken by the twang of her bowstring...",
+ "te": "...ఆమె అడుగుల భారానికి భూమి వంగిపోతోంది, కిరీటం ఆకాశాన్ని తాకుతోంది, ఆమె ధనుస్సు అల్లెతాటి ధ్వనికి పాతాళాలన్నీ కలవరపడుతున్నాయి..."
+},
+"2.39": {
+ "pada": [["diśaḥ","the directions","దిక్కులను"],["bhuja","arms","భుజాల"],["sahasreṇa","with a thousand","వేయి"],["samantāt","all around","అన్ని వైపులా"],["vyāpya","pervading","వ్యాపించి"],["saṃsthitām","standing","నిలిచిన"],["tataḥ","then","అప్పుడు"],["pravavṛte","began","మొదలైంది"],["yuddham","battle","యుద్ధం"],["tayā","with that","ఆ"],["devyā","Goddess","దేవితో"],["suradviṣām","of the enemies of the gods","దేవద్వేషులకు"]],
+ "en": "...standing with her thousand arms filling the directions on every side. Then battle began between the Goddess and the enemies of the gods...",
+ "te": "...వేయి భుజాలతో అన్ని దిక్కులను వ్యాపించి నిలిచిన ఆమెను చూశాడు. అప్పుడు దేవద్వేషులకు, ఆ దేవికి యుద్ధం మొదలైంది..."
+},
+"2.40": {
+ "pada": [["śastra","weapons","శస్త్రాలు"],["astraiḥ","and missiles","అస్త్రాల చేత"],["bahudhā","in many ways","అనేక విధాలుగా"],["muktaiḥ","released","ప్రయోగించబడిన"],["ādīpita","set ablaze","వెలిగిపోయిన"],["digantaram","the directions","దిగంతాలు గల"],["mahiṣāsura","Mahiṣāsura's","మహిషాసురుని"],["senānīḥ","general","సేనాపతి"],["cikṣura","Cikṣura","చిక్షురుడు"],["ākhyaḥ","named","అనే పేరు గల"],["mahāsuraḥ","great asura","మహాసురుడు"]],
+ "en": "...the directions blazing with weapons and missiles hurled in every way. Mahiṣāsura's general, the great asura named Cikṣura...",
+ "te": "...అనేక విధాలుగా ప్రయోగించబడిన శస్త్రాస్త్రాలతో దిగంతాలు వెలిగిపోయాయి. మహిషాసురుని సేనాపతి, చిక్షురుడనే మహాసురుడు...",
+ "ctx": {"en": "2.40–2.47 is a roll-call of Mahiṣa's generals and their vast armies: Cikṣura, Cāmara, Udagra, Mahāhanu, Asiloma, Bāṣkala, Biḍāla. The numbers (ayuta = ten thousand, niyuta = a million, koṭi = ten million) are meant to feel overwhelming.", "te": "2.40–2.47 మహిషుని సేనాపతుల, వారి అపార సైన్యాల జాబితా: చిక్షురుడు, చామరుడు, ఉదగ్రుడు, మహాహనువు, అసిలోముడు, బాష్కలుడు, బిడాలుడు. సంఖ్యలు (అయుతం = పదివేలు, నియుతం = పది లక్షలు, కోటి) అపారత్వాన్ని చూపడానికే."}
+},
+"2.41": {
+ "pada": [["yuyudhe","fought","యుద్ధం చేశాడు"],["cāmaraḥ","Cāmara","చామరుడు"],["ca","and","మరియు"],["anyaiḥ","with others","ఇతరులతో"],["caturaṅga","four-limbed (chariots, elephants, horse, foot)","చతురంగ"],["bala","army","బలంతో"],["anvitaḥ","accompanied by","కూడిన"],["rathānām","of chariots","రథాల"],["ayutaiḥ","with ten-thousands","అయుతాలతో"],["ṣaḍbhiḥ","six","ఆరు"],["udagra","Udagra","ఉదగ్రుడు"],["ākhyaḥ","named","అనే"],["mahāsuraḥ","great asura","మహాసురుడు"]],
+ "en": "...fought, and so did Cāmara, with a fourfold army of chariots, elephants, cavalry and infantry. The great asura Udagra fought with sixty thousand chariots...",
+ "te": "...యుద్ధం చేశాడు. చామరుడు కూడా చతురంగ బలంతో యుద్ధం చేశాడు. ఉదగ్రుడనే మహాసురుడు అరవై వేల రథాలతో..."
+},
+"2.42": {
+ "pada": [["ayudhyata","fought","యుద్ధం చేశాడు"],["ayutānām","of ten-thousands","అయుతాల"],["ca","and","మరియు"],["sahasreṇa","with a thousand","వేయి"],["mahāhanuḥ","Mahāhanu","మహాహనువు"],["pañcāśadbhiḥ","with fifty","యాభై"],["ca","and","మరియు"],["niyutaiḥ","millions","నియుతాలతో"],["asilomā","Asiloma","అసిలోముడు"],["mahāsuraḥ","great asura","మహాసురుడు"]],
+ "en": "...Mahāhanu fought with ten million, and the great asura Asiloma with fifty million...",
+ "te": "...మహాహనువు కోటి మందితో, అసిలోముడనే మహాసురుడు ఐదు కోట్ల మందితో యుద్ధం చేశారు..."
+},
+"2.43": {
+ "pada": [["ayutānām","of ten-thousands","అయుతాల"],["śataiḥ","with hundreds","వందలతో"],["ṣaḍbhiḥ","six","ఆరు"],["bāṣkalaḥ","Bāṣkala","బాష్కలుడు"],["yuyudhe","fought","యుద్ధం చేశాడు"],["raṇe","in battle","యుద్ధంలో"],["gaja","elephants","ఏనుగులు"],["vāji","horses","గుర్రాల"],["sahasra","thousands","వేల"],["oghaiḥ","with masses of","సమూహాలతో"],["anekaiḥ","many","అనేక"],["parivāritaḥ","surrounded","చుట్టుముట్టబడి"]],
+ "en": "...Bāṣkala fought in the battle with six million. Surrounded by countless thousands of elephants and horses...",
+ "te": "...బాష్కలుడు అరవై లక్షల మందితో యుద్ధంలో పోరాడాడు. వేలకొద్దీ ఏనుగులు, గుర్రాల సమూహాలతో చుట్టుముట్టబడి..."
+},
+"2.44": {
+ "pada": [["vṛtaḥ","surrounded","చుట్టుముట్టబడి"],["rathānām","of chariots","రథాల"],["koṭyā","by ten million","కోటి"],["ca","and","మరియు"],["yuddhe","in battle","యుద్ధంలో"],["tasmin","that","ఆ"],["ayudhyata","fought","పోరాడాడు"],["biḍāla","Biḍāla","బిడాలుడు"],["ākhyaḥ","named","అనే"],["ayutānām","of ten-thousands","అయుతాల"],["ca","and","మరియు"],["pañcāśadbhiḥ","with fifty","యాభై"],["atha","then","తరువాత"],["ayutaiḥ","ten-thousands","అయుతాలతో"]],
+ "en": "...and ten million chariots, one asura fought in that battle. Biḍāla, with five hundred thousand chariots...",
+ "te": "...కోటి రథాలతో కలిసి (ఒక అసురుడు) ఆ యుద్ధంలో పోరాడాడు. బిడాలుడు ఐదు లక్షల రథాలతో..."
+},
+"2.45": {
+ "pada": [["yuyudhe","fought","పోరాడాడు"],["saṃyuge","in combat","యుద్ధంలో"],["tatra","there","అక్కడ"],["rathānām","by chariots","రథాలతో"],["parivāritaḥ","surrounded","చుట్టుముట్టబడి"],["anye","others","ఇతరులు"],["ca","and","మరియు"],["tatra","there","అక్కడ"],["ayutaśaḥ","in tens of thousands","పదివేల సంఖ్యలో"],["ratha","chariots","రథాలు"],["nāga","elephants","ఏనుగులు"],["hayaiḥ","and horses","గుర్రాలతో"],["vṛtāḥ","surrounded by","కూడినవారై"]],
+ "en": "...fought there, surrounded by his chariots. And other great asuras, by tens of thousands, with chariots, elephants and horses...",
+ "te": "...రథాలతో చుట్టుముట్టబడి అక్కడ పోరాడాడు. పదివేల సంఖ్యలో రథాలు, ఏనుగులు, గుర్రాలతో ఇతర మహాసురులు..."
+},
+"2.46": {
+ "pada": [["yuyudhuḥ","fought","పోరాడారు"],["saṃyuge","in combat","యుద్ధంలో"],["devyā saha","with the Goddess","దేవితో"],["tatra","there","అక్కడ"],["mahāsurāḥ","great asuras","మహాసురులు"],["koṭi koṭi","crores upon crores","కోట్ల కోట్ల"],["sahasraiḥ","thousands","వేల"],["tu","and","మరియు"],["rathānām","of chariots","రథాల"],["dantinām","of elephants","ఏనుగుల"],["tathā","and","అలాగే"]],
+ "en": "...fought with the Goddess there. Surrounded by thousands upon thousands of crores of chariots, elephants...",
+ "te": "...అక్కడ దేవితో పోరాడారు. కోట్ల కోట్ల వేల రథాలు, ఏనుగులు..."
+},
+"2.47": {
+ "pada": [["hayānām","of horses","గుర్రాల"],["ca","and","మరియు"],["vṛtaḥ","surrounded","చుట్టుముట్టబడి"],["yuddhe","in battle","యుద్ధంలో"],["tatra","there","అక్కడ"],["abhūt","was","ఉన్నాడు"],["mahiṣāsuraḥ","Mahiṣāsura","మహిషాసురుడు"],["tomaraiḥ","with lances","తోమరాలతో"],["bhindipālaiḥ","javelins","భిందిపాలాలతో"],["ca","and","మరియు"],["śaktibhiḥ","spears","శక్తులతో"],["musalaiḥ","pestles","ముసలాలతో"],["tathā","and","అలాగే"]],
+ "en": "...and horses, Mahiṣāsura himself was there in the battle. With lances, javelins, spears and pestles...",
+ "te": "...గుర్రాలతో కూడి మహిషాసురుడు స్వయంగా అక్కడ యుద్ధంలో ఉన్నాడు. తోమరాలు, భిందిపాలాలు, శక్తులు, ముసలాలతో..."
+},
+"2.48": {
+ "pada": [["yuyudhuḥ","they fought","పోరాడారు"],["saṃyuge","in combat","యుద్ధంలో"],["devyā","with the Goddess","దేవితో"],["khaḍgaiḥ","with swords","ఖడ్గాలతో"],["paraśu","axes","పరశువులు"],["paṭṭiśaiḥ","and broad blades","పట్టిశాలతో"],["kecit","some","కొందరు"],["ca","and","మరియు"],["cikṣipuḥ","hurled","విసిరారు"],["śaktīḥ","spears","శక్తులను"],["kecit","some","కొందరు"],["pāśān","nooses","పాశాలను"],["tathā","and","అలాగే"],["apare","others","ఇతరులు"]],
+ "en": "...with swords, axes and broad blades they fought the Goddess. Some hurled spears, others nooses...",
+ "te": "...ఖడ్గాలు, పరశువులు, పట్టిశాలతో దేవితో పోరాడారు. కొందరు శక్తులను, మరికొందరు పాశాలను విసిరారు..."
+},
+"2.49": {
+ "pada": [["devīm","the Goddess","దేవిని"],["khaḍga","sword","ఖడ్గ"],["prahāraiḥ","with blows","ప్రహారాలతో"],["tu","and","మరియు"],["te","they","వారు"],["tām","her","ఆమెను"],["hantum","to kill","చంపడానికి"],["pracakramuḥ","set about","ప్రయత్నించారు"],["sā api","she too","ఆమె కూడా"],["devī","the Goddess","దేవి"],["tataḥ","then","అప్పుడు"],["tāni","those","ఆ"],["śastrāṇi","weapons","శస్త్రాలను"],["astrāṇi","missiles","అస్త్రాలను"],["caṇḍikā","Caṇḍikā","చండిక"]],
+ "en": "...and others tried to kill the Goddess with sword blows. Then the Goddess Caṇḍikā, those weapons and missiles...",
+ "te": "...ఇంకొందరు ఖడ్గ ప్రహారాలతో ఆమెను చంపడానికి ప్రయత్నించారు. అప్పుడు చండికాదేవి ఆ శస్త్రాస్త్రాలను..."
+},
+"2.50": {
+ "pada": [["līlayā eva","as if in play","లీలగానే"],["praciccheda","cut down","ఖండించింది"],["nija","her own","తన"],["śastra","weapons","శస్త్ర"],["astra","and missiles","అస్త్రాలను"],["varṣiṇī","raining down","వర్షిస్తూ"],["anāyasta","unstrained","శ్రమ లేని"],["ānanā","her face","ముఖం గలది"],["devī","the Goddess","దేవి"],["stūyamānā","being praised","స్తుతించబడుతూ"],["sura","by gods","దేవతలు"],["ṛṣibhiḥ","and sages","ఋషుల చేత"]],
+ "en": "...cut down as if in play, raining her own weapons and missiles. Her face showed no strain at all, as gods and sages sang her praise...",
+ "te": "...తన శస్త్రాస్త్రాలను వర్షిస్తూ లీలగానే ఖండించింది. దేవతలు, ఋషులు స్తుతిస్తుండగా ఆమె ముఖంలో ఏ శ్రమా లేదు..."
+},
+"2.51": {
+ "pada": [["mumoca","released","ప్రయోగించింది"],["asura","of the asuras","అసురుల"],["deheṣu","on the bodies","శరీరాలపై"],["śastrāṇi","weapons","శస్త్రాలను"],["astrāṇi","missiles","అస్త్రాలను"],["ca","and","మరియు"],["īśvarī","the Sovereign","ఈశ్వరి"],["saḥ api","he too","అది కూడా"],["kruddhaḥ","enraged","కోపించిన"],["dhuta","shaking","విదిలిస్తూ"],["saṭaḥ","his mane","జూలు"],["devyāḥ","of the Goddess","దేవి యొక్క"],["vāhana","mount","వాహనమైన"],["kesarī","the lion","సింహం"]],
+ "en": "...and the Sovereign loosed her weapons and missiles upon the asuras' bodies. Her mount, the lion, enraged and shaking his mane...",
+ "te": "...ఈశ్వరి అసురుల శరీరాలపై శస్త్రాస్త్రాలను ప్రయోగించింది. దేవి వాహనమైన సింహం కూడా కోపంతో జూలు విదిలిస్తూ..."
+},
+"2.52": {
+ "pada": [["cacāra","moved through","సంచరించింది"],["asura","of the asuras","అసురుల"],["sainyeṣu","the armies","సైన్యాలలో"],["vaneṣu","through forests","అడవులలో"],["iva","like","వలె"],["hutāśanaḥ","fire","అగ్ని"],["niḥśvāsān","breaths","నిశ్వాసలను"],["mumuce","released","విడిచిందో"],["yān","which","ఏ"],["ca","and","మరియు"],["yudhyamānā","while fighting","యుద్ధం చేస్తూ"],["raṇe","in battle","యుద్ధంలో"],["ambikā","Ambikā","అంబిక"]],
+ "en": "...ranged through the asura armies like fire through a forest. And the breaths that Ambikā let out as she fought in battle...",
+ "te": "...అడవిలో అగ్నిలా అసుర సైన్యాలలో సంచరించింది. యుద్ధం చేస్తూ అంబిక విడిచిన నిశ్వాసలే..."
+},
+"2.53": {
+ "pada": [["te eva","those very (breaths)","అవే"],["sadyaḥ","instantly","వెంటనే"],["sambhūtāḥ","became","అయ్యాయి"],["gaṇāḥ","attendants, troops","గణాలుగా"],["śata","hundreds","వందల"],["sahasraśaḥ","of thousands","వేల సంఖ్యలో"],["yuyudhuḥ","fought","పోరాడారు"],["te","they","వారు"],["paraśubhiḥ","with axes","పరశువులతో"],["bhindipāla","javelins","భిందిపాలాలు"],["asi","swords","ఖడ్గాలు"],["paṭṭiśaiḥ","and broad blades","పట్టిశాలతో"]],
+ "en": "...instantly became troops of gaṇas by the hundred thousand. They fought with axes, javelins, swords and broad blades...",
+ "te": "...వెంటనే లక్షల సంఖ్యలో గణాలుగా మారాయి. వారు పరశువులు, భిందిపాలాలు, ఖడ్గాలు, పట్టిశాలతో పోరాడారు...",
+ "ctx": {"en": "Her very breathing becomes an army. The point is that the Devī needs no helpers from outside herself; even her breath is power.", "te": "ఆమె శ్వాసే సైన్యంగా మారుతుంది. దేవికి బయటి సహాయకులు అక్కరలేదు; ఆమె శ్వాస కూడా శక్తియే అని భావం."}
+},
+"2.54": {
+ "pada": [["nāśayantaḥ","destroying","నాశనం చేస్తూ"],["asura","asura","అసుర"],["gaṇān","hosts","గణాలను"],["devī","the Goddess's","దేవి"],["śakti","power","శక్తితో"],["upabṛṃhitāḥ","strengthened by","బలపడినవారై"],["avādayanta","played","మోగించారు"],["paṭahān","war drums","పటహాలను (డప్పులను)"],["gaṇāḥ","the gaṇas","గణాలు"],["śaṅkhān","conches","శంఖాలను"],["tathā","and","అలాగే"],["apare","others","ఇతరులు"]],
+ "en": "...destroying the asura hosts, strengthened by the Goddess's power. Some gaṇas beat war drums, others blew conches...",
+ "te": "...దేవి శక్తితో బలపడి అసుర గణాలను నాశనం చేస్తూ ఉన్నారు. కొందరు గణాలు పటహాలు మోగించారు, మరికొందరు శంఖాలు ఊదారు..."
+},
+"2.55": {
+ "pada": [["mṛdaṅgān","mṛdaṅga drums","మృదంగాలను"],["ca","and","మరియు"],["tathā eva","likewise","అలాగే"],["anye","others","ఇతరులు"],["tasmin","in that","ఆ"],["yuddha","battle","యుద్ధ"],["mahotsave","great festival","మహోత్సవంలో"],["tataḥ","then","అప్పుడు"],["devī","the Goddess","దేవి"],["triśūlena","with the trident","త్రిశూలంతో"],["gadayā","with the mace","గదతో"],["śakti","spears","శక్తుల"],["vṛṣṭibhiḥ","with showers of","వర్షంతో"]],
+ "en": "...and still others played the mṛdaṅga in that great festival of battle. Then the Goddess, with trident, mace and showers of spears...",
+ "te": "...ఇంకొందరు ఆ యుద్ధ మహోత్సవంలో మృదంగాలు వాయించారు. అప్పుడు దేవి త్రిశూలంతో, గదతో, శక్తుల వర్షంతో..."
+},
+"2.56": {
+ "pada": [["khaḍga","sword","ఖడ్గం"],["ādibhiḥ","and other weapons","మొదలైనవాటితో"],["ca","and","మరియు"],["śataśaḥ","by hundreds","వందల సంఖ్యలో"],["nijaghāna","struck down","సంహరించింది"],["mahāsurān","great asuras","మహాసురులను"],["pātayāmāsa","felled","పడగొట్టింది"],["ca eva","and also","కూడా"],["anyān","others","ఇతరులను"],["ghaṇṭā","of her bell","ఘంట"],["svana","by the sound","ధ్వనితో"],["vimohitān","stunned","మూర్ఛపోయిన"]],
+ "en": "...the sword and other weapons, struck down great asuras by the hundred. Others, stunned by the sound of her bell, she threw to the ground...",
+ "te": "...ఖడ్గం మొదలైనవాటితో వందల కొద్దీ మహాసురులను సంహరించింది. ఘంటానాదంతో మూర్ఛపోయిన ఇతరులను పడగొట్టింది..."
+},
+"2.57": {
+ "pada": [["asurān","asuras","అసురులను"],["bhuvi","on the ground","భూమిపై"],["pāśena","with the noose","పాశంతో"],["baddhvā","binding","బంధించి"],["ca","and","మరియు"],["anyān","others","ఇతరులను"],["akarṣayat","dragged","ఈడ్చింది"],["kecit","some","కొందరు"],["dvidhā","in two","రెండుగా"],["kṛtāḥ","were cut","చేయబడ్డారు"],["tīkṣṇaiḥ","sharp","పదునైన"],["khaḍga","sword","ఖడ్గ"],["pātaiḥ","by strokes of","దెబ్బలతో"],["tathā","and","అలాగే"],["apare","others","ఇతరులు"]],
+ "en": "...and others she bound with her noose and dragged along the ground. Some were cut in two by sharp sword strokes; others...",
+ "te": "...ఇతర అసురులను పాశంతో బంధించి భూమిపై ఈడ్చింది. కొందరు పదునైన ఖడ్గ ప్రహారాలకు రెండుగా తెగిపోయారు; మరికొందరు..."
+},
+"2.58": {
+ "pada": [["vipothitāḥ","crushed","నలిగిపోయి"],["nipātena","by the blow","దెబ్బకు"],["gadayā","of the mace","గద"],["bhuvi","on the ground","నేలపై"],["śerate","lay","పడి ఉన్నారు"],["vemuḥ","vomited","కక్కారు"],["ca","and","మరియు"],["kecit","some","కొందరు"],["rudhiram","blood","రక్తాన్ని"],["musalena","by the pestle","ముసలంతో"],["bhṛśam","severely","తీవ్రంగా"],["hatāḥ","struck","కొట్టబడి"]],
+ "en": "...crushed by the blow of her mace, lay on the ground. Some, badly struck by her pestle, vomited blood.",
+ "te": "...గద దెబ్బకు నలిగి నేలపై పడి ఉన్నారు. ముసలంతో తీవ్రంగా కొట్టబడిన కొందరు రక్తం కక్కారు."
+},
+"2.59": {
+ "pada": [["kecit","some","కొందరు"],["nipatitāḥ","fell","పడిపోయారు"],["bhūmau","to the ground","నేలపై"],["bhinnāḥ","pierced","చీల్చబడి"],["śūlena","by the trident","శూలంతో"],["vakṣasi","in the chest","వక్షస్సులో"],["nirantarāḥ","covered completely","దట్టంగా నిండినవారు"],["śara","arrows","బాణాల"],["oghena","by a flood of","ప్రవాహంతో"],["kṛtāḥ","were made","చేయబడ్డారు"],["kecit","some","కొందరు"],["raṇājire","on the battlefield","రణరంగంలో"]],
+ "en": "Some fell to the ground, pierced in the chest by her trident. Some on the battlefield were riddled through by a flood of arrows...",
+ "te": "కొందరు శూలంతో వక్షస్సు చీల్చబడి నేలకూలారు. రణరంగంలో కొందరు బాణప్రవాహంతో నిండిపోయారు..."
+},
+"2.60": {
+ "pada": [["śyena","hawks","డేగల"],["anukāriṇaḥ","acting like","వలె ప్రవర్తించే"],["prāṇān","their lives","ప్రాణాలను"],["mumucuḥ","gave up","విడిచారు"],["tridaśa","the gods","దేవతలను"],["ardanāḥ","tormentors of","పీడించేవారు"],["keṣāñcit","of some","కొందరి"],["bāhavaḥ","arms","బాహువులు"],["chinnāḥ","were severed","తెగిపోయాయి"],["chinna","severed","తెగిన"],["grīvāḥ","necks","మెడలు గలవారు"],["tathā","and","అలాగే"],["apare","others","ఇతరులు"]],
+ "en": "...and those tormentors of the gods, who had swooped like hawks, gave up their lives. The arms of some were cut off; others had their necks severed...",
+ "te": "...డేగల్లా విరుచుకుపడిన ఆ దేవపీడకులు ప్రాణాలు విడిచారు. కొందరి బాహువులు తెగిపోయాయి; మరికొందరి మెడలు తెగాయి..."
+},
+"2.61": {
+ "pada": [["śirāṃsi","heads","శిరస్సులు"],["petuḥ","fell","రాలిపడ్డాయి"],["anyeṣām","of others","ఇతరుల"],["anye","others","ఇతరులు"],["madhye","in the middle","మధ్యలో"],["vidāritāḥ","were split","చీల్చబడ్డారు"],["vicchinna","cut off","తెగిన"],["jaṅghāḥ","legs","పిక్కలు గలవారై"],["tu","and","మరియు"],["apare","others","ఇతరులు"],["petuḥ","fell","పడిపోయారు"],["urvyām","on the earth","భూమిపై"],["mahāsurāḥ","great asuras","మహాసురులు"]],
+ "en": "...the heads of others rolled; others were split down the middle; and other great asuras, their legs cut off, fell to the earth.",
+ "te": "...ఇతరుల తలలు రాలాయి; కొందరు మధ్యకు చీలిపోయారు; ఇంకొందరు మహాసురులు కాళ్ళు తెగి నేలకూలారు."
+},
+"2.62": {
+ "pada": [["eka","one","ఒక్క"],["bāhu","arm","బాహువు"],["akṣi","eye","కన్ను"],["caraṇāḥ","and foot","కాలు గలవారై"],["kecit","some","కొందరు"],["devyā","by the Goddess","దేవి చేత"],["dvidhā kṛtāḥ","cut in two","రెండుగా చీల్చబడి"],["chinne","severed","తెగినా"],["api","even","కూడా"],["ca","and","మరియు"],["anye","others","ఇతరులు"],["śirasi","the head","తల"],["patitāḥ","having fallen","పడిపోయి"],["punaḥ","again","మళ్ళీ"],["utthitāḥ","rose","లేచారు"]],
+ "en": "Some, cut in half by the Goddess, were left with one arm, one eye and one foot. Others, though their heads were cut off, fell and rose up again.",
+ "te": "దేవి రెండుగా చీల్చగా కొందరు ఒక్క చేయి, ఒక్క కన్ను, ఒక్క కాలుతో మిగిలారు. మరికొందరు తల తెగిపోయినా పడి మళ్ళీ లేచారు."
+},
+"2.63": {
+ "pada": [["kabandhāḥ","headless trunks","తలలేని మొండేలు"],["yuyudhuḥ","fought","పోరాడాయి"],["devyā","with the Goddess","దేవితో"],["gṛhīta","grasping","పట్టుకొని"],["parama","excellent","శ్రేష్ఠమైన"],["āyudhāḥ","weapons","ఆయుధాలను"],["nanṛtuḥ","danced","నాట్యం చేశాయి"],["ca","and","మరియు"],["apare","others","ఇతరులు"],["tatra","there","అక్కడ"],["yuddhe","in battle","యుద్ధంలో"],["tūrya","of the war music","యుద్ధ వాద్యాల"],["laya","rhythm","లయను"],["āśritāḥ","following","అనుసరించి"]],
+ "en": "Headless trunks seized fine weapons and fought on against the Goddess; others danced there in the battle to the rhythm of the war music.",
+ "te": "తలలేని మొండేలు శ్రేష్ఠమైన ఆయుధాలను పట్టుకొని దేవితో పోరాడాయి; మరికొన్ని యుద్ధవాద్యాల లయకు అనుగుణంగా అక్కడ నాట్యం చేశాయి."
+},
+"2.64": {
+ "pada": [["kabandhāḥ","headless trunks","మొండేలు"],["chinna","cut off","తెగిన"],["śirasaḥ","heads","తలలు గలవి"],["khaḍga","sword","ఖడ్గం"],["śakti","spear","శక్తి"],["ṛṣṭi","and lance","ఋష్టి"],["pāṇayaḥ","in hand","చేతుల్లో గలవి"],["tiṣṭha tiṣṭha","stop, stop!","ఆగు ఆగు"],["iti","thus","అని"],["bhāṣantaḥ","crying","అంటూ"],["devīm","to the Goddess","దేవితో"],["anye","other","ఇతర"],["mahāsurāḥ","great asuras","మహాసురులు"]],
+ "en": "Headless trunks, swords, spears and lances in hand, and other great asuras too, kept shouting at the Goddess, 'Stop! Stop!'",
+ "te": "తలలు తెగిన మొండేలు ఖడ్గం, శక్తి, ఋష్టి చేతబట్టి, ఇతర మహాసురులు కూడా దేవితో 'ఆగు! ఆగు!' అని అరిచారు."
+},
+"2.65": {
+ "pada": [["pātitaiḥ","fallen","పడిపోయిన"],["ratha","chariots","రథాలు"],["nāga","elephants","ఏనుగులు"],["aśvaiḥ","horses","గుర్రాలతో"],["asuraiḥ","asuras","అసురులతో"],["ca","and","మరియు"],["vasundharā","the earth","భూమి"],["agamyā","impassable","నడవలేనిదిగా"],["sā","it","అది"],["abhavat","became","అయ్యింది"],["tatra","there","అక్కడ"],["yatra","where","ఎక్కడ"],["abhūt","took place","జరిగిందో"],["saḥ","that","ఆ"],["mahāraṇaḥ","great battle","మహాయుద్ధం"]],
+ "en": "Where that great battle raged, the earth became impassable, strewn with fallen chariots, elephants, horses and asuras.",
+ "te": "ఆ మహాయుద్ధం జరిగిన చోట పడిపోయిన రథాలు, ఏనుగులు, గుర్రాలు, అసురులతో భూమి నడవలేనంతగా నిండిపోయింది."
+},
+"2.66": {
+ "pada": [["śoṇita","blood","రక్త"],["oghāḥ","streams of","ప్రవాహాలు"],["mahānadyaḥ","great rivers","మహానదులుగా"],["sadyaḥ","at once","వెంటనే"],["tatra","there","అక్కడ"],["prasusruvuḥ","flowed","ప్రవహించాయి"],["madhye","in the midst","మధ్యలో"],["ca","and","మరియు"],["asura","asura","అసుర"],["sainyasya","of the army","సైన్యం"],["vāraṇa","elephants","ఏనుగులు"],["asura","asuras","అసురులు"],["vājinām","and horses","గుర్రాల"]],
+ "en": "At once great rivers of blood flowed there through the midst of the asura army, from its elephants, asuras and horses.",
+ "te": "అసుర సైన్యం మధ్యలో ఏనుగులు, అసురులు, గుర్రాల నుండి రక్తప్రవాహాలు వెంటనే మహానదులుగా ప్రవహించాయి."
+},
+"2.67": {
+ "pada": [["kṣaṇena","in a moment","క్షణంలో"],["tat","that","ఆ"],["mahāsainyam","great army","మహాసైన్యాన్ని"],["asurāṇām","of the asuras","అసురుల"],["tathā","so","ఆ విధంగా"],["ambikā","Ambikā","అంబిక"],["ninye","brought","చేర్చింది"],["kṣayam","to destruction","నాశనానికి"],["yathā","as","ఎలాగైతే"],["vahniḥ","fire","అగ్ని"],["tṛṇa","grass","గడ్డి"],["dāru","and wood","కట్టెల"],["mahācayam","a great heap of","పెద్ద కుప్పను"]],
+ "en": "In a moment Ambikā destroyed that great army of the asuras, as fire consumes a huge heap of grass and wood.",
+ "te": "గడ్డి, కట్టెల పెద్ద కుప్పను అగ్ని దహించినట్లు అంబిక అసురుల ఆ మహాసైన్యాన్ని క్షణంలో నాశనం చేసింది."
+},
+"2.68": {
+ "pada": [["saḥ","that","ఆ"],["ca","and","మరియు"],["siṃhaḥ","lion","సింహం"],["mahānādam","a mighty roar","మహానాదాన్ని"],["utsṛjan","letting out","చేస్తూ"],["dhuta","shaking","విదిలిస్తూ"],["kesaraḥ","his mane","జూలు"],["śarīrebhyaḥ","from the bodies","శరీరాల నుండి"],["amarārīṇām","of the enemies of the gods","దేవశత్రువుల"],["asūn","the life-breaths","ప్రాణాలను"],["iva","as if","వలె"],["vicinvati","searching out","వెదికి తీస్తున్నట్లు"]],
+ "en": "And the lion, shaking his mane and letting out a mighty roar, seemed to be hunting out the very life from the bodies of the gods' enemies.",
+ "te": "ఆ సింహం జూలు విదిలిస్తూ మహానాదం చేస్తూ, దేవశత్రువుల శరీరాల నుండి ప్రాణాలను వెదికి తీస్తున్నట్లుగా ఉంది."
+},
+"2.69": {
+ "pada": [["devyā","by the Goddess","దేవి చేత"],["gaṇaiḥ","by the gaṇas","గణాల చేత"],["ca","and","మరియు"],["taiḥ","those","ఆ"],["tatra","there","అక్కడ"],["kṛtam","was waged","చేయబడింది"],["yuddham","battle","యుద్ధం"],["tathā","such","అటువంటి"],["asuraiḥ","with the asuras","అసురులతో"],["yathā","that","ఎలాగంటే"],["eṣām","with them","వారి పట్ల"],["tutuṣuḥ","were delighted","సంతోషించారు"],["devāḥ","the gods","దేవతలు"],["puṣpa","flowers","పుష్ప"],["vṛṣṭi","a rain of","వర్షాన్ని"],["mucaḥ","showering","కురిపిస్తూ"],["divi","from the sky","ఆకాశం నుండి"]],
+ "en": "The Goddess and her gaṇas fought the asuras so well that the gods were delighted and showered flowers on them from the sky.",
+ "te": "దేవి, ఆమె గణాలు అసురులతో అలా యుద్ధం చేయగా, దేవతలు సంతోషించి ఆకాశం నుండి పుష్పవర్షం కురిపించారు.",
+ "ctx": {"en": "End of Chapter 2. The army is gone, but Mahiṣa and his chief generals remain; Chapter 3 is their final battle.", "te": "2వ అధ్యాయం ముగిసింది. సైన్యం నశించింది, కానీ మహిషుడు, అతని ముఖ్య సేనాపతులు మిగిలి ఉన్నారు; 3వ అధ్యాయం వారి చివరి యుద్ధం."}
+}
+}
