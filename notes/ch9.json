@@ -1,0 +1,214 @@
+{
+"_intro": {
+ "en": "With Raktabīja dead, King Suratha asks to hear the rest. Niśumbha leads the remaining asura army against the Devī. Their duel moves fast: sword and shield, spear, trident, mace, axe. Niśumbha falls stunned, revives, grows ten thousand arms, and is finally pierced through the heart by Caṇḍikā's spear. When a second warrior steps out of the wound shouting 'Stop!', she laughs and cuts off his head. The Mothers, Kālī, Śivadūtī and the lion destroy what is left of his army.",
+ "te": "రక్తబీజుడు మరణించిన తరువాత సురథ మహారాజు మిగిలిన కథను వినాలని కోరుతాడు. నిశుంభుడు మిగిలిన అసురసైన్యంతో దేవిపైకి వస్తాడు. వారి ద్వంద్వయుద్ధం వేగంగా సాగుతుంది: ఖడ్గం, డాలు, శక్తి, శూలం, గద, పరశువు. నిశుంభుడు మూర్ఛపోయి మళ్ళీ లేచి పది వేల చేతులు ధరిస్తాడు; చివరకు చండిక శూలం అతని హృదయాన్ని చీల్చుతుంది. ఆ గాయం నుండి 'ఆగు!' అంటూ మరో యోధుడు బయటకు రాగా ఆమె నవ్వి అతని తల నరుకుతుంది. మాతృకలు, కాళి, శివదూతి, సింహం అతని మిగిలిన సైన్యాన్ని నాశనం చేస్తారు."
+},
+"pre0": {
+ "pada": [["oṃ","Om","ఓం"],["bandhūka","bandhūka flower (red)","బంధూక పుష్పం"],["kāñcana","and gold","బంగారం"],["nibham","shining like","వలె ప్రకాశించే"],["rucira","lovely","అందమైన"],["akṣamālām","rosary","అక్షమాలను"],["pāśa","noose","పాశం"],["aṅkuśau","and goad","అంకుశాలను"],["ca","and","మరియు"],["varadām","boon-giving gesture","వరద ముద్రను"],["nija","its own","తన"],["bāhudaṇḍaiḥ","with arms","బాహువులతో"],["bibhrāṇam","bearing","ధరించిన"],["indu","moon","చంద్ర"],["śakala","crescent","ఖండాన్ని"],["ābharaṇam","as ornament","ఆభరణంగా గల"],["trinetram","three-eyed","మూడు కన్నుల"],["ardha","half","సగం"],["ambikā","Ambikā","అంబిక"],["īśam","and half Īśa","సగం ఈశుడు అయిన"],["aniśam","always","ఎల్లప్పుడూ"],["vapuḥ","the form","రూపాన్ని"],["āśrayāmi","I take refuge in","ఆశ్రయిస్తాను"]],
+ "en": "I always take refuge in the form that is half Ambikā and half Īśa: shining like the red bandhūka flower and gold, holding in its own arms a lovely rosary, the noose and goad, and the boon-giving gesture, adorned with the crescent moon and three-eyed.",
+ "te": "బంధూక పుష్పం, బంగారం వలె ప్రకాశిస్తూ, తన బాహువులలో అందమైన అక్షమాల, పాశం, అంకుశం, వరద ముద్రలను ధరించి, చంద్రఖండాన్ని ఆభరణంగా కలిగి, మూడు కన్నులతో ఉన్న సగం అంబిక, సగం ఈశుడైన రూపాన్ని ఎల్లప్పుడూ ఆశ్రయిస్తాను.",
+ "ctx": {"en": "The dhyāna for this chapter is Ardhanārīśvara: Śiva and Śakti in one body, half red and half gold.", "te": "ఈ అధ్యాయ ధ్యానం అర్ధనారీశ్వరుడు: శివశక్తులు ఒకే శరీరంలో, సగం ఎరుపు, సగం బంగారు వర్ణం."}
+},
+"9.1": {"pada": [["oṃ","Om","ఓం"],["rājā","the king","రాజు"],["uvāca","said","పలికెను"]], "en": "Om. The king said:", "te": "ఓం. రాజు ఇలా అన్నాడు:", "ctx": {"en": "King Suratha interrupts, the only time in the main story he asks a question in the middle of the battles.", "te": "సురథ మహారాజు మధ్యలో ప్రశ్నిస్తాడు; యుద్ధ కథల మధ్యలో అతడు ప్రశ్న అడిగే ఏకైక సందర్భం ఇది."}},
+"9.2": {
+ "pada": [["vicitram","wonderful","విచిత్రమైన"],["idam","this","ఈ"],["ākhyātam","has been told","చెప్పబడింది"],["bhagavan","revered sir","పూజ్యులారా"],["bhavatā","by you","మీ చేత"],["mama","to me","నాకు"],["devyāḥ","of the Goddess","దేవి యొక్క"],["carita","deeds","చరిత్ర"],["māhātmyam","greatness","మాహాత్మ్యం"],["raktabīja","Raktabīja","రక్తబీజుని"],["vadha","slaying","వధకు"],["āśritam","concerning","సంబంధించిన"]],
+ "en": "'Revered sir, you have told me this wonderful account of the greatness of the Goddess's deeds in the slaying of Raktabīja.'",
+ "te": "'పూజ్యులారా, రక్తబీజ వధకు సంబంధించిన దేవి చరిత్ర మాహాత్మ్యాన్ని మీరు నాకు విచిత్రంగా వివరించారు.'"
+},
+"9.3": {
+ "pada": [["bhūyaḥ","further","ఇంకా"],["ca","and","మరియు"],["icchāmi","I wish","కోరుకుంటున్నాను"],["aham","I","నేను"],["śrotum","to hear","వినడానికి"],["raktabīje","Raktabīja","రక్తబీజుడు"],["nipātite","having been slain","సంహరించబడిన తరువాత"],["cakāra","did","చేశాడు"],["śumbhaḥ","Śumbha","శుంభుడు"],["yat","what","ఏమి"],["karma","deed","కర్మను"],["niśumbhaḥ","Niśumbha","నిశుంభుడు"],["ca","and","మరియు"],["atikopanaḥ","very wrathful","మహాకోపి"]],
+ "en": "'I wish to hear more: what did Śumbha and the very wrathful Niśumbha do after Raktabīja was slain?'",
+ "te": "'రక్తబీజుడు సంహరించబడిన తరువాత శుంభుడు, మహాకోపి నిశుంభుడు ఏమి చేశారో ఇంకా వినాలని కోరుకుంటున్నాను.'"
+},
+"9.4": {"pada": [["ṛṣiḥ","the sage","ఋషి"],["uvāca","said","పలికెను"]], "en": "The sage said:", "te": "ఋషి ఇలా అన్నాడు:"},
+"9.5": {
+ "pada": [["cakāra","showed","చూపాడు"],["kopam","anger","కోపాన్ని"],["atulam","boundless","అపారమైన"],["raktabīje","Raktabīja","రక్తబీజుడు"],["nipātite","being slain","సంహరించబడగా"],["śumbha","Śumbha","శుంభ"],["asuraḥ","the asura","అసురుడు"],["niśumbhaḥ","Niśumbha","నిశుంభుడు"],["ca","and","మరియు"],["hateṣu","being slain","సంహరించబడగా"],["anyeṣu","the others","ఇతరులు"],["ca","and","మరియు"],["āhave","in battle","యుద్ధంలో"]],
+ "en": "With Raktabīja slain and the others killed in battle, the asura Śumbha and Niśumbha were filled with boundless rage.",
+ "te": "రక్తబీజుడు, ఇతరులు యుద్ధంలో సంహరించబడగా అసురుడైన శుంభుడు, నిశుంభుడు అపారమైన కోపం చూపారు."
+},
+"9.6": {
+ "pada": [["hanyamānam","being slaughtered","సంహరించబడుతున్న"],["mahāsainyam","his great army","మహాసైన్యాన్ని"],["vilokya","seeing","చూసి"],["amarṣam","fury","కోపాన్ని"],["udvahan","bearing","వహిస్తూ"],["abhyadhāvat","rushed forward","ముందుకు దూకాడు"],["niśumbhaḥ","Niśumbha","నిశుంభుడు"],["atha","then","అప్పుడు"],["mukhyayā","with the chief","ప్రధానమైన"],["asura","asura","అసుర"],["senayā","army","సేనతో"]],
+ "en": "Seeing his great army being slaughtered, Niśumbha, burning with fury, rushed forward with the pick of the asura army.",
+ "te": "తన మహాసైన్యం సంహరించబడడం చూసి నిశుంభుడు కోపంతో ప్రధాన అసురసేనతో ముందుకు దూకాడు."
+},
+"9.7": {
+ "pada": [["tasya","his","అతని"],["agrataḥ","in front","ముందు"],["tathā","and","అలాగే"],["pṛṣṭhe","behind","వెనుక"],["pārśvayoḥ","on both sides","రెండు ప్రక్కల"],["ca","and","మరియు"],["mahāsurāḥ","great asuras","మహాసురులు"],["sandaṣṭa","bitten","కొరికిన"],["oṣṭha","lips","పెదవులు"],["puṭāḥ","whose","గలవారై"],["kruddhāḥ","enraged","కోపించిన"],["hantum","to kill","చంపడానికి"],["devīm","the Goddess","దేవిని"],["upāyayuḥ","came","వచ్చారు"]],
+ "en": "Great asuras in front of him, behind him and on both sides, biting their lips in rage, came to kill the Goddess.",
+ "te": "అతని ముందు, వెనుక, రెండు ప్రక్కల మహాసురులు కోపంతో పెదవులు కొరుకుతూ దేవిని చంపడానికి వచ్చారు."
+},
+"9.8": {
+ "pada": [["ājagāma","came","వచ్చాడు"],["mahāvīryaḥ","of great valour","మహావీరుడైన"],["śumbhaḥ api","Śumbha too","శుంభుడు కూడా"],["svabalaiḥ","by his own forces","తన బలాలతో"],["vṛtaḥ","surrounded","కూడి"],["nihantum","to kill","సంహరించడానికి"],["caṇḍikām","Caṇḍikā","చండికను"],["kopāt","in anger","కోపంతో"],["kṛtvā","having done","చేసి"],["yuddham","battle","యుద్ధం"],["tu","indeed","అయితే"],["mātṛbhiḥ","with the Mothers","మాతృకలతో"]],
+ "en": "Śumbha too, of great valour, came with his own forces, having fought the Mothers, to kill Caṇḍikā in his anger.",
+ "te": "మహావీరుడైన శుంభుడు కూడా తన బలాలతో, మాతృకలతో యుద్ధం చేసి, కోపంతో చండికను సంహరించడానికి వచ్చాడు."
+},
+"9.9": {
+ "pada": [["tataḥ","then","అప్పుడు"],["yuddham","battle","యుద్ధం"],["atīva","fierce","తీవ్రమైన"],["āsīt","there was","జరిగింది"],["devyāḥ","of the Goddess","దేవికి"],["śumbha","Śumbha","శుంభ"],["niśumbhayoḥ","and Niśumbha","నిశుంభులకు"],["śaravarṣam","rain of arrows","బాణవర్షం"],["atīva","most","అతి"],["ugram","fierce","ఉగ్రమైన"],["meghayoḥ","two clouds","రెండు మేఘాలు"],["iva","like","వలె"],["varṣatoḥ","raining","కురిపిస్తున్న"]],
+ "en": "Then a fierce battle broke out between the Goddess and Śumbha and Niśumbha, who poured out a most fearsome rain of arrows, like two clouds raining.",
+ "te": "అప్పుడు దేవికి శుంభ నిశుంభులకు తీవ్రమైన యుద్ధం జరిగింది; వారు రెండు మేఘాలు వర్షించినట్లు అతి ఉగ్రమైన బాణవర్షం కురిపించారు."
+},
+"9.10": {
+ "pada": [["ciccheda","cut down","ఖండించింది"],["astān","hurled","విసిరిన"],["charān","arrows","బాణాలను"],["tābhyām","by those two","వారిద్దరి"],["caṇḍikā","Caṇḍikā","చండిక"],["svaśara","her own arrows","తన బాణాల"],["utkaraiḥ","with showers of","సమూహాలతో"],["tāḍayāmāsa","struck","కొట్టింది"],["ca","and","మరియు"],["aṅgeṣu","on their limbs","అవయవాలపై"],["śastraughaiḥ","with floods of weapons","శస్త్రసమూహాలతో"],["asureśvarau","the two asura lords","ఇద్దరు అసురేశ్వరులను"]],
+ "en": "Caṇḍikā cut down the arrows those two hurled with showers of her own, and struck the two asura lords on their limbs with floods of weapons.",
+ "te": "వారిద్దరు విసిరిన బాణాలను చండిక తన బాణసమూహాలతో ఖండించి, శస్త్రసమూహాలతో ఆ ఇద్దరు అసురేశ్వరుల అవయవాలపై కొట్టింది."
+},
+"9.11": {
+ "pada": [["niśumbhaḥ","Niśumbha","నిశుంభుడు"],["niśitam","sharp","పదునైన"],["khaḍgam","sword","ఖడ్గాన్ని"],["carma","shield","డాలును"],["ca","and","మరియు"],["ādāya","taking","తీసుకొని"],["suprabham","gleaming","ప్రకాశించే"],["atāḍayat","struck","కొట్టాడు"],["mūrdhni","on the head","తలపై"],["siṃham","the lion","సింహాన్ని"],["devyāḥ","of the Goddess","దేవి యొక్క"],["vāhanam","mount","వాహనమైన"],["uttamam","excellent","శ్రేష్ఠమైన"]],
+ "en": "Niśumbha took a sharp sword and a gleaming shield and struck the lion, the Goddess's noble mount, on the head.",
+ "te": "నిశుంభుడు పదునైన ఖడ్గాన్ని, ప్రకాశించే డాలును తీసుకొని దేవి వాహనమైన శ్రేష్ఠ సింహం తలపై కొట్టాడు."
+},
+"9.12": {
+ "pada": [["tāḍite","being struck","కొట్టబడగా"],["vāhane","her mount","వాహనం"],["devī","the Goddess","దేవి"],["kṣurapreṇa","with a razor-edged arrow","క్షురప్ర బాణంతో"],["asim","sword","ఖడ్గాన్ని"],["uttamam","fine","శ్రేష్ఠమైన"],["niśumbhasya","Niśumbha's","నిశుంభుని"],["āśu","quickly","వెంటనే"],["ciccheda","cut","ఖండించింది"],["carma","shield","డాలును"],["ca api","and also","కూడా"],["aṣṭacandrakam","with eight moons","ఎనిమిది చంద్రాకృతుల"]],
+ "en": "When her mount was struck, the Goddess quickly cut Niśumbha's fine sword with a razor-edged arrow, and also his shield decorated with eight moons.",
+ "te": "వాహనం కొట్టబడగా దేవి క్షురప్ర బాణంతో వెంటనే నిశుంభుని శ్రేష్ఠ ఖడ్గాన్ని, ఎనిమిది చంద్రాకృతుల డాలును ఖండించింది."
+},
+"9.13": {
+ "pada": [["chinne","being cut","ఖండించబడగా"],["carmaṇi","the shield","డాలు"],["khaḍge","the sword","ఖడ్గం"],["ca","and","మరియు"],["śaktim","a spear","శక్తి ఆయుధాన్ని"],["cikṣepa","hurled","విసిరాడు"],["saḥ","he","ఆ"],["asuraḥ","the asura","అసురుడు"],["tām api","that too","దానిని కూడా"],["asya","his","అతని"],["dvidhā","in two","రెండుగా"],["cakre","made","చేసింది"],["cakreṇa","with her discus","చక్రంతో"],["abhimukha","towards her","తన వైపు"],["āgatām","coming","వస్తున్న"]],
+ "en": "With shield and sword cut, the asura hurled a spear; that too, as it came at her, she cut in two with her discus.",
+ "te": "డాలు, ఖడ్గం ఖండించబడగా ఆ అసురుడు శక్తిని విసిరాడు; తన వైపు వస్తున్న దానిని కూడా ఆమె చక్రంతో రెండుగా ఖండించింది."
+},
+"9.14": {
+ "pada": [["kopa","rage","కోపంతో"],["ādhmātaḥ","swollen with","ఉబ్బిన"],["niśumbhaḥ","Niśumbha","నిశుంభుడు"],["atha","then","అప్పుడు"],["śūlam","a trident","శూలాన్ని"],["jagrāha","seized","పట్టుకున్నాడు"],["dānavaḥ","the dānava","దానవుడు"],["āyātam","coming","వస్తున్న"],["muṣṭi","fist","పిడికిలి"],["pātena","with a blow of","దెబ్బతో"],["devī","the Goddess","దేవి"],["tat","that","దానిని"],["ca api","too","కూడా"],["acūrṇayat","shattered","పొడి చేసింది"]],
+ "en": "Swollen with rage, the dānava Niśumbha seized a trident; as it came, the Goddess shattered that too with a blow of her fist.",
+ "te": "కోపంతో ఉబ్బిన దానవుడు నిశుంభుడు శూలాన్ని పట్టుకున్నాడు; అది వస్తుండగా దేవి పిడికిలి దెబ్బతో దానిని పొడి చేసింది."
+},
+"9.15": {
+ "pada": [["āvidhya","whirling","గిరగిరా తిప్పి"],["atha","then","అప్పుడు"],["gadām","a mace","గదను"],["saḥ api","he too","అతడు కూడా"],["cikṣepa","hurled","విసిరాడు"],["caṇḍikām","Caṇḍikā","చండిక"],["prati","at","పైకి"],["sā api","that too","అది కూడా"],["devyāḥ","the Goddess's","దేవి"],["triśūlena","by the trident","త్రిశూలంతో"],["bhinnā","shattered","బద్దలై"],["bhasmatvam","to ashes","బూడిదగా"],["āgatā","turned","మారింది"]],
+ "en": "Then he whirled a mace and hurled it at Caṇḍikā; that too, shattered by the Goddess's trident, turned to ashes.",
+ "te": "అప్పుడు అతడు గదను తిప్పి చండికపైకి విసిరాడు; అది కూడా దేవి త్రిశూలంతో బద్దలై బూడిదగా మారింది."
+},
+"9.16": {
+ "pada": [["tataḥ","then","అప్పుడు"],["paraśu","an axe","పరశువు"],["hastam","in hand","చేతిలో గల"],["tam","him","అతనిని"],["āyāntam","approaching","వస్తున్న"],["daitya","of daityas","దైత్య"],["puṅgavam","the bull (chief)","శ్రేష్ఠుని"],["āhatya","striking","కొట్టి"],["devī","the Goddess","దేవి"],["bāṇaughaiḥ","with floods of arrows","బాణసమూహాలతో"],["apātayata","felled","పడగొట్టింది"],["bhūtale","to the ground","భూమిపై"]],
+ "en": "Then, as that chief of daityas came at her axe in hand, the Goddess struck him with floods of arrows and felled him to the ground.",
+ "te": "అప్పుడు పరశువు చేతబట్టి వస్తున్న ఆ దైత్యశ్రేష్ఠుని దేవి బాణసమూహాలతో కొట్టి నేలపై పడగొట్టింది."
+},
+"9.17": {
+ "pada": [["tasmin","he","అతడు"],["nipatite","having fallen","పడిపోగా"],["bhūmau","on the ground","భూమిపై"],["niśumbhe","Niśumbha","నిశుంభుడు"],["bhīma","terrible","భయంకరమైన"],["vikrame","of prowess","పరాక్రమం గల"],["bhrātari","his brother","సోదరుడు"],["atīva","exceedingly","అత్యంత"],["saṅkruddhaḥ","enraged","కోపించి"],["prayayau","went forth","బయలుదేరాడు"],["hantum","to kill","చంపడానికి"],["ambikām","Ambikā","అంబికను"]],
+ "en": "When his brother Niśumbha of terrible prowess fell to the ground, Śumbha, utterly enraged, went forth to kill Ambikā.",
+ "te": "భయంకర పరాక్రమశాలి అయిన సోదరుడు నిశుంభుడు నేలపై పడగా శుంభుడు అత్యంత కోపంతో అంబికను చంపడానికి బయలుదేరాడు."
+},
+"9.18": {
+ "pada": [["saḥ","he","అతడు"],["rathasthaḥ","standing in his chariot","రథంలో నిలిచి"],["tathā","and","అలాగే"],["atyuccaiḥ","held high","ఎత్తుగా"],["gṛhīta","grasping","పట్టుకున్న"],["parama","supreme","శ్రేష్ఠమైన"],["āyudhaiḥ","weapons","ఆయుధాలతో"],["bhujaiḥ","with arms","భుజాలతో"],["aṣṭābhiḥ","eight","ఎనిమిది"],["atulaiḥ","matchless","సాటిలేని"],["vyāpya","pervading","వ్యాపించి"],["aśeṣam","entire","సమస్త"],["babhau","shone","ప్రకాశించాడు"],["nabhaḥ","sky","ఆకాశాన్ని"]],
+ "en": "Standing in his chariot, with eight matchless arms holding the finest weapons high, he seemed to fill the whole sky.",
+ "te": "రథంలో నిలిచి, శ్రేష్ఠమైన ఆయుధాలను ఎత్తుగా పట్టుకున్న సాటిలేని ఎనిమిది భుజాలతో అతడు ఆకాశమంతా వ్యాపించినట్లు ప్రకాశించాడు."
+},
+"9.19": {
+ "pada": [["tam","him","అతనిని"],["āyāntam","approaching","వస్తున్న"],["samālokya","seeing","చూసి"],["devī","the Goddess","దేవి"],["śaṅkham","her conch","శంఖాన్ని"],["avādayat","blew","ఊదింది"],["jyā","bowstring","అల్లెతాటి"],["śabdam","sound","ధ్వనిని"],["ca api","and also","కూడా"],["dhanuṣaḥ","of her bow","ధనుస్సు యొక్క"],["cakāra","made","చేసింది"],["atīva","most","అత్యంత"],["duḥsaham","unbearable","భరించలేని"]],
+ "en": "Seeing him coming, the Goddess blew her conch and made her bowstring twang, a sound most unbearable.",
+ "te": "అతడు వస్తుండడం చూసి దేవి శంఖం ఊదింది; ధనుస్సు అల్లెతాటితో భరించలేని ధ్వని చేసింది."
+},
+"9.20": {
+ "pada": [["pūrayāmāsa","filled","నింపింది"],["kakubhaḥ","the quarters","దిక్కులను"],["nija","her own","తన"],["ghaṇṭā","bell","ఘంట"],["svanena","with the sound of","నాదంతో"],["ca","and","మరియు"],["samasta","all","సమస్త"],["daitya","daitya","దైత్య"],["sainyānām","of the armies","సైన్యాల"],["tejo","vigour","తేజస్సును"],["vadha","destruction","నాశనం"],["vidhāyinā","which caused","చేసే"]],
+ "en": "And with the ringing of her bell, which destroyed the vigour of all the daitya armies, she filled the quarters.",
+ "te": "సమస్త దైత్యసైన్యాల తేజస్సును నశింపజేసే తన ఘంటానాదంతో దిక్కులను నింపింది."
+},
+"9.21": {
+ "pada": [["tataḥ","then","అప్పుడు"],["siṃhaḥ","the lion","సింహం"],["mahānādaiḥ","with mighty roars","మహానాదాలతో"],["tyājita","which made shed","వదిలించిన"],["ibha","elephants","ఏనుగుల"],["mahāmadaiḥ","great rut","మహామదాన్ని"],["pūrayāmāsa","filled","నింపింది"],["gaganam","the sky","ఆకాశాన్ని"],["gām","the earth","భూమిని"],["tathā eva","and likewise","అలాగే"],["diśaḥ","the directions","దిక్కులను"],["daśa","ten","పది"]],
+ "en": "Then the lion filled the sky, the earth and the ten directions with mighty roars that made the elephants lose their great rut.",
+ "te": "అప్పుడు సింహం ఏనుగుల మహామదాన్ని వదిలించే మహానాదాలతో ఆకాశాన్ని, భూమిని, పది దిక్కులను నింపింది."
+},
+"9.22": {
+ "pada": [["tataḥ","then","అప్పుడు"],["kālī","Kālī","కాళి"],["samutpatya","leaping up","పైకి ఎగిరి"],["gaganam","the sky","ఆకాశాన్ని"],["kṣmām","the earth","భూమిని"],["atāḍayat","struck","కొట్టింది"],["karābhyām","with both hands","రెండు చేతులతో"],["tat","that","ఆ"],["ninādena","by the sound","నాదంతో"],["prāk","earlier","ముందటి"],["svanāḥ","sounds","ధ్వనులు"],["te","those","ఆ"],["tirohitāḥ","were drowned out","మరుగున పడ్డాయి"]],
+ "en": "Then Kālī leapt up and struck the sky and the earth with both hands; that sound drowned out all the sounds before it.",
+ "te": "అప్పుడు కాళి పైకి ఎగిరి రెండు చేతులతో ఆకాశాన్ని, భూమిని కొట్టింది; ఆ నాదంతో ముందటి ధ్వనులన్నీ మరుగున పడ్డాయి."
+},
+"9.23": {
+ "pada": [["aṭṭāṭṭahāsam","a loud peal of laughter","గట్టి అట్టహాసాన్ని"],["aśivam","ominous","అమంగళకరమైన"],["śivadūtī","Śivadūtī","శివదూతి"],["cakāra","made","చేసింది"],["ha","indeed","నిజంగా"],["vaiḥ","by those","ఆ"],["śabdaiḥ","sounds","శబ్దాలతో"],["asurāḥ","the asuras","అసురులు"],["tresuḥ","trembled","వణికారు"],["śumbhaḥ","Śumbha","శుంభుడు"],["kopam","anger","కోపాన్ని"],["param","supreme","పరమ"],["yayau","went to","పొందాడు"]],
+ "en": "Śivadūtī let out an ominous peal of laughter; the asuras trembled at those sounds, and Śumbha flew into the greatest rage.",
+ "te": "శివదూతి అమంగళకరమైన అట్టహాసం చేసింది; ఆ శబ్దాలకు అసురులు వణికారు, శుంభుడు పరమ కోపం పొందాడు."
+},
+"9.24": {
+ "pada": [["durātman","O wicked one","ఓ దురాత్మా"],["tiṣṭha tiṣṭha","stop, stop!","ఆగు, ఆగు"],["iti","thus","అని"],["vyājahāra","cried","పలికింది"],["ambikā","Ambikā","అంబిక"],["yadā","when","ఎప్పుడు"],["tadā","then","అప్పుడు"],["jaya","victory!","జయ"],["iti","thus","అని"],["abhihitam","was proclaimed","పలుకబడింది"],["devaiḥ","by the gods","దేవతల చేత"],["ākāśa","in the sky","ఆకాశంలో"],["saṃsthitaiḥ","standing","నిలిచిన"]],
+ "en": "When Ambikā cried, 'Stop, stop, wicked one!', the gods standing in the sky shouted 'Victory!'",
+ "te": "'ఓ దురాత్మా, ఆగు, ఆగు!' అని అంబిక పలకగా ఆకాశంలో నిలిచిన దేవతలు 'జయ!' అని నినదించారు."
+},
+"9.25": {
+ "pada": [["śumbhena","by Śumbha","శుంభుని చేత"],["āgatya","approaching","వచ్చి"],["yā","which","ఏ"],["śaktiḥ","spear","శక్తి"],["muktā","was hurled","విడువబడిందో"],["jvālā","flames","జ్వాలలతో"],["atibhīṣaṇā","most terrible","అతి భయంకరమైన"],["āyāntī","coming","వస్తున్న"],["vahni","fire","అగ్ని"],["kūṭa","mountain","పర్వతం"],["ābhā","looking like","వలె కనిపించే"],["sā","it","అది"],["nirastā","was repelled","నిరోధించబడింది"],["maholkayā","by a great firebrand","మహోల్కతో"]],
+ "en": "The spear Śumbha came up and hurled, terrible with flames and coming like a mountain of fire, was repelled by a great firebrand.",
+ "te": "శుంభుడు వచ్చి విసిరిన, జ్వాలలతో అతి భయంకరమైన, అగ్నిపర్వతంలా వస్తున్న ఆ శక్తి మహోల్కతో నిరోధించబడింది."
+},
+"9.26": {
+ "pada": [["siṃhanādena","by the lion-roar","సింహనాదంతో"],["śumbhasya","of Śumbha","శుంభుని"],["vyāptam","was filled","వ్యాపించింది"],["loka","worlds","లోక"],["traya","three","త్రయ"],["antaram","the space of","మధ్యప్రదేశం"],["nirghāta","thunderclap","పిడుగుపాటు"],["niḥsvanaḥ","sound","ధ్వని"],["ghoraḥ","terrible","భయంకరమైన"],["jitavān","surpassed","మించిపోయింది"],["avanīpate","O lord of the earth","ఓ భూపతీ"]],
+ "en": "Śumbha's lion-like roar filled the three worlds, O lord of the earth, but the terrible thunderclap of the battle drowned it out.",
+ "te": "ఓ భూపతీ, శుంభుని సింహనాదం ముల్లోకాల మధ్య వ్యాపించింది; కానీ భయంకరమైన పిడుగుపాటు ధ్వని దానిని మించిపోయింది.",
+ "ctx": {"en": "The second half is read two ways: the thunder of the Goddess's response outdid his roar, or the roar itself sounded as terrible as a thunderclap.", "te": "రెండవ పాదాన్ని రెండు విధాలుగా చెబుతారు: దేవి ప్రతిస్పందన ఉరుము అతని గర్జనను మించిపోయింది, లేదా ఆ గర్జనే పిడుగుపాటు వలె భయంకరంగా ఉంది."}
+},
+"9.27": {
+ "pada": [["śumbha","Śumbha","శుంభుడు"],["muktān","released","విడిచిన"],["charān","arrows","బాణాలను"],["devī","the Goddess","దేవి"],["śumbhaḥ","Śumbha","శుంభుడు"],["tat","her","ఆమె"],["prahitān","shot","వేసిన"],["charān","arrows","బాణాలను"],["ciccheda","cut","ఖండించారు"],["svaśaraiḥ","with own arrows","తమ బాణాలతో"],["ugraiḥ","fierce","ఉగ్రమైన"],["śataśaḥ","by hundreds","వందల"],["atha","and","మరియు"],["sahasraśaḥ","by thousands","వేల సంఖ్యలో"]],
+ "en": "The Goddess cut down the arrows Śumbha shot, and Śumbha cut down hers, each with fierce arrows of their own, by the hundred and the thousand.",
+ "te": "శుంభుడు విడిచిన బాణాలను దేవి, ఆమె వేసిన బాణాలను శుంభుడు తమ ఉగ్రబాణాలతో వందల, వేల సంఖ్యలో ఖండించారు."
+},
+"9.28": {
+ "pada": [["tataḥ","then","అప్పుడు"],["sā","she","ఆ"],["caṇḍikā","Caṇḍikā","చండిక"],["kruddhā","enraged","కోపించిన"],["śūlena","with her spear","శూలంతో"],["abhijaghāna","struck","కొట్టింది"],["tam","him","అతనిని"],["saḥ","he","అతడు"],["tadā","then","అప్పుడు"],["abhihataḥ","struck","దెబ్బతిని"],["bhūmau","on the ground","నేలపై"],["mūrcchitaḥ","fainting","మూర్ఛపోయి"],["nipapāta","fell","పడిపోయాడు"],["ha","indeed","నిజంగా"]],
+ "en": "Then Caṇḍikā in her anger struck him with her spear, and struck down, he fell fainting to the ground.",
+ "te": "అప్పుడు కోపించిన చండిక శూలంతో అతనిని కొట్టింది; దెబ్బతిన్న అతడు మూర్ఛపోయి నేలపై పడ్డాడు.",
+ "ctx": {"en": "Śumbha is only stunned here; he returns in Chapter 10. In 9.29 the fight turns back to Niśumbha, who has come round.", "te": "ఇక్కడ శుంభుడు మూర్ఛపోయాడు మాత్రమే; 10వ అధ్యాయంలో తిరిగి వస్తాడు. 9.29లో స్పృహ తెచ్చుకున్న నిశుంభుని వైపు యుద్ధం మళ్ళుతుంది."}
+},
+"9.29": {
+ "pada": [["tataḥ","then","అప్పుడు"],["niśumbhaḥ","Niśumbha","నిశుంభుడు"],["samprāpya","regaining","తిరిగి పొంది"],["cetanām","consciousness","స్పృహను"],["ātta","having taken up","తీసుకొని"],["kārmukaḥ","his bow","ధనుస్సును"],["ājaghāna","struck","కొట్టాడు"],["śaraiḥ","with arrows","బాణాలతో"],["devīm","the Goddess","దేవిని"],["kālīm","Kālī","కాళిని"],["kesariṇam","the lion","సింహాన్ని"],["tathā","and","అలాగే"]],
+ "en": "Then Niśumbha, regaining consciousness, took up his bow and struck the Goddess, Kālī and the lion with arrows.",
+ "te": "అప్పుడు నిశుంభుడు స్పృహ తెచ్చుకొని ధనుస్సు తీసుకొని దేవిని, కాళిని, సింహాన్ని బాణాలతో కొట్టాడు."
+},
+"9.30": {
+ "pada": [["punaḥ ca","and again","మళ్ళీ"],["kṛtvā","making","చేసుకొని"],["bāhūnām","arms","బాహువులను"],["ayutam","ten thousand","పది వేల"],["danuja","of the dānavas","దనుజ"],["īśvaraḥ","the lord","ప్రభువు"],["cakra","discus","చక్ర"],["āyudhena","weapons","ఆయుధాలతో"],["ditijaḥ","the son of Diti","దితి పుత్రుడు"],["chādayāmāsa","covered","కప్పివేశాడు"],["caṇḍikām","Caṇḍikā","చండికను"]],
+ "en": "Again, that lord of dānavas, son of Diti, made himself ten thousand arms and covered Caṇḍikā with discuses.",
+ "te": "మళ్ళీ ఆ దనుజేశ్వరుడు, దితిపుత్రుడు పది వేల బాహువులను సృష్టించుకొని చక్రాయుధాలతో చండికను కప్పివేశాడు."
+},
+"9.31": {
+ "pada": [["tataḥ","then","అప్పుడు"],["bhagavatī","the Blessed One","భగవతి"],["kruddhā","enraged","కోపించిన"],["durgā","Durgā","దుర్గ"],["durga","difficulties","దుర్గమమైన"],["ārti","distress","ఆర్తిని"],["nāśinī","destroyer of","నశింపజేసే"],["ciccheda","cut","ఖండించింది"],["devī","the Goddess","దేవి"],["cakrāṇi","the discuses","చక్రాలను"],["svaśaraiḥ","with her arrows","తన బాణాలతో"],["sāyakān","arrows","బాణాలను"],["ca","and","మరియు"],["tān","those","ఆ"]],
+ "en": "Then the Blessed Durgā, destroyer of distress in hard places, enraged, cut those discuses and arrows with her own arrows.",
+ "te": "అప్పుడు దుర్గమ ఆర్తిని నశింపజేసే భగవతి దుర్గాదేవి కోపంతో ఆ చక్రాలను, బాణాలను తన బాణాలతో ఖండించింది.",
+ "ctx": {"en": "'Durgā durgārtināśinī' plays on durga, 'a hard-to-cross place': she is the one who takes away the suffering of hard straits.", "te": "'దుర్గా దుర్గార్తినాశినీ' అనేది 'దుర్గం' (దాటలేని కష్టం) అనే పదంతో ఆట: కష్టాల బాధను తొలగించేది ఆమె."}
+},
+"9.32": {
+ "pada": [["tataḥ","then","అప్పుడు"],["niśumbhaḥ","Niśumbha","నిశుంభుడు"],["vegena","swiftly","వేగంగా"],["gadām","a mace","గదను"],["ādāya","taking","తీసుకొని"],["caṇḍikām","at Caṇḍikā","చండికపైకి"],["abhyadhāvata","rushed","దూకాడు"],["vai","indeed","నిజంగా"],["hantum","to kill","చంపడానికి"],["daitya","daitya","దైత్య"],["sainya","army","సైన్యంతో"],["samāvṛtaḥ","surrounded by","కూడి"]],
+ "en": "Then Niśumbha swiftly took up a mace and, surrounded by the daitya army, rushed at Caṇḍikā to kill her.",
+ "te": "అప్పుడు నిశుంభుడు వేగంగా గదను తీసుకొని దైత్యసైన్యంతో కూడి చండికను చంపడానికి దూకాడు."
+},
+"9.33": {
+ "pada": [["tasya","his","అతని"],["āpatataḥ","as he attacked","మీదికి వస్తుండగా"],["eva","just","వెంటనే"],["āśu","quickly","త్వరగా"],["gadām","mace","గదను"],["ciccheda","cut","ఖండించింది"],["caṇḍikā","Caṇḍikā","చండిక"],["khaḍgena","with her sword","ఖడ్గంతో"],["śitadhāreṇa","sharp-edged","పదునైన అంచు గల"],["saḥ","he","అతడు"],["ca","and","మరియు"],["śūlam","a trident","శూలాన్ని"],["samādade","took up","అందుకున్నాడు"]],
+ "en": "As he charged, Caṇḍikā quickly cut his mace with her sharp-edged sword, and he took up a trident.",
+ "te": "అతడు మీదికి వస్తుండగానే చండిక పదునైన ఖడ్గంతో అతని గదను త్వరగా ఖండించింది; అతడు శూలాన్ని అందుకున్నాడు."
+},
+"9.34": {
+ "pada": [["śūla","trident","శూలం"],["hastam","in hand","చేతిలో గల"],["samāyāntam","approaching","వస్తున్న"],["niśumbham","Niśumbha","నిశుంభుని"],["amara","of the gods","దేవతలను"],["ardanam","tormentor","పీడించేవాడిని"],["hṛdi","in the heart","హృదయంలో"],["vivyādha","pierced","చీల్చింది"],["śūlena","with her spear","శూలంతో"],["vega","speed","వేగంతో"],["āviddhena","hurled with","విసిరిన"],["caṇḍikā","Caṇḍikā","చండిక"]],
+ "en": "As Niśumbha, tormentor of the gods, came trident in hand, Caṇḍikā pierced him in the heart with a swiftly hurled spear.",
+ "te": "శూలం చేతబట్టి వస్తున్న దేవపీడకుడు నిశుంభుని హృదయాన్ని చండిక వేగంగా విసిరిన శూలంతో చీల్చింది."
+},
+"9.35": {
+ "pada": [["bhinnasya","pierced","చీల్చబడిన"],["tasya","his","అతని"],["śūlena","by the spear","శూలంతో"],["hṛdayāt","from the heart","హృదయం నుండి"],["niḥsṛtaḥ","came out","బయటకు వచ్చాడు"],["aparaḥ","another","మరొకడు"],["mahābalaḥ","of great strength","మహాబలుడు"],["mahāvīryaḥ","of great valour","మహావీరుడు"],["tiṣṭha","stop!","ఆగు!"],["iti","thus","అని"],["puruṣaḥ","a man","పురుషుడు"],["vadan","saying","అంటూ"]],
+ "en": "From his heart, pierced by the spear, came out another man of great strength and valour, shouting 'Stop!'",
+ "te": "శూలంతో చీల్చబడిన అతని హృదయం నుండి 'ఆగు!' అంటూ మహాబలుడు, మహావీరుడు అయిన మరో పురుషుడు బయటకు వచ్చాడు.",
+ "ctx": {"en": "Read inwardly, even after the ego is struck, a subtler one steps out of it. The Devī meets it with a laugh.", "te": "అంతరార్థంలో, అహంకారం దెబ్బతిన్న తరువాత కూడా దాని నుండి మరింత సూక్ష్మమైనది బయటకు వస్తుంది. దేవి దానిని నవ్వుతో ఎదుర్కొంటుంది."}
+},
+"9.36": {
+ "pada": [["tasya","his","అతని"],["niṣkrāmataḥ","as he came out","బయటకు వస్తుండగా"],["devī","the Goddess","దేవి"],["prahasya","laughing","నవ్వి"],["svanavat","aloud","బిగ్గరగా"],["tataḥ","then","అప్పుడు"],["śiraḥ","head","తలను"],["ciccheda","cut off","నరికింది"],["khaḍgena","with her sword","ఖడ్గంతో"],["tataḥ","then","అప్పుడు"],["asau","he","అతడు"],["apatat","fell","పడిపోయాడు"],["bhuvi","to the ground","నేలపై"]],
+ "en": "As he came out, the Goddess laughed aloud and cut off his head with her sword, and he fell to the ground.",
+ "te": "అతడు బయటకు వస్తుండగా దేవి బిగ్గరగా నవ్వి ఖడ్గంతో అతని తల నరికింది; అతడు నేలపై పడిపోయాడు."
+},
+"9.37": {
+ "pada": [["tataḥ","then","అప్పుడు"],["siṃhaḥ","the lion","సింహం"],["cakhāda","devoured","మింగింది"],["ugra","fierce","ఉగ్రమైన"],["daṃṣṭrā","fangs","కోరలతో"],["kṣuṇṇa","crushed","నలిగిన"],["śirodharān","necks","మెడలు గల"],["asurān","asuras","అసురులను"],["tān","those","ఆ"],["tathā","and","అలాగే"],["kālī","Kālī","కాళి"],["śivadūtī","Śivadūtī","శివదూతి"],["tathā","likewise","అలాగే"],["aparān","others","ఇతరులను"]],
+ "en": "Then the lion devoured those asuras whose necks it had crushed with its fierce fangs, and Kālī and Śivadūtī devoured others.",
+ "te": "అప్పుడు సింహం ఉగ్రమైన కోరలతో మెడలు నలిపిన ఆ అసురులను మింగింది; కాళి, శివదూతి ఇతరులను మింగారు."
+},
+"9.38": {
+ "pada": [["kaumārī","Kaumārī's","కౌమారి"],["śakti","spear","శక్తితో"],["nirbhinnāḥ","pierced by","చీల్చబడి"],["kecit","some","కొందరు"],["neśuḥ","perished","నశించారు"],["mahāsurāḥ","great asuras","మహాసురులు"],["brahmāṇī","Brahmāṇī's","బ్రహ్మాణి"],["mantra","mantra","మంత్ర"],["pūtena","purified by","పవిత్రమైన"],["toyena","with water","జలంతో"],["anye","others","ఇతరులు"],["nirākṛtāḥ","were driven off","తరిమివేయబడ్డారు"]],
+ "en": "Some great asuras, pierced by Kaumārī's spear, perished; others were driven off by Brahmāṇī's mantra-purified water.",
+ "te": "కౌమారి శక్తితో చీల్చబడి కొందరు మహాసురులు నశించారు; బ్రహ్మాణి మంత్రపూత జలంతో ఇతరులు తరిమివేయబడ్డారు."
+},
+"9.39": {
+ "pada": [["māheśvarī","Māheśvarī's","మాహేశ్వరి"],["triśūlena","by the trident","త్రిశూలంతో"],["bhinnāḥ","pierced","చీల్చబడి"],["petuḥ","fell","పడిపోయారు"],["tathā","likewise","అలాగే"],["apare","others","ఇతరులు"],["vārāhī","Vārāhī's","వారాహి"],["tuṇḍa","snout","ముట్టె"],["ghātena","by the blows of","దెబ్బలతో"],["kecit","some","కొందరు"],["cūrṇīkṛtāḥ","were pulverised","పొడి చేయబడ్డారు"],["bhuvi","on the ground","నేలపై"]],
+ "en": "Others fell, pierced by Māheśvarī's trident; some were pounded to dust on the ground by the blows of Vārāhī's snout.",
+ "te": "మాహేశ్వరి త్రిశూలంతో చీల్చబడి ఇతరులు పడిపోయారు; వారాహి ముట్టె దెబ్బలతో కొందరు నేలపై పొడి చేయబడ్డారు."
+},
+"9.40": {
+ "pada": [["khaṇḍam khaṇḍam","piece by piece","ముక్కలు ముక్కలుగా"],["ca","and","మరియు"],["cakreṇa","by the discus","చక్రంతో"],["vaiṣṇavyā","of Vaiṣṇavī","వైష్ణవి"],["dānavāḥ","dānavas","దానవులు"],["kṛtāḥ","were made","చేయబడ్డారు"],["vajreṇa","by the thunderbolt","వజ్రంతో"],["ca","and","మరియు"],["aindrī","Aindrī's","ఐంద్రి"],["hasta","hand","చేతి"],["agra","tip","కొన నుండి"],["vimuktena","released from","విడువబడిన"],["tathā","likewise","అలాగే"],["apare","others","ఇతరులు"]],
+ "en": "Dānavas were cut to pieces by Vaiṣṇavī's discus, and others likewise by the thunderbolt released from Aindrī's hand.",
+ "te": "వైష్ణవి చక్రంతో దానవులు ముక్కలు ముక్కలుగా చేయబడ్డారు; ఐంద్రి చేతి నుండి విడువబడిన వజ్రంతో ఇతరులు కూడా."
+},
+"9.41": {
+ "pada": [["kecit","some","కొందరు"],["vineśuḥ","perished","నశించారు"],["asurāḥ","asuras","అసురులు"],["kecit","some","కొందరు"],["naṣṭāḥ","fled","పారిపోయారు"],["mahāhavāt","from the great battle","మహాయుద్ధం నుండి"],["bhakṣitāḥ","were devoured","మింగబడ్డారు"],["ca","and","మరియు"],["apare","others","ఇతరులు"],["kālī","by Kālī","కాళి"],["śivadūtī","Śivadūtī","శివదూతి"],["mṛgādhipaiḥ","and the king of beasts","మృగరాజుల చేత"]],
+ "en": "Some asuras perished, some fled the great battle, and others were devoured by Kālī, Śivadūtī and the lion, king of beasts.",
+ "te": "కొందరు అసురులు నశించారు, కొందరు మహాయుద్ధం నుండి పారిపోయారు; ఇతరులు కాళి, శివదూతి, మృగరాజు చేత మింగబడ్డారు.",
+ "ctx": {"en": "End of Chapter 9. Niśumbha is dead; only Śumbha remains, and in Chapter 10 he faces the Devī alone.", "te": "9వ అధ్యాయం ముగిసింది. నిశుంభుడు మరణించాడు; శుంభుడు మాత్రమే మిగిలాడు; 10వ అధ్యాయంలో అతడు ఒంటరిగా దేవిని ఎదుర్కొంటాడు."}
+}
+}
