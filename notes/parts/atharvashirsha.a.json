@@ -1,0 +1,77 @@
+{
+"_intro": {
+ "en": "The Devyatharvaśīrṣa (also called the Devī Upaniṣad) is a short Upaniṣad of the Atharva tradition. The gods ask the Devī 'Who are you?' and she answers that she is Brahman itself, the source of the whole world, both knowledge and ignorance. The gods then praise her, and the text reveals in coded form her one-syllable bīja (hrīṃ) and the nine-syllable Navārṇa mantra used in the Saptaśatī. Much of it is prose; the verse numbers follow the source.",
+ "te": "దేవ్యథర్వశీర్షం (దేవీ ఉపనిషత్తు అని కూడా) అథర్వ సంప్రదాయపు చిన్న ఉపనిషత్తు. 'నీవెవరు?' అని దేవతలు దేవిని అడుగుతారు; తాను బ్రహ్మమేనని, సమస్త జగత్తుకు మూలమని, విద్య, అవిద్య రెండూ తానేనని ఆమె సమాధానం చెబుతుంది. తరువాత దేవతలు ఆమెను స్తుతిస్తారు; ఆమె ఏకాక్షర బీజం (హ్రీం), సప్తశతిలో ఉపయోగించే నవార్ణ మంత్రం సంకేత రూపంలో వెల్లడవుతాయి. చాలా భాగం గద్యం; సంఖ్యలు మూలాన్ని అనుసరిస్తాయి."
+},
+"1": {
+ "pada": [["oṃ","Om","ఓం"],["sarve","all","అందరూ"],["vai","indeed","నిజంగా"],["devāḥ","the gods","దేవతలు"],["devīm","the Goddess","దేవిని"],["upatasthuḥ","approached","సమీపించారు"],["kā","who","ఎవరు"],["asi","are","అవు"],["tvam","you","నీవు"],["mahādevi","O Great Goddess","ఓ మహాదేవీ"],["iti","thus","అని"]],
+ "en": "All the gods approached the Goddess and asked: 'Who are you, Great Goddess?'",
+ "te": "దేవతలందరూ దేవిని సమీపించి 'ఓ మహాదేవీ, నీవెవరు?' అని అడిగారు."
+},
+"2": {
+ "pada": [["sā","she","ఆమె"],["abravīt","said","అంది"],["aham","I","నేను"],["brahma","Brahman","బ్రహ్మ"],["svarūpiṇī","in essence","స్వరూపిణిని"],["mattaḥ","from me","నా నుండి"],["prakṛti","Prakṛti (nature)","ప్రకృతి"],["puruṣa","Puruṣa (spirit)","పురుష"],["ātmakam","consisting of","స్వరూపమైన"],["jagat","the world","జగత్తు"],["śūnyam","void","శూన్యం"],["ca","and","మరియు"],["aśūnyam","non-void","అశూన్యం"]],
+ "en": "She said: 'I am Brahman in essence. From me comes this world of Prakṛti and Puruṣa, the void and the non-void.'",
+ "te": "ఆమె అంది: 'నేను బ్రహ్మస్వరూపిణిని. ప్రకృతిపురుషాత్మకమైన ఈ జగత్తు, శూన్యం, అశూన్యం నా నుండే.'"
+},
+"3": {
+ "pada": [["aham","I","నేను"],["ānanda","bliss","ఆనందం"],["anānandau","and non-bliss","అనానందం"],["vijñāna","knowledge","విజ్ఞానం"],["avijñāne","and non-knowledge","అవిజ్ఞానం"],["brahma","Brahman","బ్రహ్మ"],["abrahmaṇī","and non-Brahman","అబ్రహ్మ"],["dve","two","రెండు"],["brahmaṇī","Brahmans","బ్రహ్మలు"],["veditavye","are to be known","తెలుసుకోవలసినవి"],["pañca","five","పంచ"],["tanmātrāṇi","subtle elements","తన్మాత్రలు"],["akhilam","whole","సమస్త"],["jagat","world","జగత్తు"]],
+ "en": "'I am bliss and non-bliss. I am knowledge and ignorance. I am Brahman and non-Brahman; both Brahmans must be known. I am the five subtle elements. I am the whole world.'",
+ "te": "'నేనే ఆనందం, అనానందం. నేనే విజ్ఞానం, అవిజ్ఞానం. నేనే బ్రహ్మ, అబ్రహ్మ; రెండు బ్రహ్మలను తెలుసుకోవాలి. నేనే పంచతన్మాత్రలు. నేనే సమస్త జగత్తు.'",
+ "ctx": {"en": "The 'two Brahmans' are usually read as the higher (nirguṇa) and lower (saguṇa, or the Veda as śabda-brahman).", "te": "'రెండు బ్రహ్మలు' అంటే పర (నిర్గుణ), అపర (సగుణ, లేదా శబ్దబ్రహ్మమైన వేదం) అని సాధారణంగా చెబుతారు."}
+},
+"4": {
+ "pada": [["vedaḥ","the Veda","వేదం"],["aham","I","నేను"],["avedaḥ","not the Veda","అవేదం"],["vidyā","knowledge","విద్య"],["avidyā","ignorance","అవిద్య"],["ajā","unborn","అజ"],["anajā","not unborn","అనజ"],["adhaḥ","below","క్రింద"],["ca","and","మరియు"],["ūrdhvam","above","పైన"],["tiryak","across","అడ్డంగా"]],
+ "en": "'I am the Veda and what is not the Veda. I am knowledge and ignorance. I am the unborn and the born. I am below, above and on every side.'",
+ "te": "'నేనే వేదం, అవేదం. నేనే విద్య, అవిద్య. నేనే అజ, అనజ. క్రింద, పైన, అడ్డంగా అంతటా నేనే.'"
+},
+"5": {
+ "pada": [["aham","I","నేను"],["rudrebhiḥ","with the Rudras","రుద్రులతో"],["vasubhiḥ","with the Vasus","వసువులతో"],["carāmi","move","సంచరిస్తాను"],["ādityaiḥ","with the Ādityas","ఆదిత్యులతో"],["viśvadevaiḥ","with the All-Gods","విశ్వదేవులతో"],["mitrāvaruṇau","Mitra and Varuṇa","మిత్రావరుణులను"],["ubhau","both","ఇద్దరినీ"],["bibharmi","uphold","భరిస్తాను"],["indrāgnī","Indra and Agni","ఇంద్రాగ్నులను"],["aśvinau","the Aśvins","అశ్వినులను"]],
+ "en": "'I move with the Rudras and the Vasus, with the Ādityas and the All-Gods. I uphold both Mitra and Varuṇa, Indra and Agni, and both Aśvins.'",
+ "te": "'నేను రుద్రులతో, వసువులతో, ఆదిత్యులతో, విశ్వదేవులతో సంచరిస్తాను. మిత్రావరుణులను, ఇంద్రాగ్నులను, అశ్వినులిద్దరినీ భరిస్తాను.'",
+ "ctx": {"en": "5–7 quote the Ṛgvedic Devī Sūkta (10.125), recited after the 13 chapters.", "te": "5–7 ఋగ్వేద దేవీసూక్తం (10.125) నుండి ఉదాహరణలు; ఆ సూక్తం 13 అధ్యాయాల తరువాత పఠించబడుతుంది."}
+},
+"6": {
+ "pada": [["aham","I","నేను"],["somam","Soma","సోముని"],["tvaṣṭāram","Tvaṣṭṛ","త్వష్టను"],["pūṣaṇam","Pūṣan","పూషుని"],["bhagam","Bhaga","భగుని"],["dadhāmi","uphold","ధరిస్తాను"],["viṣṇum","Viṣṇu","విష్ణువును"],["urukramam","of the wide strides","ఉరుక్రముని"],["brahmāṇam","Brahmā","బ్రహ్మను"],["uta","and","మరియు"],["prajāpatim","Prajāpati","ప్రజాపతిని"]],
+ "en": "'I uphold Soma, Tvaṣṭṛ, Pūṣan and Bhaga. I uphold Viṣṇu of the wide strides, Brahmā, and Prajāpati.'",
+ "te": "'సోముని, త్వష్టను, పూషుని, భగుని నేనే ధరిస్తాను. ఉరుక్రముడైన విష్ణువును, బ్రహ్మను, ప్రజాపతిని ధరిస్తాను.'"
+},
+"7": {
+ "pada": [["dadhāmi","grant","ఇస్తాను"],["draviṇam","wealth","ధనాన్ని"],["haviṣmate","to the offerer","హవిస్సు సమర్పించేవానికి"],["yajamānāya","to the sacrificer","యజమానునికి"],["rājñī","queen","రాణిని"],["saṅgamanī","gatherer","సమకూర్చేది"],["vasūnām","of riches","సంపదల"],["prathamā","first","ప్రథమ"],["yajñiyānām","of the worshipful","యజ్ఞార్హులలో"],["suve","bring forth","జన్మనిస్తాను"],["pitaram","the father","తండ్రికి"],["yoniḥ","source","మూలం"],["samudre","in the ocean","సముద్రంలో"],["yaḥ","whoever","ఎవరు"],["evam","thus","ఇలా"],["veda","knows","తెలుసుకుంటాడో"],["daivīm","divine","దైవీ"],["sampadam","wealth","సంపదను"],["āpnoti","attains","పొందుతాడు"]],
+ "en": "'I grant wealth to the sacrificer who brings offerings and presses the Soma. I am the queen, gatherer of riches, the knowing one, first of the worshipful. I bring forth the Father at the summit of this world; my source is in the waters, within the ocean.' Whoever knows this attains divine wealth.",
+ "te": "'హవిస్సు సమర్పించి సోమం పిండే యజమానునికి నేనే ధనాన్ని ఇస్తాను. నేనే రాణిని, సంపదలను సమకూర్చేదానిని, జ్ఞానవతిని, యజ్ఞార్హులలో ప్రథమను. ఈ లోకపు శిఖరంపై తండ్రికి జన్మనిస్తాను; నా మూలం జలాలలో, సముద్రంలో ఉంది.' ఇలా తెలుసుకున్నవాడు దైవీ సంపదను పొందుతాడు."
+},
+"8": {
+ "pada": [["te","those","ఆ"],["devāḥ","gods","దేవతలు"],["abruvan","said","అన్నారు"],["namaḥ","salutation","నమస్కారం"],["devyai","to the Goddess","దేవికి"],["mahādevyai","to the Great Goddess","మహాదేవికి"],["śivāyai","to the auspicious one","శివకు"],["satatam","always","ఎల్లప్పుడూ"],["prakṛtyai","to Prakṛti","ప్రకృతికి"],["bhadrāyai","to the gracious one","భద్రకు"],["niyatāḥ","with restraint","నియతులమై"],["praṇatāḥ sma","we have bowed","నమస్కరించాము"],["tām","to her","ఆమెకు"]],
+ "en": "The gods said: 'Salutations to the Goddess, to the Great Goddess; to Śivā, always salutations. Salutations to Prakṛti, to Bhadrā. With minds restrained we bow to her.'",
+ "te": "దేవతలు అన్నారు: 'దేవికి, మహాదేవికి నమస్కారం; శివకు ఎల్లప్పుడూ నమస్కారం. ప్రకృతికి, భద్రకు నమస్కారం. నియతులమై ఆమెకు నమస్కరించాము.'",
+ "ctx": {"en": "This verse is the same as Chapter 5.9.", "te": "ఈ శ్లోకం 5వ అధ్యాయపు 9వ శ్లోకమే."}
+},
+"9": {
+ "pada": [["tām","her","ఆ"],["agnivarṇām","fire-coloured","అగ్నివర్ణ"],["tapasā","with tapas","తపస్సుతో"],["jvalantīm","blazing","జ్వలించే"],["vairocanīm","radiant","వైరోచని"],["karmaphaleṣu","in the fruits of action","కర్మఫలాలలో"],["juṣṭām","delighted / sought","ఆదరించబడే"],["durgām","Durgā","దుర్గ"],["devīm","the Goddess","దేవిని"],["śaraṇam","refuge","శరణు"],["prapadyāmahe","we take","పొందుతున్నాము"],["asurān","the asuras","అసురులను"],["nāśayitryai","to the destroyer of","నాశనం చేసేదానికి"],["te","to you","నీకు"],["namaḥ","salutation","నమస్కారం"]],
+ "en": "We take refuge in the Goddess Durgā, fire-coloured, blazing with tapas, radiant, sought for the fruits of action. Salutations to you, destroyer of the asuras.",
+ "te": "అగ్నివర్ణ, తపస్సుతో జ్వలించే, వైరోచని, కర్మఫలాల కోసం ఆశ్రయించబడే దుర్గాదేవిని శరణు పొందుతున్నాము. అసురనాశినివైన నీకు నమస్కారం.",
+ "ctx": {"en": "Adapted from the Vedic Durgā Sūkta (Taittirīya Āraṇyaka).", "te": "వైదిక దుర్గాసూక్తం (తైత్తిరీయ ఆరణ్యకం) నుండి తీసుకోబడింది."}
+},
+"10": {
+ "pada": [["devīm","the divine","దివ్యమైన"],["vācam","Speech","వాక్కును"],["ajanayanta","brought forth","పుట్టించారు"],["devāḥ","the gods","దేవతలు"],["tām","her","ఆమెను"],["viśvarūpāḥ","of every form","అన్ని రూపాల"],["paśavaḥ","creatures","జీవులు"],["vadanti","speak","పలుకుతాయి"],["sā","she","ఆమె"],["naḥ","for us","మాకు"],["mandrā","delightful","ఆనందకరమైన"],["iṣam","nourishment","అన్నాన్ని"],["ūrjam","strength","బలాన్ని"],["duhānā","yielding","ఇస్తూ"],["dhenuḥ","cow","ధేనువు"],["vāk","Speech","వాక్కు"],["asmān","to us","మా వద్దకు"],["upa","near","దగ్గరకు"],["suṣṭutā","well praised","బాగా స్తుతించబడిన"],["etu","may she come","వచ్చుగాక"]],
+ "en": "The gods brought forth the divine Speech; creatures of every form speak her. May she, the delightful cow of Speech, well praised, come to us, yielding nourishment and strength.",
+ "te": "దేవతలు దివ్యమైన వాక్కును పుట్టించారు; అన్ని రూపాల జీవులు ఆమెనే పలుకుతాయి. ఆనందకరమైన ధేనువు అయిన ఆ వాక్కు, బాగా స్తుతించబడి, అన్నబలాలను ఇస్తూ మా వద్దకు వచ్చుగాక.",
+ "ctx": {"en": "A Ṛgvedic verse (8.100.11) to Vāk, divine Speech.", "te": "దివ్య వాక్కును స్తుతించే ఋగ్వేద మంత్రం (8.100.11)."}
+},
+"11": {
+ "pada": [["kālarātrīm","Kālarātrī","కాలరాత్రిని"],["brahmastutām","praised by Brahmā","బ్రహ్మస్తుతను"],["vaiṣṇavīm","Vaiṣṇavī","వైష్ణవిని"],["skandamātaram","mother of Skanda","స్కందమాతను"],["sarasvatīm","Sarasvatī","సరస్వతిని"],["aditim","Aditi","అదితిని"],["dakṣa","of Dakṣa","దక్షుని"],["duhitaram","daughter","పుత్రికను"],["namāmaḥ","we bow to","నమస్కరిస్తున్నాము"],["pāvanām","the purifier","పావనిని"],["śivām","Śivā","శివను"]],
+ "en": "We bow to Kālarātrī, praised by Brahmā; to Vaiṣṇavī, mother of Skanda; to Sarasvatī, Aditi, the daughter of Dakṣa; to Śivā, the purifier.",
+ "te": "బ్రహ్మస్తుత అయిన కాలరాత్రికి, స్కందమాత వైష్ణవికి, సరస్వతికి, దక్షపుత్రిక అదితికి, పావని శివకు నమస్కరిస్తున్నాము."
+},
+"12": {
+ "pada": [["mahālakṣmyai","Mahālakṣmī","మహాలక్ష్మిని"],["ca","and","మరియు"],["vidmahe","we know","తెలుసుకుంటున్నాము"],["sarvaśaktyai","the all-powerful","సర్వశక్తిని"],["dhīmahi","we meditate on","ధ్యానిస్తున్నాము"],["tat","that","ఆ"],["naḥ","us","మమ్మల్ని"],["devī","Goddess","దేవి"],["pracodayāt","may she inspire","ప్రేరేపించుగాక"]],
+ "en": "We know Mahālakṣmī; we meditate on her who is all power. May that Goddess inspire us.",
+ "te": "మహాలక్ష్మిని తెలుసుకుంటున్నాము; సర్వశక్తిని ధ్యానిస్తున్నాము. ఆ దేవి మమ్మల్ని ప్రేరేపించుగాక.",
+ "ctx": {"en": "This is the Devī Gāyatrī, in the same form as the Sāvitrī Gāyatrī.", "te": "ఇది దేవీ గాయత్రి; సావిత్రీ గాయత్రి వలెనే దీని రూపం."}
+},
+"13": {
+ "pada": [["aditiḥ","Aditi","అదితి"],["hi","indeed","నిజంగా"],["ajaniṣṭa","was born","జన్మించింది"],["dakṣa","O Dakṣa","ఓ దక్షా"],["yā","who","ఏ"],["duhitā","daughter","పుత్రిక"],["tava","your","నీ"],["tām","after her","ఆమె తరువాత"],["devāḥ","the gods","దేవతలు"],["anvajāyanta","were born","జన్మించారు"],["bhadrāḥ","blessed","భద్రులైన"],["amṛta","immortality","అమృతానికి"],["bandhavaḥ","kin of","బంధువులు"]],
+ "en": "Aditi was born, O Dakṣa, she who is your daughter. After her the gods were born, blessed, kin of immortality.",
+ "te": "ఓ దక్షా, నీ పుత్రిక అయిన అదితి జన్మించింది. ఆమె తరువాత భద్రులైన, అమృతబంధువులైన దేవతలు జన్మించారు."
+}
+}

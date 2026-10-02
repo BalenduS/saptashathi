@@ -93,7 +93,7 @@ def main():
     ratri_v['source_note'] = 'Ṛgveda 10.127 (svara marks omitted)'
 
     athar = generic('atharvashirsha', 'Devyatharvaśīrṣam', 'prayer',
-                    body_of('deviiatharva.itx', 'OM sarve vai devA'),
+                    [l.replace('namaste.stu', 'namaste.astu') for l in body_of('deviiatharva.itx', 'OM sarve vai devA')],
                     num=re.compile(r'\|\|\s*(\d+)\s*\|\|\s*$'),
                     skip=('iti ', 'shAntiH shAntiH', 'Proofread', 'Encoded', 'Please send', 'Last updated', 'http'))
 
