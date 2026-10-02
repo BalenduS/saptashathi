@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="te">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saptaśatī Reader</title>
+<meta name="description" content="Śrī Durgā Saptaśatī verse by verse — Sanskrit in Telugu and Devanagari, word-by-word meaning, English and Telugu explanations.">
+<meta name="theme-color" content="#8f1d1d">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Saptaśatī">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Tiro+Telugu:ital@0;1&family=Ramaraja&display=swap">
+<style>
+/* Layout: a single reading column like a pothi leaf — rubricated ink on paper by day, lamp-light on lacquer by night.
+   Sticky top bar with section + controls; verse "leaf" centred; panels below it; contents in a side sheet. */
+:root{
+  --paper:#f6f4f1;      /* rice paper, slight rose bias */
+  --leaf:#fffdfb;       /* the verse leaf */
+  --ink:#1d1715;        /* lamp-black ink */
+  --ink-2:#5b4f4a;      /* secondary ink */
+  --ink-3:#8b7f78;      /* captions */
+  --rule:#e3dbd5;
+  --kumkum:#a3221b;     /* rubric red: numbers, speakers, guru syllables */
+  --kumkum-soft:#f6e3df;
+  --haldi:#b07a12;      /* turmeric: learned / progress */
+  --haldi-soft:#f5ead2;
+  --focus:#1f5fa8;
+  --f-deva:"Tiro Devanagari Sanskrit","Noto Serif Devanagari","Sanskrit Text",serif;
+  --f-telu:"Tiro Telugu","Noto Serif Telugu","Gautami",serif;
+  --f-title:"Ramaraja","Tiro Telugu",serif;
+  --f-body:"Gentium Book Plus","Gentium Plus","Charis SIL",Georgia,serif;
+  --scale:1;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#17110f;--leaf:#211816;--ink:#f1e6d8;--ink-2:#c9b8a6;--ink-3:#93816f;--rule:#3a2c27;
+  --kumkum:#f0826e;--kumkum-soft:#3d1d18;--haldi:#e3b45a;--haldi-soft:#3a2d14;--focus:#8ab8ff;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#17110f;--leaf:#211816;--ink:#f1e6d8;--ink-2:#c9b8a6;--ink-3:#93816f;--rule:#3a2c27;
+  --kumkum:#f0826e;--kumkum-soft:#3d1d18;--haldi:#e3b45a;--haldi-soft:#3a2d14;--focus:#8ab8ff;color-scheme:dark}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55;-webkit-text-size-adjust:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:4px}
+.sc{font-variant:small-caps;letter-spacing:.06em}
+.wrap{max-width:46rem;margin:0 auto;padding-inline:16px}
+
+/* ---------- top bar ---------- */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.bar .wrap{display:flex;align-items:center;gap:8px;min-height:52px}
+.bar h1{flex:1;min-width:0;margin:0;font-size:15px;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1 b{color:var(--kumkum);font-weight:700}
+.ib{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:40px;border-radius:20px;padding:0 10px;color:var(--ink-2)}
+.ib:hover{background:var(--kumkum-soft);color:var(--kumkum)}
+.ib[aria-pressed="true"]{background:var(--kumkum-soft);color:var(--kumkum)}
+.ib svg{width:20px;height:20px}
+.seg{display:inline-flex;border:1px solid var(--rule);border-radius:999px;padding:2px}
+.seg button{padding:4px 10px;border-radius:999px;font-size:14px;color:var(--ink-2)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.seg .telu{font-family:var(--f-telu)} .seg .deva{font-family:var(--f-deva)}
+
+/* ---------- home ---------- */
+.home{padding-block:28px 64px}
+.masthead{display:grid;gap:6px;padding-block:8px 24px;border-bottom:1px solid var(--rule)}
+.masthead .script-title{font-family:var(--f-title);font-size:clamp(34px,8vw,52px);line-height:1.15;color:var(--kumkum);margin:0;text-wrap:balance}
+.masthead .script-title.deva{font-family:var(--f-deva)}
+.masthead p{margin:0;color:var(--ink-2);max-width:36rem}
+.counts{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px;font-size:14px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.counts b{color:var(--ink);font-weight:700}
+.continue{margin-top:18px;display:flex;align-items:center;gap:14px;padding:14px 16px;border:1px solid var(--rule);background:var(--leaf);border-radius:12px;text-align:left;width:100%}
+.continue:hover{border-color:var(--kumkum)}
+.continue .k{font-size:13px;color:var(--ink-3)}
+.continue .v{font-size:17px}
+.continue .arrow{margin-left:auto;color:var(--kumkum);font-size:22px}
+.group{margin-top:30px}
+.group h2{margin:0 0 4px;font-size:13px;font-weight:400;color:var(--kumkum)}
+.group .gsub{font-size:14px;color:var(--ink-3);margin:0 0 8px}
+.slist{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.srow{display:grid;grid-template-columns:2.4rem 1fr auto;align-items:center;gap:12px;width:100%;padding:12px 4px;border-bottom:1px solid var(--rule);text-align:left}
+.srow:hover{background:var(--leaf)}
+.srow .num{font-size:22px;color:var(--kumkum);text-align:center;font-variant-numeric:tabular-nums}
+.srow .num.dot{font-size:14px}
+.srow .t{min-width:0}
+.srow .t .s{display:block;font-size:20px;line-height:1.3}
+.srow .t .s.telu{font-family:var(--f-telu)} .srow .t .s.deva{font-family:var(--f-deva)}
+.srow .t .e{display:block;font-size:14px;color:var(--ink-3)}
+.srow .meta{display:grid;justify-items:end;gap:4px;font-size:13px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.chip{display:inline-block;padding:1px 8px;border-radius:999px;font-size:12px;line-height:1.6;white-space:nowrap}
+.chip.ok{background:var(--haldi-soft);color:var(--haldi)}
+.chip.txt{border:1px solid var(--rule);color:var(--ink-3)}
+.lbar{width:64px;height:3px;border-radius:2px;background:var(--rule);overflow:hidden}
+.lbar i{display:block;height:100%;background:var(--haldi)}
+.foot{margin-top:40px;font-size:13px;color:var(--ink-3);display:grid;gap:6px}
+.foot a{color:var(--ink-2)}
+
+/* ---------- verse view ---------- */
+.verse-view{padding-block:18px 120px}
+.crumb{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;font-size:14px;color:var(--ink-3);margin-bottom:10px}
+.crumb .pos{font-variant-numeric:tabular-nums}
+.prog{height:2px;background:var(--rule);border-radius:1px;margin-bottom:18px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--kumkum);transition:width .25s}
+.leafcard{background:var(--leaf);border:1px solid var(--rule);border-radius:4px;padding:26px clamp(18px,5vw,40px) 22px;position:relative;box-shadow:0 1px 0 var(--rule)}
+/* string-hole of a palm-leaf pothi: a quiet, subject-specific mark */
+.leafcard::before{content:"";position:absolute;top:50%;left:10px;width:7px;height:7px;margin-top:-3.5px;border-radius:50%;border:1px solid var(--rule);background:var(--paper)}
+.rubric{display:flex;align-items:baseline;gap:10px;color:var(--kumkum);font-size:15px;margin-bottom:12px}
+.rubric .spk{font-size:19px}
+.rubric .spk.telu{font-family:var(--f-telu)} .rubric .spk.deva{font-family:var(--f-deva)}
+.rubric .grp{font-size:14px}
+.script{margin:0;white-space:pre-line;overflow-wrap:anywhere;font-size:calc(27px * var(--scale));line-height:1.75;text-wrap:pretty}
+.script.telu{font-family:var(--f-telu);line-height:1.85}
+.script.deva{font-family:var(--f-deva)}
+.script .dn{color:var(--kumkum);white-space:nowrap}
+.script.uv{font-size:calc(24px * var(--scale));color:var(--kumkum)}
+.iast{margin:14px 0 0;color:var(--ink-2);font-style:italic;white-space:pre-line;font-size:calc(17px * var(--scale))}
+.memo .script .ln{filter:blur(7px);cursor:pointer;transition:filter .2s;border-radius:4px}
+.memo .script .ln.shown{filter:none}
+.memo .script .ln:not(.shown):hover{background:var(--kumkum-soft)}
+.memohint{margin:10px 0 0;font-size:14px;color:var(--ink-3)}
+.nav{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:16px}
+.nav .spacer{flex:1}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:999px;border:1px solid var(--rule);background:var(--leaf);font-size:15px}
+.btn:hover{border-color:var(--kumkum);color:var(--kumkum)}
+.btn.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn.primary:hover{background:var(--kumkum);border-color:var(--kumkum);color:#fff}
+.btn.learned{background:var(--haldi-soft);border-color:transparent;color:var(--haldi)}
+.btn:disabled{opacity:.4;cursor:default}
+
+.panel{margin-top:22px;border-top:1px solid var(--rule);padding-top:16px}
+.panel h3{margin:0 0 10px;font-size:13px;font-weight:400;color:var(--kumkum)}
+.panel p{margin:0 0 10px;max-width:65ch}
+.panel .te{font-family:var(--f-telu);font-size:18px;line-height:1.8}
+.meaning .langtag{font-size:12px;color:var(--ink-3);margin-right:6px}
+.words{display:grid;grid-template-columns:repeat(auto-fill,minmax(10.5rem,1fr));gap:8px}
+.w{border:1px solid var(--rule);border-radius:8px;padding:8px 10px;background:var(--leaf);min-width:0}
+.w .ws{display:block;font-size:19px;line-height:1.4;overflow-wrap:anywhere}
+.w .ws.telu{font-family:var(--f-telu)} .w .ws.deva{font-family:var(--f-deva)}
+.w .wi{display:block;font-size:13px;font-style:italic;color:var(--ink-3)}
+.w .wm{display:block;font-size:14px;margin-top:2px}
+.w .wt{display:block;font-family:var(--f-telu);font-size:15px;color:var(--ink-2)}
+.pada{font-size:calc(20px * var(--scale));line-height:1.9;margin:0 0 12px;overflow-wrap:anywhere}
+.pada.telu{font-family:var(--f-telu)} .pada.deva{font-family:var(--f-deva)}
+.pada span+span::before{content:"·";color:var(--kumkum);margin:0 .35em}
+.meter{display:grid;gap:8px}
+.mline{display:flex;flex-wrap:wrap;min-width:0;gap:2px 1px;align-items:flex-end;font-size:16px}
+.syl{display:inline-flex;flex-direction:column;align-items:center;padding:0 2px;min-width:1.2em}
+.syl i{font-style:normal;font-size:12px;line-height:1;color:var(--ink-3)}
+.syl.g b{font-weight:700;color:var(--kumkum)}
+.syl.g i{color:var(--kumkum)}
+.syl b{font-weight:400}
+.mline .gap{width:.6em}
+.mline .cnt{margin-left:8px;font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.legend{font-size:13px;color:var(--ink-3)}
+.legend b{color:var(--kumkum)}
+.ctx{background:var(--haldi-soft);border-radius:10px;padding:12px 14px}
+.ctx h3{color:var(--haldi)}
+.empty{color:var(--ink-3);font-size:15px}
+.empty b{color:var(--ink-2);font-weight:400}
+
+/* ---------- paath (continuous) ---------- */
+.paath{padding-block:22px 100px}
+.paath h2{margin:0 0 4px;font-family:var(--f-title);font-weight:400;font-size:32px;color:var(--kumkum);text-wrap:balance}
+.paath h2.deva{font-family:var(--f-deva)}
+.paath .psub{color:var(--ink-3);font-size:14px;margin:0 0 20px}
+.pre{margin:0 0 18px;padding:12px 14px;border-left:2px solid var(--kumkum);background:var(--leaf)}
+.pre .lab{font-size:13px;color:var(--kumkum);display:block;margin-bottom:4px}
+.pre .script{font-size:calc(20px * var(--scale))}
+.pv{display:block;width:100%;text-align:left;padding:8px 0 10px;border-bottom:1px dashed var(--rule)}
+.pv:hover .script{color:var(--kumkum)}
+.pv .script{font-size:calc(24px * var(--scale))}
+.pv .spk{display:block;color:var(--kumkum);font-size:18px}
+.pv .spk.telu{font-family:var(--f-telu)} .pv .spk.deva{font-family:var(--f-deva)}
+.pv.uv .script{color:var(--kumkum);font-size:calc(21px * var(--scale))}
+.pnext{margin-top:28px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+
+/* ---------- sheet (contents & settings) ---------- */
+.scrim{position:fixed;inset:0;background:rgb(0 0 0 / .35);z-index:30}
+.sheet{position:fixed;top:0;bottom:0;right:0;width:min(26rem,100%);background:var(--paper);z-index:31;overflow:auto;padding:calc(env(safe-area-inset-top,0px) + 14px) 18px calc(env(safe-area-inset-bottom,0px) + 24px);border-left:1px solid var(--rule)}
+.sheet h2{font-size:13px;font-weight:400;color:var(--kumkum);margin:18px 0 8px}
+.sheet .row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--rule)}
+.sheet .row label{color:var(--ink-2)}
+.sheet .close{float:right}
+.toc a{display:flex;justify-content:space-between;gap:10px;padding:7px 4px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule)}
+.toc a:hover{color:var(--kumkum)}
+.toc a small{color:var(--ink-3);font-variant-numeric:tabular-nums}
+.toc .g{margin-top:14px;font-size:13px;color:var(--kumkum)}
+input[type=range]{accent-color:var(--kumkum);width:9rem}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:8px 16px;border-radius:999px;font-size:14px;z-index:40}
+.loading{padding:60px 0;color:var(--ink-3);text-align:center}
+
+/* ---------- tablet (iPad portrait and up): larger type, 44px touch targets ---------- */
+@media (min-width:700px){
+  body{font-size:18px}
+  .wrap{max-width:50rem;padding-inline:28px}
+  .ib{min-width:44px;height:44px}
+  .btn{padding:11px 20px;font-size:16px;min-height:44px}
+  .seg button{padding:7px 14px;font-size:15px}
+  .script{font-size:calc(30px * var(--scale))}
+  .iast{font-size:calc(18px * var(--scale))}
+  .srow{padding-block:14px}
+  .words{grid-template-columns:repeat(auto-fill,minmax(12rem,1fr))}
+}
+/* ---------- wide (iPad landscape, iPad Pro, laptops): two panes ---------- */
+@media (min-width:1000px){
+  .bar .wrap,.verse-view{max-width:84rem}
+  .home{max-width:76rem}
+  .groups{columns:2;column-gap:56px}
+  .groups .group{break-inside:avoid;display:inline-block;width:100%}
+  .vgrid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:44px;align-items:start}
+  .vgrid.solo{grid-template-columns:minmax(0,48rem);justify-content:center}
+  .vleft{position:sticky;top:calc(env(safe-area-inset-top,0px) + 72px);max-height:calc(100dvh - 92px);overflow:auto;padding-bottom:8px}
+  .vright{display:flex;flex-direction:column}
+  .vright .meaning{order:-2}
+  .vright .ctx{order:-1}
+  .vright>.panel{margin-top:0;margin-bottom:24px}
+  .vright>.panel.meaning{border-top:0;padding-top:4px}
+  .leafcard{padding:34px 44px 28px}
+  .script{font-size:calc(32px * var(--scale))}
+  .paath{max-width:58rem}
+  .pv .script{font-size:calc(27px * var(--scale))}
+}
+/* touch screens: no sticky hover colours after a tap */
+@media (hover:none){
+  .ib:hover{background:none;color:var(--ink-2)}
+  .ib[aria-pressed="true"]:hover{background:var(--kumkum-soft);color:var(--kumkum)}
+  .srow:hover{background:none}
+  .btn:hover{border-color:var(--rule);color:inherit}
+  .btn.primary:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+  .pv:hover .script{color:inherit}
+  .continue:hover{border-color:var(--rule)}
+}
+@media (max-width:520px){
+  .bar .hide-s{display:none}
+  .leafcard::before{display:none}
+  .script{font-size:calc(23px * var(--scale))}
+  .words{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+
+<header class="bar">
+  <div class="wrap">
+    <button class="ib" id="homeBtn" aria-label="All sections" title="All sections">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l9 16H3z"/><path d="M12 9l4.5 8h-9z"/></svg>
+    </button>
+    <h1 id="barTitle"><b>ॐ</b> Saptaśatī</h1>
+    <div class="seg hide-s" role="group" aria-label="Script">
+      <button class="telu" data-script="telu" aria-pressed="true">తె</button>
+      <button class="deva" data-script="deva" aria-pressed="false">दे</button>
+    </div>
+    <button class="ib" id="paathBtn" aria-pressed="false" title="Paath mode: read the whole section continuously" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h7a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4zM20 5h-7a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h7z"/></svg>
+    </button>
+    <button class="ib" id="memoBtn" aria-pressed="false" title="Practice: hide the lines and recall them" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z"/><path d="M4 20L20 4"/></svg>
+    </button>
+    <button class="ib" id="menuBtn" aria-label="Contents and settings" title="Contents and settings">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="app"><div class="loading">Opening the text…</div></main>
+<div id="sheetRoot"></div>
+
+<script>
+(() => {
+'use strict';
+/* ---------------- state ---------------- */
+const store = {
+  get(k, d){ try{ const v = localStorage.getItem('ss:'+k); return v===null? d : JSON.parse(v);}catch(e){return d;} },
+  set(k, v){ try{ localStorage.setItem('ss:'+k, JSON.stringify(v)); }catch(e){} }
+};
+const prefs = Object.assign({script:'telu', mean:'both', iast:true, scale:1, theme:'system'}, store.get('prefs', {}));
+let learned = new Set(store.get('learned', []));
+let DATA = null, NOTES = {}, NOTEIDX = {};
+let memo = false, paathMode = false;
+const app = document.getElementById('app');
+
+/* ---------------- IAST → Telugu / Devanagari (for word lists) ---------------- */
+const V = {a:['అ','','अ',''],'ā':['ఆ','ా','आ','ा'],i:['ఇ','ి','इ','ि'],'ī':['ఈ','ీ','ई','ी'],u:['ఉ','ు','उ','ु'],'ū':['ఊ','ూ','ऊ','ू'],
+  'ṛ':['ఋ','ృ','ऋ','ृ'],'ṝ':['ౠ','ౄ','ॠ','ॄ'],'ḷ':['ఌ','ౢ','ऌ','ॢ'],e:['ఏ','ే','ए','े'],ai:['ఐ','ై','ऐ','ै'],o:['ఓ','ో','ओ','ो'],au:['ఔ','ౌ','औ','ौ']};
+const C = {k:['క','क'],kh:['ఖ','ख'],g:['గ','ग'],gh:['ఘ','घ'],'ṅ':['ఙ','ङ'],c:['చ','च'],ch:['ఛ','छ'],j:['జ','ज'],jh:['ఝ','झ'],'ñ':['ఞ','ञ'],
+  'ṭ':['ట','ट'],'ṭh':['ఠ','ठ'],'ḍ':['డ','ड'],'ḍh':['ఢ','ढ'],'ṇ':['ణ','ण'],t:['త','त'],th:['థ','थ'],d:['ద','द'],dh:['ధ','ध'],n:['న','न'],
+  p:['ప','प'],ph:['ఫ','फ'],b:['బ','ब'],bh:['భ','भ'],m:['మ','म'],y:['య','य'],r:['ర','र'],l:['ల','ल'],v:['వ','व'],'ś':['శ','श'],'ṣ':['ష','ष'],s:['స','स'],h:['హ','ह'],'ḻ':['ళ','ळ']};
+const VIR = ['్','्'], ANU=['ం','ं'], VIS=['ః','ः'], AVA=['ఽ','ऽ'];
+function xl(iast, script){
+  const si = script==='telu'?0:1, s = iast.normalize('NFC').toLowerCase().replace(/ṁ/g,'ṃ');
+  if(s==='oṃ' && script==='deva') return 'ॐ';
+  let out='', i=0, pend=false;
+  const tok = (str,pos,dict)=>{ for(const L of [2,1]){ const t=str.substr(pos,L); if(dict[t]) return t; } return null; };
+  while(i<s.length){
+    const cons = tok(s,i,C);
+    if(cons){ if(pend) out+=VIR[si]; out+=C[cons][si]; pend=true; i+=cons.length; continue; }
+    const vow = tok(s,i,V);
+    if(vow){ out += pend ? V[vow][si*2+1] : V[vow][si*2]; pend=false; i+=vow.length; continue; }
+    if(pend){ out+=VIR[si]; pend=false; }
+    const ch=s[i];
+    if(ch==='ṃ') out+=ANU[si]; else if(ch==='ḥ') out+=VIS[si]; else if(ch==="'"||ch==='’') out+=AVA[si];
+    else if(ch==='|') out+='।'; else out+=ch;
+    i++;
+  }
+  if(pend) out+=VIR[si];
+  return out;
+}
+
+/* ---------------- metre: guru/laghu from IAST ---------------- */
+const LONGV = ['ai','au','ā','ī','ū','ṝ','e','o'], SHORTV=['a','i','u','ṛ','ḷ'];
+const CONS = Object.keys(C).sort((a,b)=>b.length-a.length);
+function syllables(line){
+  const s = line.normalize('NFC').toLowerCase().replace(/[|।॥'’.,;:\-]/g,' ').replace(/ṁ/g,'ṃ');
+  const units=[]; // {t:'c'|'v'|'m'|'sp', s, long}
+  let i=0;
+  while(i<s.length){
+    if(s[i]===' '){ units.push({t:'sp'}); i++; continue; }
+    let v = [...LONGV,...SHORTV].find(x=>s.startsWith(x,i));
+    if(v){ units.push({t:'v',s:v,long:LONGV.includes(v)}); i+=v.length; continue; }
+    if(s[i]==='ṃ'||s[i]==='ḥ'){ units.push({t:'m',s:s[i]}); i++; continue; }
+    const c = CONS.find(x=>s.startsWith(x,i));
+    if(c){ units.push({t:'c',s:c}); i+=c.length; continue; }
+    i++;
+  }
+  // build syllables: onset consonants + vowel + following m
+  const syl=[]; let onset='', wordBreakBefore=false;
+  units.forEach(u=>{
+    if(u.t==='sp'){ wordBreakBefore = true; return; }
+    if(u.t==='c'){ onset+=u.s; return; }
+    if(u.t==='v'){ syl.push({txt:onset+u.s, long:u.long, coda:'', brk:wordBreakBefore}); onset=''; wordBreakBefore=false; return; }
+    if(u.t==='m' && syl.length){ syl[syl.length-1].txt+=u.s; syl[syl.length-1].heavyM=true; }
+  });
+  if(onset && syl.length){ syl[syl.length-1].txt+=onset; syl[syl.length-1].final=true; }
+  // count consonants following each syllable (onset of next)
+  const consCount = str => { let n=0,j=0; while(j<str.length){ const c=CONS.find(x=>str.startsWith(x,j)); if(c){n++; j+=c.length;} else break; } return n; };
+  syl.forEach((x,k)=>{
+    const next = syl[k+1];
+    const nOn = next ? consCount(next.txt) : 0;
+    x.guru = x.long || x.heavyM || x.final || nOn>=2;
+  });
+  return syl;
+}
+
+/* ---------------- helpers ---------------- */
+const esc = s => String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const $ = (sel, el=document) => el.querySelector(sel);
+function toast(msg){ const t=document.createElement('div'); t.className='toast'; t.textContent=msg; document.body.appendChild(t); setTimeout(()=>t.remove(),1600); }
+function applyPrefs(){
+  document.documentElement.style.setProperty('--scale', prefs.scale);
+  if(prefs.theme==='system') document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme', prefs.theme);
+  document.querySelectorAll('[data-script]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.script===prefs.script));
+  store.set('prefs', prefs);
+}
+const scriptOf = obj => obj[prefs.script];
+const sec = id => DATA.sections[id];
+
+/* entries for a section: preamble blocks + verses, refs resolved */
+const PRE_LABEL = {viniyoga:'Viniyoga', dhyanam:'Dhyānam', namaskara:'Namaskāra', invocation:'Invocation'};
+function entries(id){
+  const s = sec(id);
+  if(s.kind==='ref'){
+    const r = s.ref, base = sec(r.section);
+    const vs = base.verses.filter(v => r.from==null || (v.n>=r.from && v.n<=r.to));
+    return vs.map(v=>({...v, _src:r.section}));
+  }
+  return [...s.preamble.map((p,i)=>({...p, kind:'pre', ref:'pre'+i, _pre:true})), ...s.verses.map(v=>({...v,_src:id}))];
+}
+function refLabel(sid, e){
+  if(e._pre) return PRE_LABEL[e.label]||e.label;
+  if(e.kind==='ritual') return e.group;
+  return e.ref;
+}
+function entryToken(e, i){ return e._pre ? 'p'+e.ref.slice(3) : (e.n!=null ? String(e.n) : String(i)); }
+function sectionHash(sid, idx){
+  if(idx==null) return '#'+sid;
+  const e = entries(sid)[idx];
+  return '#' + sid + '.' + (e ? entryToken(e, idx) : idx);
+}
+function indexFor(sid, tok){
+  const list = entries(sid);
+  if(/^p\d+$/.test(tok)){ const k = list.findIndex(e=>e._pre && e.ref==='pre'+tok.slice(1)); return k<0?0:k; }
+  const n = parseInt(tok,10); if(isNaN(n)) return 0;
+  const k = list.findIndex(e=>!e._pre && e.n<=n && (e.n_end||e.n)>=n);
+  return k<0 ? 0 : k;
+}
+
+/* ---------------- notes ---------------- */
+async function loadNotes(id){
+  const src = sec(id).kind==='ref' ? sec(id).ref.section : id;
+  if(NOTES[src]!==undefined) return NOTES[src];
+  if(!NOTEIDX[src]) { NOTES[src]=null; return null; }
+  try{ const r = await fetch('data/notes/'+src+'.json'); NOTES[src] = r.ok ? await r.json() : null; }
+  catch(e){ NOTES[src]=null; }
+  return NOTES[src];
+}
+function ctxFor(notes, list, idx){
+  if(!notes) return null;
+  for(let k=idx;k>=0;k--){ const n = notes[list[k].ref]; if(n && n.ctx) return {ctx:n.ctx, at:list[k].ref, same:k===idx}; }
+  return notes._intro ? {ctx:notes._intro, at:null, same:false} : null;
+}
+
+/* ---------------- views ---------------- */
+function title(s){ return s.title; }
+function scriptTitle(s){
+  const T = {kavacham:'devīkavacam',argala:'argalāstotram',kilakam:'kīlakastotram',dhyanam:'śrīcaṇḍikādhyānam','ratri-vedic':'vedoktarātrisūktam','ratri-tantric':'tantroktarātrisūktam',atharvashirsha:'devyatharvaśīrṣam',navarna:'navārṇavidhiḥ','saptashati-nyasa':'saptaśatīnyāsaḥ',
+    ch1:'prathamo\'dhyāyaḥ',ch2:'dvitīyo\'dhyāyaḥ',ch3:'tṛtīyo\'dhyāyaḥ',ch4:'caturtho\'dhyāyaḥ',ch5:'pañcamo\'dhyāyaḥ',ch6:'ṣaṣṭho\'dhyāyaḥ',ch7:'saptamo\'dhyāyaḥ',ch8:'aṣṭamo\'dhyāyaḥ',ch9:'navamo\'dhyāyaḥ',ch10:'daśamo\'dhyāyaḥ',ch11:'ekādaśo\'dhyāyaḥ',ch12:'dvādaśo\'dhyāyaḥ',ch13:'trayodaśo\'dhyāyaḥ',
+    'navarna-after':'navārṇavidhiḥ',devisuktam:'ṛgvedoktadevīsūktam','devisuktam-tantric':'tantroktadevīsūktam','rahasya-pradhanika':'prādhānikarahasyam','rahasya-vaikrtika':'vaikṛtikarahasyam','rahasya-murti':'mūrtirahasyam',kshamapana:'aparādhakṣamāpaṇastotram',kunjika:'siddhakuñjikāstotram'};
+  return xl(T[s.id]||s.title, prefs.script);
+}
+function mantraCount(id){ const s=sec(id); if(s.kind==='ref') return entries(id).length; return s.verses.reduce((a,v)=>a+(v.count||1),0); }
+
+function renderHome(){
+  paathMode=false; setBarFor(null);
+  const last = store.get('last', null);
+  const chMantras = DATA.groups.filter(g=>['prathama','madhyama','uttara'].includes(g.id)).flatMap(g=>g.sections).reduce((a,id)=>a+mantraCount(id),0);
+  const annotated = Object.values(NOTEIDX).reduce((a,n)=>a+n,0);
+  let h = `<div class="wrap home">
+    <section class="masthead">
+      <p class="sc" style="color:var(--kumkum)">Mārkaṇḍeya Purāṇa · Devī Māhātmyam</p>
+      <h2 class="script-title ${prefs.script}">${xl('śrīdurgāsaptaśatī', prefs.script)}</h2>
+      <p>Read each verse, see how it is pronounced, understand every word, then move to the next. Gita Press order, from the Kavacham to the Kṣamā-prārthanā.</p>
+      <div class="counts"><span><b>${chMantras}</b> mantras in 13 chapters</span><span><b>${learned.size}</b> marked learned</span><span><b>${annotated}</b> with meanings so far</span></div>
+      ${last && DATA.sections[last.s] ? `<button class="continue" data-go="${sectionHash(last.s,last.i)}"><span><span class="k">Continue where you stopped</span><br><span class="v">${esc(title(sec(last.s)))} · ${esc(refLabel(last.s, entries(last.s)[last.i]||{}))}</span></span><span class="arrow">→</span></button>` : ''}
+    </section>`;
+  const deities = {prathama:'Brahmā is the ṛṣi, Mahākālī the devatā', madhyama:'Viṣṇu is the ṛṣi, Mahālakṣmī the devatā', uttara:'Rudra is the ṛṣi, Mahāsarasvatī the devatā',
+    purvanga:'Recite these before beginning the chapters', uttaranga:'Recite these after the thirteenth chapter', extras:'Recited by many before or in place of the angas'};
+  h += `<div class="groups">`;
+  DATA.groups.forEach(g=>{
+    h += `<section class="group"><h2 class="sc">${esc(g.title)}</h2><p class="gsub">${esc(deities[g.id]||'')}</p><ul class="slist">`;
+    g.sections.forEach(id=>{
+      const s = sec(id), isCh = /^ch\d+$/.test(id);
+      const src = s.kind==='ref' && s.ref.section ? s.ref.section : id;
+      const n = mantraCount(id);
+      const es = entries(id);
+      const l = es.filter(e=>learned.has(keyOf(id,e))).length;
+      const ann = NOTEIDX[src];
+      h += `<li><button class="srow" data-go="${sectionHash(id)}">
+        <span class="num ${isCh?'':'dot'}">${isCh? id.slice(2) : '◦'}</span>
+        <span class="t"><span class="s ${prefs.script}">${esc(scriptTitle(s))}</span><span class="e">${esc(s.title)}${s.kind==='ref'?' · within '+esc(sec(s.ref.section).title):''}</span></span>
+        <span class="meta"><span>${n} ${s.kind==='ritual'?'steps':'mantras'}</span>${ann? '<span class="chip ok">Meanings</span>' : '<span class="chip txt">Text</span>'}${l? `<span class="lbar" title="${l} of ${es.length} learned"><i style="width:${Math.round(100*l/es.length)}%"></i></span>`:''}</span>
+      </button></li>`;
+    });
+    h += `</ul></section>`;
+  });
+  h += `</div><footer class="foot"><span>Sanskrit text from <a href="https://sanskritdocuments.org/doc_devii/durga700.html" target="_blank" rel="noopener">sanskritdocuments.org</a>, transliterated to Telugu and IAST. Mantra numbering follows the Gita Press 700 count.</span><span>Meanings and word notes are a study aid. Check difficult passages with your guru or a printed commentary.</span></footer></div>`;
+  app.innerHTML = h;
+  window.scrollTo(0,0);
+}
+const keyOf = (sid,e) => (e._src||sid)+':'+e.ref;
+
+function setBarFor(sid){
+  $('#barTitle').innerHTML = sid ? `<b>${esc(sid.startsWith('ch')?'Ch '+sid.slice(2):'')}</b> ${esc(title(sec(sid)))}` : '<b>ॐ</b> Saptaśatī';
+  $('#paathBtn').hidden = !sid; $('#memoBtn').hidden = !sid || paathMode;
+  $('#paathBtn').setAttribute('aria-pressed', paathMode); $('#memoBtn').setAttribute('aria-pressed', memo);
+}
+
+function scriptHTML(e, cls=''){
+  const txt = scriptOf(e) || '';
+  const lines = txt.split('\n');
+  const ref = !e._pre && e.kind!=='ritual' && e.kind!=='uvacha' ? ` <span class="dn">॥ ${esc(e.ref)} ॥</span>` : (e.kind==='uvacha'?' <span class="dn">॥</span>':'');
+  return `<p class="script ${prefs.script} ${e.kind==='uvacha'?'uv':''} ${cls}">${lines.map((l,i)=>`<span class="ln" data-ln="${i}">${esc(l)}${i===lines.length-1?ref:''}</span>`).join('\n')}</p>`;
+}
+
+async function renderVerse(sid, idx){
+  paathMode=false; setBarFor(sid);
+  const list = entries(sid);
+  idx = Math.max(0, Math.min(idx, list.length-1));
+  const e = list[idx];
+  store.set('last', {s:sid, i:idx});
+  const notes = await loadNotes(sid);
+  const n = notes && notes[e.ref];
+  const k = keyOf(sid,e), isL = learned.has(k);
+  const spk = e.speaker_xl ? `<span class="spk ${prefs.script}">${esc(scriptOf(e.speaker_xl))}</span>` : '';
+  const grp = e._pre ? `<span class="grp sc">${esc(PRE_LABEL[e.label]||e.label)}</span>` : e.kind==='ritual' ? `<span class="grp sc">${esc(e.group)}</span>` : '';
+  let h = `<div class="wrap verse-view ${memo?'memo':''}">
+    <div class="crumb"><span>${esc(title(sec(sid)))}</span><span class="pos">${idx+1} / ${list.length}</span>${e.count>1?`<span class="chip txt">counts as ${e.count} mantras</span>`:''}</div>
+    <div class="prog"><i style="width:${(100*(idx+1)/list.length).toFixed(1)}%"></i></div>
+    <div class="vgrid ${memo?'solo':''}"><div class="vleft">
+    <article class="leafcard" aria-label="Verse ${esc(e.ref)}">
+      ${spk||grp?`<div class="rubric">${spk}${grp}</div>`:''}
+      ${scriptHTML(e)}
+      ${prefs.iast && !memo ? `<p class="iast">${esc(e.iast)}</p>` : ''}
+      ${memo ? `<p class="memohint">Recite from memory, then tap a line to check it.</p>`:''}
+    </article>
+    <div class="nav">
+      <button class="btn" id="prev" ${idx===0?'disabled':''}>← Previous</button>
+      <span class="spacer"></span>
+      <button class="btn ${isL?'learned':''}" id="learnBtn" aria-pressed="${isL}">${isL?'✓ Learned':'Mark learned'}</button>
+      <button class="btn primary" id="next">${idx===list.length-1?'Finish section':'Next →'}</button>
+    </div></div><div class="vright">`;
+  if(!memo){
+    if(n && n.pada && n.pada.length){
+      h += `<section class="panel"><h3 class="sc">Word by word</h3>
+        <p class="pada ${prefs.script}">${n.pada.map(w=>`<span>${esc(xl(w[0],prefs.script))}</span>`).join('')}</p>
+        <div class="words">${n.pada.map(w=>`<div class="w"><span class="ws ${prefs.script}">${esc(xl(w[0],prefs.script))}</span><span class="wi">${esc(w[0])}</span>${prefs.mean!=='te'?`<span class="wm">${esc(w[1])}</span>`:''}${prefs.mean!=='en'&&w[2]?`<span class="wt">${esc(w[2])}</span>`:''}</div>`).join('')}</div></section>`;
+    }
+    if(n && (n.en||n.te)){
+      h += `<section class="panel meaning"><h3 class="sc">Meaning</h3>
+        ${prefs.mean!=='te'&&n.en?`<p>${esc(n.en)}</p>`:''}
+        ${prefs.mean!=='en'&&n.te?`<p class="te">${esc(n.te)}</p>`:''}</section>`;
+    }
+    const c = ctxFor(notes, list, idx);
+    if(c){
+      h += `<section class="panel ctx"><h3 class="sc">${c.same?'Context':'Where we are in the story'}</h3>
+        ${prefs.mean!=='te'&&c.ctx.en?`<p>${esc(c.ctx.en)}</p>`:''}${prefs.mean!=='en'&&c.ctx.te?`<p class="te">${esc(c.ctx.te)}</p>`:''}</section>`;
+    }
+    if(!n && e.kind!=='uvacha'){
+      h += `<section class="panel"><p class="empty"><b>Meaning for this ${e.kind==='ritual'?'step':'verse'} is being written.</b> The text and pronunciation guide are complete; word-by-word notes are added chapter by chapter.</p></section>`;
+    }
+    if(e.kind!=='uvacha' && e.iast){
+      const lines = e.iast.split('\n').filter(l=>l.trim());
+      h += `<section class="panel"><h3 class="sc">Pronunciation · syllable weight</h3>
+        <div class="meter">${lines.map(l=>{ const sy=syllables(l); return `<div class="mline">${sy.map(x=>`${x.brk?'<span class="gap"></span>':''}<span class="syl ${x.guru?'g':''}"><i>${x.guru?'–':'∪'}</i><b>${esc(x.txt)}</b></span>`).join('')}<span class="cnt">${sy.length}</span></div>`; }).join('')}</div>
+        <p class="legend" style="margin-top:10px"><b>–</b> guru (long, held two beats) · ∪ laghu (short, one beat). Most verses here are anuṣṭubh: 16 syllables a line, 32 a verse.</p></section>`;
+    }
+  }
+  h += `</div></div></div>`;
+  app.innerHTML = h;
+  window.scrollTo(0,0);
+  $('#prev').onclick = ()=> go(sectionHash(sid, idx-1));
+  $('#next').onclick = ()=> idx===list.length-1 ? nextSection(sid) : go(sectionHash(sid, idx+1));
+  $('#learnBtn').onclick = ()=>{ learned.has(k)?learned.delete(k):learned.add(k); store.set('learned',[...learned]); renderVerse(sid, idx); };
+  if(memo) app.querySelectorAll('.script .ln').forEach(l=>l.onclick=()=>l.classList.toggle('shown'));
+  bindSwipe(sid, idx, list.length);
+}
+
+function nextSection(sid){
+  const order = DATA.groups.flatMap(g=>g.sections);
+  const i = order.indexOf(sid);
+  if(i<order.length-1){ toast('Next: '+title(sec(order[i+1]))); go(sectionHash(order[i+1],0)); } else go('#');
+}
+
+async function renderPaath(sid){
+  paathMode=true; memo=false; setBarFor(sid);
+  const list = entries(sid), s = sec(sid);
+  let h = `<div class="wrap paath"><h2 class="${prefs.script}">${esc(scriptTitle(s))}</h2><p class="psub">${esc(s.title)} · ${list.length} entries · tap any verse to study it</p>`;
+  list.forEach((e,i)=>{
+    if(e._pre){ h += `<div class="pre"><span class="lab sc">${esc(PRE_LABEL[e.label]||e.label)}</span>${scriptHTML(e)}</div>`; return; }
+    if(e.kind==='ritual' && (i===0 || list[i-1].group!==e.group)) h += `<div class="pre" style="border:0;background:none;padding:10px 0 0"><span class="lab sc">${esc(e.group)}</span></div>`;
+    h += `<button class="pv ${e.kind==='uvacha'?'uv':''}" data-go="${sectionHash(sid,i)}">${e.speaker_xl?`<span class="spk ${prefs.script}">${esc(scriptOf(e.speaker_xl))}</span>`:''}${scriptHTML(e)}</button>`;
+  });
+  const order = DATA.groups.flatMap(g=>g.sections), oi = order.indexOf(sid);
+  h += `<div class="pnext">${oi>0?`<button class="btn" data-go="#${order[oi-1]}~p">← ${esc(title(sec(order[oi-1])))}</button>`:'<span></span>'}${oi<order.length-1?`<button class="btn primary" data-go="#${order[oi+1]}~p">${esc(title(sec(order[oi+1])))} →</button>`:''}</div></div>`;
+  app.innerHTML = h; window.scrollTo(0,0);
+  try{ if(navigator.wakeLock) await navigator.wakeLock.request('screen'); }catch(e){}
+}
+
+/* ---------------- sheet ---------------- */
+function openSheet(){
+  const root = $('#sheetRoot');
+  let toc = '';
+  DATA.groups.forEach(g=>{ toc += `<div class="g sc">${esc(g.title)}</div>`; g.sections.forEach(id=>{ toc += `<a href="${sectionHash(id)}"><span>${esc(title(sec(id)))}</span><small>${mantraCount(id)}</small></a>`; }); });
+  root.innerHTML = `<div class="scrim" id="scrim"></div><aside class="sheet" role="dialog" aria-label="Contents and settings">
+    <button class="ib close" id="closeSheet" aria-label="Close">✕</button>
+    <h2 class="sc">Reading settings</h2>
+    <div class="row"><label>Script</label><div class="seg"><button class="telu" data-script="telu" aria-pressed="${prefs.script==='telu'}">తెలుగు</button><button class="deva" data-script="deva" aria-pressed="${prefs.script==='deva'}">देवनागरी</button></div></div>
+    <div class="row"><label>Meaning in</label><div class="seg" id="meanSeg">${[['en','English'],['te','తెలుగు'],['both','Both']].map(([v,l])=>`<button data-mean="${v}" aria-pressed="${prefs.mean===v}" class="${v==='te'?'telu':''}">${l}</button>`).join('')}</div></div>
+    <div class="row"><label for="iastT">Roman transliteration</label><input type="checkbox" id="iastT" ${prefs.iast?'checked':''}></div>
+    <div class="row"><label for="scaleR">Text size</label><input type="range" id="scaleR" min="0.85" max="1.5" step="0.05" value="${prefs.scale}"></div>
+    <div class="row"><label>Theme</label><div class="seg" id="themeSeg">${[['system','Auto'],['light','Day'],['dark','Lamp']].map(([v,l])=>`<button data-theme-v="${v}" aria-pressed="${prefs.theme===v}">${l}</button>`).join('')}</div></div>
+    <h2 class="sc">Contents</h2><nav class="toc">${toc}</nav></aside>`;
+  const close = ()=> root.innerHTML='';
+  $('#scrim').onclick = close; $('#closeSheet').onclick = close;
+  root.querySelectorAll('.toc a').forEach(a=>a.addEventListener('click', close));
+  root.querySelectorAll('[data-mean]').forEach(b=>b.onclick=()=>{prefs.mean=b.dataset.mean; applyPrefs(); openSheet(); route();});
+  root.querySelectorAll('[data-theme-v]').forEach(b=>b.onclick=()=>{prefs.theme=b.dataset.themeV; applyPrefs(); openSheet();});
+  $('#iastT').onchange = e=>{prefs.iast=e.target.checked; applyPrefs(); route();};
+  $('#scaleR').oninput = e=>{prefs.scale=+e.target.value; applyPrefs();};
+}
+
+/* ---------------- routing ---------------- */
+function go(h){ if(location.hash===h) route(); else location.hash=h; }
+function route(){
+  const h = decodeURIComponent(location.hash.slice(1));
+  if(!h || !DATA){ memo=false; return renderHome(); }
+  const pm = h.endsWith('~p');
+  const [sid, idx] = (pm? h.slice(0,-2) : h).split('.');
+  if(!DATA.sections[sid]) return renderHome();
+  if(pm) return renderPaath(sid);
+  renderVerse(sid, idx==null? 0 : indexFor(sid, idx));
+}
+window.addEventListener('hashchange', route);
+document.addEventListener('click', e=>{
+  const b = e.target.closest('[data-go]'); if(b){ go(b.dataset.go); return; }
+  const sb = e.target.closest('[data-script]'); if(sb){ prefs.script=sb.dataset.script; applyPrefs(); if($('#sheetRoot').innerHTML) openSheet(); route(); }
+});
+$('#homeBtn').onclick = ()=>{ memo=false; go('#'); };
+$('#menuBtn').onclick = openSheet;
+$('#memoBtn').onclick = ()=>{ memo=!memo; route(); };
+$('#paathBtn').onclick = ()=>{
+  const h = decodeURIComponent(location.hash.slice(1)); const sid = h.replace(/~p$/,'').split('.')[0];
+  if(paathMode){ const last=store.get('last',{}); go(sectionHash(sid, last.s===sid?last.i:0)); } else go('#'+sid+'~p');
+};
+document.addEventListener('keydown', e=>{
+  if(e.target.closest('input')||$('#sheetRoot').innerHTML) return;
+  if(e.key==='ArrowRight'){ const n=$('#next'); n&&n.click(); }
+  if(e.key==='ArrowLeft'){ const p=$('#prev'); p&&!p.disabled&&p.click(); }
+});
+function bindSwipe(sid, idx, len){
+  let x0=null,y0=null;
+  app.ontouchstart = e=>{ x0=e.touches[0].clientX; y0=e.touches[0].clientY; };
+  app.ontouchend = e=>{ if(x0===null) return; const dx=e.changedTouches[0].clientX-x0, dy=e.changedTouches[0].clientY-y0; x0=null;
+    if(Math.abs(dx)>70 && Math.abs(dx)>2*Math.abs(dy)){ if(dx<0) $('#next').click(); else if(idx>0) $('#prev').click(); } };
+}
+
+/* ---------------- boot ---------------- */
+applyPrefs();
+Promise.all([
+  fetch('data/text.json').then(r=>r.json()),
+  fetch('data/notes/index.json').then(r=>r.ok?r.json():{}).catch(()=>({}))
+]).then(([d, idx])=>{ DATA=d; NOTEIDX=idx; route(); })
+  .catch(()=>{ app.innerHTML='<div class="wrap loading">The text could not be loaded. Check your connection and reload.</div>'; });
+
+if('serviceWorker' in navigator && location.protocol==='https:' && !/claude|claudeusercontent/.test(location.hostname)){
+  try{ navigator.serviceWorker.register('sw.js').catch(()=>{}); }catch(e){}
+}
+})();
+</script>
+
+</body>
+</html>

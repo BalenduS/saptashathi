@@ -1,0 +1,213 @@
+{
+"_intro": {
+ "en": "Mārkaṇḍeya tells his disciple Krauṣṭuki how Sāvarṇi became the eighth Manu. The story begins with King Suratha, who loses his kingdom, wanders into the forest hermitage of the sage Medhas, and there meets a merchant named Samādhi who has also been thrown out by his own people. Their question to the sage, why the mind stays attached even when it knows better, opens the whole Devī Māhātmya. This first carita belongs to Mahākālī.",
+ "te": "ఎనిమిదవ మనువైన సావర్ణి ఎలా జన్మించాడో మార్కండేయ మహర్షి తన శిష్యుడైన క్రౌష్టుకికి చెబుతున్నాడు. రాజ్యం కోల్పోయిన సురథ మహారాజు మేధస మహర్షి ఆశ్రమానికి చేరుకుంటాడు. అక్కడ తన వారిచేతనే వెళ్ళగొట్టబడిన సమాధి అనే వైశ్యుడు కలుస్తాడు. 'తెలిసీ మనస్సు ఎందుకు మమకారంలో చిక్కుకుంటోంది?' అనే వారి ప్రశ్నతోనే దేవీ మాహాత్మ్యం మొదలవుతుంది. ఈ ప్రథమ చరిత్ర మహాకాళికి సంబంధించినది."
+},
+"1.1": {
+ "pada": [["oṃ","Om, the sacred syllable","ఓంకారం"],["aiṃ","seed syllable (bīja) placed at the start of the paath","బీజాక్షరం"],["mārkaṇḍeyaḥ","the sage Mārkaṇḍeya","మార్కండేయ మహర్షి"],["uvāca","said","పలికెను"]],
+ "en": "Om Aiṃ. Mārkaṇḍeya said:",
+ "te": "ఓం ఐం. మార్కండేయ మహర్షి ఇలా చెప్పెను:",
+ "ctx": {"en": "The narrator is the sage Mārkaṇḍeya, speaking to his disciple Krauṣṭuki. Everything that follows is his account.", "te": "కథ చెప్పేది మార్కండేయ మహర్షి; వినేది ఆయన శిష్యుడు క్రౌష్టుకి. ఇకపై వచ్చేదంతా ఆయన చెప్పే కథే."}
+},
+"1.2": {
+ "pada": [["sāvarṇiḥ","Sāvarṇi","సావర్ణి"],["sūryatanayaḥ","son of the Sun","సూర్యుని కుమారుడు"],["yaḥ","who","ఎవరైతే"],["manuḥ","the Manu","మనువు"],["kathyate","is called","చెప్పబడుతున్నాడో"],["aṣṭamaḥ","the eighth","ఎనిమిదవ"],["niśāmaya","listen","వినుము"],["tat","his","అతని"],["utpattim","birth, origin","పుట్టుక"],["vistarāt","in detail","విస్తారంగా"],["gadataḥ","as I tell it","చెప్పుచున్న"],["mama","from me","నా నుండి"]],
+ "en": "Sāvarṇi, the son of the Sun, is called the eighth Manu. Listen as I tell you in detail how he came to be.",
+ "te": "సూర్యుని కుమారుడైన సావర్ణి ఎనిమిదవ మనువుగా చెప్పబడుతున్నాడు. అతని జన్మ వృత్తాంతాన్ని నేను విస్తారంగా చెబుతాను, వినుము."
+},
+"1.3": {
+ "pada": [["mahāmāyā","the great Māyā, the Devī","మహామాయ (దేవి)"],["anubhāvena","by the power of","ప్రభావం చేత"],["yathā","how","ఏ విధంగా"],["manvantara","an age of a Manu","మన్వంతరానికి"],["adhipaḥ","lord, ruler","అధిపతి"],["saḥ","he","అతడు"],["babhūva","became","అయ్యెనో"],["mahābhāgaḥ","the greatly fortunate one","మహా భాగ్యశాలి"],["sāvarṇiḥ","Sāvarṇi","సావర్ణి"],["tanayaḥ","son","కుమారుడు"],["raveḥ","of the Sun","సూర్యుని"]],
+ "en": "I will tell how, by the power of Mahāmāyā, that fortunate Sāvarṇi, son of the Sun, became the lord of a Manu's age.",
+ "te": "మహామాయ అనుగ్రహం వల్ల సూర్యపుత్రుడైన ఆ మహాభాగ్యశాలి సావర్ణి మన్వంతరాధిపతి ఎలా అయ్యాడో చెబుతాను."
+},
+"1.4": {
+ "pada": [["svārociṣe","in the Svārociṣa","స్వారోచిష"],["antare","age (of Manu)","మన్వంతరంలో"],["pūrvam","long ago","పూర్వం"],["caitravaṃśa","the Caitra dynasty","చైత్ర వంశంలో"],["samudbhavaḥ","born in","జన్మించిన"],["surathaḥ","Suratha","సురథుడు"],["nāma","by name","అనే పేరు గల"],["rājā","king","రాజు"],["abhūt","there was","ఉండెను"],["samaste","over the whole","సమస్త"],["kṣitimaṇḍale","circle of the earth","భూమండలానికి"]],
+ "en": "Long ago, in the age of the Manu Svārociṣa, there was a king named Suratha, born in the Caitra dynasty, who ruled the whole earth.",
+ "te": "పూర్వం స్వారోచిష మన్వంతరంలో చైత్ర వంశంలో పుట్టిన సురథుడు అనే రాజు సమస్త భూమండలాన్ని పాలించెను.",
+ "ctx": {"en": "Suratha is introduced. He will be reborn as Sāvarṇi, the eighth Manu, through the Devī's grace; that is where the story ends in Chapter 13.", "te": "సురథుని పరిచయం. దేవి అనుగ్రహంతో అతడే తరువాత జన్మలో ఎనిమిదవ మనువైన సావర్ణిగా పుడతాడు; 13వ అధ్యాయంలో కథ అక్కడే ముగుస్తుంది."}
+},
+"1.5": {
+ "pada": [["tasya","while he","అతడు"],["pālayataḥ","was protecting","పాలిస్తూ ఉండగా"],["samyak","properly","చక్కగా"],["prajāḥ","his subjects","ప్రజలను"],["putrān","sons","పుత్రులను"],["iva","like","వలె"],["aurasān","his own-born","స్వంత"],["babhūvuḥ","there arose","ఏర్పడిరి"],["śatravaḥ","enemies","శత్రువులు"],["bhūpāḥ","kings","రాజులు"],["kolāvidhvaṃsinaḥ","the Kolāvidhvaṃsins (a hostile clan)","కోలావిధ్వంసులు"],["tadā","then","అప్పుడు"]],
+ "en": "While he ruled his subjects well, caring for them like his own children, enemy kings called the Kolāvidhvaṃsins rose against him.",
+ "te": "అతడు ప్రజలను తన సొంత బిడ్డలవలె చక్కగా పాలిస్తూ ఉండగా, కోలావిధ్వంసులు అనే రాజులు అతనికి శత్రువులయ్యారు."
+},
+"1.6": {
+ "pada": [["tasya","his","అతనికి"],["taiḥ","with them","వారితో"],["abhavat","there was","జరిగెను"],["yuddham","war","యుద్ధం"],["atiprabala","very mighty","మిక్కిలి బలమైన"],["daṇḍinaḥ","wielder of force (army)","సైన్యం గల"],["nyūnaiḥ","though fewer","తక్కువవారైనా"],["api","even","కూడా"],["saḥ","he","అతడు"],["yuddhe","in battle","యుద్ధంలో"],["kolāvidhvaṃsibhiḥ","by the Kolāvidhvaṃsins","కోలావిధ్వంసుల చేత"],["jitaḥ","was defeated","ఓడింపబడెను"]],
+ "en": "He, who had a very powerful army, fought them, yet he was defeated in battle by the Kolāvidhvaṃsins, though they were fewer in number.",
+ "te": "మహా బలమైన సైన్యం కలిగిన అతనికి వారితో యుద్ధం జరిగింది. వారు సంఖ్యలో తక్కువైనా, ఆ యుద్ధంలో కోలావిధ్వంసులు అతనిని ఓడించారు."
+},
+"1.7": {
+ "pada": [["tataḥ","then","తరువాత"],["svapuram","his own city","తన నగరానికి"],["āyātaḥ","having returned","తిరిగి వచ్చి"],["nijadeśa","his own land","తన దేశానికి మాత్రమే"],["adhipaḥ","ruler","అధిపతి"],["abhavat","became","అయ్యెను"],["ākrāntaḥ","was attacked","దాడి చేయబడెను"],["saḥ","he","అతడు"],["mahābhāgaḥ","the noble one","ఆ మహాభాగుడు"],["taiḥ","by them","వారి చేత"],["tadā","then","అప్పుడు"],["prabala","powerful","బలవంతులైన"],["aribhiḥ","enemies","శత్రువుల చేత"]],
+ "en": "He then returned to his own city and ruled only his own country. But there too that noble king was attacked by those powerful enemies.",
+ "te": "అప్పుడు అతడు తన నగరానికి తిరిగివచ్చి తన దేశానికి మాత్రమే రాజుగా ఉన్నాడు. అక్కడ కూడా ఆ బలవంతులైన శత్రువులు ఆ మహాభాగునిపై దాడి చేశారు."
+},
+"1.8": {
+ "pada": [["amātyaiḥ","by his ministers","మంత్రుల చేత"],["balibhiḥ","powerful","బలవంతులైన"],["duṣṭaiḥ","wicked","దుష్టులైన"],["durbalasya","of him, now weak","బలహీనుడైన అతని"],["durātmabhiḥ","evil-minded","దురాత్ములైన"],["kośaḥ","treasury","కోశాగారం"],["balam","army","సైన్యం"],["ca","and","మరియు"],["apahṛtam","were seized","అపహరించబడెను"],["tatra api","there too","అక్కడ కూడా"],["svapure","in his own city","తన నగరంలో"],["tataḥ","then","అప్పుడు"]],
+ "en": "Then, in his own city, his powerful, wicked and evil-minded ministers seized the treasury and the army from the now weakened king.",
+ "te": "అప్పుడు తన నగరంలోనే బలహీనుడైన అతని నుండి, బలవంతులు, దుష్టులు, దురాత్ములు అయిన మంత్రులు కోశాగారాన్ని, సైన్యాన్ని లాగుకొన్నారు."
+},
+"1.9": {
+ "pada": [["tataḥ","then","అప్పుడు"],["mṛgayā","hunting","వేట"],["vyājena","on the pretext of","అనే నెపంతో"],["hṛta","taken away","పోగొట్టుకున్న"],["svāmyaḥ","sovereignty","ప్రభుత్వం"],["saḥ","that","ఆ"],["bhūpatiḥ","king","రాజు"],["ekākī","alone","ఒంటరిగా"],["hayam","a horse","గుర్రాన్ని"],["āruhya","mounting","ఎక్కి"],["jagāma","went","వెళ్ళెను"],["gahanam","dense","దట్టమైన"],["vanam","forest","అడవికి"]],
+ "en": "Then the king, robbed of his sovereignty, mounted a horse alone on the pretext of going hunting and rode into a dense forest.",
+ "te": "అప్పుడు రాజ్యాధికారం పోగొట్టుకున్న ఆ రాజు వేటకు వెళ్తున్నట్టు నెపంతో ఒంటరిగా గుర్రమెక్కి దట్టమైన అడవికి వెళ్ళాడు."
+},
+"1.10": {
+ "pada": [["saḥ","he","అతడు"],["tatra","there","అక్కడ"],["āśramam","the hermitage","ఆశ్రమాన్ని"],["adrākṣīt","saw","చూచెను"],["dvijavaryasya","of the best of brahmins","బ్రాహ్మణోత్తముడైన"],["medhasaḥ","of Medhas","మేధస మహర్షి యొక్క"],["praśānta","calmed, made peaceful","శాంతించిన"],["śvāpada","wild beasts","క్రూర మృగాలతో"],["ākīrṇam","filled with","నిండిన"],["muniśiṣya","the sage's disciples","ముని శిష్యులతో"],["upaśobhitam","adorned","శోభిల్లుతున్న"]],
+ "en": "There he saw the hermitage of Medhas, the best of brahmins. It was full of wild animals grown peaceful, and graced by the sage's disciples.",
+ "te": "అక్కడ అతడు బ్రాహ్మణోత్తముడైన మేధస మహర్షి ఆశ్రమాన్ని చూశాడు. అది శాంతించిన క్రూరమృగాలతో నిండి, ముని శిష్యులతో శోభిల్లుతోంది.",
+ "ctx": {"en": "The sage Medhas will be the teacher for the rest of the text. Wild animals living in peace near him is the classic sign of a realised sage's presence.", "te": "ఇకపై దేవీ మహిమను బోధించేది ఈ మేధస మహర్షే. క్రూర మృగాలు కూడా శాంతంగా ఉండటం సిద్ధుడైన మహర్షి సాన్నిధ్యానికి గుర్తు."}
+},
+"1.11": {
+ "pada": [["tasthau","stayed","ఉండెను"],["kañcit kālam","for some time","కొంత కాలం"],["saḥ","he","అతడు"],["ca","and","మరియు"],["muninā","by the sage","ముని చేత"],["tena","that","ఆ"],["satkṛtaḥ","honoured, welcomed","సత్కరించబడి"],["itaḥ ca itaḥ ca","here and there","అటూ ఇటూ"],["vicaran","wandering","తిరుగుతూ"],["tasmin","in that","ఆ"],["munivara","best of sages","మునిశ్రేష్ఠుని"],["āśrame","hermitage","ఆశ్రమంలో"]],
+ "en": "Welcomed with honour by the sage, he stayed there for some time, wandering here and there in the hermitage of that great sage.",
+ "te": "ఆ ముని చేత సత్కరించబడి, అతడు ఆ మునిశ్రేష్ఠుని ఆశ్రమంలో అటూ ఇటూ తిరుగుతూ కొంతకాలం ఉన్నాడు."
+},
+"1.12": {
+ "pada": [["saḥ","he","అతడు"],["acintayat","thought","ఆలోచించెను"],["tadā","then","అప్పుడు"],["tatra","there","అక్కడ"],["mamatva","sense of 'mine'","నాది అనే మమకారంతో"],["ākṛṣṭa","pulled","లాగబడిన"],["mānasaḥ","mind","మనస్సు గలవాడై"],["matpūrvaiḥ","by my ancestors","నా పూర్వీకుల చేత"],["pālitam","protected","పాలించబడిన"],["pūrvam","before","పూర్వం"],["mayā","by me","నా చేత"],["hīnam","abandoned, lost","విడువబడిన"],["puram","city","నగరం"],["hi","indeed","కదా"],["tat","that","ఆ"]],
+ "en": "There, his mind pulled by the feeling of 'mine', he began to brood: 'That city, ruled by my forefathers before me, is now lost to me.'",
+ "te": "అక్కడ 'నాది' అనే మమకారంతో లాగబడిన మనస్సుతో అతడు ఇలా ఆలోచించాడు: 'నా పూర్వీకులు పాలించిన ఆ నగరం ఇప్పుడు నా చేతినుండి జారిపోయింది.'",
+ "ctx": {"en": "The king's brooding (1.12–1.16) shows mamatā, possessive attachment. Even in a peaceful hermitage his mind keeps returning to his lost city, elephant, servants and treasury.", "te": "1.12–1.16 శ్లోకాలు మమత (నాది అనే బంధం) ను చూపిస్తాయి. శాంతమైన ఆశ్రమంలో ఉన్నా రాజు మనస్సు పోయిన నగరం, ఏనుగు, సేవకులు, ధనం చుట్టే తిరుగుతోంది."}
+},
+"1.13": {
+ "pada": [["madbhṛtyaiḥ","by my servants","నా సేవకుల చేత"],["taiḥ","those","ఆ"],["asadvṛttaiḥ","of bad conduct","చెడు నడవడి గల"],["dharmataḥ","righteously","ధర్మంగా"],["pālyate","is ruled","పాలించబడుతోందో"],["na vā","or not","లేదో"],["na jāne","I do not know","నాకు తెలియదు"],["saḥ","that","ఆ"],["pradhānaḥ","chief","ప్రధానమైన"],["me","my","నా"],["śūraḥ","brave","శూరమైన"],["hastī","elephant","ఏనుగు"],["sadāmadaḥ","always in rut, ever-spirited","ఎల్లప్పుడూ మదించిన"]],
+ "en": "'Is it being ruled righteously or not by those servants of mine, men of bad conduct? I do not know. And my chief elephant, brave and always full of spirit...'",
+ "te": "'చెడు నడవడి గల నా సేవకులు దానిని ధర్మంగా పాలిస్తున్నారో లేదో తెలియదు. ఎల్లప్పుడూ మదించి ఉండే నా శూరమైన పట్టపు ఏనుగు...'"
+},
+"1.14": {
+ "pada": [["mama","my","నా"],["vairi","enemies'","శత్రువుల"],["vaśam","control","వశానికి"],["yātaḥ","having gone","చేరి"],["kān","what","ఏ"],["bhogān","comforts","సుఖాలను"],["upalapsyate","will it get","పొందుతుందో"],["ye","those who","ఎవరైతే"],["mama","me","నన్ను"],["anugatāḥ","followed","అనుసరించారో"],["nityam","always","ఎల్లప్పుడూ"],["prasāda","favours","అనుగ్రహం"],["dhana","wealth","ధనం"],["bhojanaiḥ","and food","భోజనం చేత"]],
+ "en": "'...now in my enemies' hands, what comforts will it have? And those who always followed me, receiving my favour, wealth and food...'",
+ "te": "'...ఇప్పుడు శత్రువుల వశమై ఏ సుఖాలు పొందుతుందో! నా అనుగ్రహం, ధనం, భోజనం పొందుతూ ఎల్లప్పుడూ నన్ను అనుసరించిన వారు...'"
+},
+"1.15": {
+ "pada": [["anuvṛttim","service, obedience","సేవను"],["dhruvam","surely","తప్పక"],["te","they","వారు"],["adya","now","ఇప్పుడు"],["kurvanti","are doing","చేస్తున్నారు"],["anya","other","ఇతర"],["mahībhṛtām","kings","రాజులకు"],["asamyak","wrongly","అనుచితంగా"],["vyaya","spending","ఖర్చు చేసే"],["śīlaiḥ","in habit","స్వభావం గల"],["taiḥ","by them","వారి చేత"],["kurvadbhiḥ","doing","చేయబడుతూ"],["satatam","constantly","నిరంతరం"],["vyayam","expenditure","ఖర్చు"]],
+ "en": "'...are surely serving other kings now. And by those wasteful men, who keep spending without restraint...'",
+ "te": "'...ఇప్పుడు తప్పక ఇతర రాజులను సేవిస్తున్నారు. అనుచితంగా ఖర్చు చేసే స్వభావం గల వారు నిరంతరం వ్యయం చేస్తూ ఉంటే...'"
+},
+"1.16": {
+ "pada": [["sañcitaḥ","gathered","కూడబెట్టిన"],["saḥ","that","ఆ"],["atiduḥkhena","with great hardship","ఎంతో కష్టంతో"],["kṣayam","exhaustion, ruin","నాశనాన్ని"],["kośaḥ","treasury","కోశం"],["gamiṣyati","will go to","పొందుతుంది"],["etat","this","ఇది"],["ca","and","మరియు"],["anyat ca","and other things","ఇంకా ఇతర విషయాలను"],["satatam","constantly","నిరంతరం"],["cintayāmāsa","kept thinking","ఆలోచిస్తూ ఉండెను"],["pārthivaḥ","the king","ఆ రాజు"]],
+ "en": "'...the treasury I gathered with such hardship will be emptied.' The king kept thinking of these and other such things.",
+ "te": "'...ఎంతో కష్టపడి నేను కూడబెట్టిన కోశాగారం ఖాళీ అవుతుంది.' ఇలాంటి విషయాలను, ఇంకా ఎన్నో ఆ రాజు నిరంతరం ఆలోచిస్తూనే ఉన్నాడు."
+},
+"1.17": {
+ "pada": [["tatra","there","అక్కడ"],["vipra","the brahmin's","బ్రాహ్మణుని"],["āśrama","hermitage","ఆశ్రమం"],["abhyāśe","near","దగ్గర"],["vaiśyam","a merchant","ఒక వైశ్యుని"],["ekam","one","ఒక"],["dadarśa","saw","చూచెను"],["saḥ","he","అతడు"],["saḥ","that one","ఆ వైశ్యుడు"],["pṛṣṭaḥ","was asked","అడుగబడెను"],["tena","by him","అతని చేత"],["kaḥ","who","ఎవరు"],["tvam","you","నీవు"],["bho","sir","ఓయీ"],["hetuḥ","reason","కారణం"],["ca","and","మరియు"],["āgamane","for coming","రావడానికి"],["atra","here","ఇక్కడికి"],["kaḥ","what","ఏమిటి"]],
+ "en": "Near the brahmin's hermitage he saw a merchant, and asked him: 'Who are you, friend? What brings you here?'",
+ "te": "ఆ బ్రాహ్మణుని ఆశ్రమం దగ్గర అతడు ఒక వైశ్యుని చూసి ఇలా అడిగాడు: 'ఓయీ, నీవెవరు? ఇక్కడికి ఎందుకు వచ్చావు?'",
+ "ctx": {"en": "The merchant Samādhi enters. His name means 'deep absorption'; he will later ask the Devī not for wealth but for liberating knowledge.", "te": "సమాధి అనే వైశ్యుడు ప్రవేశిస్తాడు. 'సమాధి' అంటే లోతైన ఏకాగ్రత. తరువాత అతడు దేవిని ధనం కాక మోక్షజ్ఞానాన్నే కోరుకుంటాడు."}
+},
+"1.18": {
+ "pada": [["saśokaḥ","sorrowful","శోకంతో ఉన్నవాడి"],["iva","as if","వలె"],["kasmāt","why","ఎందుకు"],["tvam","you","నీవు"],["durmanāḥ","dejected","మనస్సు కుంగినవాడి"],["iva","as if","వలె"],["lakṣyase","appear","కనిపిస్తున్నావు"],["iti","thus","ఇలా"],["ākarṇya","hearing","విని"],["vacaḥ","words","మాటలను"],["tasya","his","అతని"],["bhūpateḥ","the king's","రాజు యొక్క"],["praṇaya","kindly","ప్రేమతో"],["uditam","spoken","పలికిన"]],
+ "en": "'Why do you look so sorrowful and downcast?' Hearing these words, spoken kindly by the king,",
+ "te": "'నీవు ఎందుకు దుఃఖంతో, మనస్సు కుంగినవాడిలా కనిపిస్తున్నావు?' అని రాజు ప్రేమతో పలికిన మాటలు విని,"
+},
+"1.19": {
+ "pada": [["pratyuvāca","replied","బదులు పలికెను"],["saḥ","that","ఆ"],["tam","to him","అతనికి"],["vaiśyaḥ","merchant","వైశ్యుడు"],["praśraya","humility","వినయంతో"],["avanataḥ","bowing","వంగి"],["nṛpam","to the king","రాజుకు"]],
+ "en": "the merchant bowed humbly and answered the king.",
+ "te": "ఆ వైశ్యుడు వినయంతో వంగి రాజుకు ఇలా బదులిచ్చాడు."
+},
+"1.20": {
+ "pada": [["vaiśyaḥ","the merchant","వైశ్యుడు"],["uvāca","said","పలికెను"]],
+ "en": "The merchant said:",
+ "te": "వైశ్యుడు ఇలా అన్నాడు:"
+},
+"1.21": {
+ "pada": [["samādhiḥ","Samādhi","సమాధి"],["nāma","by name","అనే పేరు గల"],["vaiśyaḥ","merchant","వైశ్యుడను"],["aham","I","నేను"],["utpannaḥ","born","పుట్టిన"],["dhaninām","of the wealthy","ధనవంతుల"],["kule","in a family","వంశంలో"]],
+ "en": "'I am a merchant named Samādhi, born into a wealthy family.'",
+ "te": "'నేను సమాధి అనే వైశ్యుడను, ధనవంతుల వంశంలో పుట్టినవాడను.'"
+},
+"1.22": {
+ "pada": [["putra","by sons","కుమారుల చేత"],["dāraiḥ","and wife","భార్య చేత"],["nirastaḥ","driven out","వెళ్ళగొట్టబడినవాడను"],["ca","and","మరియు"],["dhana","for wealth","ధనంపై"],["lobhāt","out of greed","లోభంతో"],["asādhubhiḥ","by the wicked","దుర్మార్గుల చేత"],["vihīnaḥ","deprived","లేనివాడినై"],["ca","and","మరియు"],["dhanaiḥ","of wealth","ధనం"],["dāraiḥ","wife","భార్య"],["putraiḥ","sons","పుత్రులు"],["ādāya","having taken","తీసుకొని"],["me","my","నా"],["dhanam","wealth","ధనాన్ని"]],
+ "en": "'Out of greed for money, my wicked wife and sons drove me out. They took my wealth, and I am left without wealth, wife or sons.'",
+ "te": "'ధనంపై లోభంతో దుర్మార్గులైన నా భార్యాపుత్రులు నన్ను వెళ్ళగొట్టారు. నా ధనాన్ని లాగుకొన్నారు. ధనం, భార్య, పుత్రులు లేనివాడినయ్యాను.'"
+},
+"1.23": {
+ "pada": [["vanam","to the forest","అడవికి"],["abhyāgataḥ","have come","వచ్చాను"],["duḥkhī","in sorrow","దుఃఖితుడనై"],["nirastaḥ","cast out","వెళ్ళగొట్టబడి"],["ca","and","మరియు"],["āpta","trusted","ఆప్తులైన"],["bandhubhiḥ","by relatives","బంధువుల చేత"],["saḥ aham","that I","అట్టి నేను"],["na vedmi","do not know","ఎరుగను"],["putrāṇām","of my sons","నా కుమారుల"],["kuśala","well-being","క్షేమం"],["akuśala","or ill-being","అక్షేమం"],["ātmikām","consisting of","గురించిన"]],
+ "en": "'Cast out even by my trusted relatives, I have come to the forest in sorrow. Living here, I do not know whether my sons are well or not...'",
+ "te": "'ఆప్తులైన బంధువులు కూడా వెళ్ళగొట్టగా దుఃఖంతో అడవికి వచ్చాను. ఇక్కడ ఉన్న నాకు నా కుమారులు క్షేమంగా ఉన్నారో లేదో తెలియదు...'"
+},
+"1.24": {
+ "pada": [["pravṛttim","news","సమాచారం"],["svajanānām","of my kin","నా వారి"],["ca","and","మరియు"],["dārāṇām","of my wife","భార్య యొక్క"],["ca","and","మరియు"],["atra","here","ఇక్కడ"],["saṃsthitaḥ","staying","ఉన్నవాడనై"],["kim nu","whether","ఏమో"],["teṣām","their","వారి"],["gṛhe","at home","ఇంటిలో"],["kṣemam","welfare","క్షేమం"],["akṣemam","misfortune","అక్షేమం"],["kim nu","whether","ఏమో"],["sāmpratam","now","ఇప్పుడు"]],
+ "en": "'...nor any news of my kinsfolk and my wife. Is all well in their home now, or is it not?'",
+ "te": "'...నా బంధువుల, భార్య సమాచారం కూడా తెలియదు. ఇప్పుడు వారి ఇంట్లో క్షేమమో, అక్షేమమో?'"
+},
+"1.25": {
+ "pada": [["katham","how","ఎలా"],["te","they","వారు"],["kim nu","whether","ఏమో"],["sadvṛttāḥ","of good conduct","సత్ప్రవర్తన గలవారో"],["durvṛttāḥ","of bad conduct","దుష్ప్రవర్తన గలవారో"],["kim nu","whether","ఏమో"],["me","my","నా"],["sutāḥ","sons","కుమారులు"]],
+ "en": "'How are they? Are my sons living well, or have they gone astray?'",
+ "te": "'వారు ఎలా ఉన్నారో? నా కుమారులు మంచిగా నడుచుకుంటున్నారో, చెడు దారి పట్టారో?'"
+},
+"1.26": {
+ "pada": [["rājā","the king","రాజు"],["uvāca","said","పలికెను"]],
+ "en": "The king said:",
+ "te": "రాజు ఇలా అన్నాడు:"
+},
+"1.27": {
+ "pada": [["yaiḥ","by whom","ఎవరి చేత"],["nirastaḥ","driven out","వెళ్ళగొట్టబడ్డావో"],["bhavān","you","మీరు"],["lubdhaiḥ","greedy","లోభులైన"],["putra","sons","పుత్రులు"],["dāra","wife","భార్య"],["ādibhiḥ","and the rest","మొదలైన వారి చేత"],["dhanaiḥ","for wealth","ధనం కోసం"]],
+ "en": "'Those greedy ones, your sons, wife and others, who drove you out for the sake of wealth...'",
+ "te": "'ధనం కోసం లోభులై మిమ్మల్ని వెళ్ళగొట్టిన ఆ భార్యాపుత్రులు మొదలైనవారి పట్ల...'"
+},
+"1.28": {
+ "pada": [["teṣu","towards them","వారి పట్ల"],["kim","why","ఎందుకు"],["bhavataḥ","your","మీ"],["sneham","affection","ప్రేమను"],["anubadhnāti","binds, holds on to","బంధించుకొని ఉంది"],["mānasam","mind","మనస్సు"]],
+ "en": "'...why does your mind still cling to them with affection?'",
+ "te": "'...మీ మనస్సు ఇంకా వారిపై ప్రేమతో ఎందుకు ముడిపడి ఉంది?'"
+},
+"1.29": {
+ "pada": [["vaiśyaḥ","the merchant","వైశ్యుడు"],["uvāca","said","పలికెను"]],
+ "en": "The merchant said:",
+ "te": "వైశ్యుడు ఇలా అన్నాడు:"
+},
+"1.30": {
+ "pada": [["evam","so","ఈ విధంగానే"],["etat","this","ఇది"],["yathā","as","ఏ విధంగా"],["prāha","said","చెప్పారో"],["bhavān","you","మీరు"],["asmadgatam","about me","నా గురించి"],["vacaḥ","words","మాట"]],
+ "en": "'What you have said about me is exactly so.'",
+ "te": "'నా గురించి మీరు చెప్పిన మాట నిజమే.'"
+},
+"1.31": {
+ "pada": [["kim karomi","what can I do","ఏమి చేయను"],["na badhnāti","does not take on","పొందడం లేదు"],["mama","my","నా"],["niṣṭhuratām","hardness","కాఠిన్యాన్ని"],["manaḥ","mind","మనస్సు"],["yaiḥ","by whom","ఎవరి చేత"],["santyajya","abandoning","విడిచిపెట్టి"],["pitṛsneham","love for a father","తండ్రిపై ప్రేమను"],["dhana","for wealth","ధనం పట్ల"],["lubdhaiḥ","greedy","లోభులైన"],["nirākṛtaḥ","I was rejected","తిరస్కరించబడ్డానో"]],
+ "en": "'But what can I do? My mind will not turn hard against those who, greedy for wealth, abandoned their love for their father and rejected me...'",
+ "te": "'ఏమి చేయను? ధనలోభంతో తండ్రిపై ప్రేమను విడిచిపెట్టి నన్ను తిరస్కరించిన వారి పట్ల నా మనస్సు కఠినం కావడం లేదు...'"
+},
+"1.32": {
+ "pada": [["pati","for a husband","భర్తపై"],["svajana","for kin","బంధువులపై"],["hārdam","love","ప్రేమను"],["ca","and","మరియు"],["hārditeṣu","towards those (who gave it up)","అట్టి వారిపైనే"],["eva","only","మాత్రమే"],["me","my","నా"],["manaḥ","mind","మనస్సు"],["kim","what","ఏమిటి"],["etat","this","ఇది"],["na abhijānāmi","I do not understand","నాకు అర్థం కావడం లేదు"],["jānan","knowing","తెలిసి"],["api","even","కూడా"],["mahāmate","O wise one","ఓ మహామతీ"]],
+ "en": "'...and who gave up all love for husband and kin. Still my heart goes out to them. O wise one, I know all this, yet I cannot understand it.'",
+ "te": "'...భర్తపై, బంధువులపై ప్రేమను విడిచిన వారి మీదే నా మనస్సు ప్రేమతో ఉంది. ఓ మహామతీ, తెలిసి కూడా ఇది ఏమిటో నాకు అర్థం కావడం లేదు.'",
+ "ctx": {"en": "This is the key question of the Devī Māhātmya: 'I know, yet I cannot stop.' The answer, given from 1.40 onwards, is Mahāmāyā, the Devī's power that binds and also frees.", "te": "దేవీ మాహాత్మ్యానికి ఇదే మూల ప్రశ్న: 'తెలుసు, అయినా ఆపుకోలేకపోతున్నాను.' దానికి సమాధానం 1.40 నుండి వస్తుంది: బంధించేదీ, విడిపించేదీ దేవి శక్తి అయిన మహామాయే."}
+},
+"1.33": {
+ "pada": [["yat","that","ఏదైతే"],["prema","love","ప్రేమ వైపు"],["pravaṇam","inclined","మొగ్గిన"],["cittam","heart","చిత్తం"],["viguṇeṣu","without virtue","గుణహీనులైన"],["api","even","అయినా"],["bandhuṣu","towards relatives","బంధువుల పట్ల"],["teṣām kṛte","for their sake","వారి కోసం"],["me","my","నాకు"],["niḥśvāsaḥ","sighing","నిట్టూర్పు"],["daurmanasyam","heaviness of heart","మనోవేదన"],["ca","and","మరియు"],["jāyate","arises","కలుగుతోంది"]],
+ "en": "'My heart leans in love towards these relatives, though they lack all virtue. For their sake I sigh and feel heavy-hearted.'",
+ "te": "'గుణహీనులైన బంధువుల పట్ల కూడా నా హృదయం ప్రేమతో వంగి ఉంది. వారి కోసమే నాకు నిట్టూర్పు, మనోవేదన కలుగుతున్నాయి.'"
+},
+"1.34": {
+ "pada": [["karomi kim","what shall I do","ఏమి చేయను"],["yat","since","ఎందుకంటే"],["na","not","కాదు"],["manaḥ","mind","మనస్సు"],["teṣu","towards them","వారి పట్ల"],["aprītiṣu","unloving","ప్రేమ లేని"],["niṣṭhuram","hard","కఠినం"]],
+ "en": "'What can I do, when my mind will not harden towards those who have no love for me?'",
+ "te": "'నాపై ప్రేమలేని వారి పట్ల నా మనస్సు కఠినం కావడం లేదు; ఏమి చేయను?'"
+},
+"1.35": {
+ "pada": [["mārkaṇḍeyaḥ","Mārkaṇḍeya","మార్కండేయుడు"],["uvāca","said","పలికెను"]],
+ "en": "Mārkaṇḍeya said:",
+ "te": "మార్కండేయుడు ఇలా అన్నాడు:"
+},
+"1.36": {
+ "pada": [["tataḥ","then","అప్పుడు"],["tau","the two","ఆ ఇద్దరూ"],["sahitau","together","కలిసి"],["vipra","O brahmin","ఓ బ్రాహ్మణా"],["tam","that","ఆ"],["munim","sage","ముని వద్దకు"],["samupasthitau","approached","చేరారు"]],
+ "en": "Then, O brahmin, the two of them went together to the sage.",
+ "te": "ఓ బ్రాహ్మణా, అప్పుడు ఆ ఇద్దరూ కలిసి ఆ ముని దగ్గరకు వెళ్ళారు.",
+ "ctx": {"en": "The king and the merchant, one who lost power and one who lost family, now go together to the sage Medhas with the same question.", "te": "అధికారం పోగొట్టుకున్న రాజు, కుటుంబాన్ని పోగొట్టుకున్న వైశ్యుడు ఇద్దరూ ఒకే ప్రశ్నతో మేధస మహర్షి దగ్గరకు వెళ్తున్నారు."}
+},
+"1.37": {
+ "pada": [["samādhiḥ","Samādhi","సమాధి"],["nāma","named","అనే"],["vaiśyaḥ","merchant","వైశ్యుడు"],["asau","this","ఈ"],["saḥ","that","ఆ"],["ca","and","మరియు"],["pārthiva","king","రాజులలో"],["sattamaḥ","the best","శ్రేష్ఠుడు"],["kṛtvā","having made","చేసి"],["tu","and","అయితే"],["tau","the two","వారిద్దరూ"],["yathānyāyam","as is proper","న్యాయంగా"],["yathārham","as befits","తగినట్టుగా"],["tena","with him","అతనితో"],["saṃvidam","courteous greeting","మర్యాదపూర్వక సంభాషణ"]],
+ "en": "The merchant Samādhi and that best of kings greeted the sage properly and respectfully, as was fitting.",
+ "te": "సమాధి అనే వైశ్యుడు, రాజశ్రేష్ఠుడు అయిన సురథుడు ఇద్దరూ ఆ మునికి యథోచితంగా నమస్కరించి మర్యాదగా మాట్లాడారు."
+},
+"1.38": {
+ "pada": [["upaviṣṭau","seated","కూర్చుని"],["kathāḥ","talks","మాటలు"],["kāścit","some","కొన్ని"],["cakratuḥ","they had","జరిపారు"],["vaiśya","the merchant","వైశ్యుడు"],["pārthivau","and the king","రాజు"]],
+ "en": "Seated there, the merchant and the king spoke with him for a while.",
+ "te": "అక్కడ కూర్చుని ఆ వైశ్యుడు, రాజు ఆయనతో కొంతసేపు మాట్లాడారు."
+},
+"1.39": {
+ "pada": [["rājā","the king","రాజు"],["uvāca","said","పలికెను"]],
+ "en": "The king said:",
+ "te": "రాజు ఇలా అన్నాడు:"
+},
+"1.40": {
+ "pada": [["bhagavan","O revered one","ఓ భగవాన్"],["tvām","you","మిమ్మల్ని"],["aham","I","నేను"],["praṣṭum","to ask","అడగాలని"],["icchāmi","wish","కోరుతున్నాను"],["ekam","one thing","ఒక విషయం"],["vadasva","please tell","చెప్పండి"],["tat","that","దానిని"]],
+ "en": "'Revered sir, I wish to ask you one thing. Please explain it to me.'",
+ "te": "'భగవాన్, మిమ్మల్ని ఒక విషయం అడగాలని ఉంది. దయచేసి దానిని నాకు చెప్పండి.'"
+}
+}
