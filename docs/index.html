@@ -121,9 +121,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .script .dn{color:var(--kumkum);white-space:nowrap}
 .script.uv{font-size:calc(24px * var(--scale));color:var(--kumkum)}
 .iast{margin:14px 0 0;color:var(--ink-2);font-style:italic;white-space:pre-line;font-size:calc(17px * var(--scale))}
-.memo .script .ln{filter:blur(7px);cursor:pointer;transition:filter .2s;border-radius:4px}
-.memo .script .ln.shown{filter:none}
-.memo .script .ln:not(.shown):hover{background:var(--kumkum-soft)}
+.memo .script .ln[data-ln]{filter:blur(7px);cursor:pointer;transition:filter .2s;border-radius:4px}
+.memo .script .ln[data-ln].shown{filter:none}
+.memo .script .ln[data-ln]:not(.shown):hover{background:var(--kumkum-soft)}
 .memohint{margin:10px 0 0;font-size:14px;color:var(--ink-3)}
 .nav{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:16px}
 .nav .spacer{flex:1}
@@ -465,6 +465,29 @@ html[data-motion="on"] .japa{animation:fadeIn .25s both}
 html[data-motion="on"] .japa .bead.pulse{animation:beadPop .35s ease-out}
 @keyframes beadPop{0%{transform:scale(1)}40%{transform:scale(1.9)}100%{transform:scale(1)}}
 .japa .bead{transform-box:fill-box;transform-origin:center}
+
+/* ---------- practice levels + review ---------- */
+.hints{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 12px;font-size:13px;color:var(--ink-3)}
+.hints .seg button{font-size:13px;padding:4px 10px}
+.mw{border-radius:4px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.mw.hide{color:transparent;background:var(--kumkum-soft);text-shadow:none}
+.mw .dots{color:var(--ink-3);letter-spacing:.08em}
+.mw.shown{color:inherit;background:none}
+html[data-motion="on"] .mw.shown{animation:lineIn .35s both}
+.reviewbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:14px;padding:12px 14px;border-radius:12px;background:var(--haldi-soft)}
+.reviewbar .q{flex:1;min-width:12rem;font-size:15px;color:var(--ink-2)}
+.reviewbar .btn.good{background:var(--good);border-color:var(--good);color:#fff}
+.reviewcard{margin-top:10px;display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid var(--rule);background:var(--leaf);border-radius:12px;text-align:left;width:100%}
+.reviewcard b{font-weight:400;font-size:17px} .reviewcard small{display:block;color:var(--ink-3);font-size:13px}
+.reviewcard .n{margin-left:auto;font-size:22px;color:var(--haldi);font-variant-numeric:tabular-nums}
+/* ---------- share card preview ---------- */
+.sharebox{position:fixed;inset:0;z-index:56;display:grid;place-items:center;padding:16px;background:rgb(20 10 8 / .55)}
+.sharebox .inner{background:var(--leaf);border-radius:16px;padding:14px;max-width:min(30rem,100%);width:100%;max-height:100%;overflow:auto;display:grid;gap:12px;box-shadow:0 20px 60px rgb(0 0 0 / .3)}
+.sharebox img{width:100%;height:auto;border-radius:10px;border:1px solid var(--rule);display:block}
+.sharebox .row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.sharebox .opts{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;font-size:13px;color:var(--ink-3);align-items:center}
+html[data-motion="on"] .sharebox{animation:fadeIn .25s both}
+html[data-motion="on"] .sharebox .inner{animation:cardIn .35s cubic-bezier(.2,.7,.2,1) both}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media (prefers-reduced-motion:reduce){.reveal .pv{opacity:1;transform:none}}
 </style>
@@ -505,7 +528,7 @@ const store = {
   get(k, d){ try{ const v = localStorage.getItem('ss:'+k); return v===null? d : JSON.parse(v);}catch(e){return d;} },
   set(k, v){ try{ localStorage.setItem('ss:'+k, JSON.stringify(v)); }catch(e){} }
 };
-const prefs = Object.assign({script:'telu', mean:'both', iast:true, scale:1, theme:'system', tspell:'book', motion:'on', tempo:170, samputa:'', sampMode:'both'}, store.get('prefs', {}));
+const prefs = Object.assign({script:'telu', mean:'both', iast:true, scale:1, theme:'system', tspell:'book', motion:'on', tempo:170, samputa:'', sampMode:'both', memoLevel:'none', shareMean:'en'}, store.get('prefs', {}));
 let learned = new Set(store.get('learned', []));
 let DATA = null, NOTES = {}, NOTEIDX = {};
 let memo = false, paathMode = false;
@@ -719,6 +742,7 @@ function renderHome(){
       <p>Read each verse, see how it is pronounced, understand every word, then move to the next. Gita Press order, from the Kavacham to the Kṣamā-prārthanā.</p>
       <div class="counts"><span><b data-n="${chMantras}">${chMantras}</b> mantras in 13 chapters</span><span><b data-n="${learned.size}">${learned.size}</b> marked learned</span><span><b data-n="${annotated}">${annotated}</b> verses with meanings</span></div>
       ${todayCardHTML()}
+      ${reviewCardHTML()}
       <div class="homelinks"><button class="btn" id="japaBtn">📿 Japa counter</button></div>
       ${last && DATA.sections[last.s] ? `<button class="continue" data-go="${sectionHash(last.s,last.i)}"><span><span class="k">Continue where you stopped</span><br><span class="v">${esc(title(sec(last.s)))} · ${esc(refLabel(last.s, entries(last.s)[last.i]||{}))}</span></span><span class="arrow">→</span></button>` : ''}
     </section>`;
@@ -748,6 +772,7 @@ function renderHome(){
   window.scrollTo(0,0);
   countUp(app);
   $('#japaBtn').onclick = ()=>openJapa();
+  const rb=$('#reviewBtn'); if(rb) rb.onclick = startReview;
 }
 const keyOf = (sid,e) => (e._src||sid)+':'+e.ref;
 
@@ -821,14 +846,16 @@ async function renderVerse(sid, idx){
     <div class="vgrid ${memo?'solo':''}"><div class="vleft">
     <article class="leafcard" style="--dir:${navDir}" aria-label="Verse ${esc(e.ref)}">
       ${spk||grp?`<div class="rubric">${spk}${grp}</div>`:''}
-      ${scriptHTML(e, '', !memo && !!(n && n.tok))}
+      ${memo ? `<div class="hints">Hints <span class="seg">${[['all','All'],['first','First letters'],['half','Every other'],['none','None']].map(([v,l])=>`<button data-lv="${v}" aria-pressed="${prefs.memoLevel===v}">${l}</button>`).join('')}</span></div>${memoHTML(e)}` : scriptHTML(e, '', !!(n && n.tok))}
       ${prefs.iast && !memo ? `<p class="iast">${esc(e.iast).replace(/ (\|+)/g,"\u00a0$1")}</p>` : ''}
-      ${memo ? `<p class="memohint">Recite from memory, then tap a line to check it.</p>`:''}
+      ${memo ? `<p class="memohint">Recite from memory, then tap ${prefs.memoLevel==='none'?'a line':'a hidden word'} to check it.</p>`:''}
     </article>
+    ${reviewQ && memo ? `<div class="reviewbar"><span class="q">Review ${reviewQ.i+1} of ${reviewQ.keys.length}. Did you recite it correctly?</span><button class="btn" data-rv="0">Not yet</button><button class="btn good" data-rv="1">✓ Remembered</button></div>` : ''}
     <div class="nav">
       <button class="btn" id="prev" ${idx===0?'disabled':''}>← Previous</button>
       <span class="spacer"></span>
       ${e.kind==='ritual' && /^Japa/.test(e.group||'') ? '<button class="btn" id="japaHere">📿 Count 108</button>' : ''}
+      <button class="btn" id="shareBtn" aria-label="Share this verse as an image" title="Share as an image">⇪ Share</button>
       <button class="btn ${isL?'learned':''}" id="learnBtn" aria-pressed="${isL}">${isL?'✓ Learned':'Mark learned'}</button>
       <button class="btn primary" id="next">${idx===list.length-1?'Finish section':'Next →'}</button>
     </div></div><div class="vright">`;
@@ -870,7 +897,7 @@ async function renderVerse(sid, idx){
   $('#next').onclick = ()=>{ navDir=1; idx===list.length-1 ? nextSection(sid) : go(sectionHash(sid, idx+1)); };
   $('#learnBtn').onclick = ev=>{
     const b = ev.currentTarget, on = !learned.has(k);
-    on ? learned.add(k) : learned.delete(k); store.set('learned',[...learned]);
+    S(); on ? learned.add(k) : learned.delete(k); store.set('learned',[...learned]); on ? srsAdd(k) : srsDrop(k);
     b.classList.toggle('learned', on); b.setAttribute('aria-pressed', on); b.textContent = on ? '✓ Learned' : 'Mark learned';
     if(on){ b.classList.remove('popping'); void b.offsetWidth; b.classList.add('popping');
       const r=b.getBoundingClientRect(); petals(r.left+r.width/2, r.top+r.height/2); }
@@ -891,7 +918,13 @@ async function renderVerse(sid, idx){
   const flash = (el)=>{ el.classList.remove('hl'); void el.offsetWidth; el.classList.add('hl'); };
   ws.forEach((w,i)=>{ const f=()=>{ ps.forEach(x=>x.classList.remove('hl')); ws.forEach(x=>x.classList.remove('hl')); if(ps[i]) flash(ps[i]); flash(w); }; w.addEventListener('click', f); w.addEventListener('pointerenter', ev=>{ if(ev.pointerType==='mouse') f(); }); });
   ps.forEach((p,i)=>{ p.style.cursor='pointer'; p.addEventListener('click', ev=>{ ev.stopPropagation(); ps.forEach(x=>x.classList.remove('hl')); ws.forEach(x=>x.classList.remove('hl')); if(ws[i]) flash(ws[i]); openPop(p, p.textContent, n.pada[i][0], [n.pada[i]]); }); });
-  if(memo) app.querySelectorAll('.script .ln').forEach(l=>l.onclick=()=>l.classList.toggle('shown'));
+  if(memo){
+    app.querySelectorAll('.script .ln[data-ln]').forEach(l=>l.onclick=()=>l.classList.toggle('shown'));
+    app.querySelectorAll('.mw').forEach(m=>m.onclick=()=>{ m.textContent = m.dataset.full; m.classList.remove('hide'); m.classList.add('shown'); });
+    app.querySelectorAll('[data-lv]').forEach(b=>b.onclick=()=>{ prefs.memoLevel=b.dataset.lv; store.set('prefs',prefs); renderVerse(sid, idx); });
+    app.querySelectorAll('[data-rv]').forEach(b=>b.onclick=()=>{ const ok=b.dataset.rv==='1'; const days=srsAnswer(k, ok); if(ok){ reviewQ.ok++; const r=b.getBoundingClientRect(); petals(r.left+r.width/2, r.top+r.height/2, 10); } toast(ok?`Next review in ${days} day${days>1?'s':''}`:'Will come back tomorrow'); setTimeout(reviewNext, ok?500:250); });
+  }
+  $('#shareBtn').onclick = ()=>shareCard(sid, e, n);
   bindSwipe(sid, idx, list.length);
 }
 
@@ -1071,6 +1104,113 @@ function openSheet(){
   $('#scaleR').oninput = e=>{prefs.scale=+e.target.value; applyPrefs();};
 }
 
+
+
+/* ================= Practice levels + spaced review ================= */
+const BOX_DAYS = [1,3,7,16,35];
+let srs = null;
+function S(){ if(!srs){ srs = store.get('srs', null); if(!srs){ srs = {}; [...learned].forEach(k=>{ srs[k] = {box:0, due:todayD()}; }); store.set('srs', srs); } } return srs; }
+const saveSrs = () => store.set('srs', S());
+function srsAdd(k){ S(); if(!srs[k]){ srs[k] = {box:0, due:addD(todayD(), BOX_DAYS[0])}; saveSrs(); } }
+function srsDrop(k){ S(); if(srs[k]){ delete srs[k]; saveSrs(); } }
+function srsAnswer(k, ok){
+  S(); const c = srs[k] || {box:0};
+  c.box = ok ? Math.min(BOX_DAYS.length-1, c.box + 1) : 0;
+  c.due = addD(todayD(), BOX_DAYS[c.box]);
+  srs[k] = c; saveSrs(); return BOX_DAYS[c.box];
+}
+const dueKeys = () => Object.keys(S()).filter(k=>srs[k].due <= todayD()).sort((a,b)=>srs[a].due < srs[b].due ? -1 : 1);
+let reviewQ = null;   /* {keys:[], i:0, ok:0} while reviewing */
+function keyToHash(k){
+  const [sid, ref] = k.split(':'); const list = entries(sid); if(!list) return null;
+  const i = list.findIndex(e=>e.ref===ref && !e._pre) ; const j = i>=0 ? i : list.findIndex(e=>e.ref===ref);
+  return j>=0 ? sectionHash(sid, j) : null;
+}
+function startReview(){
+  const keys = dueKeys().filter(k=>keyToHash(k)); if(!keys.length){ toast('Nothing due for review today'); return; }
+  reviewQ = {keys, i:0, ok:0}; memo = true; go(keyToHash(keys[0]));
+}
+function reviewNext(){
+  reviewQ.i++;
+  if(reviewQ.i >= reviewQ.keys.length){ const r = reviewQ; reviewQ = null; memo = false; toast(`Review done · ${r.ok} of ${r.keys.length} remembered`); if(r.ok) shower(Math.min(40, 10 + r.ok*3)); go('#'); return; }
+  go(keyToHash(reviewQ.keys[reviewQ.i]));
+}
+function reviewCardHTML(){
+  const n = dueKeys().length, total = Object.keys(S()).length;
+  if(!total) return '';
+  return `<button class="reviewcard" id="reviewBtn"><span><b>${n ? 'Review learned verses' : 'All reviews done for today'}</b><small>${n ? 'Recite from memory, then check' : `${total} verses in your review cycle`}</small></span><span class="n">${n||'✓'}</span></button>`;
+}
+const graphemes = w => { try{ return [...new Intl.Segmenter(undefined,{granularity:'grapheme'}).segment(w)].map(x=>x.segment); }catch(e){ return [...w]; } };
+function memoHTML(e){
+  const lv = prefs.memoLevel, txt = scriptOf(e) || '', lines = txt.split('\n');
+  const ref = !e._pre && e.kind!=='ritual' && e.kind!=='uvacha' ? ` <span class="dn">॥ ${esc(e.ref)} ॥</span>` : '';
+  if(lv==='none') return `<p class="script ${prefs.script}">${lines.map((l,i)=>`<span class="ln" data-ln="${i}">${esc(l)}${i===lines.length-1?ref:''}</span>`).join('\n')}</p>`;
+  let w = 0;
+  const word = part => {
+    if(!part || /^\s+$/.test(part) || /^[।॥|\d.]+$/.test(part)) return esc(part);
+    const i = w++;
+    if(lv==='all') return esc(part);
+    if(lv==='half' && i % 2 === 0) return esc(part);
+    if(lv==='first'){ const g = graphemes(part); return `<span class="mw" data-full="${esc(part)}">${esc(g[0])}<span class="dots">${'·'.repeat(Math.min(4, Math.max(1, g.length-1)))}</span></span>`; }
+    return `<span class="mw hide" data-full="${esc(part)}">${esc(part)}</span>`;
+  };
+  return `<p class="script ${prefs.script}">${lines.map((l,i)=>`<span class="ln">${l.split(/(\s+)/).map(word).join('')}${i===lines.length-1?ref:''}</span>`).join('\n')}</p>`;
+}
+
+/* ================= Share a verse as an image ================= */
+async function shareCard(sid, e, n){
+  const W = 1080, H = 1350, c = document.createElement('canvas'); c.width = W; c.height = H;
+  const g = c.getContext('2d');
+  const dark = document.documentElement.dataset.theme==='dark' || (prefs.theme==='system' && matchMedia('(prefers-color-scheme: dark)').matches);
+  const P = dark ? {bg:'#1c1412', leaf:'#241a17', ink:'#f1e6d8', ink2:'#c9b8a6', red:'#f0826e', gold:'#e3b45a', rule:'#3a2c27'}
+                 : {bg:'#f3eee8', leaf:'#fffdfa', ink:'#1d1715', ink2:'#5b4f4a', red:'#a3221b', gold:'#b07a12', rule:'#e3d8cf'};
+  const fScript = prefs.script==='telu' ? '"Tiro Telugu"' : '"Tiro Devanagari Sanskrit"', fBody = '"Gentium Book Plus"', fTe = '"Tiro Telugu"';
+  try{ await Promise.all([`40px ${fScript}`, `30px ${fBody}`, `italic 28px ${fBody}`, `28px ${fTe}`].map(f=>document.fonts.load(f))); }catch(err){}
+  g.fillStyle = P.bg; g.fillRect(0,0,W,H);
+  const M = 70; g.fillStyle = P.leaf; g.strokeStyle = P.rule; g.lineWidth = 2;
+  g.beginPath(); g.roundRect ? g.roundRect(M, M, W-2*M, H-2*M, 26) : g.rect(M, M, W-2*M, H-2*M); g.fill(); g.stroke();
+  g.strokeStyle = P.red; g.lineWidth = 3; g.beginPath(); g.moveTo(M+60, M+150); g.lineTo(W-M-60, M+150); g.stroke();
+  /* small diya */
+  g.save(); g.translate(W/2-32, M+28); g.scale(1,1);
+  const fl = g.createLinearGradient(0,32,0,6); fl.addColorStop(0,'#d4471c'); fl.addColorStop(.5,'#f29e33'); fl.addColorStop(1,'#fff0b8');
+  g.fillStyle = fl; g.fill(new Path2D('M32 6c5 8 8 15 0 26c-8-11-5-18 0-26z'));
+  g.fillStyle = P.red; g.fill(new Path2D('M9 37c3 12 43 12 46 0z')); g.strokeStyle = P.gold; g.lineWidth = 2.4; g.stroke(new Path2D('M7 37h50')); g.restore();
+  g.textAlign = 'center'; g.fillStyle = P.red; g.font = `30px ${fBody}`;
+  const head = `Śrī Durgā Saptaśatī  ·  ${title(sec(e._src||sid))}${/^\d/.test(e.ref)?'  ·  '+e.ref:''}`;
+  g.fillText(head, W/2, M+122);
+  const wrap = (text, font, maxW, lh, color, y, maxLines=99) => {
+    g.font = font; g.fillStyle = color; const out = [];
+    text.split('\n').forEach(par=>{ let line=''; par.split(/\s+/).forEach(wd=>{ const t = line ? line+' '+wd : wd; if(g.measureText(t).width > maxW && line){ out.push(line); line = wd; } else line = t; }); if(line) out.push(line); });
+    out.slice(0,maxLines).forEach((l,i)=>g.fillText(i===maxLines-1 && out.length>maxLines ? l+' …' : l, W/2, y + i*lh));
+    return y + Math.min(out.length,maxLines)*lh;
+  };
+  const verse = (scriptOf(e)||'').replace(/ ?[|।]+ ?$/gm,'').trim();
+  let size = 54; const lines = verse.split('\n').length; if(lines>4) size = 44; if(lines>6) size = 38;
+  let y = M + 240;
+  y = wrap(verse, `${size}px ${fScript}`, W-2*M-110, size*1.55, P.ink, y, 10);
+  if(/^\d/.test(e.ref)){ g.font = `34px ${fBody}`; g.fillStyle = P.red; g.fillText(`॥ ${e.ref} ॥`, W/2, y+10); y += 60; } else y += 20;
+  g.strokeStyle = P.rule; g.lineWidth = 2; g.beginPath(); g.moveTo(W/2-90, y); g.lineTo(W/2+90, y); g.stroke(); y += 64;
+  const mean = prefs.shareMean;
+  if(n && (mean==='en'||mean==='both') && n.en) y = wrap(n.en.replace(/^'|'$/g,''), `30px ${fBody}`, W-2*M-130, 44, P.ink2, y, mean==='both'?5:9) + 18;
+  if(n && (mean==='te'||mean==='both') && n.te) y = wrap(n.te.replace(/^'|'$/g,''), `29px ${fTe}`, W-2*M-130, 50, P.ink2, y, mean==='both'?5:9);
+  g.font = `24px ${fBody}`; g.fillStyle = P.gold; g.fillText('balendus.github.io/saptashathi', W/2, H-M-36);
+  const blob = await new Promise(r=>c.toBlob(r, 'image/png'));
+  const url = URL.createObjectURL(blob), fname = `saptashati-${(e.ref||'verse').replace(/[^\w.-]/g,'')}.png`;
+  const box = document.createElement('div'); box.className = 'sharebox'; box.setAttribute('role','dialog'); box.setAttribute('aria-label','Share this verse');
+  const canFiles = (()=>{ try{ return navigator.canShare && navigator.canShare({files:[new File([blob], fname, {type:'image/png'})]}); }catch(err){ return false; } })();
+  box.innerHTML = `<div class="inner"><img src="${url}" alt="Verse card for ${esc(e.ref)}">
+    <div class="opts">Meaning on the card: <span class="seg">${[['en','English'],['te','తెలుగు'],['both','Both'],['none','None']].map(([v,l])=>`<button data-sm="${v}" aria-pressed="${prefs.shareMean===v}">${l}</button>`).join('')}</span></div>
+    <div class="row">${canFiles?'<button class="btn primary" data-s="share">Share…</button>':''}<a class="btn ${canFiles?'':'primary'}" href="${url}" download="${fname}">Save image</a><button class="btn" data-s="close">Close</button></div></div>`;
+  document.body.appendChild(box);
+  const close = ()=>{ box.remove(); URL.revokeObjectURL(url); };
+  box.addEventListener('click', async ev=>{
+    if(ev.target===box) return close();
+    const sm = ev.target.closest('[data-sm]'); if(sm){ prefs.shareMean = sm.dataset.sm; store.set('prefs',prefs); close(); shareCard(sid, e, n); return; }
+    const b = ev.target.closest('[data-s]'); if(!b) return;
+    if(b.dataset.s==='close') close();
+    if(b.dataset.s==='share'){ try{ await navigator.share({files:[new File([blob], fname, {type:'image/png'})], title:'Śrī Durgā Saptaśatī '+e.ref}); }catch(err){} }
+  });
+}
 
 /* ================= Today's pārāyaṇa: 7-day round, as in the Chandi Paath tracker ================= */
 /* Tithi at local sunrise (Hyderabad), low-precision Meeus. */
@@ -1326,9 +1466,9 @@ document.addEventListener('click', e=>{
   const b = e.target.closest('[data-go]'); if(b){ go(b.dataset.go); return; }
   const sb = e.target.closest('[data-script]'); if(sb){ prefs.script=sb.dataset.script; applyPrefs(); if($('#sheetRoot').innerHTML) openSheet(); route(); }
 });
-$('#homeBtn').onclick = ()=>{ memo=false; go('#'); };
+$('#homeBtn').onclick = ()=>{ memo=false; reviewQ=null; go('#'); };
 $('#menuBtn').onclick = openSheet;
-$('#memoBtn').onclick = ()=>{ memo=!memo; route(); };
+$('#memoBtn').onclick = ()=>{ memo=!memo; if(!memo) reviewQ=null; route(); };
 $('#paathBtn').onclick = ()=>{
   const h = decodeURIComponent(location.hash.slice(1)); const sid = h.replace(/~p$/,'').split('.')[0];
   if(paathMode){ const last=store.get('last',{}); go(sectionHash(sid, last.s===sid?last.i:0)); } else go('#'+sid+'~p');
