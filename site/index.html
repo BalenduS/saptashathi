@@ -384,6 +384,82 @@ html[data-motion="on"] .paath .tw.chant{background-size:0% 100%;animation:sweep 
 .chantbar .left{font-size:12px;opacity:.75;padding:0 6px;white-space:nowrap;font-variant-numeric:tabular-nums}
 @media (max-width:520px){.chantbar .left{display:none}}
 html[data-motion="on"] .chantbar{animation:toastIn .3s both}
+
+/* ---------- today's pārāyaṇa (7-day round, after the Chandi Paath tracker) ---------- */
+:root{--kali:#2a1a14;--lakshmi:#a8790c;--saraswati:#5f7896;--good:#2f7a3d;--good-soft:#e2f0e1}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--kali:#e9d9cc;--lakshmi:#e3b341;--saraswati:#9db4cf;--good:#8cc795;--good-soft:#1e3222}}
+:root[data-theme="dark"]{--kali:#e9d9cc;--lakshmi:#e3b341;--saraswati:#9db4cf;--good:#8cc795;--good-soft:#1e3222}
+.todaycard{margin-top:18px;display:grid;gap:4px;padding:14px 16px;border:1px solid var(--rule);background:var(--leaf);border-radius:12px;text-align:left;width:100%}
+.todaycard .k{font-size:13px;color:var(--kumkum)}
+.todaycard .v{font-size:19px}
+.todaycard .m{font-size:14px;color:var(--ink-3)}
+.todaycard .bar{height:4px;border-radius:2px;background:var(--rule);overflow:hidden;margin-top:6px}
+.todaycard .bar i{display:block;height:100%;background:var(--haldi)}
+.homelinks{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.today{padding-block:20px 90px}
+.today .card{background:var(--leaf);border:1px solid var(--rule);border-radius:14px;padding:16px;margin-bottom:14px}
+.today .eyebrow{font-size:13px;color:var(--ink-3);font-variant:small-caps;letter-spacing:.06em}
+.today .spread{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.strip{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-top:12px}
+.dchip{border:1.5px solid var(--rule);background:var(--paper);border-radius:12px;padding:8px 2px 6px;display:flex;flex-direction:column;align-items:center;gap:2px;min-height:64px}
+.dchip .dn{font-size:11px;letter-spacing:.06em;color:var(--ink-3);text-transform:uppercase}
+.dchip .dd{font-size:22px;line-height:1.1;font-variant-numeric:tabular-nums}
+.dchip .dm{width:6px;height:6px;border-radius:50%}
+.dchip.done{background:var(--good-soft);border-color:var(--good)} .dchip.done .dm{background:var(--good)}
+.dchip.missed .dm{background:var(--haldi)}
+.dchip.today{border-color:var(--kumkum)} .dchip.today .dn{color:var(--kumkum)}
+.dchip[aria-pressed="true"]{box-shadow:0 0 0 2px var(--kumkum) inset}
+.hero .part{display:inline-flex;align-items:center;gap:8px;font-size:13px;padding:3px 10px;border-radius:999px;background:var(--paper);border:1px solid var(--rule);margin-top:8px}
+.hero .part b{width:10px;height:10px;border-radius:50%}
+.hero h2{font-family:var(--f-title);font-weight:400;font-size:34px;line-height:1.15;color:var(--kumkum);margin:10px 0 6px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}
+.tag{font-size:13px;padding:2px 10px;border-radius:999px;border:1px solid var(--rule);color:var(--ink-2)}
+.tag.gold{border-color:transparent;background:var(--haldi-soft);color:var(--haldi)}
+.tag .te{font-family:var(--f-telu)}
+.steps{list-style:none;margin:8px 0 12px;padding:0;display:grid;gap:6px}
+.step{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;padding:8px 8px 8px 6px;border:1px solid var(--rule);border-radius:10px;background:var(--paper)}
+.step.on{background:var(--good-soft);border-color:transparent}
+.step .tick{width:30px;height:30px;border-radius:15px;border:1.5px solid var(--rule);display:inline-flex;align-items:center;justify-content:center;color:transparent;font-size:15px}
+.step.on .tick{background:var(--good);border-color:var(--good);color:#fff}
+.step .t b{display:block;font-weight:400;font-size:16px}
+.step .t small{display:block;font-size:13px;color:var(--ink-3)}
+.step .t .opt{font-size:11px;padding:0 6px;border:1px solid var(--rule);border-radius:999px;margin-left:6px;color:var(--ink-3)}
+.step.main{border-color:var(--kumkum)}
+.step .acts{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.step .acts .btn{padding:6px 12px;font-size:14px;min-height:36px}
+.chchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chchips .btn{padding:3px 10px;font-size:13px;min-height:30px}
+.chchips .btn.on{background:var(--good-soft);border-color:transparent;color:var(--good)}
+.field{display:grid;gap:6px}
+.field input[type=date]{font:inherit;padding:8px 10px;border:1px solid var(--rule);border-radius:10px;background:var(--paper);color:var(--ink);max-width:14rem}
+.quick{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.quick .chip{display:grid;text-align:left;padding:6px 12px;border:1px solid var(--rule);border-radius:12px;background:var(--paper);font-size:14px;line-height:1.3}
+.quick .chip small{color:var(--ink-3);font-size:12px}
+.quick .chip[aria-pressed="true"]{border-color:var(--kumkum);color:var(--kumkum)}
+.hist{list-style:none;margin:0;padding:0}
+.hist li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.hist small{color:var(--ink-3)}
+/* ---------- japa counter ---------- */
+.japa{position:fixed;inset:0;z-index:55;background:var(--paper);display:grid;grid-template-rows:auto auto 1fr auto;padding:calc(env(safe-area-inset-top,0px) + 10px) 16px calc(env(safe-area-inset-bottom,0px) + 14px);touch-action:manipulation;user-select:none;-webkit-user-select:none}
+.japa .top{display:flex;justify-content:space-between;align-items:center}
+.japa .mantra{text-align:center;margin:6px 0 0}
+.japa .mantra .s{display:block;font-size:clamp(22px,6vw,34px);color:var(--kumkum);line-height:1.4}
+.japa .mantra .s.telu{font-family:var(--f-telu)} .japa .mantra .s.deva{font-family:var(--f-deva)}
+.japa .mantra i{color:var(--ink-3);font-size:14px}
+.japa .pad{display:grid;place-items:center;cursor:pointer;-webkit-tap-highlight-color:transparent;outline:none}
+.japa svg.mala{width:min(84vw,62vh,520px);height:auto;overflow:visible}
+.japa .bead{fill:var(--rule);transition:fill .15s}
+.japa .bead.on{fill:var(--kumkum)}
+.japa .meru{fill:var(--haldi)}
+.japa .num{font-size:64px;fill:var(--ink);font-variant-numeric:tabular-nums}
+.japa .of{font-size:16px;fill:var(--ink-3)}
+.japa .rounds{font-size:15px;fill:var(--haldi)}
+.japa .hint{text-align:center;color:var(--ink-3);font-size:14px;margin:4px 0 0}
+.japa .row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+html[data-motion="on"] .japa{animation:fadeIn .25s both}
+html[data-motion="on"] .japa .bead.pulse{animation:beadPop .35s ease-out}
+@keyframes beadPop{0%{transform:scale(1)}40%{transform:scale(1.9)}100%{transform:scale(1)}}
+.japa .bead{transform-box:fill-box;transform-origin:center}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media (prefers-reduced-motion:reduce){.reveal .pv{opacity:1;transform:none}}
 </style>
@@ -634,6 +710,8 @@ function renderHome(){
       <div class="mhead"><h2 class="script-title ${prefs.script}">${xl('śrīdurgāsaptaśatī', prefs.script)}</h2>${DIYA}</div>
       <p>Read each verse, see how it is pronounced, understand every word, then move to the next. Gita Press order, from the Kavacham to the Kṣamā-prārthanā.</p>
       <div class="counts"><span><b data-n="${chMantras}">${chMantras}</b> mantras in 13 chapters</span><span><b data-n="${learned.size}">${learned.size}</b> marked learned</span><span><b data-n="${annotated}">${annotated}</b> verses with meanings</span></div>
+      ${todayCardHTML()}
+      <div class="homelinks"><button class="btn" id="japaBtn">📿 Japa counter</button></div>
       ${last && DATA.sections[last.s] ? `<button class="continue" data-go="${sectionHash(last.s,last.i)}"><span><span class="k">Continue where you stopped</span><br><span class="v">${esc(title(sec(last.s)))} · ${esc(refLabel(last.s, entries(last.s)[last.i]||{}))}</span></span><span class="arrow">→</span></button>` : ''}
     </section>`;
   const deities = {prathama:'Brahmā is the ṛṣi, Mahākālī the devatā', madhyama:'Viṣṇu is the ṛṣi, Mahālakṣmī the devatā', uttara:'Rudra is the ṛṣi, Mahāsarasvatī the devatā',
@@ -661,6 +739,7 @@ function renderHome(){
   app.innerHTML = h;
   window.scrollTo(0,0);
   countUp(app);
+  $('#japaBtn').onclick = ()=>openJapa();
 }
 const keyOf = (sid,e) => (e._src||sid)+':'+e.ref;
 
@@ -741,6 +820,7 @@ async function renderVerse(sid, idx){
     <div class="nav">
       <button class="btn" id="prev" ${idx===0?'disabled':''}>← Previous</button>
       <span class="spacer"></span>
+      ${e.kind==='ritual' && /^Japa/.test(e.group||'') ? '<button class="btn" id="japaHere">📿 Count 108</button>' : ''}
       <button class="btn ${isL?'learned':''}" id="learnBtn" aria-pressed="${isL}">${isL?'✓ Learned':'Mark learned'}</button>
       <button class="btn primary" id="next">${idx===list.length-1?'Finish section':'Next →'}</button>
     </div></div><div class="vright">`;
@@ -777,6 +857,7 @@ async function renderVerse(sid, idx){
   const pct = 100*(idx+1)/list.length, pbar = $('.prog i');
   requestAnimationFrame(()=>requestAnimationFrame(()=>{ pbar.style.width = pct.toFixed(1)+'%'; }));
   lastProg = {s:sid, p:pct};
+  const jh = $('#japaHere'); if(jh) jh.onclick = ()=>openJapa();
   $('#prev').onclick = ()=>{ navDir=-1; go(sectionHash(sid, idx-1)); };
   $('#next').onclick = ()=>{ navDir=1; idx===list.length-1 ? nextSection(sid) : go(sectionHash(sid, idx+1)); };
   $('#learnBtn').onclick = ev=>{
@@ -806,7 +887,7 @@ async function renderVerse(sid, idx){
   bindSwipe(sid, idx, list.length);
 }
 
-function nextSection(sid){
+function nextSection(sid, paath=false){
   const order = DATA.groups.flatMap(g=>g.sections);
   const i = order.indexOf(sid), nxt = order[i+1];
   const es = entries(sid), l = es.filter(e=>learned.has(keyOf(sid,e))).length;
@@ -816,10 +897,13 @@ function nextSection(sid){
     <p>${esc(title(sec(sid)))} · ${es.length} ${sec(sid).kind==='ritual'?'steps':'entries'} read${l?` · ${l} marked learned`:''}</p>
     ${nxt?'':`<p>${esc(xl('sarvamaṅgalamāṅgalye śive sarvārthasādhike', prefs.script))}</p>`}
     <div class="nav"><button class="btn" data-act="home">All sections</button>${nxt?`<button class="btn primary" data-act="next">${esc(title(sec(nxt)))} →</button>`:''}</div></div>`;
+  const ticked = markFromSection(sid);
+  if(ticked){ const pp=document.createElement('p'); pp.style.cssText='color:var(--good);font-size:14px;margin:6px 0 0'; pp.textContent='✓ '+ticked; root.querySelector('.nav').before(pp);
+    const tb=document.createElement('button'); tb.className='btn'; tb.dataset.act='today'; tb.textContent="Today's pārāyaṇa"; root.querySelector('.nav').prepend(tb); }
   const close = (to)=>{ root.remove(); if(to) go(to); };
   root.addEventListener('click', ev=>{
     const a = ev.target.closest('[data-act]');
-    if(a) close(a.dataset.act==='next' ? sectionHash(nxt,0) : '#');
+    if(a) close(a.dataset.act==='next' ? (paath ? '#'+nxt+'~p' : sectionHash(nxt,0)) : a.dataset.act==='today' ? '#today' : '#');
     else if(ev.target===root) close(null);
   });
   document.body.appendChild(root);
@@ -892,7 +976,7 @@ function keepInView(el){
 function tick(){
   if(!chant || !chant.playing) return;
   const it = chant.seq[chant.i];
-  if(!it){ const done = chant; stopChant(); toast('॥ Chanting complete ॥'); return; }
+  if(!it){ const box = app.querySelector('.paath'), sidDone = box && box.dataset.sid; stopChant(); if(sidDone) nextSection(sidDone, true); else toast('॥ Chanting complete ॥'); return; }
   markBlock(it.block);
   if(chant.cur){ chant.cur.classList.remove('chant'); chant.cur.classList.add('sung'); chant.cur=null; }
   const ms = (it.pause || it.beats) * 60000 / prefs.tempo;
@@ -934,9 +1018,10 @@ async function renderPaath(sid){
     if(wrapS && prefs.sampMode==='both') h += sampBlock('sa'+i);
   });
   const order = DATA.groups.flatMap(g=>g.sections), oi = order.indexOf(sid);
-  h += `<div class="pnext">${oi>0?`<button class="btn" data-go="#${order[oi-1]}~p">← ${esc(title(sec(order[oi-1])))}</button>`:'<span></span>'}${oi<order.length-1?`<button class="btn primary" data-go="#${order[oi+1]}~p">${esc(title(sec(order[oi+1])))} →</button>`:''}</div></div>`;
+  h += `<div class="pnext">${oi>0?`<button class="btn" data-go="#${order[oi-1]}~p">← ${esc(title(sec(order[oi-1])))}</button>`:'<span></span>'}<button class="btn primary" id="finishSec">✓ Finish ${esc(title(s))}</button>${oi<order.length-1?`<button class="btn" data-go="#${order[oi+1]}~p">${esc(title(sec(order[oi+1])))} →</button>`:''}</div></div>`;
   app.innerHTML = h; window.scrollTo(0,0);
-  const box = app.querySelector('.paath');
+  const box = app.querySelector('.paath'); box.dataset.sid = sid;
+  $('#finishSec').onclick = ()=>{ stopChant(); nextSection(sid, true); };
   const est = buildChant(box, ents).reduce((a,x)=>a+(x.pause||x.beats),0);
   $('#chantEst').textContent = `${fmtMin(est)} at ${prefs.tempo} beats/min${samp?' with saṃpuṭa':''}`;
   $('#chantGo').onclick = ()=> startChant(box, ents);
@@ -978,12 +1063,249 @@ function openSheet(){
   $('#scaleR').oninput = e=>{prefs.scale=+e.target.value; applyPrefs();};
 }
 
+
+/* ================= Today's pārāyaṇa: 7-day round, as in the Chandi Paath tracker ================= */
+/* Tithi at local sunrise (Hyderabad), low-precision Meeus. */
+var PANCHANG=(function(){
+  var R=Math.PI/180;
+  function n360(x){x%=360;return x<0?x+360:x}
+  function sunLon(T){
+    var L0=280.46646+36000.76983*T, M=(357.52911+35999.05029*T)*R;
+    var C=(1.914602-0.004817*T)*Math.sin(M)+(0.019993-0.000101*T)*Math.sin(2*M)+0.000289*Math.sin(3*M);
+    return n360(L0+C-0.00569-0.00478*Math.sin((125.04-1934.136*T)*R));
+  }
+  var TERMS=[[0,0,1,0,6288774],[2,0,-1,0,1274027],[2,0,0,0,658314],[0,0,2,0,213618],[0,1,0,0,-185116],[0,0,0,2,-114332],
+    [2,0,-2,0,58793],[2,-1,-1,0,57066],[2,0,1,0,53322],[2,-1,0,0,45758],[0,1,-1,0,-40923],[1,0,0,0,-34720],[0,1,1,0,-30383],
+    [2,0,0,-2,15327],[0,0,1,2,-12528],[0,0,1,-2,10980],[4,0,-1,0,10675],[0,0,3,0,10034],[4,0,-2,0,8548],[2,1,-1,0,-7888],
+    [2,1,0,0,-6766],[1,0,-1,0,-5163],[1,1,0,0,4987],[2,-1,1,0,4036],[2,0,2,0,3994],[4,0,0,0,3861],[2,0,-3,0,3665],[0,1,-2,0,-2689],
+    [2,0,-1,2,-2602],[2,-1,-2,0,2390],[1,0,1,0,-2348],[2,-2,0,0,2236],[0,1,2,0,-2120],[0,2,0,0,-2069]];
+  function moonLon(T){
+    var Lp=218.3164477+481267.88123421*T, D=297.8501921+445267.1114034*T, M=357.5291092+35999.0502909*T,
+        Mp=134.9633964+477198.8675055*T, F=93.2720950+483202.0175233*T, E=1-0.002516*T, s=0;
+    for(var i=0;i<TERMS.length;i++){var t=TERMS[i],arg=(t[0]*D+t[1]*M+t[2]*Mp+t[3]*F)*R,e=Math.abs(t[1])===1?E:Math.abs(t[1])===2?E*E:1;s+=t[4]*e*Math.sin(arg)}
+    s+=3958*Math.sin((119.75+131.849*T)*R)+1962*Math.sin((Lp-F)*R);
+    return n360(Lp+s/1e6-0.00478*Math.sin((125.04-1934.136*T)*R));
+  }
+  function jd(ms){return ms/864e5+2440587.5}
+  function elong(ms){var T=(jd(ms)-2451545)/36525;return n360(moonLon(T)-sunLon(T))}
+  /* Sunrise at Hyderabad for a local calendar date, returned as UTC ms. */
+  var LAT=17.385, LNG=78.4867, TZ=5.5;
+  function sunriseMs(y,m,d){
+    var noon=Date.UTC(y,m-1,d,12)-TZ*36e5, n=jd(noon)-2451545;
+    var L=n360(280.46+0.9856474*n), g=n360(357.528+0.9856003*n)*R;
+    var lam=(L+1.915*Math.sin(g)+0.02*Math.sin(2*g))*R, eps=23.439*R;
+    var dec=Math.asin(Math.sin(eps)*Math.sin(lam));
+    var ra=Math.atan2(Math.cos(eps)*Math.sin(lam),Math.cos(lam))/R;
+    var eqt=(L-n360(ra)); if(eqt>180)eqt-=360; if(eqt<-180)eqt+=360; eqt*=4;
+    var cosH=(Math.sin(-0.833*R)-Math.sin(LAT*R)*Math.sin(dec))/(Math.cos(LAT*R)*Math.cos(dec));
+    var H=Math.acos(Math.max(-1,Math.min(1,cosH)))/R;
+    var solarNoonMin=720-4*LNG-eqt; /* UTC minutes */
+    return Date.UTC(y,m-1,d)+(solarNoonMin-4*H)*6e4;
+  }
+  var NAMES=[['Pratipada','పాడ్యమి'],['Dwitiya','విదియ'],['Tritiya','తదియ'],['Chaviti','చవితి'],['Panchami','పంచమి'],['Shashti','షష్ఠి'],
+    ['Saptami','సప్తమి'],['Ashtami','అష్టమి'],['Navami','నవమి'],['Dashami','దశమి'],['Ekadashi','ఏకాదశి'],['Dwadashi','ద్వాదశి'],
+    ['Trayodashi','త్రయోదశి'],['Chaturdashi','చతుర్దశి']];
+  var cache={};
+  function tithi(isoDate){
+    if(cache[isoDate])return cache[isoDate];
+    var p=isoDate.split('-'), ms=sunriseMs(+p[0],+p[1],+p[2]);
+    var n=Math.floor(elong(ms)/12)+1; /* 1..30 */
+    var shukla=n<=15, k=shukla?n:n-15, en, te;
+    if(n===15){en='Purnima';te='పౌర్ణమి'}else if(n===30){en='Amavasya';te='అమావాస్య'}else{en=NAMES[k-1][0];te=NAMES[k-1][1]}
+    var devi=(k===8||k===9||k===14)&&n!==30;
+    var r={n:n,k:k,shukla:shukla,paksha:shukla?'Shukla':'Bahula',pakshaTe:shukla?'శుక్ల':'బహుళ',name:en,te:te,devi:devi,
+      label:(n===15||n===30)?en:(shukla?'Shukla':'Bahula')+' '+en, labelTe:(n===15||n===30)?te:(shukla?'శుక్ల':'బహుళ')+' '+te};
+    cache[isoDate]=r;return r;
+  }
+  return {tithi:tithi,sunriseMs:sunriseMs};
+})();
+const SCHEDULE = [
+  {ch:'Chapter 1', n:[1], part:'kali'}, {ch:'Chapters 2 & 3', n:[2,3], part:'lakshmi'}, {ch:'Chapter 4', n:[4], part:'lakshmi'},
+  {ch:'Chapters 5 – 8', n:[5,6,7,8], part:'saraswati'}, {ch:'Chapters 9 & 10', n:[9,10], part:'saraswati'},
+  {ch:'Chapter 11', n:[11], part:'saraswati'}, {ch:'Chapters 12 & 13', n:[12,13], part:'saraswati'}];
+const PARTS = {kali:{name:'Śrī Mahākālī', charitra:'Prathama Carita', color:'var(--kali)'}, lakshmi:{name:'Śrī Mahālakṣmī', charitra:'Madhyama Carita', color:'var(--lakshmi)'}, saraswati:{name:'Śrī Mahāsarasvatī', charitra:'Uttama Carita', color:'var(--saraswati)'}};
+/* [label, optional?, note, section(s) in this reader] — same order as the tracker */
+const STEPS = [
+  ['Devī Kavacham', false, '', ['kavacham']], ['Argalā Stotram', false, '', ['argala']], ['Kīlakam', false, '', ['kilakam']],
+  ['Navārṇa japa', true, '108 times', ['navarna']], ['Rātri Sūktam', false, '', ['ratri-vedic','ratri-tantric']],
+  ['CHAPTERS', false, '', []], ['Navārṇa japa', true, '108 times again', ['navarna']],
+  ['Devī Sūktam', false, 'Ṛgvedic “ahaṃ rudrebhiḥ…”', ['devisuktam','devisuktam-tantric']],
+  ['Rahasya Trayam', true, 'Prādhānika, Vaikṛtika, Mūrti', ['rahasya-pradhanika','rahasya-vaikrtika','rahasya-murti']],
+  ['Kṣamā Prārthanā', false, '', ['kshamapana']]];
+const MAIN_STEP = 5, REQUIRED = STEPS.map((x,i)=>x[1]?-1:i).filter(i=>i>=0);
+const WD = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], WD_LONG = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'], MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const AUSP = {2:1,5:1,6:1};
+const pad2 = n => (n<10?'0':'')+n;
+const isoD = d => d.getFullYear()+'-'+pad2(d.getMonth()+1)+'-'+pad2(d.getDate());
+const parseD = x => { const q=x.split('-'); return new Date(+q[0],+q[1]-1,+q[2]); };
+const addD = (x,k) => { const d=parseD(x); d.setDate(d.getDate()+k); return isoD(d); };
+const diffD = (a,b) => Math.round((parseD(b)-parseD(a))/864e5);
+const todayD = () => isoD(new Date());
+const fmtD = x => { const d=parseD(x); return WD[d.getDay()]+', '+d.getDate()+' '+MON[d.getMonth()]; };
+const dowD = x => parseD(x).getDay();
+const TT = x => PANCHANG.tithi(x);
+const auspD = x => { const w=!!AUSP[dowD(x)], t=TT(x).devi; return {wd:w, tt:t, any:w||t, both:w&&t}; };
+let rounds = store.get('rounds', []);
+const saveRounds = () => store.set('rounds', rounds);
+const newRound = start => { const days={}; for(let i=1;i<=7;i++) days[i]={steps:STEPS.map(()=>false), ch:{}, done:false, doneAt:null}; return {id:'r'+Date.now().toString(36), startDate:start, createdAt:new Date().toISOString(), days}; };
+const roundDone = r => [1,2,3,4,5,6,7].filter(i=>r.days[i].done).length;
+function currentRound(){
+  const t = todayD();
+  const act = rounds.filter(r=>{ const k=diffD(r.startDate,t); return k>=-30 && k<=6 && roundDone(r)<7; }).sort((a,b)=>a.startDate<b.startDate?1:-1);
+  return act[0] || null;
+}
+function defaultDay(r){ const k=diffD(r.startDate,todayD())+1; if(k>=1&&k<=7&&!r.days[k].done) return k; for(let i=1;i<=7;i++) if(!r.days[i].done) return i; return 7; }
+function dayStatus(r,i){ const d=addD(r.startDate,i-1), t=todayD(), rec=r.days[i]; if(rec.done) return 'done'; if(d===t) return 'today'; return d<t ? 'missed' : 'future'; }
+let todaySel = null, todayStarting = false, startPick = todayD();
+function requiredDone(rec){ return REQUIRED.every(i=>rec.steps[i]); }
+function setStep(r, day, idx, val){
+  const rec = r.days[day]; rec.steps[idx] = val;
+  if(val && requiredDone(rec) && !rec.done){ rec.done = true; rec.doneAt = new Date().toISOString(); saveRounds(); return true; }
+  saveRounds(); return false;
+}
+/* finishing a section in the reader ticks today's step */
+function markFromSection(sid){
+  const r = currentRound(); if(!r) return null;
+  const day = defaultDay(r), rec = r.days[day], sch = SCHEDULE[day-1];
+  let idx = -1;
+  const m = /^ch(\d+)$/.exec(sid);
+  if(m){ const n=+m[1]; if(!sch.n.includes(n)) return null; rec.ch[n]=true; if(sch.n.every(c=>rec.ch[c])) idx = MAIN_STEP; else { saveRounds(); return `Chapter ${n} done · Day ${day}`; } }
+  else if(sid==='navarna' || sid==='navarna-after') idx = (sid==='navarna-after' || rec.steps[3]) ? 6 : 3;
+  else if(sid.startsWith('rahasya-')){ rec.ch[sid]=true; if(['rahasya-pradhanika','rahasya-vaikrtika','rahasya-murti'].every(x=>rec.ch[x])) idx=8; else { saveRounds(); return null; } }
+  else idx = STEPS.findIndex((x,i)=>i!==3 && i!==6 && x[3].includes(sid));
+  if(idx<0) return null;
+  const finished = setStep(r, day, idx, true);
+  return finished ? `Day ${day} of 7 complete · జయ మా` : `${idx===MAIN_STEP?sch.ch:STEPS[idx][0]} ticked · Day ${day}`;
+}
+function nextStepSection(r, day){
+  const rec = r.days[day], sch = SCHEDULE[day-1];
+  for(let i=0;i<STEPS.length;i++){
+    if(rec.steps[i] || STEPS[i][1]) continue;
+    if(i===MAIN_STEP){ const c = sch.n.find(n=>!rec.ch[n]) || sch.n[0]; return 'ch'+c; }
+    return STEPS[i][3][0];
+  }
+  return null;
+}
+function todayCardHTML(){
+  const r = currentRound();
+  if(!r) return `<button class="todaycard" data-go="#today"><span class="k sc">Today's pārāyaṇa</span><span class="v">Begin a 7-day Saptaśatī</span><span class="m">Pick an auspicious day; each day's reading is laid out in order.</span></button>`;
+  const day = defaultDay(r), sch = SCHEDULE[day-1], rec = r.days[day], k = diffD(r.startDate, todayD());
+  const done = REQUIRED.filter(i=>rec.steps[i]).length;
+  return `<button class="todaycard" data-go="#today"><span class="k sc">${k<0?`Begins ${fmtD(r.startDate)}`:`Day ${day} of 7`} · ${roundDone(r)}/7 days done</span><span class="v">${esc(sch.ch)}</span><span class="m">${esc(PARTS[sch.part].charitra)} · ${done} of ${REQUIRED.length} steps today</span><span class="bar"><i style="width:${Math.round(100*done/REQUIRED.length)}%"></i></span></button>`;
+}
+function renderToday(){
+  paathMode=false; setBarFor(null); $('#barTitle').innerHTML = '<b>ॐ</b> Today’s pārāyaṇa';
+  const r = currentRound();
+  if(!r || todayStarting) return renderStartRound();
+  const t = todayD(), sel = todaySel || defaultDay(r), date = addD(r.startDate, sel-1), rec = r.days[sel], sch = SCHEDULE[sel-1], part = PARTS[sch.part];
+  const roundNo = rounds.slice().sort((a,b)=>a.startDate<b.startDate?-1:1).indexOf(r)+1, startsIn = diffD(t, r.startDate), dc = roundDone(r);
+  let h = `<div class="wrap today"><section class="card"><div class="spread"><div><div class="eyebrow">Round ${roundNo}</div><div style="font-size:14px;color:var(--ink-3)">${fmtD(r.startDate)} – ${fmtD(addD(r.startDate,6))}</div></div><b style="font-weight:400;font-variant-numeric:tabular-nums">${dc} / 7 days</b></div><div class="strip" role="group" aria-label="Days of this round">`;
+  for(let i=1;i<=7;i++){ const st=dayStatus(r,i), dd=parseD(addD(r.startDate,i-1));
+    h += `<button class="dchip ${st}" data-day="${i}" aria-pressed="${i===sel}" aria-label="Day ${i}, ${fmtD(isoD(dd))}, ${st}"><span class="dn">${st==='today'?'Today':WD[dd.getDay()]}</span><span class="dd">${dd.getDate()}</span><span class="dm"></span></button>`; }
+  h += `</div></section>`;
+  if(dc===7) h += `<section class="card" style="text-align:center">${DIYA}<p class="sc" style="color:var(--kumkum);margin:4px 0">॥ iti śrī durgā saptaśatī ॥</p><p style="margin:0 0 10px">All seven days are complete.</p><button class="btn primary" id="newRound">Begin another round</button></section>`;
+  else if(startsIn>0) h += `<section class="card"><b style="font-weight:400">Begins in ${startsIn} day${startsIn>1?'s':''}</b><div style="font-size:14px;color:var(--ink-3)">Day 1 is ${fmtD(r.startDate)}. You can look at each day’s reading below.</div></section>`;
+  const tdy = TT(date);
+  h += `<section class="card hero"><div class="spread"><div class="eyebrow">Day ${sel} of 7 · ${fmtD(date)}</div>${rec.done?'<span class="tag gold">Completed</span>':''}</div>
+    <span class="part"><b style="background:${part.color}"></b>${esc(part.charitra)} · ${esc(part.name)}</span>
+    <h2>${esc(sch.ch)}</h2>
+    <div class="tags"><span class="tag">${sch.n.reduce((a,c)=>a+mantraCount('ch'+c),0)} mantras</span><span class="tag ${tdy.devi?'gold':''}"><span class="te">${esc(tdy.labelTe)}</span> · ${esc(tdy.label)}</span>${AUSP[dowD(date)]?`<span class="tag gold">${WD_LONG[dowD(date)]}</span>`:''}</div>
+    ${!rec.done?`<button class="btn primary" id="beginDay" style="margin-bottom:8px">▶ ${REQUIRED.some(i=>rec.steps[i])?'Continue':'Begin'} day ${sel}</button>`:''}
+    <ol class="steps" aria-label="Order of reading">`;
+  STEPS.forEach((st,i)=>{
+    const on = !!rec.steps[i], main = i===MAIN_STEP, sids = main ? sch.n.map(c=>'ch'+c) : st[3];
+    h += `<li class="step ${on?'on':''} ${main?'main':''}"><button class="tick" data-step="${i}" aria-pressed="${on}" aria-label="Mark ${esc(main?sch.ch:st[0])} ${on?'not done':'done'}">✓</button>
+      <span class="t"><b>${esc(main?sch.ch:st[0])}${st[1]?'<span class="opt">optional</span>':''}</b>${main?`<span class="chchips">${sch.n.map(c=>`<button class="btn ${rec.ch[c]?'on':''}" data-go="#ch${c}~p">${rec.ch[c]?'✓ ':''}Ch ${c} · ${mantraCount('ch'+c)}</button>`).join('')}</span>`:(st[2]?`<small>${esc(st[2])}</small>`:'')}</span>
+      <span class="acts">${(i===3||i===6)?`<button class="btn" data-japa="${i}">Count</button>`:''}${!main?`<button class="btn" data-go="#${sids[0]}~p">Read</button>`:''}</span></li>`;
+  });
+  h += `</ol>${rec.done?`<button class="btn" id="undoDay">Mark day ${sel} as not done</button>`:`<button class="btn" id="completeDay">Complete day ${sel}</button>`}</section>
+    <section class="card"><div class="eyebrow">While reading</div><p style="margin:6px 0 0;font-size:15px">Read with faith and correct pronunciation, the mind fixed on Śrī Devī. Do not stop in the middle of a chapter. Steps tick themselves when you finish that section here in the reader.</p></section>`;
+  const past = rounds.filter(x=>x!==r).sort((a,b)=>a.startDate<b.startDate?1:-1);
+  if(past.length) h += `<section class="card"><div class="eyebrow">Earlier rounds</div><ul class="hist">${past.map(x=>`<li><span>${fmtD(x.startDate)} – ${fmtD(addD(x.startDate,6))}</span><small>${roundDone(x)} / 7 days</small></li>`).join('')}</ul></section>`;
+  if(dc<7) h += `<div style="text-align:center"><button class="btn" id="newRound">Start a different round</button></div>`;
+  h += `</div>`;
+  app.innerHTML = h; scrollTo(0,0);
+  app.querySelectorAll('[data-day]').forEach(b=>b.onclick=()=>{ todaySel=+b.dataset.day; renderToday(); });
+  app.querySelectorAll('[data-step]').forEach(b=>b.onclick=()=>{ const i=+b.dataset.step, val=!rec.steps[i]; if(i===MAIN_STEP) sch.n.forEach(c=>rec.ch[c]=val); const fin=setStep(r, sel, i, val); if(fin){ toast(`Day ${sel} complete · జయ మా`); shower(30); } renderToday(); });
+  app.querySelectorAll('[data-japa]').forEach(b=>b.onclick=()=>openJapa({onDone:()=>{ if(setStep(r, sel, +b.dataset.japa, true)) toast(`Day ${sel} complete`); renderToday(); }}));
+  const bd=$('#beginDay'); if(bd) bd.onclick=()=>{ const sid=nextStepSection(r, sel); if(sid) go('#'+sid+'~p'); };
+  const cd=$('#completeDay'); if(cd) cd.onclick=()=>{ REQUIRED.forEach(i=>rec.steps[i]=true); sch.n.forEach(c=>rec.ch[c]=true); rec.done=true; rec.doneAt=new Date().toISOString(); saveRounds(); toast(`Day ${sel} complete · జయ మా`); shower(30); todaySel=null; renderToday(); };
+  const ud=$('#undoDay'); if(ud) ud.onclick=()=>{ rec.done=false; rec.doneAt=null; saveRounds(); renderToday(); };
+  const nr=$('#newRound'); if(nr) nr.onclick=()=>{ todayStarting=true; renderToday(); };
+}
+function renderStartRound(){
+  const t = todayD(), x = startPick, st = TT(x), a = auspD(x), hasOpen = !!currentRound();
+  const nextMatch = fn => { for(let k=1;k<=60;k++){ const d=addD(t,k); if(fn(d)) return d; } return null; };
+  const wdPicks = [2,5,6].map(w=>[WD_LONG[w], nextMatch(d=>dowD(d)===w)]);
+  const ttPicks = [8,9,14].map(k=>{ const d=nextMatch(y=>{ const q=TT(y); return q.k===k && q.n!==30; }); return [d?TT(d).name:'', d]; });
+  const chips = arr => arr.filter(q=>q[1]).map(q=>`<button class="chip" data-pick="${q[1]}" aria-pressed="${q[1]===x}">Next ${esc(q[0])}<small>${fmtD(q[1])} · ${esc(TT(q[1]).label)}</small></button>`).join('');
+  let up = []; for(let k=0;k<30 && up.length<8;k++){ const d=addD(t,k); if(auspD(d).any) up.push(d); }
+  app.innerHTML = `<div class="wrap today"><section class="card"><div class="spread"><h2 style="margin:0;font-weight:400;font-size:24px">Begin a Saptaśatī</h2>${todayStarting&&hasOpen?'<button class="btn" id="cancelStart">Cancel</button>':''}</div>
+      <p style="margin:6px 0 0;color:var(--ink-2);font-size:15px">Pick the day you begin. The thirteen chapters are spread over seven days, with each day’s reading laid out in order: Kavacham, Argalā, Kīlakam, Rātri Sūktam, the day’s chapters, Devī Sūktam and Kṣamā-prārthanā.</p></section>
+    <section class="card"><div class="field"><label for="startDate">Day 1 begins on</label><input type="date" id="startDate" value="${x}"></div>
+      <div style="font-size:14px;margin-top:6px"><span style="font-family:var(--f-telu)">${esc(st.labelTe)}</span> · ${esc(st.label)}</div>
+      ${a.any?`<div style="font-size:14px;color:var(--haldi);margin-top:4px">${a.both?WD_LONG[dowD(x)]+' and '+st.name+' together: doubly auspicious to begin.':a.wd?WD_LONG[dowD(x)]+' is an auspicious day to begin.':st.name+' is a Devī tithi, auspicious to begin.'}</div>`:''}
+      <div class="eyebrow" style="margin-top:14px">Weekdays · Tue, Fri, Sat</div><div class="quick">${chips(wdPicks)}</div>
+      <div class="eyebrow" style="margin-top:12px">Devī tithis</div><div class="quick">${chips(ttPicks)}</div>
+      <div class="eyebrow" style="margin-top:12px">Upcoming auspicious days</div><div class="quick">${up.map(d=>`<button class="chip" data-pick="${d}" aria-pressed="${d===x}">${fmtD(d)}<small>${auspD(d).wd?WD_LONG[dowD(d)]:''}${auspD(d).both?' · ':''}${auspD(d).tt?esc(TT(d).name):''}</small></button>`).join('')}</div>
+      <div style="margin-top:16px"><button class="btn primary" id="startRound">Begin on ${fmtD(x)}</button></div>
+      <p style="font-size:13px;color:var(--ink-3);margin:10px 0 0">Tithis are worked out for sunrise at Hyderabad, on this device. Check a panchāṅgam for important dates.</p></section></div>`;
+  scrollTo(0,0);
+  $('#startDate').onchange = e=>{ if(e.target.value){ startPick=e.target.value; renderStartRound(); } };
+  app.querySelectorAll('[data-pick]').forEach(b=>b.onclick=()=>{ startPick=b.dataset.pick; renderStartRound(); });
+  $('#startRound').onclick = ()=>{ rounds.push(newRound(startPick)); saveRounds(); todayStarting=false; todaySel=null; renderToday(); };
+  const cs=$('#cancelStart'); if(cs) cs.onclick=()=>{ todayStarting=false; renderToday(); };
+}
+
+/* ================= Japa counter ================= */
+let japaState = store.get('japa', {n:0, rounds:0});
+function openJapa(opts={}){
+  closePop();
+  const N = 108, iast = 'oṃ aiṃ hrīṃ klīṃ cāmuṇḍāyai vicce';
+  const root = document.createElement('div'); root.className='japa'; root.setAttribute('role','dialog'); root.setAttribute('aria-label','Japa counter');
+  const cx=200, cy=200, R=172;
+  let beads='';
+  for(let i=0;i<N;i++){ const a = -Math.PI/2 + (i+0.5)*2*Math.PI/N; beads += `<circle class="bead" data-b="${i}" cx="${(cx+R*Math.cos(a)).toFixed(1)}" cy="${(cy+R*Math.sin(a)).toFixed(1)}" r="4.6"/>`; }
+  root.innerHTML = `<div class="top"><button class="btn" data-j="close">✕ Close</button><span style="font-size:14px;color:var(--ink-3)">Navārṇa japa</span><button class="btn" data-j="reset">Reset</button></div>
+    <p class="mantra"><span class="s ${prefs.script}">${esc(xl(iast, prefs.script))}</span><i>${esc(iast)}</i></p>
+    <div class="pad" tabindex="0" aria-label="Tap to count"><svg class="mala" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="${R}" fill="none" stroke="var(--rule)" stroke-width="1"/>${beads}<circle class="meru" cx="200" cy="${200-R-14}" r="9"/>
+      <text class="num" x="200" y="212" text-anchor="middle">0</text><text class="of" x="200" y="244" text-anchor="middle">of ${N}</text><text class="rounds" x="200" y="150" text-anchor="middle"></text></svg></div>
+    <div><p class="hint">Tap anywhere on the mālā (or press Space) for each repetition.</p><div class="row" style="margin-top:8px"><button class="btn" data-j="undo">− 1</button>${opts.onDone?'<button class="btn primary" data-j="done">Done · tick the step</button>':''}</div></div>`;
+  document.body.appendChild(root);
+  let wl=null; try{ navigator.wakeLock && navigator.wakeLock.request('screen').then(x=>wl=x).catch(()=>{}); }catch(e){}
+  const draw = (pulse) => {
+    root.querySelector('.num').textContent = japaState.n;
+    root.querySelector('.rounds').textContent = japaState.rounds ? `mālā ${japaState.rounds+1}` : '';
+    root.querySelectorAll('.bead').forEach((b,i)=>b.classList.toggle('on', i < japaState.n));
+    if(pulse!=null && motionOK()){ const b=root.querySelector(`.bead[data-b="${pulse}"]`); if(b){ b.classList.remove('pulse'); void b.getBoundingClientRect(); b.classList.add('pulse'); } }
+    store.set('japa', japaState);
+  };
+  const inc = () => {
+    japaState.n++;
+    if(japaState.n >= N){ japaState.n = 0; japaState.rounds++; draw(); try{ navigator.vibrate && navigator.vibrate([60,40,60,40,120]); }catch(e){}
+      const m=root.querySelector('.meru').getBoundingClientRect(); petals(m.left+m.width/2, m.top+m.height/2, 26); toast(`${N} complete · mālā ${japaState.rounds}`); return; }
+    try{ navigator.vibrate && navigator.vibrate(12); }catch(e){}
+    draw(japaState.n-1);
+  };
+  const close = () => { root.remove(); document.removeEventListener('keydown', key, true); try{ wl && wl.release(); }catch(e){} };
+  const key = ev => { if(ev.key===' '||ev.key==='Enter'){ ev.preventDefault(); ev.stopPropagation(); inc(); } if(ev.key==='Escape'){ ev.stopPropagation(); close(); } };
+  document.addEventListener('keydown', key, true);
+  root.querySelector('.pad').addEventListener('pointerdown', ev=>{ ev.preventDefault(); inc(); });
+  root.addEventListener('click', ev=>{ const b=ev.target.closest('[data-j]'); if(!b) return; const j=b.dataset.j;
+    if(j==='close') close();
+    if(j==='reset'){ japaState={n:0, rounds:0}; draw(); }
+    if(j==='undo'){ if(japaState.n>0) japaState.n--; else if(japaState.rounds>0){ japaState.rounds--; japaState.n=N-1; } draw(); }
+    if(j==='done'){ close(); opts.onDone && opts.onDone(); } });
+  draw();
+}
+
 /* ---------------- routing ---------------- */
 function go(h){ if(location.hash===h) route(); else location.hash=h; }
 function route(){
   closePop(); stopChant();
   const h = decodeURIComponent(location.hash.slice(1));
   if(!h || !DATA){ memo=false; return renderHome(); }
+  if(h==='today') return renderToday();
   const pm = h.endsWith('~p');
   const [sid, idx] = (pm? h.slice(0,-2) : h).split('.');
   if(!DATA.sections[sid]) return renderHome();
