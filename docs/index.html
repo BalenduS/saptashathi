@@ -363,6 +363,32 @@ html[data-motion="on"] .donecard{animation:cardIn .5s cubic-bezier(.2,.7,.2,1) b
 html[data-motion="on"] .wpop{animation:popIn .18s cubic-bezier(.2,.7,.2,1) both}
 html[data-motion="on"] .wpop.above{--py:-6px}
 html[data-motion="on"] .wpop.sheet{animation:sheetUp .26s cubic-bezier(.2,.7,.2,1) both}
+
+/* ---------- paath tools: chanting guide + saṃpuṭa ---------- */
+.ptools{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:0 0 22px;padding:12px 14px;border:1px solid var(--rule);border-radius:12px;background:var(--leaf)}
+.ptools .btn{min-height:40px}
+.ptools label{font-size:14px;color:var(--ink-2);display:inline-flex;align-items:center;gap:8px}
+.ptools select{font:inherit;font-size:14px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:6px 8px;max-width:15rem}
+.ptools .est{font-size:13px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.paath .tw{cursor:inherit} .paath .tw:hover{background:none}
+.paath .tw.chant{color:var(--kumkum);border-radius:4px;background-image:linear-gradient(var(--haldi-soft),var(--haldi-soft));background-repeat:no-repeat;background-size:100% 100%}
+html[data-motion="on"] .paath .tw.chant{background-size:0% 100%;animation:sweep var(--d,600ms) linear forwards}
+@keyframes sweep{to{background-size:100% 100%}}
+.paath .tw.sung{color:var(--ink-3)}
+.paath .now{box-shadow:inset 3px 0 0 var(--kumkum);background:color-mix(in srgb,var(--leaf) 70%,transparent)}
+.paath .pv.now{padding-left:10px}
+.samp{margin:4px 0 6px;padding:6px 12px;border-left:2px solid var(--haldi);border-radius:0 8px 8px 0;background:color-mix(in srgb,var(--haldi-soft) 55%,transparent)}
+.samp .lab{display:block;font-size:12px;color:var(--haldi);margin-bottom:2px}
+.samp .script{font-size:calc(19px * var(--scale));line-height:1.7}
+.chantbar{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 14px);transform:translateX(-50%);z-index:35;display:flex;align-items:center;gap:6px;padding:6px 8px;border-radius:999px;background:var(--ink);color:var(--paper);box-shadow:0 10px 30px rgb(0 0 0 / .25);max-width:calc(100vw - 20px)}
+.chantbar button{min-width:44px;height:44px;border-radius:22px;color:var(--paper);font-size:18px;display:inline-flex;align-items:center;justify-content:center}
+.chantbar button:hover{background:rgb(255 255 255 / .12)}
+.chantbar .play{background:var(--kumkum);color:#fff;min-width:52px;height:52px;border-radius:26px;font-size:20px}
+.chantbar .tempo{display:flex;align-items:center;gap:2px;padding:0 4px;font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.chantbar .tempo b{min-width:3.6em;text-align:center;font-weight:400}
+.chantbar .left{font-size:12px;opacity:.75;padding:0 6px;white-space:nowrap;font-variant-numeric:tabular-nums}
+@media (max-width:520px){.chantbar .left{display:none}}
+html[data-motion="on"] .chantbar{animation:toastIn .3s both}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media (prefers-reduced-motion:reduce){.reveal .pv{opacity:1;transform:none}}
 </style>
@@ -403,7 +429,7 @@ const store = {
   get(k, d){ try{ const v = localStorage.getItem('ss:'+k); return v===null? d : JSON.parse(v);}catch(e){return d;} },
   set(k, v){ try{ localStorage.setItem('ss:'+k, JSON.stringify(v)); }catch(e){} }
 };
-const prefs = Object.assign({script:'telu', mean:'both', iast:true, scale:1, theme:'system', tspell:'book', motion:'on'}, store.get('prefs', {}));
+const prefs = Object.assign({script:'telu', mean:'both', iast:true, scale:1, theme:'system', tspell:'book', motion:'on', tempo:170, samputa:'', sampMode:'both'}, store.get('prefs', {}));
 let learned = new Set(store.get('learned', []));
 let DATA = null, NOTES = {}, NOTEIDX = {};
 let memo = false, paathMode = false;
@@ -809,20 +835,124 @@ function nextSection(sid){
   shower(nxt ? 42 : 90);
 }
 
+
+/* ---------------- saṃpuṭa ---------------- */
+const SAMPUTA = [
+  ['', 'Off'],
+  ['11.39', '11.39 sarvābādhā… · removing obstacles'],
+  ['11.10', '11.10 sarvamaṅgala… · auspiciousness'],
+  ['4.17',  '4.17 durge smṛtā… · fear and want'],
+  ['11.29', '11.29 rogān aśeṣān… · health'],
+  ['11.12', '11.12 śaraṇāgata… · refuge in distress'],
+  ['11.24', '11.24 sarvasvarūpe… · protection'],
+  ['11.3',  '11.3 devi prapannārtihare… · grace'],
+  ['navarna', 'Navārṇa mantra'],
+];
+function samputaEntry(){
+  const r = prefs.samputa; if(!r) return null;
+  if(r==='navarna'){ const iast='oṃ aiṃ hrīṃ klīṃ cāmuṇḍāyai vicce'; return {iast, telu:xl(iast,'telu'), deva:xl(iast,'deva'), _pre:true, kind:'mantra', ref:'navarna'}; }
+  const v = sec('ch'+r.split('.')[0]).verses.find(x=>x.ref===r);
+  return v ? Object.assign({}, v, {_pre:true}) : null;
+}
+/* ---------------- chanting guide ---------------- */
+let chant = null;
+const beatsOf = tok => syllables(tok).reduce((a,x)=>a+(x.guru?2:1),0) || 1;
+function buildChant(root, ents){
+  const seq = [];
+  root.querySelectorAll('[data-chant]').forEach(block=>{
+    const e = ents[block.dataset.chant]; if(!e || !e.iast) return;
+    const toks = e.iast.split(/\s+/).filter(Boolean);
+    toks.forEach((tk,i)=>{
+      const el = block.querySelector(`.tw[data-t="${i}"]`);
+      if(el) seq.push({el, beats:beatsOf(tk), block});
+      else if(/\|\||॥/.test(tk)) seq.push({pause:4, block});
+      else if(/\||।/.test(tk)) seq.push({pause:2, block});
+    });
+    seq.push({pause:3, block});
+  });
+  return seq;
+}
+function beatsLeft(){ if(!chant) return 0; let b=0; for(let k=chant.i;k<chant.seq.length;k++){ const x=chant.seq[k]; b += x.pause||x.beats; } return b; }
+function fmtMin(beats){ const m = beats/prefs.tempo; return m < 1 ? '< 1 min' : `≈ ${Math.round(m)} min`; }
+function chantBar(){
+  let bar = $('.chantbar');
+  if(!chant){ if(bar) bar.remove(); return; }
+  if(!bar){ bar = document.createElement('div'); bar.className='chantbar'; bar.setAttribute('role','toolbar'); bar.setAttribute('aria-label','Chanting guide'); document.body.appendChild(bar);
+    bar.innerHTML = `<button data-c="back" aria-label="Previous verse">⏮</button><button class="play" data-c="play" aria-label="Play or pause"></button><button data-c="fwd" aria-label="Next verse">⏭</button>
+      <span class="tempo"><button data-c="slow" aria-label="Slower">−</button><b></b><button data-c="fast" aria-label="Faster">+</button></span><span class="left"></span><button data-c="stop" aria-label="Stop chanting guide">✕</button>`;
+    bar.addEventListener('click', ev=>{ const b=ev.target.closest('[data-c]'); if(!b) return; const c=b.dataset.c;
+      if(c==='play') chant.playing ? pauseChant() : playChant();
+      if(c==='stop') stopChant();
+      if(c==='slow'||c==='fast'){ prefs.tempo = Math.max(80, Math.min(320, prefs.tempo + (c==='fast'?10:-10))); store.set('prefs',prefs); }
+      if(c==='back'||c==='fwd') jumpBlock(c==='fwd'?1:-1);
+      chantBar(); });
+  }
+  bar.querySelector('.play').textContent = chant.playing ? '❚❚' : '▶';
+  bar.querySelector('.tempo b').textContent = prefs.tempo + ' bpm';
+  bar.querySelector('.tempo b').title = 'beats per minute (a long syllable is 2 beats, a short one 1)';
+  bar.querySelector('.left').textContent = fmtMin(beatsLeft()) + ' left';
+}
+function markBlock(block){ if(chant.block===block) return; if(chant.block){ chant.block.classList.remove('now'); chant.block.querySelectorAll('.sung,.chant').forEach(x=>x.classList.remove('sung','chant')); } chant.block=block; if(block) block.classList.add('now'); }
+function keepInView(el){
+  const r = el.getBoundingClientRect(), top = innerHeight*0.22, bot = innerHeight*0.62;
+  if(r.top < top || r.bottom > bot) scrollTo({top: scrollY + r.top - innerHeight*0.36, behavior: motionOK()?'smooth':'auto'});
+}
+function tick(){
+  if(!chant || !chant.playing) return;
+  const it = chant.seq[chant.i];
+  if(!it){ const done = chant; stopChant(); toast('॥ Chanting complete ॥'); return; }
+  markBlock(it.block);
+  if(chant.cur){ chant.cur.classList.remove('chant'); chant.cur.classList.add('sung'); chant.cur=null; }
+  const ms = (it.pause || it.beats) * 60000 / prefs.tempo;
+  if(it.el){ it.el.style.setProperty('--d', ms+'ms'); it.el.style.animationPlayState=''; it.el.classList.remove('sung'); void it.el.offsetWidth; it.el.classList.add('chant'); chant.cur = it.el; keepInView(it.el); }
+  chant.timer = setTimeout(()=>{ chant.i++; if(chant.i % 8 === 0) chantBar(); tick(); }, ms);
+}
+function startChant(root, ents, fromBlock){
+  stopChant();
+  chant = {seq: buildChant(root, ents), i:0, playing:false, block:null, cur:null, timer:null};
+  if(fromBlock){ const k = chant.seq.findIndex(x=>x.block===fromBlock); if(k>=0) chant.i=k; }
+  playChant();
+}
+function playChant(){ if(!chant) return; chant.playing = true; chantBar(); tick(); }
+function pauseChant(){ if(!chant) return; chant.playing = false; clearTimeout(chant.timer); if(chant.cur){ chant.cur.style.animationPlayState='paused'; } chantBar(); }
+function stopChant(){ if(!chant) return; clearTimeout(chant.timer); app.querySelectorAll('.paath .now,.paath .chant,.paath .sung').forEach(x=>x.classList.remove('now','chant','sung')); chant=null; chantBar(); }
+function jumpTo(block){ if(!chant) return; const k = chant.seq.findIndex(x=>x.block===block); if(k<0) return; clearTimeout(chant.timer); if(chant.cur){ chant.cur.classList.remove('chant'); chant.cur=null; } markBlock(null); chant.i=k; if(chant.playing) tick(); else { markBlock(block); keepInView(block); } chantBar(); }
+function jumpBlock(d){ if(!chant) return; const blocks=[...new Set(chant.seq.map(x=>x.block))]; const cur = blocks.indexOf(chant.block); const nb = blocks[Math.max(0, Math.min(blocks.length-1, (cur<0?0:cur)+d))]; jumpTo(nb); }
+document.addEventListener('visibilitychange', ()=>{ if(document.hidden && chant && chant.playing) pauseChant(); });
+
 async function renderPaath(sid){
+  stopChant();
   paathMode=true; memo=false; setBarFor(sid);
-  const list = entries(sid), s = sec(sid);
-  let h = `<div class="wrap paath"><h2 class="${prefs.script}">${esc(scriptTitle(s))}</h2><p class="psub">${esc(s.title)} · ${list.length} entries · tap any verse to study it</p>`;
+  const list = entries(sid), s = sec(sid), isCh = /^ch\d+$/.test(sid);
+  const samp = isCh ? samputaEntry() : null;
+  const ents = {};
+  const sampBlock = (key, where) => { ents[key] = samp; return `<div class="samp" data-chant="${key}"><span class="lab sc">Saṃpuṭa${where?' · '+where:''}</span>${scriptHTML(samp,'',true)}</div>`; };
+  let h = `<div class="wrap paath"><h2 class="${prefs.script}">${esc(scriptTitle(s))}</h2><p class="psub">${esc(s.title)} · ${list.length} entries · tap any verse to study it</p>
+    <div class="ptools"><button class="btn primary" id="chantGo">▶ Chanting guide</button>
+    ${isCh?`<label>Saṃpuṭa <select id="sampSel">${SAMPUTA.map(([v,l])=>`<option value="${v}" ${prefs.samputa===v?'selected':''}>${esc(l)}</option>`).join('')}</select></label>
+      ${samp?`<label>Recite it <select id="sampMode"><option value="both" ${prefs.sampMode==='both'?'selected':''}>before and after each verse</option><option value="before" ${prefs.sampMode==='before'?'selected':''}>before each verse</option></select></label>`:''}`:''}
+    <span class="est" id="chantEst"></span></div>`;
   list.forEach((e,i)=>{
-    if(e._pre){ h += `<div class="pre"><span class="lab sc">${esc(PRE_LABEL[e.label]||e.label)}</span>${scriptHTML(e)}</div>`; return; }
+    const key = 'e'+i; ents[key] = e;
+    if(e._pre){ h += `<div class="pre" data-chant="${key}"><span class="lab sc">${esc(PRE_LABEL[e.label]||e.label)}</span>${scriptHTML(e,'',true)}</div>`; return; }
     if(e.kind==='ritual' && (i===0 || list[i-1].group!==e.group)) h += `<div class="pre" style="border:0;background:none;padding:10px 0 0"><span class="lab sc">${esc(e.group)}</span></div>`;
-    h += `<button class="pv ${e.kind==='uvacha'?'uv':''}" data-go="${sectionHash(sid,i)}">${e.speaker_xl?`<span class="spk ${prefs.script}">${esc(scriptOf(e.speaker_xl))}</span>`:''}${scriptHTML(e)}</button>`;
+    const wrapS = samp && e.kind!=='uvacha';
+    if(wrapS) h += sampBlock('sb'+i);
+    h += `<button class="pv ${e.kind==='uvacha'?'uv':''}" data-go="${sectionHash(sid,i)}" data-chant="${key}">${e.speaker_xl?`<span class="spk ${prefs.script}">${esc(scriptOf(e.speaker_xl))}</span>`:''}${scriptHTML(e,'',true)}</button>`;
+    if(wrapS && prefs.sampMode==='both') h += sampBlock('sa'+i);
   });
   const order = DATA.groups.flatMap(g=>g.sections), oi = order.indexOf(sid);
   h += `<div class="pnext">${oi>0?`<button class="btn" data-go="#${order[oi-1]}~p">← ${esc(title(sec(order[oi-1])))}</button>`:'<span></span>'}${oi<order.length-1?`<button class="btn primary" data-go="#${order[oi+1]}~p">${esc(title(sec(order[oi+1])))} →</button>`:''}</div></div>`;
   app.innerHTML = h; window.scrollTo(0,0);
+  const box = app.querySelector('.paath');
+  const est = buildChant(box, ents).reduce((a,x)=>a+(x.pause||x.beats),0);
+  $('#chantEst').textContent = `${fmtMin(est)} at ${prefs.tempo} beats/min${samp?' with saṃpuṭa':''}`;
+  $('#chantGo').onclick = ()=> startChant(box, ents);
+  box.paathEnts = ents;
+  const ss = $('#sampSel'); if(ss) ss.onchange = ()=>{ prefs.samputa = ss.value; store.set('prefs',prefs); renderPaath(sid); };
+  const sm = $('#sampMode'); if(sm) sm.onchange = ()=>{ prefs.sampMode = sm.value; store.set('prefs',prefs); renderPaath(sid); };
   if(motionOK() && 'IntersectionObserver' in window){
-    const box = app.querySelector('.paath'); box.classList.add('reveal');
+    box.classList.add('reveal');
     const io = new IntersectionObserver(es=>es.forEach(x=>{ if(x.isIntersecting){ x.target.classList.add('in'); io.unobserve(x.target); } }), {rootMargin:'0px 0px -6% 0px'});
     box.querySelectorAll('.pv').forEach(v=>io.observe(v));
   }
@@ -859,7 +989,7 @@ function openSheet(){
 /* ---------------- routing ---------------- */
 function go(h){ if(location.hash===h) route(); else location.hash=h; }
 function route(){
-  closePop();
+  closePop(); stopChant();
   const h = decodeURIComponent(location.hash.slice(1));
   if(!h || !DATA){ memo=false; return renderHome(); }
   const pm = h.endsWith('~p');
@@ -870,6 +1000,7 @@ function route(){
 }
 window.addEventListener('hashchange', route);
 document.addEventListener('click', e=>{
+  const cb = chant && e.target.closest('.paath [data-chant]'); if(cb){ jumpTo(cb); return; }
   const b = e.target.closest('[data-go]'); if(b){ go(b.dataset.go); return; }
   const sb = e.target.closest('[data-script]'); if(sb){ prefs.script=sb.dataset.script; applyPrefs(); if($('#sheetRoot').innerHTML) openSheet(); route(); }
 });
@@ -883,6 +1014,7 @@ $('#paathBtn').onclick = ()=>{
 document.addEventListener('keydown', e=>{
   if(e.target.closest('input')||$('#sheetRoot').innerHTML) return;
   if(document.querySelector('.done')) return;
+  if(chant && e.key===' '){ e.preventDefault(); chant.playing ? pauseChant() : playChant(); return; }
   if(e.key==='ArrowRight'){ const n=$('#next'); n&&n.click(); }
   if(e.key==='ArrowLeft'){ const p=$('#prev'); p&&!p.disabled&&p.click(); }
 });
