@@ -488,6 +488,49 @@ html[data-motion="on"] .mw.shown{animation:lineIn .35s both}
 .sharebox .opts{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;font-size:13px;color:var(--ink-3);align-items:center}
 html[data-motion="on"] .sharebox{animation:fadeIn .25s both}
 html[data-motion="on"] .sharebox .inner{animation:cardIn .35s cubic-bezier(.2,.7,.2,1) both}
+
+/* ---------- word index ---------- */
+.windex{padding-block:20px 90px}
+.windex h2,.story h2{font-family:var(--f-title);font-weight:400;font-size:32px;color:var(--kumkum);margin:0 0 4px}
+.windex .sub,.story .sub{color:var(--ink-3);font-size:15px;margin:0 0 14px}
+.wsearch{width:100%;font:inherit;font-size:18px;padding:10px 14px;border:1px solid var(--rule);border-radius:12px;background:var(--leaf);color:var(--ink)}
+.wquick{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 16px}
+.wquick button{padding:4px 12px;border:1px solid var(--rule);border-radius:999px;background:var(--leaf);font-size:15px}
+.wlist{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.wlist li>button{display:grid;grid-template-columns:1fr auto;gap:2px 12px;width:100%;text-align:left;padding:10px 4px;border-bottom:1px solid var(--rule)}
+.wlist .ws{font-size:21px} .wlist .ws.telu{font-family:var(--f-telu)} .wlist .ws.deva{font-family:var(--f-deva)}
+.wlist .wi{font-style:italic;color:var(--ink-3);font-size:14px;margin-left:8px}
+.wlist .wg{grid-column:1;font-size:15px;color:var(--ink-2)}
+.wlist .wc{grid-row:1 / span 2;grid-column:2;align-self:center;font-size:14px;color:var(--haldi);font-variant-numeric:tabular-nums}
+.occ{list-style:none;margin:0;padding:0}
+.occ li>button{display:block;width:100%;text-align:left;padding:10px 4px;border-bottom:1px solid var(--rule)}
+.occ .r{font-size:13px;color:var(--ink-3)}
+.occ .l{display:block;font-size:21px;line-height:1.6} .occ .l.telu{font-family:var(--f-telu)} .occ .l.deva{font-family:var(--f-deva)}
+.occ mark{background:var(--haldi-soft);color:var(--kumkum);border-radius:4px;padding:0 2px}
+.wpop .more{background:none;border:0;padding:0;cursor:pointer;font:inherit;font-size:14px;color:var(--kumkum)}
+/* ---------- story map ---------- */
+.story{padding-block:20px 90px}
+.carita{position:relative;margin:22px 0 0;padding-left:26px}
+.carita::before{content:"";position:absolute;left:8px;top:6px;bottom:0;width:2px;background:var(--cc,var(--rule));opacity:.5}
+.carita>h3{margin:0 0 2px;font-size:14px;font-weight:400;color:var(--cc);font-variant:small-caps;letter-spacing:.06em}
+.carita>p{margin:0 0 10px;color:var(--ink-3);font-size:14px}
+.chnode{position:relative;margin:0 0 12px;padding:12px 14px;border:1px solid var(--rule);border-radius:12px;background:var(--leaf)}
+.chnode::before{content:"";position:absolute;left:-24px;top:18px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--cc)}
+.chnode.here::before{background:var(--cc)}
+.chnode .ct{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.chnode .ct b{font-size:20px;font-weight:400;color:var(--kumkum);font-variant-numeric:tabular-nums}
+.chnode .ct span{font-size:18px} .chnode .ct span.telu{font-family:var(--f-telu)} .chnode .ct span.deva{font-family:var(--f-deva)}
+.chnode .ct small{font-size:13px;color:var(--ink-3)}
+.chnode p{margin:6px 0 8px;font-size:15px;color:var(--ink-2)}
+.cast{display:flex;flex-wrap:wrap;gap:6px}
+.cast button{padding:3px 10px;border-radius:999px;border:1px solid var(--rule);background:var(--paper);font-size:14px}
+.cast button small{color:var(--ink-3);margin-left:4px;font-variant-numeric:tabular-nums}
+.cast button.dev{border-color:transparent;background:var(--haldi-soft);color:var(--haldi)}
+.cast button.asura{border-color:transparent;background:var(--kumkum-soft);color:var(--kumkum)}
+.chnode .go{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+.chnode .go .btn{padding:5px 12px;font-size:14px;min-height:34px}
+.castpanel{margin:10px 0 0;padding:10px 12px;border-radius:10px;background:var(--paper);border:1px solid var(--rule)}
+html[data-motion="on"] .story .chnode,html[data-motion="on"] .windex .wlist li{animation:fadeUp .45s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(min(var(--i,0) * 35ms, 500ms))}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media (prefers-reduced-motion:reduce){.reveal .pv{opacity:1;transform:none}}
 </style>
@@ -743,7 +786,7 @@ function renderHome(){
       <div class="counts"><span><b data-n="${chMantras}">${chMantras}</b> mantras in 13 chapters</span><span><b data-n="${learned.size}">${learned.size}</b> marked learned</span><span><b data-n="${annotated}">${annotated}</b> verses with meanings</span></div>
       ${todayCardHTML()}
       ${reviewCardHTML()}
-      <div class="homelinks"><button class="btn" id="japaBtn">📿 Japa counter</button></div>
+      <div class="homelinks"><button class="btn" data-go="#story">Story map</button><button class="btn" data-go="#words">Word index</button><button class="btn" id="japaBtn">📿 Japa counter</button></div>
       ${last && DATA.sections[last.s] ? `<button class="continue" data-go="${sectionHash(last.s,last.i)}"><span><span class="k">Continue where you stopped</span><br><span class="v">${esc(title(sec(last.s)))} · ${esc(refLabel(last.s, entries(last.s)[last.i]||{}))}</span></span><span class="arrow">→</span></button>` : ''}
     </section>`;
   const deities = {prathama:'Brahmā is the ṛṣi, Mahākālī the devatā', madhyama:'Viṣṇu is the ṛṣi, Mahālakṣmī the devatā', uttara:'Rudra is the ṛṣi, Mahāsarasvatī the devatā',
@@ -822,6 +865,10 @@ function openPop(el, word, iast, glosses, sandhiNote){
     ${rows || `<p class="none">This word is not glossed on its own. See the word-by-word list for this verse.</p>`}`;
   p.querySelector('.x').onclick = closePop;
   document.body.appendChild(p); popEl = p; placePop();
+  if(glosses.length) loadWidx().then(()=>{ if(popEl!==p) return;
+    const links = glosses.map(g=>WMAP.get(g[0])).filter(x=>x && x[3].length>1);
+    links.forEach(x=>{ const b=document.createElement('button'); b.className='more'; b.textContent = `${glosses.length>1?x[0]+': ':''}appears in ${x[3].length} verses →`; b.onclick=()=>{ closePop(); go('#words/'+encodeURIComponent(x[0])); }; p.appendChild(b); });
+    placePop(); }).catch(()=>{});
   if(!sheet) p.querySelector('.x').focus({preventScroll:true});
 }
 addEventListener('scroll', ()=>requestAnimationFrame(placePop), {passive:true, capture:true});
@@ -1447,6 +1494,110 @@ function openJapa(opts={}){
   draw();
 }
 
+
+/* ================= Word index ================= */
+let WIDX = null, WMAP = null;
+async function loadWidx(){ if(WIDX) return WIDX; WIDX = await fetch('data/wordindex.json').then(r=>r.json()); WMAP = new Map(WIDX.map(e=>[e[0], e])); return WIDX; }
+const fold = x => x.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z ]/g,'');
+function occLine(sid, ref, ti){
+  const e = (sec(sid).verses.find(v=>v.ref===ref)) || (sec(sid).preamble||[])[+String(ref).replace('pre','')];
+  if(!e) return '';
+  const txt = scriptOf(e) || ''; let t = 0, out = '';
+  for(const line of txt.split('\n')){
+    let has = false;
+    const html = line.split(/(\s+)/).map(part=>{ if(!part || /^\s+$/.test(part)) return part; const i = t++; if(i===ti){ has = true; return `<mark>${esc(part)}</mark>`; } return esc(part); }).join('');
+    if(has || (ti<0 && !out)) out = html;
+  }
+  return out || esc(txt.split('\n')[0]);
+}
+function refHash(sid, ref){ const list = entries(sid); const i = list.findIndex(e=>e.ref===ref); return i>=0 ? sectionHash(sid, i) : '#'+sid; }
+async function renderWords(q){
+  paathMode=false; setBarFor(null); $('#barTitle').innerHTML = '<b>ॐ</b> Word index';
+  app.innerHTML = '<div class="loading">Opening the word index…</div>';
+  await loadWidx();
+  const one = q && WMAP.get(q);
+  if(one){
+    const [w, en, te, refs] = one;
+    app.innerHTML = `<div class="wrap windex"><button class="btn" data-go="#words">← All words</button>
+      <h2 class="${prefs.script}" style="margin-top:14px">${esc(xl(w, prefs.script))}</h2><p class="sub"><i>${esc(w)}</i> · ${prefs.mean!=='te'?esc(en):''}${prefs.mean==='both'?' · ':''}${prefs.mean!=='en'?`<span style="font-family:var(--f-telu)">${esc(te)}</span>`:''} · in ${refs.length} verse${refs.length>1?'s':''}</p>
+      <ul class="occ">${refs.map(h=>{ const [sid, ref, ti] = h.split('|'); return `<li><button data-go="${refHash(sid, ref)}"><span class="r">${esc(title(sec(sid)))} · ${/^pre/.test(ref)?'opening':esc(ref)}</span><span class="l ${prefs.script}">${occLine(sid, ref, +ti)}</span></button></li>`; }).join('')}</ul></div>`;
+    scrollTo(0,0); return;
+  }
+  const NAMES = ['devī','caṇḍikā','ambikā','durgā','kālī','cāmuṇḍā','nārāyaṇi','śivā','bhagavatī','parameśvarī','mahāmāyā','kātyāyanī','śaraṇye','namaḥ'];
+  app.innerHTML = `<div class="wrap windex"><h2>Word index</h2><p class="sub">Every glossed word in the text, with the verses where it appears. Type in Roman letters (accents optional), e.g. <i>durga</i>, <i>mahis</i>, <i>sarva</i>.</p>
+    <input class="wsearch" id="wq" type="search" placeholder="Search a word…" autocomplete="off" value="${esc(q||'')}">
+    <div class="wquick">${NAMES.filter(n=>WMAP.has(n)).map(n=>`<button data-go="#words/${encodeURIComponent(n)}" class="${prefs.script}">${esc(xl(n, prefs.script))}</button>`).join('')}</div>
+    <ul class="wlist" id="wl"></ul></div>`;
+  const inp = $('#wq'), wl = $('#wl');
+  const show = () => {
+    const f = fold(inp.value.trim());
+    const res = (f ? WIDX.filter(e=>fold(e[0]).startsWith(f)) : WIDX).slice(0, 80);
+    wl.innerHTML = res.map((e,i)=>`<li style="--i:${i}"><button data-go="#words/${encodeURIComponent(e[0])}"><span><span class="ws ${prefs.script}">${esc(xl(e[0], prefs.script))}</span><span class="wi">${esc(e[0])}</span></span><span class="wg">${esc(prefs.mean==='te'?e[2]:e[1])}</span><span class="wc">${e[3].length}</span></button></li>`).join('') || '<li style="padding:12px 4px;color:var(--ink-3)">No glossed word starts with that.</li>';
+  };
+  inp.addEventListener('input', show); show(); scrollTo(0,0);
+  if(!matchMedia('(hover:none)').matches) inp.focus();
+}
+
+/* ================= Story map ================= */
+const CAST = {
+  suratha:['King Suratha','surath','hero'], samadhi:['Samādhi, the merchant','samādhi|vaiśy','hero'],
+  madhu:['Madhu & Kaiṭabha','kaiṭabh','asura'], yoganidra:['Yoganidrā','yoganidr','dev'], visnu:['Viṣṇu','viṣṇu','hero'],
+  mahisa:['Mahiṣāsura','mahiṣ','asura'], ciksura:['Cikṣura','cikṣur','asura'], camara:['Cāmara','cāmara','asura'], bidala:['Biḍāla','biḍāl','asura'],
+  gods:['The gods','devā|surāḥ|sendrāḥ','hero'], ambika:['Ambikā','ambik','dev'], sugriva:['Sugrīva (envoy)','sugrīv','asura'],
+  dhumra:['Dhūmralocana','dhūmralocan','asura'], canda:['Caṇḍa & Muṇḍa','caṇḍamuṇḍ|(^|\\s)muṇḍ|caṇḍaś|caṇḍo |caṇḍe |caṇḍaṃ','asura'],
+  kali:['Kālī / Cāmuṇḍā','kālī|cāmuṇḍ','dev'], raktabija:['Raktabīja','raktabīj','asura'], matrka:['The Mothers','mātṛ|brahmāṇī|māheśvarī|kaumārī|vaiṣṇavī|vārāhī|nārasiṃhī|aindrī','dev'],
+  sivaduti:['Śivadūtī','śivadūt','dev'], nisumbha:['Niśumbha','niśumbh','asura'], sumbha:['Śumbha','(^|[^i])śumbh','asura'],
+  narayani:['Nārāyaṇī','nārāyaṇi','dev'], durga:['Durgā','durg','dev'],
+};
+const STORY = [
+  {c:'Prathama Carita', d:'Mahākālī · tamas', cc:'var(--kali)', chs:[
+    [1,'A dispossessed king and a betrayed merchant ask the sage Medhas why they still love those who wronged them. He tells of Mahāmāyā, and of how Brahmā praised Yoganidrā to wake Viṣṇu, who then slew Madhu and Kaiṭabha.', ['suratha','samadhi','yoganidra','visnu','madhu']]]},
+  {c:'Madhyama Carita', d:'Mahālakṣmī · rajas', cc:'var(--lakshmi)', chs:[
+    [2,'Mahiṣāsura drives the gods from heaven. From their blazing anger one radiance takes shape as the Devī; each god gives her a weapon. Her army of the lion and her breath meets the asura generals.', ['gods','mahisa','ciksura','camara']],
+    [3,'The battle with the generals, then Mahiṣa himself, changing from buffalo to lion to man to elephant, until she pins him and cuts off his head.', ['mahisa','ciksura','camara','bidala']],
+    [4,'Indra and the gods praise her (Śakrādi Stuti); she promises to come whenever they remember her in distress.', ['gods','durga']]]},
+  {c:'Uttama Carita', d:'Mahāsarasvatī · sattva', cc:'var(--saraswati)', chs:[
+    [5,'Śumbha and Niśumbha seize the three worlds. The gods sing “yā devī sarvabhūteṣu”; Ambikā emerges from Pārvatī. Caṇḍa and Muṇḍa praise her beauty to Śumbha, who sends Sugrīva with a proposal.', ['gods','ambika','sumbha','nisumbha','sugriva','canda']],
+    [6,'Dhūmralocana is sent to drag her by the hair; she burns him to ash with a single “huṃ”.', ['dhumra','ambika']],
+    [7,'Caṇḍa and Muṇḍa attack; Kālī springs from her brow, devours the army and beheads both. She is named Cāmuṇḍā.', ['canda','kali']],
+    [8,'The Mothers emerge from the gods; Śivadūtī sends Śiva as messenger. Raktabīja’s every drop of blood becomes a new asura, until Kālī drinks it all.', ['matrka','sivaduti','raktabija','kali']],
+    [9,'Niśumbha fights and falls; the Mothers rout what is left of his army.', ['nisumbha','sumbha','matrka']],
+    [10,'Śumbha taunts her for relying on others; “I alone exist”, she says, and the Mothers return into her. She slays him in the sky.', ['sumbha','ambika']],
+    [11,'The gods praise her as Nārāyaṇī. She grants a boon and foretells her future forms.', ['narayani','gods']],
+    [12,'The Devī herself describes the fruit of reciting these deeds.', ['durga']],
+    [13,'Suratha regains his kingdom and will be the next Manu; Samādhi receives liberating knowledge.', ['suratha','samadhi']]]},
+];
+let castCache = {};
+function castHits(id){
+  if(castCache[id]) return castCache[id];
+  const re = new RegExp(CAST[id][1]); const out = [];
+  for(let c=1;c<=13;c++) sec('ch'+c).verses.forEach((v,i)=>{ if(v.kind!=='uvacha' && re.test(v.iast.toLowerCase())) out.push(['ch'+c, i, v]); });
+  return castCache[id] = out;
+}
+function renderStory(){
+  paathMode=false; setBarFor(null); $('#barTitle').innerHTML = '<b>ॐ</b> Story map';
+  const last = store.get('last', null); let ni = 0;
+  let h = `<div class="wrap story"><h2>Story map</h2><p class="sub">The three caritas at a glance. Tap a name to see every verse where they appear, or a chapter to read it.</p>`;
+  STORY.forEach(band=>{
+    h += `<section class="carita" style="--cc:${band.cc}"><h3>${band.c}</h3><p>${band.d}</p>`;
+    band.chs.forEach(([n, txt, cast])=>{
+      const here = last && last.s==='ch'+n;
+      h += `<article class="chnode ${here?'here':''}" style="--i:${ni++}"><div class="ct"><b>${n}</b><span class="${prefs.script}">${esc(scriptTitle(sec('ch'+n)))}</span><small>${esc(sec('ch'+n).title)} · ${mantraCount('ch'+n)} mantras${here?' · you are here':''}</small></div>
+        <p>${esc(txt)}</p><div class="cast">${cast.map(id=>`<button class="${CAST[id][2]}" data-cast="${id}">${esc(CAST[id][0])}<small>${castHits(id).length}</small></button>`).join('')}</div>
+        <div class="castpanel" hidden></div>
+        <div class="go"><button class="btn" data-go="${sectionHash('ch'+n)}">Study</button><button class="btn" data-go="#ch${n}~p">Read</button></div></article>`;
+    });
+    h += `</section>`;
+  });
+  app.innerHTML = h + `</div>`; scrollTo(0,0);
+  app.querySelectorAll('[data-cast]').forEach(b=>b.onclick=()=>{
+    const panel = b.closest('.chnode').querySelector('.castpanel'), id = b.dataset.cast;
+    if(!panel.hidden && panel.dataset.id===id){ panel.hidden = true; return; }
+    const hits = castHits(id); panel.dataset.id = id; panel.hidden = false;
+    panel.innerHTML = `<b style="font-weight:400">${esc(CAST[id][0])}</b> · ${hits.length} verses<ul class="occ">${hits.slice(0,60).map(([sid,i,v])=>`<li><button data-go="${sectionHash(sid,i)}"><span class="r">${esc(v.ref)}</span><span class="l ${prefs.script}" style="font-size:18px">${esc((scriptOf(v)||'').split('\n')[0])}</span></button></li>`).join('')}</ul>${hits.length>60?'<small style="color:var(--ink-3)">Showing the first 60.</small>':''}`;
+  });
+}
+
 /* ---------------- routing ---------------- */
 function go(h){ if(location.hash===h) route(); else location.hash=h; }
 function route(){
@@ -1454,6 +1605,8 @@ function route(){
   const h = decodeURIComponent(location.hash.slice(1));
   if(!h || !DATA){ memo=false; return renderHome(); }
   if(h==='today') return renderToday();
+  if(h==='story') return renderStory();
+  if(h==='words' || h.startsWith('words/')) return renderWords(h.startsWith('words/') ? h.slice(6) : '');
   const pm = h.endsWith('~p');
   const [sid, idx] = (pm? h.slice(0,-2) : h).split('.');
   if(!DATA.sections[sid]) return renderHome();

@@ -26,6 +26,7 @@ def build_notes():
     os.makedirs(f'{SITE}/data/notes', exist_ok=True)
     idx, problems = {}, []
     merged = {}
+    windex = {}
     for f in sorted(glob.glob(f'{ROOT}/notes/*.json')) + sorted(glob.glob(f'{ROOT}/notes/parts/*.json')):
         sid = os.path.basename(f)[:-5].split('.')[0]
         part = json.load(open(f, encoding='utf-8'))
@@ -51,8 +52,19 @@ def build_notes():
             if n.get('pada') and k in iast:
                 n['tok'] = wordmap(iast[k], n['pada'])   # per printed word: indices of the glosses it contains
         json.dump(notes, open(f'{SITE}/data/notes/{sid}.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+        for k, n in notes.items():   # word index: every glossed word -> verses (and printed word) where it occurs
+            if k == '_intro' or not n.get('pada'): continue
+            tokof = {}
+            for ti, gis in enumerate(n.get('tok', [])):
+                for gi in gis: tokof.setdefault(gi, ti)
+            for gi, w in enumerate(n['pada']):
+                e = windex.setdefault(w[0], [w[0], w[1], w[2], []])
+                hit = f'{sid}|{k}|{tokof.get(gi, -1)}'
+                if not any(h.startswith(f'{sid}|{k}|') for h in e[3]): e[3].append(hit)
         idx[sid] = sum(1 for k in notes if k != '_intro')
     json.dump(idx, open(f'{SITE}/data/notes/index.json', 'w', encoding='utf-8'))
+    forms = sorted(windex.values(), key=lambda e: (-len(e[3]), e[0]))
+    json.dump(forms, open(f'{SITE}/data/wordindex.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     return idx, problems
 
 
@@ -92,7 +104,7 @@ MANIFEST = {
 
 SW = """// Offline cache: the whole text is small, so cache everything on install; network-first for data so new meanings arrive.
 const V = '__VERSION__';
-const CORE = ['./', 'index.html', 'manifest.json', 'data/text.json', 'data/notes/index.json', 'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png', __NOTES__];
+const CORE = ['./', 'index.html', 'manifest.json', 'data/text.json', 'data/notes/index.json', 'data/wordindex.json', 'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png', __NOTES__];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(CORE)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', e => {
