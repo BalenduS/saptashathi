@@ -1239,7 +1239,7 @@ async function shareCard(sid, e, n){
   const canFiles = (()=>{ try{ return navigator.canShare && navigator.canShare({files:[new File([blob], fname, {type:'image/png'})]}); }catch(err){ return false; } })();
   box.innerHTML = `<div class="inner"><img src="${url}" alt="Verse card for ${esc(e.ref)}">
     <div class="opts">Meaning on the card: <span class="seg">${[['en','English'],['te','తెలుగు'],['both','Both'],['none','None']].map(([v,l])=>`<button data-sm="${v}" aria-pressed="${prefs.shareMean===v}">${l}</button>`).join('')}</span></div>
-    <div class="row">${canFiles?'<button class="btn primary" data-s="share">Share…</button>':''}<a class="btn ${canFiles?'':'primary'}" href="${url}" download="${fname}">Save image</a><button class="btn" data-s="close">Close</button></div></div>`;
+    <div class="row">${canFiles?'<button class="btn primary" data-s="share">Share…</button>':''}<button class="btn ${canFiles?'':'primary'}" data-s="save">Save image</button><button class="btn" data-s="close">Close</button></div></div>`;
   document.body.appendChild(box);
   const close = ()=>{ box.remove(); URL.revokeObjectURL(url); };
   box.addEventListener('click', async ev=>{
@@ -1247,6 +1247,11 @@ async function shareCard(sid, e, n){
     const sm = ev.target.closest('[data-sm]'); if(sm){ prefs.shareMean = sm.dataset.sm; store.set('prefs',prefs); close(); shareCard(sid, e, n); return; }
     const b = ev.target.closest('[data-s]'); if(!b) return;
     if(b.dataset.s==='close') close();
+    if(b.dataset.s==='save'){
+      let dl = null; try{ dl = window.claude && window.claude.use ? await window.claude.use('downloads') : null; }catch(err){}
+      if(dl){ try{ await dl.save({filename:fname, data:blob}); toast('Image saved'); }catch(err){ if(err && err.code!=='declined') toast('Saving is not available here'); } }
+      else { const a=document.createElement('a'); a.href=url; a.download=fname; document.body.appendChild(a); a.click(); a.remove(); }
+    }
     if(b.dataset.s==='share'){ try{ await navigator.share({files:[new File([blob], fname, {type:'image/png'})], title:'Śrī Durgā Saptaśatī '+e.ref}); }catch(err){} }
   });
 }
