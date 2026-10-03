@@ -321,6 +321,43 @@ html[data-motion="on"] .done{animation:fadeIn .3s both}
 html[data-motion="on"] .donecard{animation:cardIn .5s cubic-bezier(.2,.7,.2,1) both .05s}
 
 ::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+
+/* ---------- tap a word: dictionary popup (iBooks/Kindle style) ---------- */
+.tw{border-radius:5px;cursor:pointer;transition:background .15s,box-shadow .15s;-webkit-tap-highlight-color:transparent}
+.tw:hover{background:var(--haldi-soft)}
+.tw.sel{background:var(--haldi-soft);box-shadow:0 0 0 3px var(--haldi-soft)}
+.tw:focus-visible{outline:2px solid var(--focus)}
+.pada span.sel{background:var(--haldi-soft);border-radius:5px}
+@media (hover:none){.tw:hover{background:none}.tw.sel{background:var(--haldi-soft)}}
+.wpop{position:fixed;z-index:45;width:min(22rem,calc(100vw - 24px));max-height:min(70vh,30rem);overflow:auto;background:var(--leaf);color:var(--ink);border:1px solid var(--rule);border-radius:14px;box-shadow:0 14px 40px rgb(0 0 0 / .2),0 2px 6px rgb(0 0 0 / .08);padding:14px 16px 12px;overscroll-behavior:contain}
+.wpop .hw{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;padding-right:28px}
+.wpop .hw b{font-weight:400;font-size:26px;line-height:1.35;color:var(--kumkum)}
+.wpop .hw b.telu{font-family:var(--f-telu)} .wpop .hw b.deva{font-family:var(--f-deva)}
+.wpop .hw i{color:var(--ink-3);font-size:15px}
+.wpop .x{position:absolute;top:8px;right:8px;width:32px;height:32px;border-radius:16px;color:var(--ink-3);font-size:16px}
+.wpop .x:hover{background:var(--kumkum-soft);color:var(--kumkum)}
+.wpop .sandhi{margin:6px 0 2px;font-size:13px;color:var(--haldi)}
+.wpop .gl{border-top:1px solid var(--rule);padding:9px 0 7px;margin-top:8px}
+.wpop .gl:first-of-type{margin-top:6px}
+.wpop .gw{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.wpop .gw span{font-size:20px;line-height:1.4}
+.wpop .gw span.telu{font-family:var(--f-telu)} .wpop .gw span.deva{font-family:var(--f-deva)}
+.wpop .gw em{font-size:14px;color:var(--ink-3)}
+.wpop .ge{display:block;font-size:16px;margin-top:2px}
+.wpop .gt{display:block;font-family:var(--f-telu);font-size:16px;color:var(--ink-2);line-height:1.6}
+.wpop .none{margin:8px 0 2px;color:var(--ink-3);font-size:15px}
+.wpop .more{display:block;margin-top:8px;font-size:14px;color:var(--kumkum)}
+.wpop::after{content:"";position:absolute;left:var(--ax,50%);width:12px;height:12px;margin-left:-6px;background:var(--leaf);border:1px solid var(--rule);transform:rotate(45deg)}
+.wpop.below::after{top:-7px;border-right:0;border-bottom:0}
+.wpop.above::after{bottom:-7px;border-left:0;border-top:0}
+.wpop.sheet{left:0!important;right:0;bottom:0;top:auto!important;width:auto;max-height:62vh;border-radius:18px 18px 0 0;border-width:1px 0 0;padding:20px 18px calc(env(safe-area-inset-bottom,0px) + 18px)}
+.wpop.sheet::after{display:none}
+.wpop.sheet::before{content:"";position:absolute;top:7px;left:50%;width:38px;height:4px;margin-left:-19px;border-radius:2px;background:var(--rule)}
+@keyframes popIn{from{opacity:0;transform:translateY(var(--py,6px)) scale(.97)}to{opacity:1;transform:none}}
+@keyframes sheetUp{from{transform:translateY(100%)}to{transform:none}}
+html[data-motion="on"] .wpop{animation:popIn .18s cubic-bezier(.2,.7,.2,1) both}
+html[data-motion="on"] .wpop.above{--py:-6px}
+html[data-motion="on"] .wpop.sheet{animation:sheetUp .26s cubic-bezier(.2,.7,.2,1) both}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media (prefers-reduced-motion:reduce){.reveal .pv{opacity:1;transform:none}}
 </style>
@@ -607,12 +644,52 @@ function setBarFor(sid){
   $('#paathBtn').setAttribute('aria-pressed', paathMode); $('#memoBtn').setAttribute('aria-pressed', memo);
 }
 
-function scriptHTML(e, cls=''){
+function scriptHTML(e, cls='', tap=false){
   const txt = scriptOf(e) || '';
   const lines = txt.split('\n');
   const ref = !e._pre && e.kind!=='ritual' && e.kind!=='uvacha' ? ` <span class="dn">॥ ${esc(e.ref)} ॥</span>` : (e.kind==='uvacha'?' <span class="dn">॥</span>':'');
-  return `<p class="script ${prefs.script} ${e.kind==='uvacha'?'uv':''} ${cls}">${lines.map((l,i)=>`<span class="ln" data-ln="${i}" style="--i:${i}">${esc(l)}${i===lines.length-1?ref:''}</span>`).join('\n')}</p>`;
+  let t = 0;   /* running word index across lines; matches the build-time word map */
+  const words = l => !tap ? esc(l) : l.split(/(\s+)/).map(part => {
+    if(!part || /^\s+$/.test(part)) return part;
+    const i = t++;
+    return /^[।॥|\d.]+$/.test(part) ? esc(part) : `<span class="tw" data-t="${i}" role="button" tabindex="0">${esc(part)}</span>`;
+  }).join('');
+  return `<p class="script ${prefs.script} ${e.kind==='uvacha'?'uv':''} ${cls}">${lines.map((l,i)=>`<span class="ln" data-ln="${i}" style="--i:${i}">${words(l)}${i===lines.length-1?ref:''}</span>`).join('\n')}</p>`;
 }
+
+/* ---------------- word popup ---------------- */
+let popEl = null, popFor = null;
+function closePop(){ if(popEl){ popEl.remove(); popEl=null; } if(popFor){ popFor.classList.remove('sel'); popFor=null; } }
+function placePop(){
+  if(!popEl || !popFor) return;
+  if(popEl.classList.contains('sheet')) return;
+  const r = popFor.getBoundingClientRect(), w = popEl.offsetWidth, h = popEl.offsetHeight;
+  if(r.bottom < 0 || r.top > innerHeight){ closePop(); return; }
+  const left = Math.max(12, Math.min(innerWidth - w - 12, r.left + r.width/2 - w/2));
+  const below = r.bottom + 12 + h <= innerHeight - 8 || r.top - 12 - h < 8;
+  popEl.classList.toggle('below', below); popEl.classList.toggle('above', !below);
+  popEl.style.left = left + 'px';
+  popEl.style.top = (below ? r.bottom + 12 : r.top - 12 - h) + 'px';
+  popEl.style.setProperty('--ax', Math.max(18, Math.min(w - 18, r.left + r.width/2 - left)) + 'px');
+}
+function openPop(el, word, iast, glosses, sandhiNote){
+  const same = popFor === el; closePop(); if(same) return;
+  popFor = el; el.classList.add('sel');
+  const p = document.createElement('div'); p.className = 'wpop'; p.setAttribute('role','dialog'); p.setAttribute('aria-label', 'Meaning of ' + iast);
+  const sheet = innerWidth < 600; if(sheet) p.classList.add('sheet');
+  const rows = glosses.map(g => `<div class="gl">${glosses.length>1?`<div class="gw"><span class="${prefs.script}">${esc(xl(g[0], prefs.script))}</span><em>${esc(g[0])}</em></div>`:''}${prefs.mean!=='te'?`<span class="ge">${esc(g[1])}</span>`:''}${prefs.mean!=='en'&&g[2]?`<span class="gt">${esc(g[2])}</span>`:''}</div>`).join('');
+  p.innerHTML = `<button class="x" aria-label="Close">✕</button>
+    <div class="hw"><b class="${prefs.script}">${esc(word)}</b>${iast?`<i>${esc(iast)}</i>`:''}</div>
+    ${glosses.length>1 ? `<p class="sandhi">${sandhiNote||`${glosses.length} words joined by sandhi`}</p>` : ''}
+    ${rows || `<p class="none">This word is not glossed on its own. See the word-by-word list for this verse.</p>`}`;
+  p.querySelector('.x').onclick = closePop;
+  document.body.appendChild(p); popEl = p; placePop();
+  if(!sheet) p.querySelector('.x').focus({preventScroll:true});
+}
+addEventListener('scroll', ()=>requestAnimationFrame(placePop), {passive:true, capture:true});
+addEventListener('resize', closePop);
+document.addEventListener('pointerdown', ev=>{ if(popEl && !ev.target.closest('.wpop') && !ev.target.closest('.tw, .pada span')) closePop(); });
+document.addEventListener('keydown', ev=>{ if(ev.key==='Escape') closePop(); });
 
 async function renderVerse(sid, idx){
   paathMode=false; setBarFor(sid);
@@ -631,7 +708,7 @@ async function renderVerse(sid, idx){
     <div class="vgrid ${memo?'solo':''}"><div class="vleft">
     <article class="leafcard" style="--dir:${navDir}" aria-label="Verse ${esc(e.ref)}">
       ${spk||grp?`<div class="rubric">${spk}${grp}</div>`:''}
-      ${scriptHTML(e)}
+      ${scriptHTML(e, '', !memo && !!(n && n.tok))}
       ${prefs.iast && !memo ? `<p class="iast">${esc(e.iast).replace(/ (\|+)/g,"\u00a0$1")}</p>` : ''}
       ${memo ? `<p class="memohint">Recite from memory, then tap a line to check it.</p>`:''}
     </article>
@@ -683,11 +760,22 @@ async function renderVerse(sid, idx){
     if(on){ b.classList.remove('popping'); void b.offsetWidth; b.classList.add('popping');
       const r=b.getBoundingClientRect(); petals(r.left+r.width/2, r.top+r.height/2); }
   };
+  /* tap a word in the verse: popup with the glosses it contains */
+  closePop();
+  if(n && n.tok){
+    const iastToks = e.iast.split(/\s+/).filter(Boolean);
+    const openTok = el => { const i=+el.dataset.t, gi=n.tok[i]||[]; openPop(el, el.textContent, iastToks[i]||'', gi.map(k=>n.pada[k])); };
+    app.querySelectorAll('.leafcard .tw').forEach(el=>{
+      el.addEventListener('click', ev=>{ ev.stopPropagation(); openTok(el); });
+      el.addEventListener('keydown', ev=>{ if(ev.key==='Enter'||ev.key===' '){ ev.preventDefault(); openTok(el); } });
+    });
+    if(!store.get('tipWords', false)){ setTimeout(()=>toast('Tip: tap any word in the verse for its meaning'), 900); store.set('tipWords', true); }
+  }
   /* word card <-> word in the line */
   const ps = app.querySelectorAll('.pada span'), ws = app.querySelectorAll('.words .w');
   const flash = (el)=>{ el.classList.remove('hl'); void el.offsetWidth; el.classList.add('hl'); };
   ws.forEach((w,i)=>{ const f=()=>{ ps.forEach(x=>x.classList.remove('hl')); ws.forEach(x=>x.classList.remove('hl')); if(ps[i]) flash(ps[i]); flash(w); }; w.addEventListener('click', f); w.addEventListener('pointerenter', ev=>{ if(ev.pointerType==='mouse') f(); }); });
-  ps.forEach((p,i)=>p.addEventListener('click', ()=>{ ps.forEach(x=>x.classList.remove('hl')); ws.forEach(x=>x.classList.remove('hl')); flash(p); if(ws[i]){ flash(ws[i]); ws[i].scrollIntoView({block:'nearest', behavior: motionOK()?'smooth':'auto'}); } }));
+  ps.forEach((p,i)=>{ p.style.cursor='pointer'; p.addEventListener('click', ev=>{ ev.stopPropagation(); ps.forEach(x=>x.classList.remove('hl')); ws.forEach(x=>x.classList.remove('hl')); if(ws[i]) flash(ws[i]); openPop(p, p.textContent, n.pada[i][0], [n.pada[i]]); }); });
   if(memo) app.querySelectorAll('.script .ln').forEach(l=>l.onclick=()=>l.classList.toggle('shown'));
   bindSwipe(sid, idx, list.length);
 }
@@ -763,6 +851,7 @@ function openSheet(){
 /* ---------------- routing ---------------- */
 function go(h){ if(location.hash===h) route(); else location.hash=h; }
 function route(){
+  closePop();
   const h = decodeURIComponent(location.hash.slice(1));
   if(!h || !DATA){ memo=false; return renderHome(); }
   const pm = h.endsWith('~p');

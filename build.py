@@ -11,7 +11,9 @@ Authored note format, keyed by verse ref exactly as in text.json:
           "ctx": {"en": "...", "te": "..."}}                 # optional; applies until the next ctx
 }
 """
-import json, os, re, shutil, glob, hashlib
+import json, os, re, shutil, glob, hashlib, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tools'))
+from wordmap import wordmap
 from PIL import Image, ImageDraw
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -33,7 +35,9 @@ def build_notes():
         merged.setdefault(sid, {}).update(part)
     for sid, notes in merged.items():
         sec = text['sections'][sid]
-        refs = {v['ref'] for v in sec['verses']} | {f'pre{i}' for i in range(len(sec['preamble']))}
+        iast = {v['ref']: v['iast'] for v in sec['verses']}
+        iast.update({f'pre{i}': p['iast'] for i, p in enumerate(sec['preamble'])})
+        refs = set(iast)
         for k, n in notes.items():
             if k == '_intro':
                 continue
@@ -44,6 +48,8 @@ def build_notes():
                     problems.append(f'{sid} {k}: bad word entry {w}')
             if not n.get('en') or not n.get('te'):
                 problems.append(f'{sid} {k}: missing en/te meaning')
+            if n.get('pada') and k in iast:
+                n['tok'] = wordmap(iast[k], n['pada'])   # per printed word: indices of the glosses it contains
         json.dump(notes, open(f'{SITE}/data/notes/{sid}.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
         idx[sid] = sum(1 for k in notes if k != '_intro')
     json.dump(idx, open(f'{SITE}/data/notes/index.json', 'w', encoding='utf-8'))
