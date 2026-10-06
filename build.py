@@ -68,6 +68,21 @@ def build_notes():
     return idx, problems
 
 
+def build_prose():
+    """notes/prose/chN.json (story retelling, every verse covered once) -> site/data/prose/ + index.json"""
+    from prose_check import check
+    os.makedirs(f'{SITE}/data/prose', exist_ok=True)
+    idx, problems = {}, []
+    for f in sorted(glob.glob(f'{ROOT}/notes/prose/ch*.json')):
+        sid, pr = check(f)
+        problems += [f'prose {sid}: {x}' for x in pr]
+        d = json.load(open(f, encoding='utf-8'))
+        json.dump(d, open(f'{SITE}/data/prose/{sid}.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+        idx[sid] = {'title': d['title'], 'n': len(d['passages'])}
+    json.dump(idx, open(f'{SITE}/data/prose/index.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    return idx, problems
+
+
 def slim_text():
     p = f'{SITE}/data/text.json'
     d = json.load(open(p, encoding='utf-8'))
@@ -121,7 +136,7 @@ self.addEventListener('fetch', e => {
 """
 
 
-def dist(idx):
+def dist(idx, pidx={}):
     if os.path.exists(DIST):
         shutil.rmtree(DIST)
     shutil.copytree(f'{SITE}/data', f'{DIST}/data')
@@ -139,7 +154,7 @@ def dist(idx):
         if os.path.isfile(f):
             h.update(open(f, 'rb').read())
     sw = SW.replace('__VERSION__', 'ss-' + h.hexdigest()[:10]).replace(
-        '__NOTES__', ', '.join(f"'data/notes/{k}.json'" for k in idx))
+        '__NOTES__', ', '.join([f"'data/notes/{k}.json'" for k in idx] + ["'data/prose/index.json'"] + [f"'data/prose/{k}.json'" for k in pidx]))
     open(f'{DIST}/sw.js', 'w').write(sw)
     open(f'{DIST}/.nojekyll', 'w').write('')
     open(f'{DIST}/404.html', 'w').write('<meta http-equiv="refresh" content="0; url=./">')
@@ -149,7 +164,10 @@ if __name__ == '__main__':
     slim_text()
     icons()
     idx, problems = build_notes()
-    dist(idx)
+    pidx, pprob = build_prose()
+    problems += pprob
+    dist(idx, pidx)
+    print('prose:', {k: v['n'] for k, v in pidx.items()})
     print('notes:', idx)
     print('problems:', len(problems))
     for p in problems[:40]:

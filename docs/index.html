@@ -530,6 +530,50 @@ html[data-motion="on"] .sharebox .inner{animation:cardIn .35s cubic-bezier(.2,.7
 .chnode .go{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
 .chnode .go .btn{padding:5px 12px;font-size:14px;min-height:34px}
 .castpanel{margin:10px 0 0;padding:10px 12px;border-radius:10px;background:var(--paper);border:1px solid var(--rule)}
+/* ---------- kathā (prose retelling) ---------- */
+.katha{padding-block:22px 100px}
+.kidx h2,.khead h2{font-family:var(--f-title);font-weight:400;font-size:34px;color:var(--kumkum);margin:0;text-wrap:balance;line-height:1.2}
+.khead{text-align:center;padding:6px 0 18px;border-bottom:1px solid var(--rule);margin-bottom:8px}
+.khead .sc{margin:0 0 6px;color:var(--haldi);letter-spacing:.08em}
+.khead h3{margin:6px 0 0;font-family:var(--f-telu);font-weight:400;font-size:24px;color:var(--ink-2)}
+.khead .ksrc{margin:8px 0 0;color:var(--ink-3);font-size:14px}
+.khead .ksrc .telu{font-family:var(--f-telu)} .khead .ksrc .deva{font-family:var(--f-deva)}
+.ktools{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:14px}
+.ktools .btn{min-height:36px;padding:5px 14px;font-size:14px}
+.ktools .btn[aria-pressed="true"]{background:var(--kumkum);color:#fff;border-color:var(--kumkum)}
+.kp{position:relative;padding:18px 0 4px}
+.kref{display:inline-flex;align-items:center;gap:6px;margin:0 0 8px;padding:2px 10px;border-radius:999px;border:1px solid var(--rule);background:var(--leaf);color:var(--ink-3);font-size:13px;font-variant-numeric:tabular-nums;cursor:pointer;font-family:var(--f-body)}
+.kref:hover,.kref[aria-expanded="true"]{color:var(--kumkum);border-color:var(--kumkum)}
+.kref svg{width:12px;height:12px;transition:transform .25s}
+.kref[aria-expanded="true"] svg{transform:rotate(180deg)}
+.ktext p{margin:0 0 .9em;font-size:calc(19px * var(--scale,1));line-height:1.75;text-wrap:pretty;hyphens:auto}
+.ktext p.tp{font-family:var(--f-telu);font-size:calc(19px * var(--scale,1));line-height:1.95;hyphens:none}
+.kp:first-of-type .ktext .en p:first-child::first-letter{float:left;font-family:var(--f-title);font-size:3.3em;line-height:.9;padding:4px 8px 0 0;color:var(--kumkum)}
+.ktext.both .te{margin-top:6px;padding-top:12px;border-top:1px dashed var(--rule)}
+@media (min-width:900px){.ktext.both{display:grid;grid-template-columns:1fr 1fr;gap:28px}.ktext.both .te{margin:0;padding:0;border:0}.katha.wide{max-width:72rem}.katha.wide .khead,.katha.wide .kv{max-width:none}}
+.kv{margin:0 0 14px;padding:12px 14px;border-left:3px solid var(--haldi);background:var(--leaf);border-radius:0 10px 10px 0}
+.kvl{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;padding:6px 0}
+.kvl+.kvl{border-top:1px solid var(--rule)}
+.kvl .kn{grid-row:span 2;font-size:12px;color:var(--ink-3);padding-top:6px;min-width:2.6em;font-variant-numeric:tabular-nums}
+.kvl .kn button{all:unset;cursor:pointer;color:var(--kumkum);text-decoration:underline dotted}
+.kvl .ks{font-size:calc(19px * var(--scale,1));line-height:1.7} .kvl .ks.telu{font-family:var(--f-telu)} .kvl .ks.deva{font-family:var(--f-deva)}
+.kvl .ki{font-size:14px;color:var(--ink-3);font-style:italic;line-height:1.5}
+.knav{display:flex;justify-content:space-between;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--rule)}
+.knav .btn{max-width:48%;text-align:left;line-height:1.3;padding:8px 14px}
+.knav .btn small{display:block;color:var(--ink-3);font-size:12px}
+.knav .btn.nx{margin-left:auto;text-align:right}
+.kend{text-align:center;color:var(--haldi);margin:26px 0 0;font-size:22px;letter-spacing:.4em}
+.kidx .klist{list-style:none;margin:0;padding:0}
+.kidx .klist button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:2.2em 1fr auto;gap:2px 10px;align-items:baseline;padding:12px 14px;margin:0 0 10px;border:1px solid var(--rule);border-radius:12px;background:var(--leaf);cursor:pointer}
+.kidx .klist button:hover{border-color:var(--kumkum)}
+.kidx .klist b{font-size:22px;font-weight:400;color:var(--kumkum);grid-row:span 2;font-variant-numeric:tabular-nums}
+.kidx .klist .e{font-size:18px} .kidx .klist .t{font-family:var(--f-telu);font-size:17px;color:var(--ink-2);grid-column:2}
+.kidx .klist small{color:var(--ink-3);font-size:13px;grid-row:1;grid-column:3}
+.kidx .klist .here small{color:var(--kumkum)}
+html[data-motion="on"] .katha .kp{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+html[data-motion="on"] .katha .kp.in{opacity:1;transform:none}
+html[data-motion="on"] .kv{animation:fadeUp .35s ease both}
+html[data-motion="on"] .kidx .klist li{animation:fadeUp .45s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0) * 40ms)}
 html[data-motion="on"] .story .chnode,html[data-motion="on"] .windex .wlist li{animation:fadeUp .45s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(min(var(--i,0) * 35ms, 500ms))}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media (prefers-reduced-motion:reduce){.reveal .pv{opacity:1;transform:none}}
@@ -786,7 +830,7 @@ function renderHome(){
       <div class="counts"><span><b data-n="${chMantras}">${chMantras}</b> mantras in 13 chapters</span><span><b data-n="${learned.size}">${learned.size}</b> marked learned</span><span><b data-n="${annotated}">${annotated}</b> verses with meanings</span></div>
       ${todayCardHTML()}
       ${reviewCardHTML()}
-      <div class="homelinks"><button class="btn" data-go="#story">Story map</button><button class="btn" data-go="#words">Word index</button><button class="btn" id="japaBtn">📿 Japa counter</button></div>
+      <div class="homelinks"><button class="btn" data-go="#katha">Kathā · the story in prose</button><button class="btn" data-go="#story">Story map</button><button class="btn" data-go="#words">Word index</button><button class="btn" id="japaBtn">📿 Japa counter</button></div>
       ${last && DATA.sections[last.s] ? `<button class="continue" data-go="${sectionHash(last.s,last.i)}"><span><span class="k">Continue where you stopped</span><br><span class="v">${esc(title(sec(last.s)))} · ${esc(refLabel(last.s, entries(last.s)[last.i]||{}))}</span></span><span class="arrow">→</span></button>` : ''}
     </section>`;
   const deities = {prathama:'Brahmā is the ṛṣi, Mahākālī the devatā', madhyama:'Viṣṇu is the ṛṣi, Mahālakṣmī the devatā', uttara:'Rudra is the ṛṣi, Mahāsarasvatī the devatā',
@@ -1092,7 +1136,7 @@ async function renderPaath(sid){
   const ents = {};
   const sampBlock = (key, where) => { ents[key] = samp; return `<div class="samp" data-chant="${key}"><span class="lab sc">Saṃpuṭa${where?' · '+where:''}</span>${scriptHTML(samp,'',true)}</div>`; };
   let h = `<div class="wrap paath"><h2 class="${prefs.script}">${esc(scriptTitle(s))}</h2><p class="psub">${esc(s.title)} · ${list.length} entries · tap any verse to study it</p>
-    <div class="ptools"><button class="btn primary" id="chantGo">▶ Chanting guide</button>
+    <div class="ptools"><button class="btn primary" id="chantGo">▶ Chanting guide</button>${isCh?`<button class="btn" data-go="#katha/${sid}">Kathā</button>`:''}
     ${isCh?`<label>Saṃpuṭa <select id="sampSel">${SAMPUTA.map(([v,l])=>`<option value="${v}" ${prefs.samputa===v?'selected':''}>${esc(l)}</option>`).join('')}</select></label>
       ${samp?`<label>Recite it <select id="sampMode"><option value="both" ${prefs.sampMode==='both'?'selected':''}>before and after each verse</option><option value="before" ${prefs.sampMode==='before'?'selected':''}>before each verse</option></select></label>`:''}`:''}
     <span class="est" id="chantEst"></span></div>`;
@@ -1590,7 +1634,7 @@ function renderStory(){
       h += `<article class="chnode ${here?'here':''}" style="--i:${ni++}"><div class="ct"><b>${n}</b><span class="${prefs.script}">${esc(scriptTitle(sec('ch'+n)))}</span><small>${esc(sec('ch'+n).title)} · ${mantraCount('ch'+n)} mantras${here?' · you are here':''}</small></div>
         <p>${esc(txt)}</p><div class="cast">${cast.map(id=>`<button class="${CAST[id][2]}" data-cast="${id}">${esc(CAST[id][0])}<small>${castHits(id).length}</small></button>`).join('')}</div>
         <div class="castpanel" hidden></div>
-        <div class="go"><button class="btn" data-go="${sectionHash('ch'+n)}">Study</button><button class="btn" data-go="#ch${n}~p">Read</button></div></article>`;
+        <div class="go"><button class="btn" data-go="${sectionHash('ch'+n)}">Study</button><button class="btn" data-go="#ch${n}~p">Read</button><button class="btn" data-go="#katha/ch${n}">Kathā</button></div></article>`;
     });
     h += `</section>`;
   });
@@ -1603,6 +1647,86 @@ function renderStory(){
   });
 }
 
+/* ================= Kathā: each chapter retold in prose ================= */
+let KIDX = null; const PROSE = {};
+async function loadKidx(){ if(KIDX) return KIDX; KIDX = await fetch('data/prose/index.json').then(r=>r.json()); return KIDX; }
+async function loadProse(sid){ if(PROSE[sid]) return PROSE[sid]; return PROSE[sid] = await fetch('data/prose/'+sid+'.json').then(r=>r.json()); }
+const kMean = () => prefs.kmean || prefs.mean;
+function kRange(sid, p){
+  const list = entries(sid), a = list.findIndex(e=>e.ref===p.from), b = list.findIndex(e=>e.ref===(p.to||p.from));
+  const es = list.slice(a, b+1), vs = es.filter(e=>!e._pre);
+  const opening = es.length > vs.length;
+  let lab = vs.length ? (vs.length>1 ? `${vs[0].ref}–${vs[vs.length-1].ref.split('.')[1]}` : vs[0].ref) : '';
+  lab = opening ? (lab ? 'Opening · '+lab : 'Opening') : 'Verses '+lab;
+  if(!opening && vs.length===1) lab = 'Verse '+vs[0].ref;
+  return {es, a, lab};
+}
+const smart = t => t.replace(/(^|[\s(\[—])"/g,'$1“').replace(/"/g,'”').replace(/(^|[\s(\[—“])'/g,'$1‘').replace(/'/g,'’');
+const kParas = (t, cls) => t.split(/\n\n+/).map(x=>`<p class="${cls}">${esc(smart(x))}</p>`).join('');
+function kVerses(sid, es, a){
+  return es.map((e,k)=>`<div class="kvl"><span class="kn"><button data-go="${sectionHash(sid, a+k)}" title="Study this verse">${esc(e._pre ? refLabel(sid,e) : e.ref)}</button></span><div class="ks ${prefs.script}">${esc(scriptOf(e)||'').replace(/\n/g,'<br>')}</div>${prefs.iast?`<div class="ki">${esc(e.iast||'').replace(/\n/g,'<br>')}</div>`:'<div></div>'}</div>`).join('');
+}
+const CHEV = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4l4 4 4-4"/></svg>';
+async function renderKathaIndex(){
+  paathMode=false; setBarFor(null); $('#barTitle').innerHTML = '<b>ॐ</b> Kathā';
+  app.innerHTML = '<div class="loading">Opening the kathā…</div>';
+  await loadKidx();
+  const pos = store.get('kpos', null); let i = 0;
+  let h = `<div class="wrap katha kidx"><h2>Kathā</h2><p class="sub" style="color:var(--ink-3);margin:4px 0 16px">The thirteen chapters told as one continuous story, in English and Telugu. Every verse is in the telling, in order, with nothing added. Tap a verse range to see the Sanskrit beside the prose.</p>
+    ${pos && KIDX[pos.s] ? `<button class="continue" data-go="#katha/${pos.s}/${pos.i}" style="margin-bottom:16px"><span><span class="k">Continue the story</span><br><span class="v">Chapter ${pos.s.slice(2)} · ${esc(KIDX[pos.s].title.en)}</span></span><span class="arrow">→</span></button>` : ''}`;
+  STORY.forEach(band=>{
+    h += `<section class="carita" style="--cc:${band.cc}"><h3>${band.c}</h3><p>${band.d}</p><ul class="klist">`;
+    band.chs.forEach(([n])=>{ const sid='ch'+n, k=KIDX[sid]; if(!k) return; const here = pos && pos.s===sid;
+      h += `<li style="--i:${i++}"><button data-go="#katha/${sid}" class="${here?'here':''}"><b>${n}</b><span class="e">${esc(k.title.en)}</span><small>${here?'reading · ':''}${mantraCount(sid)} verses</small><span class="t">${esc(k.title.te)}</span></button></li>`; });
+    h += `</ul></section>`;
+  });
+  app.innerHTML = h + '</div>'; scrollTo(0,0);
+}
+let kObs = null;
+async function renderKatha(sid, at){
+  paathMode=false; setBarFor(null); $('#barTitle').innerHTML = `<b>Ch ${sid.slice(2)}</b> Kathā`;
+  app.innerHTML = '<div class="loading">Opening the kathā…</div>';
+  const [d] = await Promise.all([loadProse(sid), loadKidx()]);
+  const n = +sid.slice(2), m = kMean(), both = m==='both';
+  const lang = [['en','English'],['te','తెలుగు'],['both','Both']];
+  let h = `<div class="wrap katha ${both?'wide':''}"><header class="khead">
+    <p class="sc">Kathā · Chapter ${n}</p>
+    ${m!=='te'?`<h2>${esc(d.title.en)}</h2>`:''}${m!=='en'?`<h3 style="${m==='te'?'font-size:30px;color:var(--kumkum)':''}">${esc(d.title.te)}</h3>`:''}
+    <p class="ksrc"><span class="${prefs.script}">${esc(scriptTitle(sec(sid)))}</span> · ${esc(sec(sid).title)} · ${mantraCount(sid)} verses</p>
+    <div class="ktools"><div class="seg" role="group" aria-label="Language">${lang.map(([v,l])=>`<button data-kmean="${v}" aria-pressed="${m===v}" class="${v==='te'?'telu':''}">${l}</button>`).join('')}</div>
+      <button class="btn" id="kAll" aria-pressed="${!!prefs.kverse}">Show all verses</button></div></header>`;
+  d.passages.forEach((p, i)=>{
+    const {es, a, lab} = kRange(sid, p);
+    h += `<section class="kp" data-i="${i}" id="kp${i}"><button class="kref" aria-expanded="${!!prefs.kverse}">${esc(lab)} ${CHEV}</button>
+      <div class="kv" ${prefs.kverse?'':'hidden'}>${prefs.kverse?kVerses(sid, es, a):''}</div>
+      <div class="ktext ${both?'both':''}">${m!=='te'?`<div class="en">${kParas(p.en,'')}</div>`:''}${m!=='en'?`<div class="te">${kParas(p.te,'tp')}</div>`:''}</div></section>`;
+  });
+  h += `<p class="kend">॥ ॐ ॥</p><nav class="knav">
+    ${n>1?`<button class="btn" id="prev" data-go="#katha/ch${n-1}"><small>← Chapter ${n-1}</small>${esc(KIDX['ch'+(n-1)].title[m==='te'?'te':'en'])}</button>`:'<button class="btn" data-go="#katha"><small>←</small>All chapters</button>'}
+    ${n<13?`<button class="btn nx" id="next" data-go="#katha/ch${n+1}"><small>Chapter ${n+1} →</small>${esc(KIDX['ch'+(n+1)].title[m==='te'?'te':'en'])}</button>`:'<button class="btn nx" data-go="#katha"><small>→</small>All chapters</button>'}</nav></div>`;
+  app.innerHTML = h;
+  // toggles
+  app.querySelectorAll('[data-kmean]').forEach(b=>b.onclick=()=>{ const keep = kCurrent(); prefs.kmean=b.dataset.kmean; applyPrefs(); renderKatha(sid, keep); });
+  $('#kAll').onclick = ()=>{ const keep = kCurrent(); prefs.kverse=!prefs.kverse; applyPrefs(); renderKatha(sid, keep); };
+  app.querySelectorAll('.kp').forEach(sct=>{
+    const btn = sct.querySelector('.kref'), kv = sct.querySelector('.kv');
+    btn.onclick = ()=>{ const open = kv.hidden; if(open && !kv.innerHTML){ const {es,a} = kRange(sid, d.passages[+sct.dataset.i]); kv.innerHTML = kVerses(sid, es, a); }
+      kv.hidden = !open; btn.setAttribute('aria-expanded', open); };
+  });
+  // reveal + remember position
+  if(kObs) kObs.disconnect();
+  const kps = [...app.querySelectorAll('.kp')];
+  if(motionOK() && 'IntersectionObserver' in window){
+    kObs = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); kObs.unobserve(e.target); } }), {rootMargin:'0px 0px -6% 0px'});
+    kps.forEach(k=>kObs.observe(k));
+  } else kps.forEach(k=>k.classList.add('in'));
+  const target = at!=null && $('#kp'+at);
+  if(target){ kps.slice(0, +at+1).forEach(k=>k.classList.add('in')); target.scrollIntoView({block:'start'}); scrollBy(0,-64); } else scrollTo(0,0);
+  store.set('kpos', {s:sid, i:+(at||0)});
+  let t = 0; window.onscroll = ()=>{ if(!location.hash.startsWith('#katha/')) { window.onscroll=null; return; } clearTimeout(t); t = setTimeout(()=>store.set('kpos', {s:sid, i:kCurrent()}), 250); };
+}
+function kCurrent(){ const kps = [...document.querySelectorAll('.kp')]; let c = 0; for(const k of kps){ if(k.getBoundingClientRect().top < 120) c = +k.dataset.i; else break; } return c; }
+
 /* ---------------- routing ---------------- */
 function go(h){ if(location.hash===h) route(); else location.hash=h; }
 function route(){
@@ -1611,6 +1735,8 @@ function route(){
   if(!h || !DATA){ memo=false; return renderHome(); }
   if(h==='today') return renderToday();
   if(h==='story') return renderStory();
+  if(h==='katha') return renderKathaIndex();
+  if(h.startsWith('katha/')){ const [, ks, ki] = h.split('/'); if(/^ch([1-9]|1[0-3])$/.test(ks)) return renderKatha(ks, ki); return renderKathaIndex(); }
   if(h==='words' || h.startsWith('words/')) return renderWords(h.startsWith('words/') ? h.slice(6) : '');
   const pm = h.endsWith('~p');
   const [sid, idx] = (pm? h.slice(0,-2) : h).split('.');
