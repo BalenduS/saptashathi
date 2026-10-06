@@ -28,6 +28,7 @@
   --focus:#1f5fa8;
   --f-deva:"Tiro Devanagari Sanskrit","Noto Serif Devanagari","Sanskrit Text",serif;
   --f-telu:"Tiro Telugu","Noto Serif Telugu","Gautami",serif;
+  --f-telp:var(--f-telu);   /* Telugu meanings and Kathā prose; both are user-selectable (TFONTS) */
   --f-title:"Ramaraja","Tiro Telugu",serif;
   --f-body:"Gentium Book Plus","Gentium Plus","Charis SIL",Georgia,serif;
   --scale:1;
@@ -132,7 +133,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .panel{margin-top:22px;border-top:1px solid var(--rule);padding-top:16px}
 .panel h3{margin:0 0 10px;font-size:13px;font-weight:400;color:var(--kumkum)}
 .panel p{margin:0 0 10px;max-width:65ch}
-.panel .te{font-family:var(--f-telu);font-size:18px;line-height:1.8}
+.panel .te{font-family:var(--f-telp);font-size:18px;line-height:1.8}
 .meaning .langtag{font-size:12px;color:var(--ink-3);margin-right:6px}
 .words{display:grid;grid-template-columns:repeat(auto-fill,minmax(10.5rem,1fr));gap:8px}
 .w{border:1px solid var(--rule);border-radius:8px;padding:8px 10px;background:var(--leaf);min-width:0}
@@ -140,7 +141,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .w .ws.telu{font-family:var(--f-telu)} .w .ws.deva{font-family:var(--f-deva)}
 .w .wi{display:block;font-size:13px;font-style:italic;color:var(--ink-3)}
 .w .wm{display:block;font-size:14px;margin-top:2px}
-.w .wt{display:block;font-family:var(--f-telu);font-size:15px;color:var(--ink-2)}
+.w .wt{display:block;font-family:var(--f-telp);font-size:15px;color:var(--ink-2)}
 .pada{font-size:calc(20px * var(--scale));line-height:1.9;margin:0 0 12px;overflow-wrap:break-word}
 .pada span{display:inline-block;max-width:100%}
 .pada.telu{font-family:var(--f-telu)} .pada.deva{font-family:var(--f-deva)}
@@ -183,6 +184,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .sheet h2{font-size:13px;font-weight:400;color:var(--kumkum);margin:18px 0 8px}
 .sheet .row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--rule)}
 .sheet .row label{color:var(--ink-2)}
+.sheet .fontrow{flex-wrap:wrap} .sheet .fontrow select{font:inherit;font-size:15px;padding:6px 8px;border:1px solid var(--rule);border-radius:8px;background:var(--leaf);color:var(--ink);max-width:100%}
+.sheet .fontprev{margin:8px 0 4px;padding:12px 14px;border:1px solid var(--rule);border-radius:10px;background:var(--leaf)}
+.sheet .fontprev .fv{font-size:22px;line-height:1.7;color:var(--kumkum)} .sheet .fontprev .fp{font-size:17px;line-height:1.8;color:var(--ink-2);margin-top:4px}
 .sheet .close{float:right}
 .toc a{display:flex;justify-content:space-between;gap:10px;padding:7px 4px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule)}
 .toc a:hover{color:var(--kumkum)}
@@ -344,7 +348,7 @@ html[data-motion="on"] .donecard{animation:cardIn .5s cubic-bezier(.2,.7,.2,1) b
 .wpop .gw span.telu{font-family:var(--f-telu)} .wpop .gw span.deva{font-family:var(--f-deva)}
 .wpop .gw em{font-size:14px;color:var(--ink-3)}
 .wpop .ge{display:block;font-size:16px;margin-top:2px}
-.wpop .gt{display:block;font-family:var(--f-telu);font-size:16px;color:var(--ink-2);line-height:1.6}
+.wpop .gt{display:block;font-family:var(--f-telp);font-size:16px;color:var(--ink-2);line-height:1.6}
 .wpop .none{margin:8px 0 2px;color:var(--ink-3);font-size:15px}
 .wpop .more{display:block;margin-top:8px;font-size:14px;color:var(--kumkum)}
 .wpop::after{content:"";position:absolute;left:var(--ax,50%);width:12px;height:12px;margin-left:-6px;background:var(--leaf);border:1px solid var(--rule);transform:rotate(45deg)}
@@ -415,7 +419,7 @@ html[data-motion="on"] .chantbar{animation:toastIn .3s both}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}
 .tag{font-size:13px;padding:2px 10px;border-radius:999px;border:1px solid var(--rule);color:var(--ink-2)}
 .tag.gold{border-color:transparent;background:var(--haldi-soft);color:var(--haldi)}
-.tag .te{font-family:var(--f-telu)}
+.tag .te{font-family:var(--f-telp)}
 .steps{list-style:none;margin:8px 0 12px;padding:0;display:grid;gap:6px}
 .step{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;padding:8px 8px 8px 6px;border:1px solid var(--rule);border-radius:10px;background:var(--paper)}
 .step.on{background:var(--good-soft);border-color:transparent}
@@ -530,7 +534,7 @@ html[data-motion="on"] .sharebox .inner{animation:cardIn .35s cubic-bezier(.2,.7
 .kidx h2,.khead h2{font-family:var(--f-title);font-weight:400;font-size:34px;color:var(--kumkum);margin:0;text-wrap:balance;line-height:1.2}
 .khead{text-align:center;padding:6px 0 18px;border-bottom:1px solid var(--rule);margin-bottom:8px}
 .khead .sc{margin:0 0 6px;color:var(--haldi);letter-spacing:.08em}
-.khead h3{margin:6px 0 0;font-family:var(--f-telu);font-weight:400;font-size:24px;color:var(--ink-2)}
+.khead h3{margin:6px 0 0;font-family:var(--f-telp);font-weight:400;font-size:24px;color:var(--ink-2)}
 .khead .ksrc{margin:8px 0 0;color:var(--ink-3);font-size:14px}
 .khead .ksrc .telu{font-family:var(--f-telu)} .khead .ksrc .deva{font-family:var(--f-deva)}
 .ktools{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:14px}
@@ -542,7 +546,7 @@ html[data-motion="on"] .sharebox .inner{animation:cardIn .35s cubic-bezier(.2,.7
 .kref svg{width:12px;height:12px;transition:transform .25s}
 .kref[aria-expanded="true"] svg{transform:rotate(180deg)}
 .ktext p{margin:0 0 .9em;font-size:calc(19px * var(--scale,1));line-height:1.75;text-wrap:pretty;hyphens:auto}
-.ktext p.tp{font-family:var(--f-telu);font-size:calc(19px * var(--scale,1));line-height:1.95;hyphens:none}
+.ktext p.tp{font-family:var(--f-telp);font-size:calc(19px * var(--scale,1));line-height:1.95;hyphens:none}
 .kp:first-of-type .ktext .en p:first-child::first-letter{float:left;font-family:var(--f-title);font-size:3.3em;line-height:.9;padding:4px 8px 0 0;color:var(--kumkum)}
 .ktext.both .te{margin-top:6px;padding-top:12px;border-top:1px dashed var(--rule)}
 @media (min-width:900px){.ktext.both{display:grid;grid-template-columns:1fr 1fr;gap:28px}.ktext.both .te{margin:0;padding:0;border:0}.katha.wide{max-width:72rem}.katha.wide .khead,.katha.wide .kv{max-width:none}}
@@ -562,7 +566,7 @@ html[data-motion="on"] .sharebox .inner{animation:cardIn .35s cubic-bezier(.2,.7
 .kidx .klist button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:2.2em 1fr auto;gap:2px 10px;align-items:baseline;padding:12px 14px;margin:0 0 10px;border:1px solid var(--rule);border-radius:12px;background:var(--leaf);cursor:pointer}
 .kidx .klist button:hover{border-color:var(--kumkum)}
 .kidx .klist b{font-size:22px;font-weight:400;color:var(--kumkum);grid-row:span 2;font-variant-numeric:tabular-nums}
-.kidx .klist .e{font-size:18px} .kidx .klist .t{font-family:var(--f-telu);font-size:17px;color:var(--ink-2);grid-column:2}
+.kidx .klist .e{font-size:18px} .kidx .klist .t{font-family:var(--f-telp);font-size:17px;color:var(--ink-2);grid-column:2}
 .kidx .klist small{color:var(--ink-3);font-size:13px;grid-row:1;grid-column:3}
 .kidx .klist .here small{color:var(--kumkum)}
 html[data-motion="on"] .katha .kp{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
@@ -743,8 +747,41 @@ function withReveal(ev, fn){
       {duration:650, easing:'cubic-bezier(.2,.7,.2,1)', pseudoElement:'::view-transition-new(root)'});
   }).catch(()=>{});
 }
+/* Telugu fonts: [id, Google family, label, kind, css axes] — loaded from Google Fonts only when chosen */
+const TFONTS = [
+  ['tiro','Tiro Telugu','Tiro Telugu','Book serif (default)',''],
+  ['noto-serif','Noto Serif Telugu','Noto Serif Telugu','Book serif','wght@400;600'],
+  ['suranna','Suranna','Suranna','Classic print',''],
+  ['ramaraja','Ramaraja','Ramaraja','Calligraphic',''],
+  ['peddana','Peddana','Peddana','Traditional, light',''],
+  ['timmana','Timmana','Timmana','Traditional, handwritten',''],
+  ['dhurjati','Dhurjati','Dhurjati','Traditional',''],
+  ['sree','Sree Krushnadevaraya','Sree Krushnadevaraya','Ornate',''],
+  ['mandali','Mandali','Mandali','Modern, round',''],
+  ['ntr','NTR','NTR','Modern, bold',''],
+  ['gurajada','Gurajada','Gurajada','Soft, handwritten',''],
+  ['noto-sans','Noto Sans Telugu','Noto Sans Telugu','Plain sans','wght@400;600'],
+  ['hind','Hind Guntur','Hind Guntur','Plain sans','wght@400;600'],
+  ['anek','Anek Telugu','Anek Telugu','Plain sans','wght@400;600'],
+];
+const tfont = id => { const t = TFONTS.find(x=>x[0]===id) || TFONTS[0]; return {id:t[0], f:t[1], label:t[2], kind:t[3], axes:t[4]}; };
+const fontLoaded = new Set(['tiro']);
+function loadTFont(id){
+  const t = tfont(id); if(fontLoaded.has(t.id)) return; fontLoaded.add(t.id);
+  const l = document.createElement('link'); l.rel = 'stylesheet';
+  l.href = 'https://fonts.googleapis.com/css2?family=' + t.f.replace(/ /g,'+') + (t.axes ? ':'+t.axes : '') + '&display=swap';
+  document.head.appendChild(l);
+}
+const fontStack = id => `"${tfont(id).f}","Tiro Telugu","Noto Serif Telugu","Gautami",serif`;
+function applyFonts(){
+  const v = prefs.tfont||'tiro', pr = prefs.tfontP||v;
+  loadTFont(v); loadTFont(pr);
+  document.documentElement.style.setProperty('--f-telu', fontStack(v));
+  document.documentElement.style.setProperty('--f-telp', fontStack(pr));
+}
 function applyPrefs(){
   document.documentElement.style.setProperty('--scale', prefs.scale);
+  applyFonts();
   document.documentElement.dataset.motion = motionOK() ? 'on' : 'off';
   if(prefs.theme==='system') document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme', prefs.theme);
   document.querySelectorAll('[data-script]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.script===prefs.script));
@@ -1171,6 +1208,9 @@ function openSheet(){
     <div class="row"><label>Script</label><div class="seg"><button class="telu" data-script="telu" aria-pressed="${prefs.script==='telu'}">తెలుగు</button><button class="deva" data-script="deva" aria-pressed="${prefs.script==='deva'}">देवनागरी</button></div></div>
     <div class="row"><label>Meaning in</label><div class="seg" id="meanSeg">${[['en','English'],['te','తెలుగు'],['both','Both']].map(([v,l])=>`<button data-mean="${v}" aria-pressed="${prefs.mean===v}" class="${v==='te'?'telu':''}">${l}</button>`).join('')}</div></div>
     <div class="row"><label>Telugu spelling</label><div class="seg" id="spellSeg">${[['book','శంఖ'],['strict','శఙ్ఖ']].map(([v,l])=>`<button class="telu" data-spell="${v}" aria-pressed="${prefs.tspell===v}" aria-label="${v==='book'?'Book style':'Strict Sanskrit'}">${l}</button>`).join('')}</div></div>
+    <div class="row fontrow"><label for="tfV">Telugu font · verses</label><select id="tfV">${TFONTS.map(t=>`<option value="${t[0]}" ${(prefs.tfont||'tiro')===t[0]?'selected':''}>${t[2]} · ${t[3]}</option>`).join('')}</select></div>
+    <div class="row fontrow"><label for="tfP">Telugu font · meanings &amp; Kathā</label><select id="tfP"><option value="">Same as verses</option>${TFONTS.map(t=>`<option value="${t[0]}" ${prefs.tfontP===t[0]?'selected':''}>${t[2]} · ${t[3]}</option>`).join('')}</select></div>
+    <div class="fontprev"><div class="fv" style="font-family:var(--f-telu)">${esc(teluBook(xl('yā devī sarvabhūteṣu śaktirūpeṇa saṃsthitā |', 'telu')))}</div><div class="fp" style="font-family:var(--f-telp)">ఏ దేవి సమస్త ప్రాణులలో శక్తి రూపంలో నెలకొని ఉన్నదో, ఆమెకు నమస్కారం.</div></div>
     <div class="row"><label for="iastT">Roman transliteration</label><input type="checkbox" id="iastT" ${prefs.iast?'checked':''}></div>
     <div class="row"><label for="scaleR">Text size</label><input type="range" id="scaleR" min="0.85" max="1.5" step="0.05" value="${prefs.scale}"></div>
     <div class="row"><label>Animations</label><div class="seg" id="motionSeg">${[['on','On'],['off','Off']].map(([v,l])=>`<button data-motion-v="${v}" aria-pressed="${prefs.motion===v}">${l}</button>`).join('')}</div></div>
@@ -1184,6 +1224,8 @@ function openSheet(){
   root.querySelectorAll('[data-theme-v]').forEach(b=>b.onclick=ev=>{ if(prefs.theme===b.dataset.themeV) return; withReveal(ev, ()=>{ prefs.theme=b.dataset.themeV; applyPrefs(); openSheet(); }); });
   root.querySelectorAll('[data-spell]').forEach(b=>b.onclick=()=>{prefs.tspell=b.dataset.spell; applyPrefs(); openSheet(); route();});
   $('#iastT').onchange = e=>{prefs.iast=e.target.checked; applyPrefs(); route();};
+  $('#tfV').onchange = e=>{prefs.tfont=e.target.value; applyPrefs();};
+  $('#tfP').onchange = e=>{prefs.tfontP=e.target.value; applyPrefs();};
   $('#scaleR').oninput = e=>{prefs.scale=+e.target.value; applyPrefs();};
 }
 
@@ -1247,7 +1289,7 @@ async function shareCard(sid, e, n){
   const dark = document.documentElement.dataset.theme==='dark' || (prefs.theme==='system' && matchMedia('(prefers-color-scheme: dark)').matches);
   const P = dark ? {bg:'#1c1412', leaf:'#241a17', ink:'#f1e6d8', ink2:'#c9b8a6', red:'#f0826e', gold:'#e3b45a', rule:'#3a2c27'}
                  : {bg:'#f3eee8', leaf:'#fffdfa', ink:'#1d1715', ink2:'#5b4f4a', red:'#a3221b', gold:'#b07a12', rule:'#e3d8cf'};
-  const fScript = prefs.script==='telu' ? '"Tiro Telugu"' : '"Tiro Devanagari Sanskrit"', fBody = '"Gentium Book Plus"', fTe = '"Tiro Telugu"';
+  const fScript = prefs.script==='telu' ? `"${tfont(prefs.tfont).f}"` : '"Tiro Devanagari Sanskrit"', fBody = '"Gentium Book Plus"', fTe = `"${tfont(prefs.tfontP||prefs.tfont).f}"`;
   try{ await Promise.all([`40px ${fScript}`, `30px ${fBody}`, `italic 28px ${fBody}`, `28px ${fTe}`].map(f=>document.fonts.load(f))); }catch(err){}
   g.fillStyle = P.bg; g.fillRect(0,0,W,H);
   const M = 70; g.fillStyle = P.leaf; g.strokeStyle = P.rule; g.lineWidth = 2;
@@ -1479,7 +1521,7 @@ function renderStartRound(){
   app.innerHTML = `<div class="wrap today"><section class="card"><div class="spread"><h2 style="margin:0;font-weight:400;font-size:24px">Begin a Saptaśatī</h2>${todayStarting&&hasOpen?'<button class="btn" id="cancelStart">Cancel</button>':''}</div>
       <p style="margin:6px 0 0;color:var(--ink-2);font-size:15px">Pick the day you begin. The thirteen chapters are spread over seven days, with each day’s reading laid out in order: Kavacham, Argalā, Kīlakam, Rātri Sūktam, the day’s chapters, Devī Sūktam and Kṣamā-prārthanā.</p></section>
     <section class="card"><div class="field"><label for="startDate">Day 1 begins on</label><input type="date" id="startDate" value="${x}"></div>
-      <div style="font-size:14px;margin-top:6px"><span style="font-family:var(--f-telu)">${esc(st.labelTe)}</span> · ${esc(st.label)}</div>
+      <div style="font-size:14px;margin-top:6px"><span style="font-family:var(--f-telp)">${esc(st.labelTe)}</span> · ${esc(st.label)}</div>
       ${a.any?`<div style="font-size:14px;color:var(--haldi);margin-top:4px">${a.both?WD_LONG[dowD(x)]+' and '+st.name+' together: doubly auspicious to begin.':a.wd?WD_LONG[dowD(x)]+' is an auspicious day to begin.':st.name+' is a Devī tithi, auspicious to begin.'}</div>`:''}
       <div class="eyebrow" style="margin-top:14px">Weekdays · Tue, Fri, Sat</div><div class="quick">${chips(wdPicks)}</div>
       <div class="eyebrow" style="margin-top:12px">Devī tithis</div><div class="quick">${chips(ttPicks)}</div>
