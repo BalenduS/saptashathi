@@ -578,6 +578,114 @@ html[data-motion="on"] .katha .kp{opacity:0;transform:translateY(16px);transitio
 html[data-motion="on"] .katha .kp.in{opacity:1;transform:none}
 html[data-motion="on"] .kv{animation:fadeUp .35s ease both}
 html[data-motion="on"] .kidx .klist li{animation:fadeUp .45s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0) * 40ms)}
+/* ---------- Master the 700: verse on the left, meaning on the right when the iPad is sideways ---------- */
+.master{max-width:84rem;margin:0 auto;padding:14px 16px calc(env(safe-area-inset-bottom,0px) + 110px)}
+.mgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+.mleft{min-width:0}
+.mtop{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;font-size:14px;color:var(--ink-3);margin:0 0 8px}
+.mtop b{font-weight:400;color:var(--kumkum)} .mtop .pos{margin-left:auto;font-variant-numeric:tabular-nums}
+.mprog{height:3px;border-radius:2px;background:var(--rule);overflow:hidden;margin:0 0 14px}
+.mprog i{display:block;height:100%;background:linear-gradient(90deg,var(--haldi),var(--kumkum));transition:width .7s cubic-bezier(.2,.7,.2,1)}
+.mcard{position:relative;background:var(--leaf);border:1px solid var(--rule);border-radius:6px;padding:28px clamp(20px,4vw,48px) 24px;view-transition-name:mcard;transition:box-shadow .5s,border-color .5s}
+.mcard .uvl{margin:0 0 6px}
+.mcard .uvl .script{font-size:calc(22px * var(--scale));color:var(--kumkum)}
+.mcard .script{font-size:calc(30px * var(--scale))}
+.mcard .iast{transition:opacity .4s}
+.mcard.mastered{border-color:var(--haldi);box-shadow:0 0 0 3px var(--haldi-soft),0 10px 40px -18px var(--haldi)}
+.mseal{position:absolute;top:-14px;right:18px;display:flex;align-items:center;gap:6px;padding:3px 12px 3px 6px;border-radius:999px;background:var(--haldi);color:#fff;font-size:13px}
+.mseal svg{width:18px;height:18px}
+.mcard .mw{display:inline-block;border-radius:4px;cursor:pointer}
+.mcard .mw .dots{color:var(--ink-3);letter-spacing:.06em}
+.mcard .mw.shown{color:var(--kumkum)}
+.mcard.memo .script .ln[data-ln]{filter:blur(8px);cursor:pointer;transition:filter .35s ease;border-radius:4px}
+.mcard.memo .script .ln[data-ln].shown{filter:none}
+.mtip{margin:10px 2px 0;font-size:14px;color:var(--ink-3)}
+.mright{min-width:0;view-transition-name:mright}
+.mright .msec{margin:0 0 22px}
+.mright h3{margin:0 0 8px;font-size:13px;font-weight:400;color:var(--kumkum);font-variant:small-caps;letter-spacing:.06em}
+.mright .men{margin:0 0 10px;font-size:calc(20px * var(--scale));line-height:1.6;text-wrap:pretty}
+.mright .mte{margin:0 0 10px;font-family:var(--f-telp);font-size:calc(20px * var(--scale));line-height:1.9;color:var(--ink-2)}
+.mright .mte.lead,.mright .men.lead{color:var(--ink)}
+.mright .small .men,.mright .small .mte{font-size:calc(16px * var(--scale))}
+.mright .mctx{padding:14px 16px;border-radius:10px;background:var(--haldi-soft);font-size:15px}
+.mright .mctx p{margin:0 0 6px} .mright .mctx .mte{font-size:16px}
+.mright .words .w{cursor:pointer;transition:border-color .2s,transform .2s}
+.mright .words .w.hl{border-color:var(--kumkum);transform:translateY(-2px)}
+.mcard .tw.hl{background:var(--haldi-soft);border-radius:4px}
+.mguide{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px dashed var(--rule);border-radius:10px;color:var(--ink-2);font-size:15px;margin-bottom:18px}
+.mguide b{font-weight:400;color:var(--kumkum)}
+.mfoot{position:fixed;left:0;right:0;bottom:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--rule);padding:10px 16px calc(env(safe-area-inset-bottom,0px) + 10px);view-transition-name:mfoot}
+.mfoot .in{max-width:84rem;margin:0 auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.mfoot .sp{flex:1}
+.msteps{display:flex;align-items:center;gap:0;margin:0 6px}
+.msteps .st{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;color:var(--ink-3);width:68px;text-align:center;position:relative}
+.msteps .st i{width:12px;height:12px;border-radius:50%;border:2px solid var(--rule);background:var(--paper);transition:background .4s,border-color .4s,transform .4s;z-index:1}
+.msteps .st::before{content:"";position:absolute;top:5px;right:50%;width:100%;height:2px;background:var(--rule)}
+.msteps .st:first-child::before{display:none}
+.msteps .st::after{content:"";position:absolute;top:5px;right:50%;width:0;height:2px;background:var(--kumkum);transition:width .5s cubic-bezier(.2,.7,.2,1)}
+.msteps .st:first-child::after{display:none}
+.msteps .st.ok i{background:var(--kumkum);border-color:var(--kumkum)}
+.msteps .st.ok::after,.msteps .st.cur::after{width:100%}
+.msteps .st.cur i{border-color:var(--kumkum);transform:scale(1.35);background:var(--kumkum-soft)}
+.msteps .st.cur{color:var(--kumkum)}
+.msteps.all .st i{background:var(--haldi);border-color:var(--haldi)} .msteps.all .st::after{background:var(--haldi);width:100%}
+.mfoot .btn.good{background:var(--haldi);border-color:var(--haldi);color:#fff}
+.mland{display:none;margin:0 0 12px;padding:8px 12px;border-radius:999px;background:var(--leaf);border:1px solid var(--rule);font-size:13px;color:var(--ink-3);width:max-content;max-width:100%}
+.mland svg{width:16px;height:16px;vertical-align:-3px;margin-right:6px}
+@media (min-width:700px) and (orientation:portrait){.mland{display:block}}
+/* sideways: the verse holds still on the left, the meaning scrolls on the right */
+html.land .master{height:calc(100dvh - 53px);padding-bottom:0;display:flex;flex-direction:column}
+html.land .mgrid{flex:1;min-height:0;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:0}
+html.land .mleft{display:flex;flex-direction:column;padding:4px 32px calc(env(safe-area-inset-bottom,0px) + 96px) 4px;overflow:auto;border-right:1px solid var(--rule)}
+html.land .mleft .mstage{flex:1;display:flex;flex-direction:column;justify-content:center}
+html.land .mright{overflow:auto;padding:22px 8px calc(env(safe-area-inset-bottom,0px) + 100px) 34px;overscroll-behavior:contain}
+html.land .mcard .script{font-size:calc(33px * var(--scale))}
+html.land .mland{display:none}
+/* motion */
+html[data-motion="on"] .mcard.enter{animation:leafIn .55s cubic-bezier(.2,.7,.2,1) both}
+html[data-motion="on"] .mcard.enter .ln{animation:lineIn .6s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(120ms + var(--i,0) * 90ms)}
+html[data-motion="on"] .mright.enter .msec{animation:fadeUp .55s cubic-bezier(.2,.7,.2,1) both}
+html[data-motion="on"] .mright.enter .msec:nth-child(2){animation-delay:.08s} html[data-motion="on"] .mright.enter .msec:nth-child(3){animation-delay:.16s} html[data-motion="on"] .mright.enter .msec:nth-child(4){animation-delay:.24s}
+html[data-motion="on"] .mright.enter .words .w{animation:fadeUp .45s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(min(var(--i,0) * 30ms, 600ms))}
+html[data-motion="on"] .mcard.morph .mw{animation:wordDim .6s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(min(var(--w,0) * 35ms, 700ms))}
+html[data-motion="on"] .mcard.morph.memo .ln[data-ln]{animation:lineBlur .7s ease both;animation-delay:calc(var(--i,0) * 120ms)}
+html[data-motion="on"] .mcard .mw.shown{animation:pop .4s ease}
+html[data-motion="on"] .mseal{animation:sealIn .7s cubic-bezier(.2,1.4,.4,1) both}
+html[data-motion="on"] .mseal path{stroke-dasharray:24;stroke-dashoffset:24;animation:draw .5s .35s ease forwards}
+html[data-motion="on"] .mcard.justm{animation:glow 1.2s ease}
+html[data-motion="on"] .msteps .st.cur i{animation:pop .5s ease}
+@keyframes wordDim{from{opacity:.25;filter:blur(4px);transform:translateY(4px)}to{opacity:1;filter:none;transform:none}}
+@keyframes lineBlur{from{filter:blur(0)}to{filter:blur(8px)}}
+@keyframes sealIn{from{opacity:0;transform:scale(.4) rotate(-20deg)}to{opacity:1;transform:none}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes glow{0%{box-shadow:0 0 0 0 var(--haldi)}40%{box-shadow:0 0 0 14px transparent,0 0 60px 0 var(--haldi)}100%{box-shadow:0 0 0 3px var(--haldi-soft),0 10px 40px -18px var(--haldi)}}
+::view-transition-group(mcard),::view-transition-group(mright),::view-transition-group(mfoot){animation-duration:.55s;animation-timing-function:cubic-bezier(.2,.7,.2,1)}
+/* overview */
+.mover{padding-block:22px 90px}
+.mover h2{font-family:var(--f-title);font-weight:400;font-size:34px;color:var(--kumkum);margin:0}
+.mhero{display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin:16px 0 22px}
+.mring{width:150px;height:150px;position:relative;flex:none}
+.mring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.mring circle{fill:none;stroke-width:9}
+.mring .bg{stroke:var(--rule)} .mring .fg{stroke:var(--haldi);stroke-linecap:round;transition:stroke-dashoffset 1.2s cubic-bezier(.2,.7,.2,1)}
+.mring .c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:13px;color:var(--ink-3)}
+.mring .c b{font-size:34px;font-weight:400;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.1}
+.mhero .stats{display:grid;gap:4px;color:var(--ink-2);font-size:15px}
+.mhero .stats b{font-weight:400;color:var(--kumkum);font-variant-numeric:tabular-nums}
+.mchs{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+@media (min-width:900px){.mchs{grid-template-columns:1fr 1fr;column-gap:16px}}
+.mchs button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:2em 1fr auto;gap:2px 10px;align-items:center;padding:12px 14px;border:1px solid var(--rule);border-radius:12px;background:var(--leaf);cursor:pointer}
+.mchs button:hover{border-color:var(--kumkum)}
+.mchs b{font-size:21px;font-weight:400;color:var(--kumkum);grid-row:span 2}
+.mchs .t{font-size:16px} .mchs .t span{font-family:var(--f-telu);color:var(--ink-2);margin-left:6px}
+.mchs small{color:var(--ink-3);font-size:13px;font-variant-numeric:tabular-nums}
+.mchs .bar2{grid-column:2/4;height:4px;border-radius:2px;background:var(--rule);overflow:hidden}
+.mchs .bar2 i{display:block;height:100%;background:var(--haldi);animation:barGrow 1s cubic-bezier(.2,.7,.2,1) both}
+.mchs .full{border-color:var(--haldi)}
+html[data-motion="on"] .mchs li{animation:fadeUp .45s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0) * 40ms)}
+.mhomecard{margin-top:12px;display:flex;align-items:center;gap:14px;width:100%;padding:12px 16px;border:1px solid var(--haldi);border-radius:12px;background:var(--haldi-soft);text-align:left;color:var(--ink)}
+.mhomecard .r{width:46px;height:46px;flex:none}
+.mhomecard b{font-weight:400;display:block} .mhomecard small{color:var(--ink-2);font-size:14px}
 html[data-motion="on"] .story .chnode,html[data-motion="on"] .windex .wlist li{animation:fadeUp .45s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(min(var(--i,0) * 35ms, 500ms))}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media (prefers-reduced-motion:reduce){.reveal .pv{opacity:1;transform:none}}
@@ -866,6 +974,7 @@ function renderHome(){
       <p>Read each verse, see how it is pronounced, understand every word, then move to the next. Gita Press order, from the Kavacham to the Kṣamā-prārthanā.</p>
       <div class="counts"><span><b data-n="${chMantras}">${chMantras}</b> mantras in 13 chapters</span><span><b data-n="${learned.size}">${learned.size}</b> marked learned</span><span><b data-n="${annotated}">${annotated}</b> verses with meanings</span></div>
       ${todayCardHTML()}
+      ${masterCardHTML()}
       ${reviewCardHTML()}
       <div class="homelinks"><button class="btn" data-go="#katha">Kathā · the story in prose</button><button class="btn" data-go="#story">Story map</button><button class="btn" data-go="#words">Word index</button><button class="btn" id="japaBtn">📿 Japa counter</button></div>
       ${last && DATA.sections[last.s] ? `<button class="continue" data-go="${sectionHash(last.s,last.i)}"><span><span class="k">Continue where you stopped</span><br><span class="v">${esc(title(sec(last.s)))} · ${esc(refLabel(last.s, entries(last.s)[last.i]||{}))}</span></span><span class="arrow">→</span></button>` : ''}
@@ -1274,8 +1383,8 @@ function reviewCardHTML(){
   return `<button class="reviewcard" id="reviewBtn"><span><b>${n ? 'Review learned verses' : 'All reviews done for today'}</b><small>${n ? 'Recite from memory, then check' : `${total} verses in your review cycle`}</small></span><span class="n">${n||'✓'}</span></button>`;
 }
 const graphemes = w => { try{ return [...new Intl.Segmenter(undefined,{granularity:'grapheme'}).segment(w)].map(x=>x.segment); }catch(e){ return [...w]; } };
-function memoHTML(e){
-  const lv = prefs.memoLevel, txt = scriptOf(e) || '', lines = txt.split('\n');
+function memoHTML(e, lv=prefs.memoLevel){
+  const txt = scriptOf(e) || '', lines = txt.split('\n');
   const ref = !e._pre && e.kind!=='ritual' && e.kind!=='uvacha' ? ` <span class="dn">॥ ${esc(e.ref)} ॥</span>` : '';
   if(lv==='none') return `<p class="script ${prefs.script}">${lines.map((l,i)=>`<span class="ln" data-ln="${i}">${esc(l)}${i===lines.length-1?ref:''}</span>`).join('\n')}</p>`;
   let w = 0;
@@ -1284,7 +1393,7 @@ function memoHTML(e){
     const i = w++;
     if(lv==='all') return esc(part);
     if(lv==='half' && i % 2 === 0) return esc(part);
-    if(lv==='first'){ const g = graphemes(part); return `<span class="mw" data-full="${esc(part)}">${esc(g[0])}<span class="dots">${'·'.repeat(Math.min(4, Math.max(1, g.length-1)))}</span></span>`; }
+    if(lv==='first'){ const g = graphemes(part); return `<span class="mw" style="--w:${i}" data-full="${esc(part)}">${esc(g[0])}<span class="dots">${'·'.repeat(Math.min(4, Math.max(1, g.length-1)))}</span></span>`; }
     return `<span class="mw hide" data-full="${esc(part)}">${esc(part)}</span>`;
   };
   return `<p class="script ${prefs.script}">${lines.map((l,i)=>`<span class="ln">${l.split(/(\s+)/).map(word).join('')}${i===lines.length-1?ref:''}</span>`).join('\n')}</p>`;
@@ -1769,6 +1878,153 @@ async function renderKatha(sid, at){
 }
 function kCurrent(){ const kps = [...document.querySelectorAll('.kp')]; let c = 0; for(const k of kps){ if(k.getBoundingClientRect().top < 120) c = +k.dataset.i; else break; } return c; }
 
+/* ================= Master the 700: one verse at a time, verse left / meaning right ================= */
+/* A unit is one verse of a chapter, carrying any "uvāca" line before it, so the 13 chapters make exactly 700 mantras.
+   Each unit walks four steps: 0 Read (meaning) → 1 Understand (word by word) → 2 Recite with first-letter hints → 3 Recite from memory → mastered (4). */
+const MSTEPS = ['Read','Understand','Hints','Memory'];
+let mastery = store.get('mastery', {});
+const UNITS = {};
+function mUnits(sid){
+  if(UNITS[sid]) return UNITS[sid];
+  const list = entries(sid), out = []; let pend = [];
+  list.forEach((e,i)=>{ if(e._pre) return; if(e.kind==='uvacha'){ pend.push(i); return; }
+    out.push({sid, i, pre:pend, key:keyOf(sid,e), count:(e.count||1)+pend.reduce((a,j)=>a+(list[j].count||1),0)}); pend = []; });
+  if(pend.length && out.length){ const u = out[out.length-1]; u.post = pend; u.count += pend.reduce((a,j)=>a+(list[j].count||1),0); }
+  return UNITS[sid] = out;
+}
+const isMastered = k => (mastery[k]||0) >= 4;
+const mStage = k => isMastered(k) ? 4 : (mastery[k]||0);
+const CHS = Array.from({length:13}, (_,i)=>'ch'+(i+1));
+function mTotals(){ let done=0, all=0; CHS.forEach(sid=>mUnits(sid).forEach(u=>{ all+=u.count; if(isMastered(u.key)) done+=u.count; })); return {done, all}; }
+function mChapter(sid){ const us = mUnits(sid); let d=0, a=0; us.forEach(u=>{ a+=u.count; if(isMastered(u.key)) d+=u.count; }); return {d, a, first: Math.max(0, us.findIndex(u=>!isMastered(u.key)))}; }
+function mNext(){ for(const sid of CHS){ const us = mUnits(sid), k = us.findIndex(u=>!isMastered(u.key)); if(k>=0) return {sid, ui:k}; } return null; }
+const mHash = (sid, ui) => { const u = mUnits(sid)[ui]; return '#master/' + sid + '.' + entryToken(entries(sid)[u.i], u.i); };
+const mToday = () => (store.get('mlog', {})[todayD()] || 0);
+function mLog(){ const l = store.get('mlog', {}); l[todayD()] = (l[todayD()]||0) + 1; store.set('mlog', l); }
+const ringSVG = (p, r=66, w=9) => { const C = 2*Math.PI*r; return `<svg viewBox="0 0 ${2*r+w*2} ${2*r+w*2}"><circle class="bg" cx="${r+w}" cy="${r+w}" r="${r}"/><circle class="fg" cx="${r+w}" cy="${r+w}" r="${r}" stroke-dasharray="${C.toFixed(1)}" stroke-dashoffset="${(C*(1-p)).toFixed(1)}"/></svg>`; };
+function masterCardHTML(){
+  const {done, all} = mTotals(), nx = mNext();
+  return `<button class="mhomecard" data-go="#master"><span class="r mring" style="width:46px;height:46px">${ringSVG(done/all, 18, 5)}</span><span><b>Master the 700</b><small>${done} of ${all} mantras mastered${nx?` · next: verse ${esc(entries(nx.sid)[mUnits(nx.sid)[nx.ui].i].ref)}`:''}</small></span></button>`;
+}
+
+/* layout: sideways = verse left, meaning right. Switching animates with a View Transition where the browser has one. */
+const wantLand = () => innerWidth > innerHeight && innerWidth >= 900;
+function setLand(animate){
+  const on = wantLand(), html = document.documentElement;
+  if(html.classList.contains('land') === on) return;
+  const flip = ()=>{ html.classList.toggle('land', on); };
+  if(animate && motionOK() && document.startViewTransition && document.querySelector('.master .mcard')) document.startViewTransition(flip); else flip();
+}
+let landT = 0;
+addEventListener('resize', ()=>{ clearTimeout(landT); landT = setTimeout(()=>setLand(true), 60); });
+setLand(false);
+
+function renderMasterHome(){
+  paathMode=false; setBarFor(null); $('#barTitle').innerHTML = '<b>ॐ</b> Master the 700';
+  const {done, all} = mTotals(), nx = mNext(), today = mToday();
+  let h = `<div class="wrap mover"><h2>Master the 700</h2><p class="sub" style="color:var(--ink-3);margin:4px 0 0">One verse at a time: read its meaning, understand each word, recite with hints, then from memory. Turn the iPad sideways to keep the verse on the left and its meaning on the right.</p>
+    <div class="mhero"><div class="mring">${ringSVG(0)}<div class="c"><b data-n="${done}">${done}</b>of ${all}</div></div>
+      <div class="stats"><span><b>${today}</b> verse${today===1?'':'s'} mastered today</span><span><b>${CHS.filter(s=>{const c=mChapter(s); return c.d===c.a;}).length}</b> of 13 chapters complete</span><span><b>${dueKeys().length}</b> due for review</span>
+      ${nx ? `<button class="btn primary" data-go="${mHash(nx.sid, nx.ui)}" style="margin-top:8px">${done?'Continue':'Begin'} · verse ${esc(entries(nx.sid)[mUnits(nx.sid)[nx.ui].i].ref)} →</button>` : '<span>All 700 mastered. Keep them fresh with the daily review.</span>'}</div></div>
+    <ul class="mchs">`;
+  CHS.forEach((sid,i)=>{ const c = mChapter(sid), n = +sid.slice(2);
+    h += `<li style="--i:${i}"><button data-go="${mHash(sid, c.d===c.a?0:c.first)}" class="${c.d===c.a?'full':''}"><b>${n}</b><span class="t">${esc(sec(sid).title)}<span>${esc(KIDX&&KIDX[sid]?KIDX[sid].title.te:'')}</span></span><small>${c.d}/${c.a}</small><span class="bar2"><i style="width:${(100*c.d/c.a).toFixed(1)}%"></i></span></button></li>`; });
+  app.innerHTML = h + '</ul></div>'; scrollTo(0,0); countUp(app);
+  const fg = app.querySelector('.mring .fg'); if(fg){ const C = +fg.getAttribute('stroke-dasharray'); fg.style.strokeDashoffset = C; requestAnimationFrame(()=>requestAnimationFrame(()=>{ fg.style.strokeDashoffset = (C*(1-done/all)).toFixed(1); })); }
+  if(!KIDX) loadKidx().then(()=>{ if(location.hash==='#master') renderMasterHome(); }).catch(()=>{});
+}
+
+let mDir = 0;
+async function renderMaster(sid, tok, opts={}){
+  paathMode=false; memo=false; setBarFor(null);
+  const us = mUnits(sid), list = entries(sid);
+  let ui = opts.ui!=null ? opts.ui : Math.max(0, us.findIndex(u=>u.i>=indexFor(sid, tok||'1') || (u.pre.includes(indexFor(sid, tok||'1')))));
+  if(ui<0) ui = 0;
+  const u = us[ui], e = list[u.i], notes = await loadNotes(sid), n = notes && notes[e.ref];
+  const step = opts.step!=null ? opts.step : mStage(u.key);
+  $('#barTitle').innerHTML = `<b>Ch ${sid.slice(2)}</b> Master · ${esc(e.ref)}`;
+  store.set('mlast', {s:sid, ui});
+  const c = mChapter(sid), done = step>=4;
+  const uvs = [...u.pre, ...(u.post||[])].map(j=>list[j]);
+  const lv = step===2 ? 'first' : step===3 ? 'none' : null;
+  const left = `${uvs.length && u.pre.length ? `<div class="uvl">${u.pre.map(j=>scriptHTML(list[j])).join('')}</div>` : ''}
+      ${lv ? memoHTML(e, lv) : scriptHTML(e, '', !!(n && n.tok))}
+      ${u.post ? `<div class="uvl" style="margin:10px 0 0">${u.post.map(j=>scriptHTML(list[j])).join('')}</div>` : ''}
+      ${prefs.iast && step<2 ? `<p class="iast">${esc(e.iast).replace(/ (\|+)/g," $1")}</p>` : ''}`;
+  const tip = step===1 ? 'Tap a word in the verse, or a card on the right, to see them together.' : step===2 ? 'Recite aloud from the first letters. Tap a word to see it in full.' : step===3 ? 'Recite the whole verse from the meaning alone. Tap a line to check yourself.' : '';
+  const uvMean = uvs.map(x=>notes && notes[x.ref]).filter(Boolean);
+  const meanEN = n && n.en ? (u.pre.length ? uvMean.slice(0,u.pre.length).map(x=>x.en).join(' ')+' ' : '') + n.en : '';
+  const meanTE = n && n.te ? (u.pre.length ? uvMean.slice(0,u.pre.length).map(x=>x.te).join(' ')+' ' : '') + n.te : '';
+  const meaning = (cls='') => `<section class="msec ${cls}"><h3>Meaning</h3>${prefs.mean!=='te'&&meanEN?`<p class="men lead">${esc(meanEN)}</p>`:''}${prefs.mean!=='en'&&meanTE?`<p class="mte lead">${esc(meanTE)}</p>`:''}</section>`;
+  const words = () => n && n.pada && n.pada.length ? `<section class="msec"><h3>Word by word</h3><div class="words">${n.pada.map((w,i)=>`<div class="w" data-g="${i}" style="--i:${i}"><span class="ws ${prefs.script}">${esc(xl(w[0],prefs.script))}</span><span class="wi">${esc(w[0])}</span>${prefs.mean!=='te'?`<span class="wm">${esc(w[1])}</span>`:''}${prefs.mean!=='en'&&w[2]?`<span class="wt">${esc(w[2])}</span>`:''}</div>`).join('')}</div></section>` : '';
+  const cx = ctxFor(notes, list, u.i);
+  const ctx = () => cx ? `<section class="msec"><div class="mctx"><h3>${cx.same?'Context':'Where we are in the story'}</h3>${prefs.mean!=='te'&&cx.ctx.en?`<p>${esc(cx.ctx.en)}</p>`:''}${prefs.mean!=='en'&&cx.ctx.te?`<p class="mte">${esc(cx.ctx.te)}</p>`:''}</div></section>` : '';
+  const guide = step===2 ? `<section class="msec"><div class="mguide"><span>🪔</span><span><b>Recite with hints.</b> Keep the meaning below in mind and say the verse aloud, using the first letter of each word on the left.</span></div></section>`
+    : step===3 ? `<section class="msec"><div class="mguide"><span>🪔</span><span><b>Recite from memory.</b> The verse is hidden. Read the meaning, recite the whole verse, then tap each line to check.</span></div></section>` : '';
+  const right = step===0 ? meaning() + ctx() + words()
+    : step===1 ? words() + meaning('small')
+    : step<4 ? guide + meaning()
+    : meaning() + words() + ctx();
+  const stepsHTML = `<div class="msteps ${done?'all':''}" aria-label="Steps">${MSTEPS.map((l,i)=>`<span class="st ${i<step?'ok':''} ${i===step?'cur':''}"><i></i>${l}</span>`).join('')}</div>`;
+  const action = done ? `<button class="btn" id="mAgain">Practise again</button><button class="btn primary" id="next">${ui<us.length-1?'Next verse →':'Next chapter →'}</button>`
+    : step===3 ? `<button class="btn" id="mNot">Not yet</button><button class="btn good" id="mGot">✓ Recited from memory</button>`
+    : `<button class="btn primary" id="next">${['I\'ve read the meaning','I understand each word','Recited with hints'][step]} →</button>`;
+  const seal = `<span class="mseal"><svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.2 3.2L15 6.8"/></svg>Mastered</span>`;
+  const keepRight = opts.keepScroll ? ($('.mright')||{}).scrollTop||0 : 0;
+  app.innerHTML = `<div class="master">
+    <div class="mgrid"><div class="mleft"><div class="mtop"><b>Chapter ${sid.slice(2)}</b><span>${esc(sec(sid).title)}</span><span class="pos">${ui+1} / ${us.length} · ${c.d}/${c.a} mastered</span></div>
+      <div class="mprog"><i style="width:${(100*c.d/c.a).toFixed(1)}%"></i></div>
+      <p class="mland"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M8 3l-2 3M16 21l2-3"/></svg>Turn the iPad sideways: verse on the left, meaning on the right</p>
+      <div class="mstage"><article class="mcard ${lv==='none'?'memo':''} ${done?'mastered':''} ${opts.anim||''}" style="--dir:${mDir}">${done?seal:''}${left}</article>
+      ${tip?`<p class="mtip">${tip}</p>`:''}</div></div>
+    <div class="mright ${opts.anim==='enter'||opts.rightAnim?'enter':''}">${right}</div></div>
+    <div class="mfoot"><div class="in"><button class="btn" id="prev" ${ui===0&&sid==='ch1'?'disabled':''} aria-label="Previous verse">←</button>${stepsHTML}<span class="sp"></span>${action}<button class="btn" id="mSkip" aria-label="Next verse" title="Next verse">→</button></div></div></div>`;
+  mDir = 0;
+  if(!opts.keepScroll) scrollTo(0,0); else { const r=$('.mright'); if(r) r.scrollTop = keepRight; }
+  const go2 = (s2, u2, dir) => { mDir = dir; const h = mHash(s2, u2); if(location.hash===h) renderMaster(s2, null, {ui:u2, anim:'enter'}); else { mPending = {anim:'enter'}; location.hash = h; } };
+  const nextUnit = (dir=1) => { if(ui+dir>=0 && ui+dir<us.length) return go2(sid, ui+dir, dir);
+    const ci = CHS.indexOf(sid)+dir; if(ci<0) return; if(ci>=CHS.length){ go('#master'); return; }
+    go2(CHS[ci], dir>0?0:mUnits(CHS[ci]).length-1, dir); };
+  const setStep = (s, anim) => { if(s<4){ mastery[u.key] = s; } store.set('mastery', mastery); renderMaster(sid, null, {ui, step:s, anim, rightAnim:true}); };
+  $('#prev').onclick = ()=>nextUnit(-1);
+  $('#mSkip').onclick = ()=>nextUnit(1);
+  const nb = $('#next');
+  if(nb) nb.onclick = ()=>{ if(done) return nextUnit(1); setStep(step+1, step+1>=2?'morph':''); };
+  const again = $('#mAgain'); if(again) again.onclick = ()=>{ mastery[u.key] = 2; store.set('mastery', mastery); renderMaster(sid, null, {ui, step:2, anim:'morph', rightAnim:true}); };
+  const not = $('#mNot'); if(not) not.onclick = ()=>setStep(2, 'morph');
+  const got = $('#mGot'); if(got) got.onclick = ev=>{
+    mastery[u.key] = 4; store.set('mastery', mastery); mLog();
+    [u.i, ...u.pre, ...(u.post||[])].forEach(j=>learned.add(keyOf(sid, list[j]))); store.set('learned', [...learned]); srsAdd(u.key);
+    const r = ev.currentTarget.getBoundingClientRect(); petals(r.left+r.width/2, r.top+r.height/2, 22);
+    const cc = mChapter(sid);
+    renderMaster(sid, null, {ui, step:4, anim:'justm', rightAnim:true, keepScroll:true});
+    if(cc.d===cc.a){ shower(60); toast(`Chapter ${sid.slice(2)} mastered`); }
+    else toast(`Mastered · ${mToday()} today`);
+  };
+  /* tap words: popup in steps 0, 1, 4; and link verse words ↔ word cards */
+  closePop();
+  const card = $('.mcard');
+  if(n && n.tok && !lv){
+    const iastToks = e.iast.split(/\s+/).filter(Boolean);
+    const cards = [...app.querySelectorAll('.mright .words .w')];
+    const light = gi => { cards.forEach(c=>c.classList.toggle('hl', gi.includes(+c.dataset.g))); const f = cards.find(c=>gi.includes(+c.dataset.g)); if(f && step===1) f.scrollIntoView({block:'nearest', behavior: motionOK()?'smooth':'auto'}); };
+    card.querySelectorAll(':scope > .script .tw').forEach(el=>{
+      el.addEventListener('click', ev=>{ ev.stopPropagation(); const i=+el.dataset.t, gi=n.tok[i]||[];
+        card.querySelectorAll('.tw.hl').forEach(x=>x.classList.remove('hl')); el.classList.add('hl'); light(gi);
+        if(step!==1) openPop(el, el.textContent, iastToks[i]||'', gi.map(k=>n.pada[k])); });
+    });
+    cards.forEach(cd=>cd.addEventListener('click', ()=>{ const g=+cd.dataset.g; card.querySelectorAll('.tw').forEach(x=>x.classList.toggle('hl', (n.tok[+x.dataset.t]||[]).includes(g))); cards.forEach(c=>c.classList.toggle('hl', c===cd)); }));
+  }
+  if(lv==='first') card.querySelectorAll('.mw').forEach(m=>m.onclick=()=>{ m.textContent = m.dataset.full; m.classList.add('shown'); });
+  if(lv==='none') card.querySelectorAll('.script .ln[data-ln]').forEach((l,i)=>{ l.style.setProperty('--i', i); l.onclick=()=>l.classList.toggle('shown'); });
+  /* swipe the verse side to move between verses */
+  let x0=null, y0=null;
+  const L = $('.mleft');
+  L.ontouchstart = ev=>{ if(ev.touches.length>1){ x0=null; return; } x0=ev.touches[0].clientX; y0=ev.touches[0].clientY; };
+  L.ontouchend = ev=>{ if(x0===null) return; const dx=ev.changedTouches[0].clientX-x0, dy=ev.changedTouches[0].clientY-y0; x0=null; if(Math.abs(dx)>70 && Math.abs(dx)>Math.abs(dy)*1.6) nextUnit(dx<0?1:-1); };
+}
+let mPending = null;
+
 /* ---------------- routing ---------------- */
 function go(h){ if(location.hash===h) route(); else location.hash=h; }
 function route(){
@@ -1778,6 +2034,8 @@ function route(){
   if(h==='today') return renderToday();
   if(h==='story') return renderStory();
   if(h==='katha') return renderKathaIndex();
+  if(h==='master') return renderMasterHome();
+  if(h.startsWith('master/')){ const [ms, mt] = h.slice(7).split('.'); if(/^ch([1-9]|1[0-3])$/.test(ms)){ const o = mPending || {anim:'enter'}; mPending = null; return renderMaster(ms, mt, o); } return renderMasterHome(); }
   if(h.startsWith('katha/')){ const [, ks, ki] = h.split('/'); if(/^ch([1-9]|1[0-3])$/.test(ks)) return renderKatha(ks, ki); return renderKathaIndex(); }
   if(h==='words' || h.startsWith('words/')) return renderWords(h.startsWith('words/') ? h.slice(6) : '');
   const pm = h.endsWith('~p');
