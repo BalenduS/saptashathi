@@ -721,7 +721,7 @@ html[data-motion="on"] .story .chnode,html[data-motion="on"] .windex .wlist li{a
   :root{--hole:12px}
   .leafcard,.mcard,.fcard .face{padding:22px calc(var(--hole) + 24px) 20px;border-radius:16px / 10px}
   .script{font-size:calc(24px * var(--scale));line-height:1.75}
-  .mcard .script{font-size:calc(24px * var(--scale))}
+  .leafcard .script,.mcard .script{font-size:calc(clamp(18px, 7.6cqi, 25px) * var(--scale));overflow-wrap:normal}
   .toast{bottom:calc(env(safe-area-inset-bottom,0px) + 84px)}
   /* thumb bar for verse navigation */
   .verse-view{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 140px)}
@@ -776,7 +776,7 @@ html[data-motion="on"] .story .chnode,html[data-motion="on"] .windex .wlist li{a
 .fctop{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--ink-3);font-variant-numeric:tabular-nums}
 .fcbar{flex:1;height:4px;border-radius:2px;background:var(--rule);overflow:hidden}
 .fcbar i{display:block;height:100%;background:linear-gradient(90deg,var(--haldi),var(--kumkum));transition:width .5s}
-.fcstage{position:relative;flex:1;min-height:min(62vh,560px);margin:18px 0 14px;perspective:1600px}
+.fcstage{position:relative;flex:1;min-height:min(60vh,540px);margin:18px 0 44px;perspective:1600px}
 .fcard{position:absolute;inset:0;touch-action:pan-y;user-select:none;-webkit-user-select:none}
 .fcard.top{cursor:pointer;z-index:3;will-change:transform}
 .fcard .flip{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.3,.7,.2,1)}
@@ -787,8 +787,16 @@ html[data-motion="on"] .story .chnode,html[data-motion="on"] .windex .wlist li{a
 .fcard.under.u1{--k:1;z-index:2} .fcard.under.u2{--k:2;z-index:1}
 .fcard.under.rise.u1{--k:0;opacity:1} .fcard.under.rise.u2{--k:1}
 .fctag{position:absolute;top:14px;left:50%;transform:translateX(-50%);font-size:13px;color:var(--kumkum);font-variant:small-caps;letter-spacing:.06em;white-space:nowrap}
-.fcverse{align-self:center;max-width:100%}
-.fcverse .script{font-size:calc(29px * var(--scale))}
+.fcverse{align-self:stretch;max-width:100%;text-align:center}
+.fcverse .script{font-size:calc(clamp(18px, 7.4cqi, 30px) * var(--scale));overflow-wrap:normal;word-break:keep-all}
+.fcverse .script .p2{padding-left:0}
+.fcverse .script:not(.uv) .dn{display:block;margin-top:.2em}
+.fcard .face{container-type:inline-size;justify-content:flex-start}
+.fcbody{margin:auto 0;width:100%}
+.fcmean .fcen,.fcard .fcen{font-size:calc(clamp(16px, 5.6cqi, 21px) * var(--scale))}
+.fcmean .fcte,.fcard .fcte{font-size:calc(clamp(16px, 5.4cqi, 20px) * var(--scale))}
+.fcmean{text-align:center}
+.fcard .iast{text-align:center}
 .fcverse .uv{font-size:calc(21px * var(--scale))}
 .fcmean .fcen{font-size:calc(21px * var(--scale));line-height:1.6;margin:0 0 12px;text-wrap:pretty}
 .fcmean .fcte,.fcard .fcte{font-family:var(--f-telp);font-size:calc(20px * var(--scale));line-height:1.85;color:var(--ink-2);margin:0}
@@ -1142,7 +1150,7 @@ const sylCount = w => ((w.toLowerCase().replace(/ai|au/g,'a').match(/[aāiīuū�
 function splitLine(l, il){
   const parts = l.split(/(\s+)/), idx = [];
   parts.forEach((p,i)=>{ if(p && !/^\s+$/.test(p) && !/^[।॥|\d.]+$/.test(p)) idx.push(i); });
-  if(idx.length < 3) return null;
+  if(idx.length < 2) return null;
   /* weigh words by syllables (from the IAST line, which has the same words) so the break lands at the real pāda */
   const iw = (il||'').split(/\s+/).filter(w=>w && !/^[|।॥\d.]+$/.test(w));
   const wt = iw.length===idx.length ? iw.map(sylCount) : idx.map(i=>parts[i].length);
@@ -2241,8 +2249,8 @@ function renderCardsPlay(){
     <div class="fcstage">
       ${nx.map((x,k)=>`<div class="fcard under u${k+1}" aria-hidden="true"><div class="face front"></div></div>`).reverse().join('')}
       <div class="fcard top" id="fcTop" tabindex="0" role="button" aria-label="Card ${D.i+1}. Tap to turn over.">
-        <div class="flip"><div class="face front"><span class="fctag">${c.kind==='w'?'Word':'Verse '+refOf(c)}</span>${fcFace(c,'front')}</div>
-        <div class="face back"><span class="fctag">${c.kind==='w'?'Meaning':'Verse '+refOf(c)}</span>${fcFace(c,'back')}</div></div>
+        <div class="flip"><div class="face front"><span class="fctag">${c.kind==='w'?'Word':'Verse '+refOf(c)}</span><div class="fcbody">${fcFace(c,'front')}</div></div>
+        <div class="face back"><span class="fctag">${c.kind==='w'?'Meaning':'Verse '+refOf(c)}</span><div class="fcbody">${fcFace(c,'back')}</div></div></div>
         <span class="stamp yes">Knew it</span><span class="stamp no">Again</span>
       </div>
     </div>
